@@ -39,9 +39,9 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 
 | SC | Title | Level | Entry | Overlap |
 |---|---|---|---|---|
-| 3.2.6 | Consistent Help | A | no entry yet | When help mechanisms repeat across pages, they stay in the same relative order; new in WCAG 2.2 |
-| 3.3.2 | Labels or Instructions | A | no entry yet | Labels or instructions when input is required |
-| 4.1.3 | Status Messages | AA | no entry yet | Confirmation messages reach assistive technology without focus |
+| 3.2.6 | Consistent Help | A | `wcag/sc-3.2.6-consistent-help.md` | When help mechanisms repeat across pages, they stay in the same relative order; new in WCAG 2.2 |
+| 3.3.2 | Labels or Instructions | A | `wcag/sc-3.3.2-labels-or-instructions.md` | Labels or instructions when input is required |
+| 4.1.3 | Status Messages | AA | `wcag/sc-4.1.3-status-messages.md` | Confirmation messages reach assistive technology without focus |
 | 1.1.1 | Non-text Content | A | `wcag/sc-1.1.1-non-text-content.md` | Supporting images and charts need text alternatives |
 | 3.3.5 | Help | AAA | no entry yet | Context-sensitive help is available |
 

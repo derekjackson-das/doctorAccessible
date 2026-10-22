@@ -41,8 +41,8 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 |---|---|---|---|---|
 | 2.4.2 | Page Titled | A | `wcag/sc-2.4.2-page-titled.md` | A title that describes the page; the code side of a clear purpose |
 | 2.4.6 | Headings and Labels | AA | `wcag/sc-2.4.6-headings-and-labels.md` | Headings and labels that describe topic or purpose |
-| 3.2.3 | Consistent Navigation | AA | no entry yet | Repeated navigation in the same relative order across pages |
-| 3.2.4 | Consistent Identification | AA | no entry yet | The same function identified the same way across pages |
+| 3.2.3 | Consistent Navigation | AA | `wcag/sc-3.2.3-consistent-navigation.md` | Repeated navigation in the same relative order across pages |
+| 3.2.4 | Consistent Identification | AA | `wcag/sc-3.2.4-consistent-identification.md` | The same function identified the same way across pages |
 | 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | Controls expose what they are to assistive technology |
 | 1.1.1 | Non-text Content | A | `wcag/sc-1.1.1-non-text-content.md` | Icons that act as controls or carry meaning need a text alternative |
 | 1.4.11 | Non-text Contrast | AA | `wcag/sc-1.4.11-non-text-contrast.md` | The visual cues that identify a control must be perceivable |
