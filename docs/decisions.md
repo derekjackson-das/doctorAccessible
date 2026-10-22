@@ -1,0 +1,25 @@
+# Decisions
+
+Why things are the way they are. Add a dated entry when a decision changes shape; do not rewrite history.
+
+## 2026-10-22: initial shape
+
+**No director agent.** The main Claude Code session already holds the full context and dispatches subagents. A director agent would be a second coordinator with less information than the first. The human directs.
+
+**One agent, the verifier.** Isolation is the feature: it must not inherit the builder's reasoning. Every other role proposed at the start (design, content, planning, research) is a procedure applied while building, so it becomes a skill, not an agent. The rule: if the work needs to remember the conversation, it is a skill; if it needs to forget, it is an agent.
+
+**No user-testing agent.** A model cannot be a screen reader user. The role becomes a skill that produces a test protocol for human assistive-technology testers.
+
+**Skills are maps, not libraries.** A `SKILL.md` holds when the domain applies, how to cite, how to judge, and which knowledge file answers which question. The knowledge lives in `knowledge/`, where it can be maintained and reviewed on its own.
+
+**Markdown, not JSON.** Agents read Markdown natively, GitHub renders and diffs it, and teammates can edit it without a parser. Nothing here has a machine consumer.
+
+**Built from scratch.** Nothing imported from the `ventz` agent, the general CCode knowledge base, or DAARA. The general knowledge base and DAARA stay separate from this repo in both directions.
+
+**Public repo.** Entries are written in our words from the source, with the source linked. No pasted vendor or practitioner text.
+
+**Evals before features.** A fixed corpus of known-defect snippets is the only way to tell whether a prompt change helped. It was the weakest link in the original plan, so it is in the first commit.
+
+**axe only.** The sole automated scanner. Automated tools find a minority of defects; the verifier's own reading does the rest.
+
+**Folder renamed** from `doctorAccessilbe` to `doctorAccessible`, with the Claude Code memory folder copied to the new path key.
