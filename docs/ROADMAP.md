@@ -1,6 +1,6 @@
 # Roadmap
 
-Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment, project spec, sources list, and content standards added).
+Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment, project spec, sources list, content standards, and the beyond-WCAG additions: package 3.10 and the Phase 5 candidates).
 
 Work is claimed by work package, not by phase. Each package becomes one GitHub issue carrying the six fields below, and a person claims the issue. Packages inside a phase are designed not to touch each other's files, so they can run in parallel.
 
@@ -11,7 +11,7 @@ Work is claimed by work package, not by phase. Each package becomes one GitHub i
 | 0 | Foundation | One agent, one skill, one entry, one eval | Done 2026-10-22 |
 | 1 | Team setup | Repo live, contribution rules, pattern proven | Public repo, PR template, axe installed, eval 001 passes |
 | 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
-| 3 | Domain skills | The procedures that use the library | consult, patterns, content, html-patterns, design, at-test-protocol, aria, ux, each with evals |
+| 3 | Domain skills | The procedures that use the library | consult, patterns, content, html-patterns, design, at-test-protocol, aria, ux, coga, each with evals |
 | 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
 | 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
 
@@ -78,7 +78,8 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | 3.6 | `at-test-protocol` skill: the human testing mode | `SKILL.md`; produces a test script for a component covering keyboard only, screen reader on two platforms, 200% and 400% zoom, reduced motion, forced colors; reads the spec for which assistive technology the project tests with; entries under `knowledge/testing/` | Two evals: a component in, expected protocol items out | 2.x | M |
 | 3.7 | `planning` skill, optional | `SKILL.md`; an accessibility checklist across a project lifecycle | One eval | 3.1 | S |
 | 3.8 | `aria` knowledge domain | `knowledge/aria/` entries: the rules for using ARIA at all (from W3C's Using ARIA, tier 2), role and attribute allowances per element (ARIA in HTML, tier 1), name computation (AccName, tier 1), and the Authoring Practices patterns marked as patterns not requirements, each with practitioner test results from tier 3 where they exist | Index updated; one eval per pattern claimed; the `patterns` entries in 3.2 link here | 2.x, 3.2 | L |
-| 3.9 | `ux` knowledge domain | `knowledge/ux/` entries feeding consult: usability heuristics and research on when a pattern serves a person and when it does not (Nielsen Norman Group and tier 3 practitioners), summarized and linked, never pasted | Consult evals in 3.1 cite at least one `ux` entry in a "build less" answer | 3.1 | M |
+| 3.9 | `ux` knowledge domain | `knowledge/ux/` entries feeding consult, in two sets. Heuristics: usability research on when a pattern serves a person and when it does not (Nielsen Norman Group and tier 3 practitioners). Need-finding: how to learn who is actually using a thing, how to write a need statement that names a real person in a real situation, how research-based personas differ from invented ones, with the GOV.UK service manual as the seed source. Summarized and linked, never pasted | Consult evals in 3.1 cite at least one `ux` entry in a "build less" answer and one in a need statement | 3.1 | M |
+| 3.10 | `coga` knowledge domain | `knowledge/coga/` entries from W3C's Making Content Usable for People with Cognitive and Learning Disabilities (tier 2, Working Group Note): one entry per objective, covering predictable layout, findable help, not relying on memory, enough time, clear purpose, and the user needs behind them. Each entry names which WCAG criteria touch it and where WCAG stops. Feeds `content`, `ux`, and consult | Index updated; one content eval and one consult eval cite a `coga` entry; the verifier reports `coga`-only findings as likely or manual review, never definite | 3.3, 3.9 | M |
 
 ## Phase 4: Eval automation
 
@@ -100,6 +101,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | 5.2 | Second agent review | A written assessment of logged verifier failures against the four conditions in principle 1 | Decision recorded in `decisions.md` | 4.4 | S |
 | 5.3 | v1.0 | Onboarding doc, CCode listing updated, tag `v1.0` | Tagged | all | S |
 | 5.4 | Plugin packaging, if 1.7 chose it | Plugin manifest; install into a fresh project yields the agent, the skills, and the spec template | One developer project installed from the plugin | 1.7, 3.x | M |
+| 5.5 | Beyond-WCAG candidates | Named so they are visible, not yet claimed. Mobile and touch: one-handed use, screen reader gestures on iOS and Android, OS text scaling. Localization and language: translatable English, locale-aware dates and numbers, right-to-left layout. Document formats: PDF, Word, slides, as a separate domain with its own standards. CMS layers: WordPress and Drupal patterns and failure modes, as layers on `html-patterns` like 5.1 | Each candidate becomes its own package with the six fields before anyone starts it | 3.x | varies |
 
 ## Governance
 
@@ -107,6 +109,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 - A PR touching `.claude/` or `knowledge/` states which evals ran and what they produced.
 - Only one agent exists until 5.2 proves a second is needed under principle 1.
 - Nothing off `knowledge/SOURCES.md` is authoritative. Adding a source is a pull request with a reason.
+- Findings that rest only on tier 2 or tier 3 sources beyond WCAG (ux, design judgment, coga) are reported as likely or manual review. Definite is reserved for WCAG failures and spec deviations.
 - Build does not start on a feature without a need statement in the project's `a11y-spec.md` (principle 14). The spec is the project's own requirements; every mode reads it first (principle 15).
 - The general CCode knowledge base and DAARA stay separate from this repo in both directions.
 - Decisions go in `decisions.md`, dated. Old entries are not rewritten.
@@ -118,6 +121,6 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | A (Derek) | 1.1, 1.2, 1.7 | 2.4, 2.5, 2.6 | 3.1, 3.2, 3.9 |
 | B | 1.3, 1.4 | 2.1 | 3.5, 3.8 |
 | C | 1.6 | 2.2 | 3.4 |
-| D | | 2.3 | 3.3, 3.6 |
+| D | | 2.3 | 3.3, 3.6, 3.10 |
 
 Fewer people: packages stack in ID order. More people: split 2.1 and 2.2 by guideline, and 3.2 by pattern.
