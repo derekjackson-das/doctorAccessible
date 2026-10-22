@@ -43,7 +43,7 @@ All techniques are tier 2, from the Understanding page linked above.
 
 - SC 4.1.2 Name, Role, Value (`wcag/sc-4.1.2-name-role-value.md`). An unassociated label fails both; report one finding and name both.
 - SC 1.3.2 Meaningful Sequence (entry in this package). Order, as distinct from structure.
-- SC 2.4.6 Headings and Labels (no entry yet). Whether a heading is descriptive, as distinct from whether it is a heading.
+- SC 2.4.6 Headings and Labels (`wcag/sc-2.4.6-headings-and-labels.md`). Whether a heading is descriptive, as distinct from whether it is a heading.
 - SC 1.4.1 Use of Color (entry in this package). Color conveying structure needs a text or markup equivalent too.
 
 ## Automated coverage (tier 3)

@@ -47,8 +47,8 @@ All techniques are tier 2, from the Understanding page linked above.
 
 ## Related criteria
 
-- SC 2.1.1 Keyboard (no entry yet). Whether the popup can be opened by keyboard.
-- SC 2.4.7 Focus Visible (no entry yet). Whether focus on the trigger is visible.
+- SC 2.1.1 Keyboard (`wcag/sc-2.1.1-keyboard.md`). Whether the popup can be opened by keyboard.
+- SC 2.4.7 Focus Visible (`wcag/sc-2.4.7-focus-visible.md`). Whether focus on the trigger is visible.
 - SC 3.2.1 On Focus (no entry yet). A popup on focus must not change context.
 - SC 4.1.2 Name, Role, Value (`wcag/sc-4.1.2-name-role-value.md`). Whether the popup's text is associated with its trigger.
 
