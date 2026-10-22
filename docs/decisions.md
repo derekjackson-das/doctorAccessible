@@ -33,3 +33,17 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **Roadmap adopted.** Five phases after the foundation, work claimed by package through GitHub issues with six fixed fields. Phase 2 splits by WCAG principle so parallel work never touches the same file. Full detail in `docs/ROADMAP.md`.
 
 **Consult comes before the other skills.** It is the mode a developer meets first, and its evals are transcript tests rather than code tests, which is a pattern the team needs early.
+
+## 2026-10-22: the design moment and the project spec
+
+**Consult starts from the need, not the feature.** Three questions in order: who is this for and what are they trying to do; what is the smallest thing that meets it; only then, how. Consult may answer "build less" or "build nothing." The output is a need statement written into the project spec.
+
+**The pause is a gate.** Build does not start on a feature without a need statement. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, build stops and returns to consult. The main session enforces this on itself through `CLAUDE.md`.
+
+**One spec per project.** `a11y-spec.md`, from `templates/a11y-spec.md`, lives at the root of the developer's project. It holds the project's own requirements and decisions. Every mode reads it first. The verifier reports deviations from it under a separate heading from WCAG findings and hands judgment calls about the need to a human.
+
+**Patterns get their own knowledge domain.** `knowledge/patterns/`, one entry per interactive pattern, each saying when a simpler pattern serves and what the pattern costs to do right. Roadmap package 3.2.
+
+**Open question recorded.** A developer's project needs the agent, the skills, and the spec next to their code. Packaging this repo as a Claude Code plugin is the likely answer. Roadmap package 1.7.
+
+**Principles 14 and 15 adopted.** Start from the need; one spec per project.

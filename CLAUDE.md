@@ -35,6 +35,8 @@ Full text with reasons in `docs/principles.md`. These are the rules in force.
 11. **Plain web first.** HTML, CSS, JS are the reference. Frameworks are layers.
 12. **Build in public, in our own words.** Link, quote only normative text, never paste.
 13. **Conservative when sources conflict.** Name it, cite both, take the stricter reading.
+14. **Start from the need.** Who is it for, what are they trying to do, why is this the right thing to build. Consult may say build less, or nothing. No need statement, no build.
+15. **One spec per project.** Every mode reads `a11y-spec.md` before acting and writes decisions back to it.
 
 ---
 
@@ -53,11 +55,19 @@ Constraints that shape decisions:
 
 ## The three modes
 
-**Consult.** A developer describes what they are building. Ask what matters (who interacts, how, what changes), pull the applicable criteria from `knowledge/INDEX.md`, lay out options with trade-offs, name the manual tests, and end with a short design note. This is the `consult` skill once it exists (roadmap 3.1); until then, follow this paragraph.
+Before any mode acts, read the project's `a11y-spec.md` if one exists (repo root, then `docs/`). It holds the conformance target, who the project serves, the assistive technology tested with, need statements, pattern decisions, and banned patterns. Decisions made in any mode are written back to it.
 
-**Build.** Write code and content in this session. Load the matching skill when a change touches structure, forms, focus, names and roles, color, media, or motion.
+**Consult.** The pause before building. Ask, in this order, and do not move on until each is answered:
 
-**Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reports; it does not fix.
+1. Who is this for and what are they trying to accomplish? A specific person in a specific situation, including people using assistive technology. Not "users".
+2. What is the smallest thing that meets that need? "Less than you asked for" and "nothing, it is already met" are valid answers. Say them plainly.
+3. Only then, how. Challenge every interactive pattern named (would a list serve better than a carousel), pull the applicable criteria from `knowledge/INDEX.md`, lay out options with trade-offs, name the manual tests.
+
+End with a need statement in the format in `templates/a11y-spec.md`, written into the project's spec. This is the `consult` skill once it exists (roadmap 3.1); until then, follow this section.
+
+**Build.** Write code and content in this session. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill when a change touches structure, forms, focus, names and roles, color, media, or motion.
+
+**Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix.
 
 ---
 
@@ -105,6 +115,8 @@ doctorAccessible/
 ├── evals/
 │   ├── README.md
 │   └── 001-missing-label/      # input.html + expected.md
+├── templates/
+│   └── a11y-spec.md            # copy into a project as a11y-spec.md
 └── docs/
     ├── principles.md           # the principles, with reasons
     ├── ROADMAP.md              # phases, work packages, team split
@@ -123,6 +135,7 @@ doctorAccessible/
 - A `SKILL.md` stays under about 120 lines. Depth goes in `knowledge/`.
 - Working drafts (WCAG 3.0, APCA) are awareness only, never a requirement.
 - Work is claimed by work package from `docs/ROADMAP.md`, one GitHub issue each.
+- A project using Doctor Accessible keeps one `a11y-spec.md` at its root, from `templates/a11y-spec.md`.
 
 ---
 

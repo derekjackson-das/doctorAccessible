@@ -1,6 +1,6 @@
 # Roadmap
 
-Phases, work packages, and how the team divides the work. Updated 2026-10-22.
+Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment and project spec added).
 
 Work is claimed by work package, not by phase. Each package becomes one GitHub issue carrying the six fields below, and a person claims the issue. Packages inside a phase are designed not to touch each other's files, so they can run in parallel.
 
@@ -11,7 +11,7 @@ Work is claimed by work package, not by phase. Each package becomes one GitHub i
 | 0 | Foundation | One agent, one skill, one entry, one eval | Done 2026-10-22 |
 | 1 | Team setup | Repo live, contribution rules, pattern proven | Public repo, PR template, axe installed, eval 001 passes |
 | 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
-| 3 | Domain skills | The procedures that use the library | consult, html-patterns, content, design, at-test-protocol, each with evals |
+| 3 | Domain skills | The procedures that use the library | consult, patterns, html-patterns, content, design, at-test-protocol, each with evals |
 | 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
 | 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
 
@@ -36,6 +36,7 @@ Every issue has these six fields. Keep them short.
 | 1.4 | Prove the pattern | Verifier run on eval 001, result recorded in `evals/RESULTS.md` | Finding matches `expected.md`; nothing from "must not" appears | 1.3 | S |
 | 1.5 | CCode listing | Project added to the CCode `README.md` and `index.html` | Listed | 1.1 | S |
 | 1.6 | Onboarding | Each teammate clones, runs `claude`, runs eval 001 | Each person has a recorded run | 1.4 | S |
+| 1.7 | Distribution decision | A written choice between packaging this repo as a Claude Code plugin a developer installs into their project, or copying `.claude/` and `templates/a11y-spec.md` by hand; recorded in `docs/decisions.md` | Decision recorded and one developer project set up the chosen way | 1.1 | S |
 
 ## Phase 2: WCAG library
 
@@ -63,16 +64,17 @@ Done when, for every package: each entry follows `knowledge/wcag/_template.md`, 
 
 ## Phase 3: Domain skills
 
-Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it points at, and at least two evals. 3.1 comes first because it is the mode a developer meets first.
+Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it points at, and at least two evals. 3.1 comes first because it is the mode a developer meets first, and 3.2 feeds it.
 
 | ID | Goal | Deliverables | Done when | Depends on | Size |
 |---|---|---|---|---|---|
-| 3.1 | `consult` skill: the brainstorming mode | `.claude/skills/consult/SKILL.md`; a procedure that asks what is being built, who interacts and how, what changes; pulls applicable criteria from the index; offers options with trade-offs; names manual tests; ends with a short design note | Two transcript evals: a described feature in, expected criteria, options, and manual tests out | entries in 2.x to point at; can start with what exists | M |
-| 3.2 | `html-patterns` skill | `SKILL.md`; entries under `knowledge/html/` for forms, tables, landmarks, headings, images, links, buttons, dialogs and custom controls | Two evals pass | 2.1, 2.2 | L |
-| 3.3 | `content` skill | `SKILL.md`; entries under `knowledge/content/` for alt text, link text, headings, plain language, error messages | Two evals pass | 2.1, 2.3 | M |
-| 3.4 | `design` skill | `SKILL.md`; entries under `knowledge/design/` for contrast, focus indicators, target size, motion, reflow, text spacing | Two evals pass | 2.1, 2.2 | M |
-| 3.5 | `at-test-protocol` skill: the human testing mode | `SKILL.md`; produces a test script for a component covering keyboard only, screen reader on two platforms, 200% and 400% zoom, reduced motion, forced colors; entries under `knowledge/testing/` | Two evals: a component in, expected protocol items out | 2.x | M |
-| 3.6 | `planning` skill, optional | `SKILL.md`; an accessibility checklist across a project lifecycle | One eval | 3.1 | S |
+| 3.1 | `consult` skill: the pause before building | `.claude/skills/consult/SKILL.md`. A procedure that asks, in order: who is this for and what are they trying to do; what is the smallest thing that meets it, with "build less" and "build nothing" as valid answers; only then how. Challenges every named pattern against `knowledge/patterns/`. Pulls applicable criteria from the index, offers options with trade-offs, names manual tests, and writes a need statement into the project's `a11y-spec.md` in the template's format | Three transcript evals: a described feature in, expected need statement, criteria, options, and manual tests out; at least one eval where the right answer is "build less" | 3.2 for pattern entries; can start with what exists | M |
+| 3.2 | `patterns` knowledge domain | `knowledge/patterns/`, one entry each for carousel, modal dialog, accordion, tabs, tooltip, infinite scroll, autocomplete, drag and drop, date picker. Each entry: the need the pattern usually serves, the simpler pattern that often serves it better and what is lost, what the pattern costs to do right with the ARIA Authoring Practices link marked as a pattern not a requirement, the criteria it touches, and the manual tests it demands | Nine entries in `INDEX.md`; each cites tier 2 and tier 3 sources by name | 2.x for criteria to point at | M |
+| 3.3 | `html-patterns` skill | `SKILL.md`; entries under `knowledge/html/` for forms, tables, landmarks, headings, images, links, buttons, dialogs and custom controls | Two evals pass | 2.1, 2.2 | L |
+| 3.4 | `content` skill | `SKILL.md`; entries under `knowledge/content/` for alt text, link text, headings, plain language, error messages | Two evals pass | 2.1, 2.3 | M |
+| 3.5 | `design` skill | `SKILL.md`; entries under `knowledge/design/` for contrast, focus indicators, target size, motion, reflow, text spacing | Two evals pass | 2.1, 2.2 | M |
+| 3.6 | `at-test-protocol` skill: the human testing mode | `SKILL.md`; produces a test script for a component covering keyboard only, screen reader on two platforms, 200% and 400% zoom, reduced motion, forced colors; reads the spec for which assistive technology the project tests with; entries under `knowledge/testing/` | Two evals: a component in, expected protocol items out | 2.x | M |
+| 3.7 | `planning` skill, optional | `SKILL.md`; an accessibility checklist across a project lifecycle | One eval | 3.1 | S |
 
 ## Phase 4: Eval automation
 
@@ -83,6 +85,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | 4.3 | Headless eval runner | `evals/run.sh` using `claude -p` to run the verifier on every eval and write one report per eval | A person can read the reports against `expected.md` in one sitting | 1.4 | M |
 | 4.4 | Checker | A script that compares a report to `expected.md` for criterion, level, tier, and the must-not list | Pass or fail per eval, no human in the loop | 4.3 | M |
 | 4.5 | CI, optional | GitHub Action running 4.4 on PRs | Results on a PR | 4.4 and an API key policy | M |
+| 4.6 | Spec-aware evals | Evals that ship an `a11y-spec.md` beside `input.html` and expect a spec deviation finding: a banned pattern used, a pattern decision ignored, a need statement the page does not serve | Three evals pass; 4.4 checks the spec deviation section | 4.4 | M |
 
 ## Phase 5: Expansion
 
@@ -91,6 +94,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | 5.1 | Framework layer | `.claude/skills/react-jsx/SKILL.md` as a layer referencing `html-patterns`, never replacing it | Two evals | 3.2 | M |
 | 5.2 | ARIA pattern entries | `knowledge/aria/` entries for the Authoring Practices patterns, marked as patterns not requirements | Index updated; one eval per pattern claimed | 2.x | L |
 | 5.3 | Second agent review | A written assessment of logged verifier failures against the four conditions in principle 1 | Decision recorded in `decisions.md` | 4.4 | S |
+| 5.5 | Plugin packaging, if 1.7 chose it | Plugin manifest; install into a fresh project yields the agent, the skills, and the spec template | One developer project installed from the plugin | 1.7, 3.x | M |
 | 5.4 | v1.0 | Onboarding doc, CCode listing updated, tag `v1.0` | Tagged | all | S |
 
 ## Governance
@@ -98,6 +102,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 - Entries re-verify when W3C publishes a revision of WCAG 2.2, and quarterly otherwise. The `Verified` column in `INDEX.md` is the record.
 - A PR touching `.claude/` or `knowledge/` states which evals ran and what they produced.
 - Only one agent exists until 5.3 proves a second is needed under principle 1.
+- Build does not start on a feature without a need statement in the project's `a11y-spec.md` (principle 14). The spec is the project's own requirements; every mode reads it first (principle 15).
 - The general CCode knowledge base and DAARA stay separate from this repo in both directions.
 - Decisions go in `decisions.md`, dated. Old entries are not rewritten.
 
@@ -105,9 +110,9 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 
 | Person | Phase 1 | Phase 2 | Phase 3 |
 |---|---|---|---|
-| A (Derek) | 1.1, 1.2, 1.5 | 2.4, 2.5 | 3.1 |
-| B | 1.3, 1.4 | 2.1 | 3.4 |
-| C | 1.6 | 2.2 | 3.2 |
-| D | | 2.3 | 3.3, 3.5 |
+| A (Derek) | 1.1, 1.2, 1.5, 1.7 | 2.4, 2.5 | 3.1, 3.2 |
+| B | 1.3, 1.4 | 2.1 | 3.5 |
+| C | 1.6 | 2.2 | 3.3 |
+| D | | 2.3 | 3.4, 3.6 |
 
-Fewer people: packages stack in ID order. More people: split 2.1 and 2.2 by guideline.
+Fewer people: packages stack in ID order. More people: split 2.1 and 2.2 by guideline, and 3.2 by pattern.
