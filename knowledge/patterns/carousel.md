@@ -1,61 +1,53 @@
 # Pattern: Carousel
 
-- W3C pattern (tier 2): ARIA Authoring Practices Guide, "Carousel (Slide Show or Image Rotator) Pattern", accessed 2026-10-22 (the page shows no date). https://www.w3.org/WAI/ARIA/apg/patterns/carousel/ A pattern, not a requirement.
-- W3C tutorial (tier 2): WAI Tutorials, "Carousels Tutorial", updated 13 April 2017, first published May 2015. https://www.w3.org/WAI/tutorials/carousels/
-- Practitioner sources (tier 3, on `knowledge/SOURCES.md`):
-  - Sara Soueidan, "Are 'CSS Carousels' accessible?", 6 May 2025, updated 19 August 2025. https://www.sarasoueidan.com/blog/css-carousels-accessibility/ Tested Chrome's experimental CSS-only carousels with VoiceOver on macOS, the keyboard, and the browser's accessibility tree.
-  - Heydon Pickering, "A Content Slider", Inclusive Components, 22 November 2017. https://inclusive-components.design/a-content-slider/ Design and build guidance; it reports no named assistive technology test.
-- Related entries: `ux/carousels.md` (whether people want one at all), `wcag/sc-2.2.2-pause-stop-hide.md`, `wcag/sc-4.1.2-name-role-value.md`, `coga/objective-5-help-users-focus.md`; `aria/` once that domain exists.
-- Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
+- Sources:
+  - W3C, "Carousel (Slide Show or Image Rotator) Pattern", ARIA Authoring Practices Guide, https://www.w3.org/WAI/ARIA/apg/patterns/carousel/. Tier 2. A pattern, not a requirement.
+  - W3C WAI, "Carousels Tutorial", https://www.w3.org/WAI/tutorials/carousels/. Tier 2.
+  - Adrian Roselli, "Horizontal Scrolling Containers Are Not a Content Strategy", 1 August 2025, updated 3 September 2025, https://adrianroselli.com/2025/08/horizontal-scrolling-containers-are-not-a-content-strategy.html. Tier 3.
+  - Sara Soueidan, "Are 'CSS Carousels' accessible?", 6 May 2025, updated 19 August 2025, https://www.sarasoueidan.com/blog/css-carousels-accessibility/. Tier 3.
+- Related entries: `ux/carousels.md`, `coga/objective-2-find-what-they-need.md`, `coga/objective-5-help-users-focus.md`, `wcag/sc-2.2.2-pause-stop-hide.md`, `wcag/sc-2.5.1-pointer-gestures.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.4.11-focus-not-obscured-minimum.md`, `wcag/sc-2.5.8-target-size-minimum.md`, `wcag/sc-1.1.1-non-text-content.md`
+- Verified against the live sources: 2026-10-22 by Derek Jackson with Claude Code
 
 ## Status and reporting
 
-The criteria listed below decide whether code fails WCAG; report a failure once, under its criterion. Everything else here is advice. Using this pattern, or not using the simpler alternative, is never a finding on its own. A departure from the Authoring Practices is likely or manual review at most, and only when a criterion entry or a practitioner test ties it to a real barrier.
+A finding that rests only on this entry is reported as likely or manual review, never definite. A WCAG failure in the carousel is reported once, under its criterion. In consult, this entry supports a question or a recommendation; it does not decide for the developer.
 
-**Testing gap.** Only one source on the list reports assistive technology testing, and it covers Chrome's experimental CSS-only carousels, not scripted ones. A search of the other practitioners on the list, including Adrian Roselli, found no carousel test. a11ysupport.io renders its results with script and could not be read for this entry. Nothing on the list tests an auto-rotating carousel, voice control, or magnification. Treat everything in "What doing it right requires" as needing confirmation in the manual tests.
+## The need it usually serves
 
-## The need
+Several items want the most visible spot on a page and the team does not want to choose. The person on the other side wants to see what is there and pick one. Those two wants pull apart: the carousel shows one item at a time, so it serves the team's problem by hiding most of the content from the person.
 
-Several items, often from different teams, competing for the top of a page. Sometimes a gallery of images people want to look through one at a time. `ux/carousels.md` covers how often the first need is organizational rather than a user need.
+## The simpler thing that often serves, and what is lost
 
-## The simpler alternative and its cost
-
-- **A static hero and a short list of links.** One featured item, then the others as plain links or cards. It moves nothing, hides nothing, and needs no script. The cost: only one item gets the big image, which is a political cost inside the organization more than a cost to readers.
-- **A list that scrolls only when the person scrolls it.** Pickering's "content slider": a labeled list of items in a horizontally scrolling region that never moves on its own, with previous and next buttons added only as an enhancement. The cost: a horizontal scroller needs care of its own (keyboard focus, visible scroll cue), and it still hides most items.
-
-For a gallery people chose to browse, the second option usually serves. For promotional content, the first one does.
+A list of the items, or one static featured item followed by a list. `ux/carousels.md` carries the research: people scroll past carousels, frames after the first are seen least, and moving content reads as advertising. What is lost by choosing the list: the large image per item, the one-at-a-time spotlight, and the sense that each team got its turn. What is gained: every item visible at once, in reading order, with nothing to pause and nothing to build.
 
 ## What doing it right requires
 
-From the Authoring Practices and the WAI tutorial, unless noted:
-- **No movement the person did not ask for.** If it rotates at all, a stop and start button comes first in the carousel's tab order, and rotation stops while the pointer hovers and when keyboard focus enters; after keyboard focus it does not restart unless asked. Pickering argues that an inclusive carousel moves only when the person moves it, since a pause button helps only after the motion has begun.
-- **Native buttons** for previous, next, and rotation, with names that say what they do; the rotation button's name changes between "Stop" and "Start".
-- **A labeled region** around the carousel, slides marked up as a list or as groups with names such as "3 of 10" when slides have no unique title.
-- **Decide what off-screen slides are.** In a rotating carousel, the Authoring Practices want slides that are not shown truly hidden, warning that slides merely moved off screen confuse screen reader reading. Pickering's scrollable list takes the other approach: every item stays readable, and he says invisible content should never be focusable, removing off-screen links from the tab order as an enhancement. Pick one model and test it; do not leave content that is out of view but still focusable.
-- **Focus stays put** when previous or next is pressed, so people can press them repeatedly. A polite live region may announce the new slide when the person changed it; it should be off while the carousel rotates on its own.
-- **Do not trust CSS-only carousels yet.** Testing Chrome's experimental version behind a flag in May 2025, Soueidan found it exposed its scroll markers as tabs with no matching panels, with missing or identical names, a selected state that did not match the screen, wrong item counts, and disabled buttons that still took focus. She advised against using it in real products. Chrome's behavior may have changed since; retest before relying on it.
-- **Buttons as well as swiping.** Some people cannot swipe, so the previous and next buttons must be there on touch screens too (WAI tutorial).
+There is no native HTML carousel. The APG pattern's expectations, in our words: auto-rotation stops the moment anything inside the carousel receives keyboard focus and does not restart until the user asks; if there is a rotation control it is the first thing in the carousel's tab order; previous and next are real buttons that do not move focus, so a person can press them repeatedly; slides are reachable in the page tab sequence without extra scripting. The WAI tutorial adds that users must be able to pause the movement and that the structure must be semantic so assistive technology can make sense of it.
+
+What the APG does not say: whether the carousel should exist. It also does not solve the problem that a hidden slide is still content, so the choice between leaving hidden slides in the accessibility tree and removing them until shown is a design decision with consequences for screen reader users either way.
+
+## What practitioners found when they tested it
+
+- **Roselli, 2025.** Horizontal scrolling containers, which users read as carousels, bring keyboard problems he details separately in his keyboard-only scrolling areas work: a focused item may not scroll fully into view, which risks the focus-not-obscured criterion; mouse-wheel users may not know to hold Shift; the container's height interacts with viewport media queries; and right-to-left or vertical-script localization breaks unless CSS logical properties were used throughout.
+- **Soueidan, 2025.** The new CSS-only carousel features were, at the time of writing, experimental and in one browser behind a flag, and she found major accessibility problems: the scroll markers the CSS creates are interactive pseudo-elements rather than links, so how they are exposed to assistive technology was an open question, and the approach bypasses the semantic HTML that screen readers depend on. Her conclusion: not ready for production, and not the developer's job to fix.
 
 ## Criteria it touches
 
-| SC | Title | Level | Entry | Why it comes up |
-|---|---|---|---|---|
-| 2.2.2 | Pause, Stop, Hide | A | `wcag/sc-2.2.2-pause-stop-hide.md` | Auto-rotation that starts on its own, lasts over five seconds, and sits beside other content |
-| 2.1.1 | Keyboard | A | `wcag/sc-2.1.1-keyboard.md` | Every control, including slide pickers, works from the keyboard |
-| 2.4.3 | Focus Order | A | `wcag/sc-2.4.3-focus-order.md` | Focusable content inside hidden slides |
-| 2.4.7 | Focus Visible | AA | `wcag/sc-2.4.7-focus-visible.md` | Focus on controls drawn over images |
-| 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | Names for buttons and picker controls; picker state exposed |
-| 1.1.1 | Non-text Content | A | `wcag/sc-1.1.1-non-text-content.md` | Text alternatives for slide images and icon-only controls |
-| 1.4.11 | Non-text Contrast | AA | `wcag/sc-1.4.11-non-text-contrast.md` | Arrows and dots over changing images |
-| 2.5.8 | Target Size (Minimum) | AA | `wcag/sc-2.5.8-target-size-minimum.md` | Small dot controls placed close together |
-| 2.5.1 | Pointer Gestures | A | `wcag/sc-2.5.1-pointer-gestures.md` | A carousel that advances only by swiping |
-| 1.4.3 | Contrast (Minimum) | AA | `wcag/sc-1.4.3-contrast-minimum.md` | Text placed over slide images |
+Auto-rotation: `wcag/sc-2.2.2-pause-stop-hide.md`, and `wcag/sc-2.2.1-timing-adjustable.md` if it advances on a clock. Swipe: `wcag/sc-2.5.1-pointer-gestures.md`, and `wcag/sc-2.5.7-dragging-movements.md` if implemented as drag. Controls: `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.5.8-target-size-minimum.md`, `wcag/sc-1.4.11-non-text-contrast.md` over images. Slides: `wcag/sc-1.1.1-non-text-content.md`, `wcag/sc-1.4.5-images-of-text.md`, `wcag/sc-1.4.3-contrast-minimum.md` for text over pictures, `wcag/sc-2.4.3-focus-order.md` for hidden slides that stay focusable, `wcag/sc-2.4.11-focus-not-obscured-minimum.md`, `wcag/sc-1.4.10-reflow.md` at 320 CSS pixels. Flashing transitions: `wcag/sc-2.3.1-three-flashes-or-below-threshold.md`.
 
-## Manual tests
+## Manual tests it demands
 
-With the assistive technology named in the project's `a11y-spec.md`:
-- Keyboard only: Tab reaches the rotation control before any slide; rotation stops when focus enters and stays stopped; previous and next work repeatedly without focus moving; no hidden slide content takes focus.
-- Screen reader: the region's name is announced; each slide's name or position is announced; reading through the carousel never jumps to a slide the person did not choose.
-- Voice control: each control can be activated by its visible name or a number overlay.
-- Zoom to 200% and 400%, and forced colors: controls stay visible and usable.
-- With the operating system's reduced-motion setting on, nothing animates on its own.
+- Keyboard: Tab into the carousel; record whether rotation stops, which control gets focus first, and whether hidden slides receive focus. Press next five times; record that focus stays put.
+- Screen reader, each pair in the spec: record what is announced on entering the region, on activating next, and whether the slide change is announced at all, and whether that announcement is tolerable.
+- Reduced motion on: record whether rotation still starts.
+- 400% zoom: record whether one slide fills the screen and whether the controls remain reachable and visible.
+- Pointer: record whether every swipe action has a button equivalent and whether controls measure 24 CSS pixels.
+- Contrast: measure control and text contrast at the worst spot of every image.
+
+## What consult should say
+
+1. What is the one thing the person must see here? Put it in text near the top.
+2. Why more than one item? If the answer is that several teams want the space, that is governance, not a need; offer a list.
+3. If a carousel stays: no auto-rotation, visible buttons, and the same items reachable as a list elsewhere.
+
+"Build less" is the usual answer. See `ux/carousels.md` for the questions in full.
