@@ -112,6 +112,9 @@ Sources: the ARIA Authoring Practices Guide and WAI Tutorials (tier 2, patterns 
 | Carousel | `patterns/carousel.md` | 2026-10-22 |
 | Modal dialog | `patterns/modal-dialog.md` | 2026-10-22 |
 | Infinite scroll | `patterns/infinite-scroll.md` | 2026-10-22 |
+| Accordion | `patterns/accordion.md` | 2026-10-22 |
+| Tabs | `patterns/tabs.md` | 2026-10-22 |
+| Tooltip and toggletip | `patterns/tooltip.md` | 2026-10-22 |
 
 ## Other domains
 
