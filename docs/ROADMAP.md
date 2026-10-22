@@ -1,0 +1,113 @@
+# Roadmap
+
+Phases, work packages, and how the team divides the work. Updated 2026-10-22.
+
+Work is claimed by work package, not by phase. Each package becomes one GitHub issue carrying the six fields below, and a person claims the issue. Packages inside a phase are designed not to touch each other's files, so they can run in parallel.
+
+## Phases
+
+| Phase | Name | Goal | Done when |
+|---|---|---|---|
+| 0 | Foundation | One agent, one skill, one entry, one eval | Done 2026-10-22 |
+| 1 | Team setup | Repo live, contribution rules, pattern proven | Public repo, PR template, axe installed, eval 001 passes |
+| 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
+| 3 | Domain skills | The procedures that use the library | consult, html-patterns, content, design, at-test-protocol, each with evals |
+| 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
+| 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
+
+## Work package format
+
+Every issue has these six fields. Keep them short.
+
+- **Goal.** One sentence.
+- **Deliverables.** The files that will exist when it is done.
+- **Done when.** A check someone else can run.
+- **Depends on.** Package IDs, or none.
+- **Size.** S (an afternoon), M (a few days), L (a couple of weeks part-time).
+- **Owner.** Blank until claimed.
+
+## Phase 1: Team setup
+
+| ID | Goal | Deliverables | Done when | Depends on | Size |
+|---|---|---|---|---|---|
+| 1.1 | Public repo on GitHub | Repo `doctorAccessible`, `main` pushed, branch protection requiring a PR | Teammates can clone | none | S |
+| 1.2 | Contribution rules | `CONTRIBUTING.md`, PR template with an "evals run" section, issue template with the six fields | A test PR shows the template | 1.1 | S |
+| 1.3 | axe available | `@axe-core/cli` runs via `npx` against `evals/001-missing-label/input.html` | Raw axe output captured in the issue | none | S |
+| 1.4 | Prove the pattern | Verifier run on eval 001, result recorded in `evals/RESULTS.md` | Finding matches `expected.md`; nothing from "must not" appears | 1.3 | S |
+| 1.5 | CCode listing | Project added to the CCode `README.md` and `index.html` | Listed | 1.1 | S |
+| 1.6 | Onboarding | Each teammate clones, runs `claude`, runs eval 001 | Each person has a recorded run | 1.4 | S |
+
+## Phase 2: WCAG library
+
+Fifty-five Level A and AA criteria, split by principle so four people never edit the same file. Each package also writes one eval per guideline in its scope, from the entries, not from memory. Verify the criterion list against the W3C quick reference when you claim a package; the lists below were compiled by hand on 2026-10-22.
+
+| ID | Goal | Scope | Entries | Evals | Depends on | Size |
+|---|---|---|---|---|---|---|
+| 2.1 | Perceivable | Guidelines 1.1 to 1.4, A and AA | 20 | 4 | none | L |
+| 2.2 | Operable | Guidelines 2.1 to 2.5, A and AA | 20 | 5 | none | L |
+| 2.3 | Understandable | Guidelines 3.1 to 3.3, A and AA | 13 | 3 | none | M |
+| 2.4 | Robust | Guideline 4.1, A and AA | 1 remaining | 1 | none | S |
+| 2.5 | Index and skill map kept current | `knowledge/INDEX.md` and the "where to look" table in `.claude/skills/wcag/SKILL.md` updated as entries land | ongoing | none | 2.1 to 2.4 | S |
+
+Robust is small. Whoever takes 2.4 also takes a phase 3 package.
+
+**2.1 Perceivable:** 1.1.1 Non-text Content (A); 1.2.1 Audio-only and Video-only, Prerecorded (A); 1.2.2 Captions, Prerecorded (A); 1.2.3 Audio Description or Media Alternative, Prerecorded (A); 1.2.4 Captions, Live (AA); 1.2.5 Audio Description, Prerecorded (AA); 1.3.1 Info and Relationships (A); 1.3.2 Meaningful Sequence (A); 1.3.3 Sensory Characteristics (A); 1.3.4 Orientation (AA); 1.3.5 Identify Input Purpose (AA); 1.4.1 Use of Color (A); 1.4.2 Audio Control (A); 1.4.3 Contrast, Minimum (AA); 1.4.4 Resize Text (AA); 1.4.5 Images of Text (AA); 1.4.10 Reflow (AA); 1.4.11 Non-text Contrast (AA); 1.4.12 Text Spacing (AA); 1.4.13 Content on Hover or Focus (AA).
+
+**2.2 Operable:** 2.1.1 Keyboard (A); 2.1.2 No Keyboard Trap (A); 2.1.4 Character Key Shortcuts (A); 2.2.1 Timing Adjustable (A); 2.2.2 Pause, Stop, Hide (A); 2.3.1 Three Flashes or Below Threshold (A); 2.4.1 Bypass Blocks (A); 2.4.2 Page Titled (A); 2.4.3 Focus Order (A); 2.4.4 Link Purpose, In Context (A); 2.4.5 Multiple Ways (AA); 2.4.6 Headings and Labels (AA); 2.4.7 Focus Visible (AA); 2.4.11 Focus Not Obscured, Minimum (AA); 2.5.1 Pointer Gestures (A); 2.5.2 Pointer Cancellation (A); 2.5.3 Label in Name (A); 2.5.4 Motion Actuation (A); 2.5.7 Dragging Movements (AA); 2.5.8 Target Size, Minimum (AA).
+
+**2.3 Understandable:** 3.1.1 Language of Page (A); 3.1.2 Language of Parts (AA); 3.2.1 On Focus (A); 3.2.2 On Input (A); 3.2.3 Consistent Navigation (AA); 3.2.4 Consistent Identification (AA); 3.2.6 Consistent Help (A); 3.3.1 Error Identification (A); 3.3.2 Labels or Instructions (A); 3.3.3 Error Suggestion (AA); 3.3.4 Error Prevention, Legal, Financial, Data (AA); 3.3.7 Redundant Entry (A); 3.3.8 Accessible Authentication, Minimum (AA).
+
+**2.4 Robust:** 4.1.2 Name, Role, Value (A), done; 4.1.3 Status Messages (AA).
+
+Done when, for every package: each entry follows `knowledge/wcag/_template.md`, quotes the normative text verbatim with a verified date, lists techniques by ID from the Understanding page, and is in `INDEX.md`; each eval has an `input.html` with one intended defect and an `expected.md` written from the entry.
+
+## Phase 3: Domain skills
+
+Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it points at, and at least two evals. 3.1 comes first because it is the mode a developer meets first.
+
+| ID | Goal | Deliverables | Done when | Depends on | Size |
+|---|---|---|---|---|---|
+| 3.1 | `consult` skill: the brainstorming mode | `.claude/skills/consult/SKILL.md`; a procedure that asks what is being built, who interacts and how, what changes; pulls applicable criteria from the index; offers options with trade-offs; names manual tests; ends with a short design note | Two transcript evals: a described feature in, expected criteria, options, and manual tests out | entries in 2.x to point at; can start with what exists | M |
+| 3.2 | `html-patterns` skill | `SKILL.md`; entries under `knowledge/html/` for forms, tables, landmarks, headings, images, links, buttons, dialogs and custom controls | Two evals pass | 2.1, 2.2 | L |
+| 3.3 | `content` skill | `SKILL.md`; entries under `knowledge/content/` for alt text, link text, headings, plain language, error messages | Two evals pass | 2.1, 2.3 | M |
+| 3.4 | `design` skill | `SKILL.md`; entries under `knowledge/design/` for contrast, focus indicators, target size, motion, reflow, text spacing | Two evals pass | 2.1, 2.2 | M |
+| 3.5 | `at-test-protocol` skill: the human testing mode | `SKILL.md`; produces a test script for a component covering keyboard only, screen reader on two platforms, 200% and 400% zoom, reduced motion, forced colors; entries under `knowledge/testing/` | Two evals: a component in, expected protocol items out | 2.x | M |
+| 3.6 | `planning` skill, optional | `SKILL.md`; an accessibility checklist across a project lifecycle | One eval | 3.1 | S |
+
+## Phase 4: Eval automation
+
+| ID | Goal | Deliverables | Done when | Depends on | Size |
+|---|---|---|---|---|---|
+| 4.1 | axe wired into the verifier | Verifier runs axe on any eval with a page and captures raw output in its report | Shown on three evals | 1.3 | S |
+| 4.2 | axe rule mapping | `knowledge/axe-rules.md`: rule ID to knowledge entry, tier 3, with the Deque rule description linked | Every rule that fires on an eval maps to an entry | 2.x | M |
+| 4.3 | Headless eval runner | `evals/run.sh` using `claude -p` to run the verifier on every eval and write one report per eval | A person can read the reports against `expected.md` in one sitting | 1.4 | M |
+| 4.4 | Checker | A script that compares a report to `expected.md` for criterion, level, tier, and the must-not list | Pass or fail per eval, no human in the loop | 4.3 | M |
+| 4.5 | CI, optional | GitHub Action running 4.4 on PRs | Results on a PR | 4.4 and an API key policy | M |
+
+## Phase 5: Expansion
+
+| ID | Goal | Deliverables | Done when | Depends on | Size |
+|---|---|---|---|---|---|
+| 5.1 | Framework layer | `.claude/skills/react-jsx/SKILL.md` as a layer referencing `html-patterns`, never replacing it | Two evals | 3.2 | M |
+| 5.2 | ARIA pattern entries | `knowledge/aria/` entries for the Authoring Practices patterns, marked as patterns not requirements | Index updated; one eval per pattern claimed | 2.x | L |
+| 5.3 | Second agent review | A written assessment of logged verifier failures against the four conditions in principle 1 | Decision recorded in `decisions.md` | 4.4 | S |
+| 5.4 | v1.0 | Onboarding doc, CCode listing updated, tag `v1.0` | Tagged | all | S |
+
+## Governance
+
+- Entries re-verify when W3C publishes a revision of WCAG 2.2, and quarterly otherwise. The `Verified` column in `INDEX.md` is the record.
+- A PR touching `.claude/` or `knowledge/` states which evals ran and what they produced.
+- Only one agent exists until 5.3 proves a second is needed under principle 1.
+- The general CCode knowledge base and DAARA stay separate from this repo in both directions.
+- Decisions go in `decisions.md`, dated. Old entries are not rewritten.
+
+## Suggested split for four people
+
+| Person | Phase 1 | Phase 2 | Phase 3 |
+|---|---|---|---|
+| A (Derek) | 1.1, 1.2, 1.5 | 2.4, 2.5 | 3.1 |
+| B | 1.3, 1.4 | 2.1 | 3.4 |
+| C | 1.6 | 2.2 | 3.2 |
+| D | | 2.3 | 3.3, 3.5 |
+
+Fewer people: packages stack in ID order. More people: split 2.1 and 2.2 by guideline.

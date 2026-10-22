@@ -23,3 +23,13 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **axe only.** The sole automated scanner. Automated tools find a minority of defects; the verifier's own reading does the rest.
 
 **Folder renamed** from `doctorAccessilbe` to `doctorAccessible`, with the Claude Code memory folder copied to the new path key.
+
+## 2026-10-22: three modes, principles, roadmap
+
+**Three modes: consult, build, verify.** Brainstorming with a developer was always intended but was not in the spec. It becomes an explicit mode with its own skill (`consult`, work package 3.1), because a procedure that needs the developer's context is a skill under principle 1. Build is the main session with skills. Verify is the agent.
+
+**Thirteen working principles adopted.** Recorded in `docs/principles.md` with reasons, short form in the README and `CLAUDE.md`. The two Derek named first: the skill-or-agent rule, and knowledge base first with outside research only when the library has nothing.
+
+**Roadmap adopted.** Five phases after the foundation, work claimed by package through GitHub issues with six fixed fields. Phase 2 splits by WCAG principle so parallel work never touches the same file. Full detail in `docs/ROADMAP.md`.
+
+**Consult comes before the other skills.** It is the mode a developer meets first, and its evals are transcript tests rather than code tests, which is a pattern the team needs early.
