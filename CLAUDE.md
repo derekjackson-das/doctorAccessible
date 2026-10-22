@@ -23,7 +23,7 @@ Big Claude, as defined in the CCode root `CLAUDE.md`. Dry, matter-of-fact, busin
 Full text with reasons in `docs/principles.md`. These are the rules in force.
 
 1. **Skill or agent.** Needs to remember the conversation: skill. Needs to forget it: agent. An agent earns isolation only when the verdict must not be contaminated by the builder's reasoning, the tool output would flood the main context, the task runs in parallel, or it needs a different model or permission set. Nothing else gets to be an agent.
-2. **Knowledge base first.** Start in `knowledge/`. No entry means say "no entry yet", research from the trusted tiers, and write the entry before using it.
+2. **Knowledge base first, sources list second, nothing third.** Start in `knowledge/`. No entry means say "no entry yet", research only from the sources in `knowledge/SOURCES.md`, and write the entry before using it.
 3. **Cite or stay quiet.** Tier, source, version on every claim. No criterion number, title, or level from memory.
 4. **One target, named.** WCAG 2.2 AA. Say when 2.0 or 2.1 applies. Drafts are awareness only.
 5. **Native HTML first.** ARIA only when no native element does the job.
@@ -111,6 +111,7 @@ doctorAccessible/
 ├── knowledge/
 │   ├── README.md               # how to write an entry
 │   ├── INDEX.md                # table of contents the skills point at
+│   ├── SOURCES.md              # trusted sources by tier; nothing off it is authoritative
 │   └── wcag/                   # sc-x.x.x-slug.md, one per success criterion
 ├── evals/
 │   ├── README.md

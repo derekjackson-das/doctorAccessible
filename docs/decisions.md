@@ -47,3 +47,15 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **Open question recorded.** A developer's project needs the agent, the skills, and the spec next to their code. Packaging this repo as a Claude Code plugin is the likely answer. Roadmap package 1.7.
 
 **Principles 14 and 15 adopted.** Start from the need; one spec per project.
+
+## 2026-10-22: knowledge beyond WCAG, and a sources list
+
+**The library draws on more than WCAG.** The ARIA specs, ARIA in HTML, accessible name computation, and the HTML Living Standard are tier 1. W3C's Understanding, Techniques, tutorials, Using ARIA, and the Authoring Practices are tier 2. Named practitioners, support databases, and usability research are tier 3. The tier system already allowed this; the list did not exist.
+
+**`knowledge/SOURCES.md` is the repo's own trusted-sources list.** Built fresh for this public repo, not copied from elsewhere. Nothing off it is authoritative until a pull request adds it. Tier 3 has an admission rule: real name, dated, cites or cited by tier 1 or 2, checkable claims, maintained. Tier 3 rows are marked "proposed" until the team confirms them.
+
+**Nielsen Norman Group belongs in the design moment.** Usability research, not an accessibility authority. It feeds consult's "is this the right thing to build" question through a `ux` knowledge domain (roadmap 3.9), summarized and linked, never pasted.
+
+**ARIA moved up.** The `aria` domain leaves Phase 5 and becomes 3.8, beside `patterns`, because the two feed each other.
+
+**Principle 2 reworded.** Knowledge base first, sources list second, nothing third.

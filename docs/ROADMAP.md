@@ -1,6 +1,6 @@
 # Roadmap
 
-Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment and project spec added).
+Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment, project spec, and sources list added).
 
 Work is claimed by work package, not by phase. Each package becomes one GitHub issue carrying the six fields below, and a person claims the issue. Packages inside a phase are designed not to touch each other's files, so they can run in parallel.
 
@@ -49,6 +49,7 @@ Fifty-five Level A and AA criteria, split by principle so four people never edit
 | 2.3 | Understandable | Guidelines 3.1 to 3.3, A and AA | 13 | 3 | none | M |
 | 2.4 | Robust | Guideline 4.1, A and AA | 1 remaining | 1 | none | S |
 | 2.5 | Index and skill map kept current | `knowledge/INDEX.md` and the "where to look" table in `.claude/skills/wcag/SKILL.md` updated as entries land | ongoing | none | 2.1 to 2.4 | S |
+| 2.6 | Sources list kept current | `knowledge/SOURCES.md`: tier 1 and 2 entries verified against the live pages, tier 3 proposals confirmed or removed by the team, quarterly re-verification | Every row has a verified date; no row says "proposed" | none | S |
 
 Robust is small. Whoever takes 2.4 also takes a phase 3 package.
 
@@ -75,6 +76,8 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | 3.5 | `design` skill | `SKILL.md`; entries under `knowledge/design/` for contrast, focus indicators, target size, motion, reflow, text spacing | Two evals pass | 2.1, 2.2 | M |
 | 3.6 | `at-test-protocol` skill: the human testing mode | `SKILL.md`; produces a test script for a component covering keyboard only, screen reader on two platforms, 200% and 400% zoom, reduced motion, forced colors; reads the spec for which assistive technology the project tests with; entries under `knowledge/testing/` | Two evals: a component in, expected protocol items out | 2.x | M |
 | 3.7 | `planning` skill, optional | `SKILL.md`; an accessibility checklist across a project lifecycle | One eval | 3.1 | S |
+| 3.8 | `aria` knowledge domain | `knowledge/aria/` entries: the rules for using ARIA at all (from W3C's Using ARIA, tier 2), role and attribute allowances per element (ARIA in HTML, tier 1), name computation (AccName, tier 1), and the Authoring Practices patterns marked as patterns not requirements, each with practitioner test results from tier 3 where they exist | Index updated; one eval per pattern claimed; the `patterns` entries in 3.2 link here | 2.x, 3.2 | L |
+| 3.9 | `ux` knowledge domain | `knowledge/ux/` entries feeding consult: usability heuristics and research on when a pattern serves a person and when it does not (Nielsen Norman Group and tier 3 practitioners), summarized and linked, never pasted | Consult evals in 3.1 cite at least one `ux` entry in a "build less" answer | 3.1 | M |
 
 ## Phase 4: Eval automation
 
@@ -92,16 +95,16 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | ID | Goal | Deliverables | Done when | Depends on | Size |
 |---|---|---|---|---|---|
 | 5.1 | Framework layer | `.claude/skills/react-jsx/SKILL.md` as a layer referencing `html-patterns`, never replacing it | Two evals | 3.2 | M |
-| 5.2 | ARIA pattern entries | `knowledge/aria/` entries for the Authoring Practices patterns, marked as patterns not requirements | Index updated; one eval per pattern claimed | 2.x | L |
-| 5.3 | Second agent review | A written assessment of logged verifier failures against the four conditions in principle 1 | Decision recorded in `decisions.md` | 4.4 | S |
-| 5.5 | Plugin packaging, if 1.7 chose it | Plugin manifest; install into a fresh project yields the agent, the skills, and the spec template | One developer project installed from the plugin | 1.7, 3.x | M |
-| 5.4 | v1.0 | Onboarding doc, CCode listing updated, tag `v1.0` | Tagged | all | S |
+| 5.2 | Second agent review | A written assessment of logged verifier failures against the four conditions in principle 1 | Decision recorded in `decisions.md` | 4.4 | S |
+| 5.3 | v1.0 | Onboarding doc, CCode listing updated, tag `v1.0` | Tagged | all | S |
+| 5.4 | Plugin packaging, if 1.7 chose it | Plugin manifest; install into a fresh project yields the agent, the skills, and the spec template | One developer project installed from the plugin | 1.7, 3.x | M |
 
 ## Governance
 
 - Entries re-verify when W3C publishes a revision of WCAG 2.2, and quarterly otherwise. The `Verified` column in `INDEX.md` is the record.
 - A PR touching `.claude/` or `knowledge/` states which evals ran and what they produced.
-- Only one agent exists until 5.3 proves a second is needed under principle 1.
+- Only one agent exists until 5.2 proves a second is needed under principle 1.
+- Nothing off `knowledge/SOURCES.md` is authoritative. Adding a source is a pull request with a reason.
 - Build does not start on a feature without a need statement in the project's `a11y-spec.md` (principle 14). The spec is the project's own requirements; every mode reads it first (principle 15).
 - The general CCode knowledge base and DAARA stay separate from this repo in both directions.
 - Decisions go in `decisions.md`, dated. Old entries are not rewritten.
@@ -110,8 +113,8 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 
 | Person | Phase 1 | Phase 2 | Phase 3 |
 |---|---|---|---|
-| A (Derek) | 1.1, 1.2, 1.5, 1.7 | 2.4, 2.5 | 3.1, 3.2 |
-| B | 1.3, 1.4 | 2.1 | 3.5 |
+| A (Derek) | 1.1, 1.2, 1.5, 1.7 | 2.4, 2.5, 2.6 | 3.1, 3.2, 3.9 |
+| B | 1.3, 1.4 | 2.1 | 3.5, 3.8 |
 | C | 1.6 | 2.2 | 3.3 |
 | D | | 2.3 | 3.4, 3.6 |
 

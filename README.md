@@ -8,7 +8,7 @@ It works in three modes:
 - **Build.** The developer writes code and content in the main Claude Code session. Skills load on demand and point at the knowledge entries for the task.
 - **Verify.** An isolated agent checks the result without seeing how it was built. It runs axe when it can, reads everything itself, and reports findings as definite, likely, or needing manual review.
 
-Under the modes sit four parts: one verifier agent, a set of short skills that act as maps, a Markdown knowledge library where every entry cites its source, tier, version, and verification date, and an eval corpus of known defects that makes every change measurable. Each project keeps one `a11y-spec.md`, its own requirements and decisions, which every mode reads first. Build does not start on a feature without a need statement in it. There is no director agent and no simulated user. The developer directs; real people with assistive technology do the final testing.
+The library is not only WCAG. It draws on the ARIA specs, the HTML Living Standard, W3C's explanatory material, and named practitioners and usability research, each labeled by tier in `knowledge/SOURCES.md`. Under the modes sit four parts: one verifier agent, a set of short skills that act as maps, a Markdown knowledge library where every entry cites its source, tier, version, and verification date, and an eval corpus of known defects that makes every change measurable. Each project keeps one `a11y-spec.md`, its own requirements and decisions, which every mode reads first. Build does not start on a feature without a need statement in it. There is no director agent and no simulated user. The developer directs; real people with assistive technology do the final testing.
 
 Conformance target: WCAG 2.2 Level AA. Automated scanner: axe only. Reference stack: plain HTML, CSS, and JavaScript.
 
@@ -17,7 +17,7 @@ Conformance target: WCAG 2.2 Level AA. Automated scanner: axe only. Reference st
 The short form. Rationale for each is in [`docs/principles.md`](docs/principles.md).
 
 1. **Skill or agent.** Needs to remember the conversation: skill. Needs to forget it: agent. Nothing else gets to be an agent.
-2. **Knowledge base first.** Every answer starts in the library. No entry means say so, research from the trusted tiers, and write the entry before using it.
+2. **Knowledge base first, sources list second, nothing third.** Every answer starts in `knowledge/`. No entry means say so, research only from `knowledge/SOURCES.md`, and write the entry before using it.
 3. **Cite or stay quiet.** Tier, source, and version on every claim. Nothing from memory.
 4. **One target, named.** WCAG 2.2 AA. Say when 2.0 or 2.1 applies. Drafts are awareness only.
 5. **Native HTML first.** ARIA only when no native element does the job.
@@ -40,6 +40,7 @@ The short form. Rationale for each is in [`docs/principles.md`](docs/principles.
 | `.claude/agents/verifier.md` | The verifier agent. |
 | `.claude/skills/wcag/SKILL.md` | The WCAG skill: when it applies, how to cite, where to look. |
 | `knowledge/INDEX.md` | Table of contents for the library. |
+| `knowledge/SOURCES.md` | The trusted sources by tier. Nothing off it is authoritative. |
 | `knowledge/wcag/` | One entry per success criterion. |
 | `evals/` | Known-defect snippets and the findings a correct verifier must produce. |
 | `templates/a11y-spec.md` | The project spec template. Copy it to the root of your project. |

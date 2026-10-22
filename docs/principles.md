@@ -8,11 +8,11 @@ If the work needs to remember the conversation, it is a skill. If the work needs
 
 Why: every handoff between agents drops context and costs tokens. A skill keeps the whole conversation and adds only its instructions. The verifier is an agent because its independence is the point. Everything else so far is a skill because its value depends on knowing what the developer is doing.
 
-## 2. Knowledge base first
+## 2. Knowledge base first, sources list second, nothing third
 
-Every answer starts in `knowledge/`. If there is no entry, say "no entry yet", research from the trusted tiers, and turn the result into an entry before it is used again.
+Every answer starts in `knowledge/`. If there is no entry, say "no entry yet", research only from the sources in `knowledge/SOURCES.md`, and turn the result into an entry before it is used again. A source not on the list is a proposal to extend the list, not a source.
 
-Why: research that does not become an entry is lost, and the next person repeats it. An answer that bypasses the library cannot be checked, versioned, or improved.
+Why: research that does not become an entry is lost, and the next person repeats it. An answer that bypasses the library cannot be checked, versioned, or improved. And a library is only as trustworthy as what it is allowed to read: the sources list is what keeps WCAG, the ARIA specs, the HTML standard, practitioner testing, and usability research in their proper tiers instead of blurring into one voice.
 
 ## 3. Cite or stay quiet
 
