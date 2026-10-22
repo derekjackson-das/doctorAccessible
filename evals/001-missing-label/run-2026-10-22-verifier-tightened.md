@@ -1,0 +1,9 @@
+# Verifier run, 2026-10-22, eval 001, tightened prompt
+
+Blind run through the registered `verifier` agent against the tightened prompt (`verifier.md` at commit 0cb0488), with the dispatch deliberately omitting the axe command and the scratch directory so the report shows whether the new rules carry those behaviors on their own.
+
+Result against `expected.md`: **pass**. One Definite finding, SC 4.1.2 Name, Role, Value (Level A), tier 1, at `#q`, with 1.3.1 co-cited in the same finding and the 2.5.3 entry noted as listing the same case; native `label` as the fix. SC 3.1.1 noted as no entry yet with the W3C URL, unverified. Nothing from the must-not list. No file modified.
+
+Rule check: the agent ran axe with `--tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa` and reported violations, passes, and incomplete, without being given the command. Scratch output went to a temp directory without being told where. Every contrast ratio stated (17.40:1 body text, 7.14:1 outline) names the entry it was checked against (1.4.3, 1.4.11). Target size stated as a rendered estimate against the 2.5.8 entry's floor. No figure appears that is not in an opened entry or computed from the code. No "would announce" language; manual checks say what to do and what to record.
+
+Report summary: finding as above; checked and passing: `lang`, title matches `h1`, landmarks per the 2.4.1 entry, focus outline per 2.4.7, search box not covered by 1.3.5 per that entry, button name matches visible text per 2.5.3, viewport allows zoom. Content: reading level not measured (three words). Manual checks: keyboard focus, screen reader name after fix, speech recognition with two identical "Search" strings, 400% reflow of the flex row, form submission behavior, site-wide title and landmark consistency. axe: 1 violation `label`, 10 passes, 0 incomplete.
