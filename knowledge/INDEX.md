@@ -115,22 +115,9 @@ Sources: the ARIA Authoring Practices Guide and WAI Tutorials (tier 2, patterns 
 | Accordion | `patterns/accordion.md` | 2026-10-22 |
 | Tabs | `patterns/tabs.md` | 2026-10-22 |
 | Tooltip and toggletip | `patterns/tooltip.md` | 2026-10-22 |
-
-## Patterns: common interface patterns, the engineering view
-
-Each entry: the need the pattern usually serves, the simpler thing that often serves better and what is lost, what doing it right requires (the ARIA Authoring Practices as a pattern, never a requirement, tier 2), what named practitioners found when they tested it (tier 3), the criteria it touches, and the manual tests it demands. The research view lives in the UX section above. Template: `patterns/_template.md`.
-
-| Pattern | Entry | Simpler thing that often serves | Verified |
-|---|---|---|---|
-| Carousel | `patterns/carousel.md` | A list, or one static item plus a list | 2026-10-22 |
-| Modal dialog | `patterns/modal-dialog.md` | An inline message, a banner, or a page | 2026-10-22 |
-| Accordion | `patterns/accordion.md` | Headings and visible content; native `details` if collapsing stays | 2026-10-22 |
-| Tabs | `patterns/tabs.md` | Headings and a same-page table of contents | 2026-10-22 |
-| Tooltip | `patterns/tooltip.md` | Visible text | 2026-10-22 |
-| Infinite scroll | `patterns/infinite-scroll.md` | Pagination or a "load more" button | 2026-10-22 |
-| Autocomplete (combobox) | `patterns/autocomplete.md` | Native `select`, `optgroup`, or `datalist` | 2026-10-22 |
-| Drag and drop | `patterns/drag-and-drop.md` | Buttons and menus that make the same move | 2026-10-22 |
-| Date picker | `patterns/date-picker.md` | A text field with the format stated | 2026-10-22 |
+| Autocomplete (combobox) | `patterns/autocomplete.md` | 2026-10-22 |
+| Drag and drop | `patterns/drag-and-drop.md` | 2026-10-22 |
+| Date picker | `patterns/date-picker.md` | 2026-10-22 |
 
 ## Other domains
 

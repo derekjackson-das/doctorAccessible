@@ -1,41 +1,34 @@
 # Pattern: Name
 
-The engineering view of a common interface pattern: what need it usually serves, what simpler thing often serves better, what it costs to do right, what practitioners found when they tested it, which criteria it touches, and what a human must test. The research view (does the pattern serve people at all) lives in `knowledge/ux/`; link it, do not repeat it.
-
-- Sources:
-  - W3C, "Pattern Name Pattern", ARIA Authoring Practices Guide, URL. Tier 2. **A pattern, not a requirement.** Never cite it as a hard rule.
-  - Author, "Title", site, date (and updated date if shown), URL. Tier 3. Practitioners with test results, from `knowledge/SOURCES.md` only.
-- Related entries: `ux/...`, `coga/...`, `wcag/...`
+- W3C pattern (tier 2): ARIA Authoring Practices Guide, "Pattern name", URL. A pattern, not a requirement: nothing in it is a conformance rule, and following it does not guarantee that assistive technology supports it.
+- W3C tutorial (tier 2), if one exists: WAI Tutorials, "Title", URL.
+- Practitioner testing (tier 3), at least two from `knowledge/SOURCES.md`: author, "Title", date (and updated date if shown), URL; one line each on what was tested and with what.
+- Related entries: `ux/...` (whether people want the pattern at all), `aria/...` once that domain exists, `wcag/...`, `coga/...`
 - Verified against the live sources: YYYY-MM-DD by <name>
 
 ## Status and reporting
 
-A finding that rests only on this entry is reported as likely or manual review, never definite. A WCAG failure in the pattern is reported once, under its criterion. In consult, this entry supports a question or a recommendation; it does not decide for the developer.
+The criteria listed below decide whether code fails WCAG; report a failure once, under its criterion. Everything else here is advice. Using this pattern, or not using the simpler alternative, is never a finding on its own. A departure from the Authoring Practices is likely or manual review at most, and only when a criterion entry or a practitioner test ties it to a real barrier.
 
-## The need it usually serves
+**Testing gap.** Include this when fewer than two sources on the list report testing the pattern with assistive technology, or when the tests are old enough that browsers or screen readers have changed since. Say what is missing (which assistive technology, which years) and which listed sources could not be read. Do not fill the gap with sources off the list.
 
-One paragraph. What the person is trying to do when a team reaches for this pattern.
+## The need
 
-## The simpler thing that often serves, and what is lost
+What people are usually trying to do when a team reaches for this pattern. One short paragraph.
 
-The alternative, honestly costed. Link the `ux/` entry for the research.
+## The simpler alternative and its cost
+
+The plainer thing that often meets the same need, usually native HTML or static content, and what is honestly lost by choosing it. This is the section that matters most.
 
 ## What doing it right requires
 
-Native element first if one exists. Then the APG pattern's keyboard and ARIA expectations, in our words, marked as the pattern's expectations. Then the things the APG does not say.
-
-## What practitioners found when they tested it
-
-Attributed, dated, in our words. Which assistive technology and browser, what broke, what the author recommends.
+The parts a correct build cannot skip, summarized from the Authoring Practices and corrected by what practitioners found broken in real assistive technology. Native HTML first. Link to the Authoring Practices page for detail; do not restate it.
 
 ## Criteria it touches
 
-Links to `wcag/` entries only. No numbers from memory.
+| SC | Title | Level | Entry | Why it comes up |
+|---|---|---|---|---|
 
-## Manual tests it demands
+## Manual tests
 
-What to do and what to record, per assistive technology in the project's spec.
-
-## What consult should say
-
-Two or three questions, the simpler alternative, and when "build less" is the answer.
+What a person has to try, with which assistive technology, before the pattern counts as working. Written as checks for a tester, never as what a user "would experience".
