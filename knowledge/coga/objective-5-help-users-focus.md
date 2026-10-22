@@ -35,7 +35,7 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 | 2.2.2 | Pause, Stop, Hide | A | `wcag/sc-2.2.2-pause-stop-hide.md` | Moving, blinking, scrolling, and auto-updating content can be paused, stopped, or hidden |
 | 1.4.2 | Audio Control | A | `wcag/sc-1.4.2-audio-control.md` | Audio that plays automatically can be paused or turned down |
 | 2.3.1 | Three Flashes or Below Threshold | A | `wcag/sc-2.3.1-three-flashes-or-below-threshold.md` | Flashing limits, for seizure safety rather than attention |
-| 3.2.1 | On Focus | A | no entry yet | Receiving keyboard focus does not change context |
+| 3.2.1 | On Focus | A | `wcag/sc-3.2.1-on-focus.md` | Receiving keyboard focus does not change context |
 | 2.4.11 | Focus Not Obscured (Minimum) | AA | `wcag/sc-2.4.11-focus-not-obscured-minimum.md` | Banners and chat widgets must not entirely hide the focused component; new in WCAG 2.2 |
 | 2.2.4 | Interruptions | AAA | no entry yet | Interruptions can be postponed or suppressed, except emergencies |
 | 2.4.8 | Location | AAA | no entry yet | Where the user is within a set of pages |

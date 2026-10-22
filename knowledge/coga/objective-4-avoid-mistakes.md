@@ -41,17 +41,17 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 
 | SC | Title | Level | Entry | Overlap |
 |---|---|---|---|---|
-| 3.3.1 | Error Identification | A | no entry yet | A detected error is identified and described in text |
-| 3.3.2 | Labels or Instructions | A | no entry yet | Labels or instructions when input is required |
-| 3.3.3 | Error Suggestion | AA | no entry yet | Known corrections are suggested |
-| 3.3.4 | Error Prevention (Legal, Financial, Data) | AA | no entry yet | Reversible, checked, or confirmed submissions, for legal, financial, data, and test cases only |
-| 3.3.7 | Redundant Entry | A | no entry yet | Information already given in the same process is filled in or selectable; new in WCAG 2.2 |
+| 3.3.1 | Error Identification | A | `wcag/sc-3.3.1-error-identification.md` | A detected error is identified and described in text |
+| 3.3.2 | Labels or Instructions | A | `wcag/sc-3.3.2-labels-or-instructions.md` | Labels or instructions when input is required |
+| 3.3.3 | Error Suggestion | AA | `wcag/sc-3.3.3-error-suggestion.md` | Known corrections are suggested |
+| 3.3.4 | Error Prevention (Legal, Financial, Data) | AA | `wcag/sc-3.3.4-error-prevention-legal-financial-data.md` | Reversible, checked, or confirmed submissions, for legal, financial, data, and test cases only |
+| 3.3.7 | Redundant Entry | A | `wcag/sc-3.3.7-redundant-entry.md` | Information already given in the same process is filled in or selectable; new in WCAG 2.2 |
 | 1.3.5 | Identify Input Purpose | AA | `wcag/sc-1.3.5-identify-input-purpose.md` | `autocomplete` on fields about the user, so tools can fill them |
 | 2.2.1 | Timing Adjustable | A | `wcag/sc-2.2.1-timing-adjustable.md` | Time limits can be turned off, adjusted, or extended |
-| 3.2.2 | On Input | A | no entry yet | Changing a setting does not change context without warning |
+| 3.2.2 | On Input | A | `wcag/sc-3.2.2-on-input.md` | Changing a setting does not change context without warning |
 | 2.5.2 | Pointer Cancellation | A | `wcag/sc-2.5.2-pointer-cancellation.md` | A pointer action can be aborted or undone, reducing accidental activation |
 | 2.5.8 | Target Size (Minimum) | AA | `wcag/sc-2.5.8-target-size-minimum.md` | A floor on pointer target size or spacing, so the wrong control is hit less often; new in WCAG 2.2 |
-| 4.1.3 | Status Messages | AA | no entry yet | Success and status messages reach assistive technology without focus |
+| 4.1.3 | Status Messages | AA | `wcag/sc-4.1.3-status-messages.md` | Success and status messages reach assistive technology without focus |
 | 2.2.6 | Timeouts | AAA | no entry yet | Warning of inactivity that loses data, unless data is kept 20 hours |
 | 3.3.6 | Error Prevention (All) | AAA | no entry yet | The 3.3.4 protections for every submission |
 

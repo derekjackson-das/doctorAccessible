@@ -47,8 +47,8 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 | 1.4.3 | Contrast (Minimum) | AA | `wcag/sc-1.4.3-contrast-minimum.md` | Text against its background, including over images |
 | 1.4.12 | Text Spacing | AA | `wcag/sc-1.4.12-text-spacing.md` | Content survives a user increasing spacing; does not require spacing by default |
 | 1.1.1 | Non-text Content | A | `wcag/sc-1.1.1-non-text-content.md` | Images that carry meaning have text alternatives |
-| 3.1.1 | Language of Page | A | no entry yet | The page language is declared, so speech synthesis reads words correctly |
-| 3.1.2 | Language of Parts | AA | no entry yet | Passages in another language are marked, with stated exceptions |
+| 3.1.1 | Language of Page | A | `wcag/sc-3.1.1-language-of-page.md` | The page language is declared, so speech synthesis reads words correctly |
+| 3.1.2 | Language of Parts | AA | `wcag/sc-3.1.2-language-of-parts.md` | Passages in another language are marked, with stated exceptions |
 | 3.1.3 | Unusual Words | AAA | no entry yet | A way to find definitions of idioms, jargon, and unusual words |
 | 3.1.4 | Abbreviations | AAA | no entry yet | A way to find what an abbreviation stands for |
 | 3.1.5 | Reading Level | AAA | no entry yet | Supplemental content or a simpler version when text is above lower secondary level |
