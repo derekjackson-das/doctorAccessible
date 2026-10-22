@@ -10,7 +10,7 @@
 
 ## Status and reporting
 
-WCAG 2.2 SC 2.3.3 Animation from Interactions (Level AAA, no entry yet) asks that motion animation triggered by interaction can be disabled unless it is essential. Using the operating system's reduced-motion setting, as in technique C39, is one sufficient way to meet it. It is beyond our AA target, so a failure here alone is manual review, not a WCAG finding.
+WCAG 2.2 SC 2.3.3 Animation from Interactions (Level AAA, no entry yet), tier 1, reads in part: "Motion animation triggered by interaction can be disabled, unless the animation is essential". Using the operating system's reduced-motion setting, as in technique C39, is one sufficient way to meet it. It is beyond our AA target, so a failure here alone is manual review, not a WCAG finding.
 
 WCAG defines motion animation narrowly: changes of color, blurring, or opacity that do not change an element's perceived size, shape, or position are not motion animation. A plain fade is outside 2.3.3; at most it is an optional note.
 
