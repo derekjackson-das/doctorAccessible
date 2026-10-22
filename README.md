@@ -5,7 +5,7 @@ Doctor Accessible is an accessibility-first development assistant for Claude Cod
 It works in three modes:
 
 - **Consult.** The pause before building. Doctor Accessible asks who this is for and what they are trying to do, then what the smallest thing that meets that need is, and only then how. It may answer "build less" or "build nothing." It challenges the pattern (does this page need a carousel, or would a list serve the reader better), pulls the criteria that apply from the knowledge library, lays out options with their trade-offs, names the tests a human still has to run, and writes a need statement into the project spec. A thinking partner, not a lecture.
-- **Build.** The developer writes code and content in the main Claude Code session. Skills load on demand and point at the knowledge entries for the task.
+- **Build.** The developer writes code and content in the main Claude Code session. Skills load on demand and point at the knowledge entries for the task. Content is built to `docs/content-standards.md`: plain language, a reading-level target, descriptive headings and links, purposeful alt text.
 - **Verify.** An isolated agent checks the result without seeing how it was built. It runs axe when it can, reads everything itself, and reports findings as definite, likely, or needing manual review.
 
 The library is not only WCAG. It draws on the ARIA specs, the HTML Living Standard, W3C's explanatory material, and named practitioners and usability research, each labeled by tier in `knowledge/SOURCES.md`. Under the modes sit four parts: one verifier agent, a set of short skills that act as maps, a Markdown knowledge library where every entry cites its source, tier, version, and verification date, and an eval corpus of known defects that makes every change measurable. Each project keeps one `a11y-spec.md`, its own requirements and decisions, which every mode reads first. Build does not start on a feature without a need statement in it. There is no director agent and no simulated user. The developer directs; real people with assistive technology do the final testing.
@@ -31,6 +31,7 @@ The short form. Rationale for each is in [`docs/principles.md`](docs/principles.
 13. **Conservative when sources conflict.** Name it, cite both, take the stricter reading.
 14. **Start from the need.** Who is it for, what are they trying to do, why is this the right thing to build. Consult may say build less, or nothing. No need statement, no build.
 15. **One spec per project.** Every mode reads `a11y-spec.md` before acting and writes decisions back to it.
+16. **Content is part of the build.** Words get the same consult, build, verify as code, against `docs/content-standards.md` and the same evals.
 
 ## Where things live
 
@@ -45,6 +46,7 @@ The short form. Rationale for each is in [`docs/principles.md`](docs/principles.
 | `evals/` | Known-defect snippets and the findings a correct verifier must produce. |
 | `templates/a11y-spec.md` | The project spec template. Copy it to the root of your project. |
 | `docs/principles.md` | The principles, with reasons. |
+| `docs/content-standards.md` | What good content looks like: plain language, reading level, headings, links, alt text, errors. |
 | `docs/ROADMAP.md` | Phases, work packages, and how the team divides the work. |
 | `docs/decisions.md` | Why things are the way they are, dated. |
 
@@ -57,7 +59,7 @@ Full detail, including every work package with its deliverables and done-when, i
 | 0 | Foundation | One agent, one skill, one entry, one eval | Done 2026-10-22 |
 | 1 | Team setup | Repo live, contribution rules, pattern proven | Public repo, PR template, axe installed, eval 001 passes |
 | 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
-| 3 | Domain skills | The procedures that use the library | consult, patterns, html-patterns, content, design, at-test-protocol, each with evals |
+| 3 | Domain skills | The procedures that use the library | consult, patterns, content, html-patterns, design, at-test-protocol, aria, ux, each with evals |
 | 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
 | 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
 

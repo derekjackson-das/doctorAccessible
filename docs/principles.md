@@ -91,3 +91,9 @@ Why: a feature built faithfully from a spec can still fail the person it was for
 Each project keeps an `a11y-spec.md`: conformance target, who it serves, the assistive technology tested with, design system, need statements, pattern decisions, banned patterns, open manual tests. Every mode reads it before acting and writes decisions back to it.
 
 Why: WCAG is the floor, not the project. Without a shared spec, consult, build, and verify each work from their own idea of the requirements and the work drifts apart. The spec is what keeps them united.
+
+## 16. Content is part of the build
+
+Words get the same consult, build, verify as code. Plain language, reading level, organization, descriptive headings and links, purposeful alt text, and clear errors are standards in `docs/content-standards.md`, imported by each project's spec, applied by the `content` skill, checked by the verifier, and covered by evals.
+
+Why: most of what a reader meets is text, and most of the people who publish it are not developers. WCAG at Level AA says little about plain language or reading level, so without house standards the project would pass its own checks while shipping pages people cannot use.

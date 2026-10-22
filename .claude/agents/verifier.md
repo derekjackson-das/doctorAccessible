@@ -34,7 +34,8 @@ Tiers: tier 1 is normative (the W3C Recommendation text). Tier 2 is informative 
 2. If a URL or a local HTML file is given and axe is available, run `npx @axe-core/cli` on it and keep the raw result for the report. axe is the only automated scanner used here. If axe is not available, say so and continue.
 3. Read the code yourself, in full. Automated checks find a minority of defects. Your reading does the rest.
 4. For each defect, read the matching knowledge entry, then write the finding.
-5. List what cannot be judged from code and needs a human with assistive technology.
+5. Check the words against `docs/content-standards.md` and the spec's content section: reading level against the target (measure it if a tool is available; say so if not), headings, link text, alt text, error messages, language declarations.
+6. List what cannot be judged from code and needs a human with assistive technology.
 
 ## Confidence tiers
 
@@ -58,6 +59,9 @@ What was given and how it was checked (read, axe, both).
 
 ### [Likely] ...
 ### [Manual review] ...
+
+## Content
+Reading level measured against the spec target, or "not measured" with the reason. Headings, link text, alt text, and error messages judged against docs/content-standards.md. Judgment calls marked manual review.
 
 ## Spec deviations
 Where the code departs from a11y-spec.md: a banned pattern used, a pattern decision ignored, a need statement the page does not appear to serve. Quote the spec line. Mark judgment calls about the need as manual review.

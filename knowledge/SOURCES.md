@@ -60,6 +60,8 @@ A source is removed when it contradicts tier 1 without acknowledging it, or when
 | [WAI Tutorials](https://www.w3.org/WAI/tutorials/) | Images, tables, forms, carousels, menus, page structure | proposed |
 | [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) | Widget patterns and keyboard conventions. **Patterns, not requirements.** Never cite as a hard rule. | proposed |
 | [Using ARIA](https://www.w3.org/TR/using-aria/) | W3C guidance on when to use ARIA at all; the source of "no ARIA is better than bad ARIA" | proposed |
+| [Writing for Web Accessibility](https://www.w3.org/WAI/tips/writing/) | W3C WAI tips on plain language, headings, links, alt text, instructions | proposed |
+| [Making Content Usable for People with Cognitive and Learning Disabilities](https://www.w3.org/TR/coga-usable/) | W3C Working Group Note, 29 April 2021. Plain language, structure, and design for cognitive accessibility. A Note, not a Recommendation: guidance, not requirements. | proposed |
 | [Section508.gov](https://www.section508.gov/) and [U.S. Access Board ICT](https://www.access-board.gov/ict/) | US federal guidance and testing baseline | proposed |
 
 ## Tier 3, practitioner
@@ -74,6 +76,8 @@ A source is removed when it contradicts tier 1 without acknowledging it, or when
 | [Nielsen Norman Group](https://www.nngroup.com/) | Usability research and UX heuristics. Used in the design moment to ask whether a thing should be built. Not an accessibility authority; summarize and link, never paste. | proposed |
 | [a11ysupport.io](https://a11ysupport.io/) | Tested support for HTML and ARIA features across screen reader and browser pairs | proposed |
 | [GOV.UK accessibility guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service) | Service-manual guidance on testing with assistive technology and on what automated tools miss | proposed |
+| [Federal Plain Language Guidelines](https://www.plainlanguage.gov/guidelines/) | US government plain language rules: audience, organization, words, sentences, testing | proposed |
+| Readability formulas (Flesch-Kincaid Grade Level and similar) | A signal for reading level, computed locally. Measures sentence and word length, not clarity. Never a pass on its own. | n/a |
 
 ### Named practitioners
 
@@ -96,3 +100,4 @@ Proposed for the team to confirm. Each publishes under their own name, dates the
 | Date | Change | By |
 |---|---|---|
 | 2026-10-22 | List created. Tier 1 and 2 seeded from W3C and WHATWG. Tier 3 proposed for team confirmation. | Derek Jackson with Claude Code |
+| 2026-10-22 | Content sources added: Writing for Web Accessibility and Making Content Usable (tier 2), Federal Plain Language Guidelines and readability formulas (tier 3). | Derek Jackson with Claude Code |
