@@ -79,3 +79,15 @@ Why: the repo is public. W3C text is licensed for reproduction with notice; most
 Name the conflict, cite both sources, and recommend the stricter reading.
 
 Why: a tier 3 source never overrides tier 1, and when two practitioners disagree the reader deserves both names rather than a silent pick.
+
+## 14. Start from the need
+
+Before building, name who it is for, what they are trying to do, and why this is the right thing to build for them. Consult asks that before it asks how, and it may answer "build less" or "build nothing." No need statement in the spec, no build.
+
+Why: a feature built faithfully from a spec can still fail the person it was for. The cheapest accessibility fix is not building the wrong thing. A carousel done perfectly is still the wrong answer when a list would have served the reader better.
+
+## 15. One spec per project
+
+Each project keeps an `a11y-spec.md`: conformance target, who it serves, the assistive technology tested with, design system, need statements, pattern decisions, banned patterns, open manual tests. Every mode reads it before acting and writes decisions back to it.
+
+Why: WCAG is the floor, not the project. Without a shared spec, consult, build, and verify each work from their own idea of the requirements and the work drifts apart. The spec is what keeps them united.
