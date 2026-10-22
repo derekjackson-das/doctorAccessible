@@ -37,6 +37,7 @@ Full text with reasons in `docs/principles.md`. These are the rules in force.
 13. **Conservative when sources conflict.** Name it, cite both, take the stricter reading.
 14. **Start from the need.** Who is it for, what are they trying to do, why is this the right thing to build. Consult may say build less, or nothing. No need statement, no build.
 15. **One spec per project.** Every mode reads `a11y-spec.md` before acting and writes decisions back to it.
+16. **Content is part of the build.** Words get the same consult, build, verify as code, against `docs/content-standards.md` and the same evals.
 
 ---
 
@@ -65,7 +66,7 @@ Before any mode acts, read the project's `a11y-spec.md` if one exists (repo root
 
 End with a need statement in the format in `templates/a11y-spec.md`, written into the project's spec. This is the `consult` skill once it exists (roadmap 3.1); until then, follow this section.
 
-**Build.** Write code and content in this session. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill when a change touches structure, forms, focus, names and roles, color, media, or motion.
+**Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill when a change touches structure, forms, focus, names and roles, color, media, or motion.
 
 **Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix.
 
@@ -120,6 +121,7 @@ doctorAccessible/
 │   └── a11y-spec.md            # copy into a project as a11y-spec.md
 └── docs/
     ├── principles.md           # the principles, with reasons
+    ├── content-standards.md    # house defaults for words; the spec imports them
     ├── ROADMAP.md              # phases, work packages, team split
     └── decisions.md            # why things are the way they are
 ```

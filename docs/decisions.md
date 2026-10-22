@@ -59,3 +59,15 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **ARIA moved up.** The `aria` domain leaves Phase 5 and becomes 3.8, beside `patterns`, because the two feed each other.
 
 **Principle 2 reworded.** Knowledge base first, sources list second, nothing third.
+
+## 2026-10-22: content standards
+
+**A second kind of principle.** The sixteen principles say how the team works. Plain language, reading level, organization, headings, links, alt text, and errors are standards for what the output looks like. They live in `docs/content-standards.md`, each with its source and tier, because WCAG at Level AA says little about plain language and nothing about reading level.
+
+**The spec imports the standards.** A project's `a11y-spec.md` gets a content section with a reading-level target and overrides. House default: grade 8 or below by Flesch-Kincaid Grade Level, as a signal that sends a human to read, never a pass on its own.
+
+**Content moves up.** The `content` skill becomes roadmap 3.3, ahead of `html-patterns`, because content is where most of Harvard's authors live. It is the writing mode, not an accessibility add-on.
+
+**The verifier checks words.** A "Content" heading in its report. A readability tool is roadmap 4.7.
+
+**Principle 16 adopted.** Content is part of the build.

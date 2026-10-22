@@ -1,6 +1,6 @@
 # Roadmap
 
-Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment, project spec, and sources list added).
+Phases, work packages, and how the team divides the work. Updated 2026-10-22 (design moment, project spec, sources list, and content standards added).
 
 Work is claimed by work package, not by phase. Each package becomes one GitHub issue carrying the six fields below, and a person claims the issue. Packages inside a phase are designed not to touch each other's files, so they can run in parallel.
 
@@ -11,7 +11,7 @@ Work is claimed by work package, not by phase. Each package becomes one GitHub i
 | 0 | Foundation | One agent, one skill, one entry, one eval | Done 2026-10-22 |
 | 1 | Team setup | Repo live, contribution rules, pattern proven | Public repo, PR template, axe installed, eval 001 passes |
 | 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
-| 3 | Domain skills | The procedures that use the library | consult, patterns, html-patterns, content, design, at-test-protocol, each with evals |
+| 3 | Domain skills | The procedures that use the library | consult, patterns, content, html-patterns, design, at-test-protocol, aria, ux, each with evals |
 | 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
 | 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
 
@@ -71,8 +71,8 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 |---|---|---|---|---|---|
 | 3.1 | `consult` skill: the pause before building | `.claude/skills/consult/SKILL.md`. A procedure that asks, in order: who is this for and what are they trying to do; what is the smallest thing that meets it, with "build less" and "build nothing" as valid answers; only then how. Challenges every named pattern against `knowledge/patterns/`. Pulls applicable criteria from the index, offers options with trade-offs, names manual tests, and writes a need statement into the project's `a11y-spec.md` in the template's format | Three transcript evals: a described feature in, expected need statement, criteria, options, and manual tests out; at least one eval where the right answer is "build less" | 3.2 for pattern entries; can start with what exists | M |
 | 3.2 | `patterns` knowledge domain | `knowledge/patterns/`, one entry each for carousel, modal dialog, accordion, tabs, tooltip, infinite scroll, autocomplete, drag and drop, date picker. Each entry: the need the pattern usually serves, the simpler pattern that often serves it better and what is lost, what the pattern costs to do right with the ARIA Authoring Practices link marked as a pattern not a requirement, the criteria it touches, and the manual tests it demands | Nine entries in `INDEX.md`; each cites tier 2 and tier 3 sources by name | 2.x for criteria to point at | M |
-| 3.3 | `html-patterns` skill | `SKILL.md`; entries under `knowledge/html/` for forms, tables, landmarks, headings, images, links, buttons, dialogs and custom controls | Two evals pass | 2.1, 2.2 | L |
-| 3.4 | `content` skill | `SKILL.md`; entries under `knowledge/content/` for alt text, link text, headings, plain language, error messages | Two evals pass | 2.1, 2.3 | M |
+| 3.3 | `content` skill: the writing mode | `SKILL.md` that reads the spec's content section and applies `docs/content-standards.md` while writing; measures reading level before handing text back; entries under `knowledge/content/` for plain language, reading level, organization, headings, link text, alt text, error messages, language | Four evals pass, text in and findings out: a paragraph above the reading-level target, a heading that says "Overview", a link that says "click here", an alt text that starts with "image of" | 2.1, 2.3 | L |
+| 3.4 | `html-patterns` skill | `SKILL.md`; entries under `knowledge/html/` for forms, tables, landmarks, headings, images, links, buttons, dialogs and custom controls | Two evals pass | 2.1, 2.2 | L |
 | 3.5 | `design` skill | `SKILL.md`; entries under `knowledge/design/` for contrast, focus indicators, target size, motion, reflow, text spacing | Two evals pass | 2.1, 2.2 | M |
 | 3.6 | `at-test-protocol` skill: the human testing mode | `SKILL.md`; produces a test script for a component covering keyboard only, screen reader on two platforms, 200% and 400% zoom, reduced motion, forced colors; reads the spec for which assistive technology the project tests with; entries under `knowledge/testing/` | Two evals: a component in, expected protocol items out | 2.x | M |
 | 3.7 | `planning` skill, optional | `SKILL.md`; an accessibility checklist across a project lifecycle | One eval | 3.1 | S |
@@ -89,6 +89,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 | 4.4 | Checker | A script that compares a report to `expected.md` for criterion, level, tier, and the must-not list | Pass or fail per eval, no human in the loop | 4.3 | M |
 | 4.5 | CI, optional | GitHub Action running 4.4 on PRs | Results on a PR | 4.4 and an API key policy | M |
 | 4.6 | Spec-aware evals | Evals that ship an `a11y-spec.md` beside `input.html` and expect a spec deviation finding: a banned pattern used, a pattern decision ignored, a need statement the page does not serve | Three evals pass; 4.4 checks the spec deviation section | 4.4 | M |
+| 4.7 | Readability tool | `tools/readability.py`: Flesch-Kincaid Grade Level over the main content of an HTML file, excluding navigation, headings, and code; used by the `content` skill and the verifier | Agrees with a hand count on three samples; the verifier's Content section reports a number | 3.3 | S |
 
 ## Phase 5: Expansion
 
@@ -115,7 +116,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 |---|---|---|---|
 | A (Derek) | 1.1, 1.2, 1.5, 1.7 | 2.4, 2.5, 2.6 | 3.1, 3.2, 3.9 |
 | B | 1.3, 1.4 | 2.1 | 3.5, 3.8 |
-| C | 1.6 | 2.2 | 3.3 |
-| D | | 2.3 | 3.4, 3.6 |
+| C | 1.6 | 2.2 | 3.4 |
+| D | | 2.3 | 3.3, 3.6 |
 
 Fewer people: packages stack in ID order. More people: split 2.1 and 2.2 by guideline, and 3.2 by pattern.

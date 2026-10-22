@@ -14,6 +14,14 @@ The people this project serves, in their own situations, including those using a
 
 What already exists and which components are approved for use. Link the system if there is one.
 
+## Content standards
+
+The house defaults in Doctor Accessible's `docs/content-standards.md` apply unless changed here.
+
+- **Reading level target:** grade 8 or below, Flesch-Kincaid Grade Level, over main content. Change it and say why.
+- **House style:** link a style guide if one exists.
+- **Overrides:** any standard this project tightens or relaxes, with the reason.
+
 ## Need statements
 
 One per feature, written in consult before build starts. Build does not begin on a feature without one.
