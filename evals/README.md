@@ -6,6 +6,7 @@ Known-defect snippets and the findings a correct verifier must produce. This is 
 
 ```
 evals/
+  RESULTS.md        one row per run, newest first
   NNN-slug/
     input.html      the page or snippet under test
     expected.md     the findings a correct run must produce, and what it must not produce
@@ -17,9 +18,12 @@ One intended defect per eval unless its `expected.md` says otherwise. Everything
 
 From a Claude Code session in this repo:
 
-1. Ask for the verifier agent on `evals/NNN-slug/input.html`.
-2. Compare its report to `expected.md`.
-3. Record pass or fail, and anything the verifier said that was not expected, in the pull request.
+1. Run axe on the input first, for the automated baseline:
+   `npx --yes @axe-core/cli "file://$PWD/evals/NNN-slug/input.html"`.
+   If it complains about ChromeDriver, run `npx --yes browser-driver-manager install chrome` once.
+2. Ask for the verifier agent on `evals/NNN-slug/input.html`.
+3. Compare both to `expected.md`.
+4. Add a row to `RESULTS.md` and cite it in the pull request.
 
 A pull request that changes `.claude/` or `knowledge/` states which evals were run and the result.
 
