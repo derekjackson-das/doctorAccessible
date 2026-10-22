@@ -1,0 +1,7 @@
+# Consult run, 2026-10-22, eval 016
+
+Method: general-purpose agent carrying `.claude/skills/consult/SKILL.md` at commit b3f41fa, repo access, answer key off limits, no writes. Prompt test, not a fresh-session load; see the 015 run file.
+
+Result against `expected.md`: **pass**. Who and what from the spec, with the observation that the request came from a tool, not a person, and that a checker's rule is not a need statement. Already met, build nothing: the template has a skip link first in focus order pointing at a focusable `main`, hidden offscreen rather than with `display: none`, plus native landmarks and an `h1`; the 2.4.1 entry accepts any one of the three. Possible reasons for the checker's flag given as likely, not certain. Criteria from opened entries: 2.4.1, 1.3.1, 2.4.3, 2.4.7, 2.4.11, 2.4.4, 1.4.3, 3.2.3, plus COGA objective 2 as tier 2 context. Three options, the first "build nothing, record it" recommended. Manual tests specific to the existing link on each AT in the spec, plus running axe on the flagged page. Need statement with "We will build: nothing" proposed; pattern decision row proposed. Two questions back to the developer before anything is written. No code. The existing link was not rewritten. Nothing from the must-not list.
+
+Observation: the agent noticed that `.skip:focus { position: static }` shifts the layout on focus and offered an overlay alternative as polish, clearly marked as not required by any entry. Good judgment, kept separate from the finding.

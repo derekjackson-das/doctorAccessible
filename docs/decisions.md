@@ -104,3 +104,13 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **Scratch files stay out of the repo.** Agents had kept axe output and measurement scripts out of the repository only because each dispatch prompt named a temp directory. The rule is now in the agent file.
 
 **Why now.** The most recent run before this change, eval 001 after package 2.5, showed the agent declining to cite contrast ratios without opening the entries, on its own. The behavior is reachable; the rule makes it hold. Measured by re-running evals 001, 005, 008, and 010, the four where the old behavior appeared.
+
+## 2026-10-22: the consult skill and transcript evals
+
+**Consult is a skill, not an agent.** It needs the conversation: the developer's request, their answers to the three questions, the spec. Principle 1 says that is a skill. It loads on demand in the main session and writes to the spec only with the developer's agreement (principle 8).
+
+**It asks before it answers.** The skill does not fill in "who is this for" from its own imagination. If the developer cannot say, the finding is that the feature is not ready. "Build less" and "build nothing" are written as need statements too, so the record exists and the request does not return unexamined.
+
+**No patterns or ux entries exist yet.** The skill says so each time and reasons from the WCAG entries a pattern touches, stating that basis. When packages 3.2 and 3.9 land, the skill's map points at them without other change.
+
+**Transcript evals are a new eval shape.** A `request.md` in place of `input.html`, with the answer key describing what a good consult answer contains. The first three cover a build-less case (a carousel that should be a list), an already-met case (a skip link that exists), and a full consult (a registration form). Until Phase 4 automates them, they run in a fresh session or, as a stand-in, in a general-purpose agent carrying the skill's text, and the record says which.
