@@ -95,7 +95,7 @@ Snippets with known defects and the findings a correct verifier must produce. An
 
 - **Language(s):** HTML, CSS, JavaScript as the reference target. Markdown for everything the agents read.
 - **Framework(s):** none.
-- **Key libraries:** axe-core, via the CLI, when a page can be loaded. Not yet installed.
+- **Key libraries:** axe-core via `@axe-core/cli`, run through `npx`, when a page can be loaded. First run on a machine may need `browser-driver-manager` to fetch a Chrome and ChromeDriver pair that match.
 - **Runtime / deployment target:** Claude Code, cloned from GitHub. Project-level `.claude/` makes the agent and skills available on clone.
 
 ---
@@ -148,8 +148,12 @@ doctorAccessible/
 # Run the verifier on an eval by hand (from a Claude Code session)
 Use the verifier agent on evals/001-missing-label/input.html and compare to expected.md
 
-# axe (once installed)
-npx @axe-core/cli <url-or-file>
+# axe: one-time setup if the bundled ChromeDriver does not match the installed Chrome
+npx --yes browser-driver-manager install chrome
+
+# axe on a local file (needs the file:// form) or a URL
+npx --yes @axe-core/cli "file://$PWD/evals/001-missing-label/input.html"
+npx --yes @axe-core/cli --stdout <url-or-file>     # JSON, with rule tags
 ```
 
 ---

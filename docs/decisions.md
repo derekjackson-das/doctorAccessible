@@ -71,3 +71,9 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **The verifier checks words.** A "Content" heading in its report. A readability tool is roadmap 4.7.
 
 **Principle 16 adopted.** Content is part of the build.
+
+## 2026-10-22: axe runs, and eval 001 has one defect
+
+**axe is available.** `@axe-core/cli` through `npx`, no global install. The bundled ChromeDriver lagged the installed Chrome, so `browser-driver-manager` fetches a matching Chrome for Testing and driver pair into the user's home cache. Recorded in the common commands.
+
+**Eval 001 confirmed.** axe-core 4.14.0 reports exactly one violation, the `label` rule on the search input, tagged `wcag412`. Twenty-one rules passed. The tag matches the knowledge entry for SC 4.1.2. Roadmap package 1.3 done; results live in `evals/RESULTS.md`.
