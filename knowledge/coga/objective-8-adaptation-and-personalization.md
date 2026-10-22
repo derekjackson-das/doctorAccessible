@@ -39,8 +39,8 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 | 1.4.12 | Text Spacing | AA | `wcag/sc-1.4.12-text-spacing.md` | Content survives user-set spacing, the hook for spacing tools |
 | 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | Exposed names and roles let tools understand controls |
 | 2.2.2 | Pause, Stop, Hide | A | `wcag/sc-2.2.2-pause-stop-hide.md` | User control over moving and updating content |
-| 3.2.1 | On Focus | A | no entry yet | Receiving focus does not change context |
-| 3.2.2 | On Input | A | no entry yet | Changing a setting does not change context unless the user was told first |
+| 3.2.1 | On Focus | A | `wcag/sc-3.2.1-on-focus.md` | Receiving focus does not change context |
+| 3.2.2 | On Input | A | `wcag/sc-3.2.2-on-input.md` | Changing a setting does not change context unless the user was told first |
 | 1.3.4 | Orientation | AA | `wcag/sc-1.3.4-orientation.md` | Content is not locked to portrait or landscape unless essential |
 | 1.3.6 | Identify Purpose | AAA | no entry yet | Purpose of components, icons, and regions programmatically determinable |
 | 3.2.5 | Change on Request | AAA | no entry yet | Changes of context only on request, or can be turned off |

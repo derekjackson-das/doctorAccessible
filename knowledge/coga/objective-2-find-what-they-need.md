@@ -42,7 +42,7 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 | 2.4.5 | Multiple Ways | AA | `wcag/sc-2.4.5-multiple-ways.md` | More than one way to locate a page; search is one option |
 | 2.4.6 | Headings and Labels | AA | `wcag/sc-2.4.6-headings-and-labels.md` | Headings that describe what a section holds |
 | 1.4.13 | Content on Hover or Focus | AA | `wcag/sc-1.4.13-content-on-hover-or-focus.md` | Menus revealed on hover must be dismissible, hoverable, and persistent |
-| 3.2.3 | Consistent Navigation | AA | no entry yet | Menus in the same relative order on every page |
+| 3.2.3 | Consistent Navigation | AA | `wcag/sc-3.2.3-consistent-navigation.md` | Menus in the same relative order on every page |
 | 2.4.10 | Section Headings | AAA | no entry yet | Headings used to organize content |
 
 ## Where WCAG stops

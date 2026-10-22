@@ -35,8 +35,8 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 
 | SC | Title | Level | Entry | Overlap |
 |---|---|---|---|---|
-| 3.3.8 | Accessible Authentication (Minimum) | AA | no entry yet | No cognitive function test at any authentication step unless an alternative, an assisting mechanism, object recognition, or personal content is offered; new in WCAG 2.2 |
-| 3.3.7 | Redundant Entry | A | no entry yet | Information already given in the same process is filled in or selectable, with stated exceptions; new in WCAG 2.2 |
+| 3.3.8 | Accessible Authentication (Minimum) | AA | `wcag/sc-3.3.8-accessible-authentication-minimum.md` | No cognitive function test at any authentication step unless an alternative, an assisting mechanism, object recognition, or personal content is offered; new in WCAG 2.2 |
+| 3.3.7 | Redundant Entry | A | `wcag/sc-3.3.7-redundant-entry.md` | Information already given in the same process is filled in or selectable, with stated exceptions; new in WCAG 2.2 |
 | 1.3.5 | Identify Input Purpose | AA | `wcag/sc-1.3.5-identify-input-purpose.md` | Fields about the user carry `autocomplete`, which password managers and autofill rely on |
 | 2.2.1 | Timing Adjustable | A | `wcag/sc-2.2.1-timing-adjustable.md` | Time limits set by the content can be turned off, adjusted, or extended, unless an exception such as Essential applies |
 | 3.3.9 | Accessible Authentication (Enhanced) | AAA | no entry yet | As 3.3.8 without the object-recognition and personal-content exceptions; new in WCAG 2.2 |
@@ -47,5 +47,5 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 
 ## How it is used
 
-- **Verify** reports WCAG failures first. A text CAPTCHA with no alternative and no assisting mechanism fails 3.3.8. A password field that blocks paste is likely under 3.3.8, and definite only if no password manager or other assisting mechanism works. Until 3.3.8 has an entry, both are marked unverified. Under this entry: a process that shows a reference number on one page and asks for it on a later page outside the same process (likely); a login with no option beyond username and password, when a password manager works (manual review).
+- **Verify** reports WCAG failures first. A text CAPTCHA with no alternative and no assisting mechanism fails 3.3.8. A password field that blocks paste is likely under 3.3.8, and definite only if no password manager or other assisting mechanism works. See `wcag/sc-3.3.8-accessible-authentication-minimum.md`. Under this entry: a process that shows a reference number on one page and asks for it on a later page outside the same process (likely); a login with no option beyond username and password, when a password manager works (manual review).
 - **Consult** asks whether the audience in the spec can be expected to manage passwords, and whether an email link or passkey option is possible.
