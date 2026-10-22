@@ -41,6 +41,7 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 | Instructions that rely on shape, position, color, or sound | `sc-1.3.3-sensory-characteristics.md` |
 | Link text | `sc-2.4.4-link-purpose-in-context.md` |
 | Finding pages across a site | `sc-2.4.5-multiple-ways.md` |
+| Duplicate IDs, unclosed tags, bad nesting | `sc-4.1.1-parsing.md`: obsolete in 2.2, never a finding on its own; report the effect under `sc-4.1.2-name-role-value.md` or `sc-1.3.1-info-and-relationships.md` |
 | Status messages and live regions | no entry yet; gap for SC 4.1.3 |
 | Language, predictable behavior, error handling, authentication | no entries yet; Guidelines 3.1 to 3.3 are roadmap package 2.3 |
 

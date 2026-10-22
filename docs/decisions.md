@@ -104,3 +104,11 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **Scratch files stay out of the repo.** Agents had kept axe output and measurement scripts out of the repository only because each dispatch prompt named a temp directory. The rule is now in the agent file.
 
 **Why now.** The most recent run before this change, eval 001 after package 2.5, showed the agent declining to cite contrast ratios without opening the entries, on its own. The behavior is reachable; the rule makes it hold. Measured by re-running evals 001, 005, 008, and 010, the four where the old behavior appeared.
+
+## 2026-10-22: an entry for an obsolete criterion
+
+**SC 4.1.1 Parsing gets an entry even though WCAG 2.2 removed it.** Duplicate IDs and bad nesting are among the most common things a scan or a reviewer notices, and older checklists still file them under 4.1.1. Without an entry, the verifier would either cite 4.1.1 from memory or stay quiet about real harms. The entry says plainly that 4.1.1 is never a finding against 2.2, that the W3C treats it as always satisfied for HTML and XML under 2.0 and 2.1, and that the consequence is reported under 4.1.2 or 1.3.1.
+
+**It does not count toward the 55.** Phase 2's total is the Level A and AA criteria in 2.2, and 4.1.1 has no level there.
+
+**WCAG 2.1, 2.0, and the 2.0 errata join the sources list as tier 1.** Policies the team works under still name those versions, and the entry quotes them.
