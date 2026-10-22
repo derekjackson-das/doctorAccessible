@@ -4,7 +4,7 @@
   - Hoa Loranger, "Infinite Scrolling Is Not for Every Website", Nielsen Norman Group, 2 February 2014. https://www.nngroup.com/articles/infinite-scrolling/
   - Tim Neusesser, "Infinite Scrolling: When to Use It, When to Avoid It", Nielsen Norman Group, 4 September 2022. https://www.nngroup.com/articles/infinite-scrolling-tips/
 - Tier: 3, usability research. Nielsen Norman Group is on `knowledge/SOURCES.md` for UX claims only. Neusesser also comments on screen readers and ARIA; those remarks are not cited here. Accessibility claims below come from the linked `wcag/` and `coga/` entries.
-- Related entries: `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-2.4.3-focus-order.md`, `coga/objective-2-find-what-they-need.md`, `coga/objective-4-avoid-mistakes.md`, `coga/objective-5-help-users-focus.md`
+- Related entries: `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-2-find-what-they-need.md`, `coga/objective-4-avoid-mistakes.md`, `coga/objective-5-help-users-focus.md`
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting
@@ -33,7 +33,7 @@ When the content is a stream of items of equal weight, people browse rather than
 
 - Loading more must work from the keyboard, and the footer's links must stay reachable by keyboard; check `wcag/sc-2.1.1-keyboard.md`.
 - New items must enter the focus order where they make sense (`wcag/sc-2.4.3-focus-order.md`). WCAG does not require a way to skip past a long list on one page; Bypass Blocks covers blocks repeated across pages. A skip link is still worth offering.
-- WCAG does not require the page to announce that more items loaded. If it shows a message such as "20 more results loaded", WCAG 2.2 SC 4.1.3 Status Messages (Level AA), W3C Rec 12 Dec 2024, tier 1, requires that assistive technology can present it without moving focus. No entry yet.
+- WCAG does not require the page to announce that more items loaded. If it shows a message such as "20 more results loaded", WCAG 2.2 SC 4.1.3 Status Messages (Level AA), W3C Rec 12 Dec 2024, tier 1, requires that assistive technology can present it without moving focus. See `wcag/sc-4.1.3-status-messages.md`.
 - `coga/objective-2-find-what-they-need.md` (find and refind), `coga/objective-4-avoid-mistakes.md` (let users go back without losing their place), and `coga/objective-5-help-users-focus.md` (avoid too much content) cover the cognitive side.
 
 ## What consult should say
