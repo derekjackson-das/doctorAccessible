@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course details</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; max-width: 40rem; }
+    .toggle { display: inline-block; padding: 0.5rem 1rem; border: 2px solid #005a9c; border-radius: 4px; color: #005a9c; background: #fff; cursor: pointer; }
+    .toggle:hover { background: #e8f1f8; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Course details</h1>
+  </header>
+  <main>
+    <p>Introduction to Web Accessibility meets Mondays and Wednesdays.</p>
+    <span class="toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="syllabus" onclick="toggleSyllabus()">Show syllabus</span>
+    <div id="syllabus" hidden>
+      <h2>Syllabus</h2>
+      <p>Week 1: Why accessibility matters. Week 2: Structure and semantics. Week 3: Forms. Week 4: Media.</p>
+    </div>
+  </main>
+  <script>
+    function toggleSyllabus() {
+      var btn = document.querySelector('.toggle');
+      var panel = document.getElementById('syllabus');
+      var open = panel.hidden;
+      panel.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Hide syllabus' : 'Show syllabus';
+    }
+  </script>
+</body>
+</html>
