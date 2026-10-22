@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Printing prices</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; max-width: 40rem; }
+    table { border-collapse: collapse; }
+    td { border: 1px solid #767676; padding: 0.5rem 0.75rem; text-align: left; }
+    tr:first-child td { font-weight: bold; background: #f2f2f2; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Printing prices</h1>
+  </header>
+  <main>
+    <p>Prices per page. Pay at the kiosk with your ID card.</p>
+    <table>
+      <caption>Cost per page by paper size and color</caption>
+      <tr>
+        <td>Paper size</td>
+        <td>Black and white</td>
+        <td>Color</td>
+        <td>Double-sided</td>
+      </tr>
+      <tr>
+        <td>Letter</td>
+        <td>$0.10</td>
+        <td>$0.50</td>
+        <td>$0.15</td>
+      </tr>
+      <tr>
+        <td>Legal</td>
+        <td>$0.12</td>
+        <td>$0.55</td>
+        <td>$0.18</td>
+      </tr>
+      <tr>
+        <td>Tabloid</td>
+        <td>$0.25</td>
+        <td>$1.00</td>
+        <td>$0.40</td>
+      </tr>
+      <tr>
+        <td>Poster</td>
+        <td>$3.00</td>
+        <td>$8.00</td>
+        <td>Not available</td>
+      </tr>
+    </table>
+  </main>
+</body>
+</html>
