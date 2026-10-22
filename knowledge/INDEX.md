@@ -83,6 +83,26 @@ Source of record: W3C, Making Content Usable for People with Cognitive and Learn
 | 7 | Provide help and support | `coga/objective-7-help-and-support.md` | 2026-10-22 |
 | 8 | Support adaptation and personalization | `coga/objective-8-adaptation-and-personalization.md` | 2026-10-22 |
 
+## UX: usability heuristics and need-finding
+
+Sources: Nielsen Norman Group (tier 3, UX claims only) and the GOV.UK Service Manual user-research guides (tier 3, added to the sources list in this package and awaiting team confirmation), with the W3C cognitive accessibility Note (tier 2) where cited. These entries feed consult. A finding that rests only on a UX entry is likely or manual review, never definite.
+
+### Heuristics: when a pattern serves people
+
+| Pattern | Entry | Verified |
+|---|---|---|
+| Carousels | `ux/carousels.md` | 2026-10-22 |
+| Modals and interruptions | `ux/modals-and-interruptions.md` | 2026-10-22 |
+| Infinite scroll and pagination | `ux/infinite-scroll-and-pagination.md` | 2026-10-22 |
+
+### Need-finding: who a thing is for
+
+| Topic | Entry | Verified |
+|---|---|---|
+| Learning who uses a thing | `ux/learning-who-uses-a-thing.md` | 2026-10-22 |
+| Writing a need statement | `ux/writing-a-need-statement.md` | 2026-10-22 |
+| Personas from research | `ux/personas-from-research.md` | 2026-10-22 |
+
 ## Other domains
 
 None yet. Planned: HTML patterns, design, content, assistive-technology test protocol.
