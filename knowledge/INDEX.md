@@ -119,6 +119,19 @@ Sources: the ARIA Authoring Practices Guide and WAI Tutorials (tier 2, patterns 
 | Drag and drop | `patterns/drag-and-drop.md` | 2026-10-22 |
 | Date picker | `patterns/date-picker.md` | 2026-10-22 |
 
+## Testing: manual test procedures
+
+Procedures for human testers, one per mode: setup, steps, what passing looks like, what to record. Doctor Accessible writes the script; people run it (principle 7). Sources: WebAIM, GOV.UK, MDN, and Adrian Roselli (tier 3), and W3C Understanding and Techniques (tier 2). The `at-test-protocol` skill builds a component's script from these.
+
+| Mode | Entry | Verified |
+|---|---|---|
+| Keyboard only | `testing/keyboard-only.md` | 2026-10-22 |
+| Screen reader on Windows (NVDA) | `testing/screen-reader-windows.md` | 2026-10-22 |
+| Screen reader on Apple devices (VoiceOver, macOS and iOS) | `testing/screen-reader-apple.md` | 2026-10-22 |
+| Zoom at 200% and 400% | `testing/zoom.md` | 2026-10-22 |
+| Reduced motion | `testing/reduced-motion.md` | 2026-10-22 |
+| Forced colors (Windows Contrast Themes) | `testing/forced-colors.md` | 2026-10-22 |
+
 ## Other domains
 
-None yet. Planned: design, content, assistive-technology test protocol.
+None yet. Planned: design, content.
