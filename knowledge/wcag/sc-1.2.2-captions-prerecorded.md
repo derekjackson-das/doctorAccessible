@@ -39,4 +39,4 @@ All techniques are tier 2, from the Understanding page linked above.
 
 ## Automated coverage (tier 3)
 
-axe-core tags `video-caption` to this criterion. It flags a `video` element with no captions `track`. It cannot detect open captions, cannot judge caption accuracy, and cannot see inside a third-party player. Rule descriptions: https://dequeuniversity.com/rules/axe/ (axe-core 4.14 rule list).
+axe-core tags `video-caption` to this criterion. It reports a `video` element with no captions `track` as "incomplete, needs review", not as a violation, because it cannot tell whether the video has sound; a one-line summary that shows only violations will hide it (observed with axe-core 4.14.0 on eval 003). It cannot detect open captions, cannot judge caption accuracy, and cannot see inside a third-party player. Rule descriptions: https://dequeuniversity.com/rules/axe/ (axe-core 4.14 rule list).

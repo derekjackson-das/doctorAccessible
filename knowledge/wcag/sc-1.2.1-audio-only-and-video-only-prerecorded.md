@@ -44,4 +44,4 @@ All techniques are tier 2, from the Understanding page linked above.
 
 ## Automated coverage (tier 3)
 
-axe-core tags `audio-caption` to this criterion. In practice axe can flag an `audio` element with no `track` for captions, which is a hint, not the requirement; a transcript on the page satisfies this criterion and axe cannot see it. Whether a transcript exists and is equivalent is manual. Rule descriptions: https://dequeuniversity.com/rules/axe/ (axe-core 4.14 rule list).
+axe-core tags `audio-caption` to this criterion. In practice axe can flag an `audio` element with no `track` for captions, likely as "incomplete, needs review" rather than a violation, which is a hint, not the requirement; a transcript on the page satisfies this criterion and axe cannot see it. Whether a transcript exists and is equivalent is manual. Rule descriptions: https://dequeuniversity.com/rules/axe/ (axe-core 4.14 rule list).
