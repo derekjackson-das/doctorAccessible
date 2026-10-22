@@ -39,7 +39,7 @@ All techniques are tier 2, from the Understanding page linked above.
 - SC 1.3.2 Meaningful Sequence (`wcag/sc-1.3.2-meaningful-sequence.md`). Reading order; focus order usually follows it.
 - SC 2.4.7 Focus Visible and 2.4.11 Focus Not Obscured (Minimum) (entries in this package). Seeing where focus is.
 - SC 2.1.2 No Keyboard Trap (entry in this package). Order is irrelevant if focus cannot leave.
-- SC 3.2.1 On Focus (no entry yet). Focus arriving must not change context.
+- SC 3.2.1 On Focus (`wcag/sc-3.2.1-on-focus.md`). Focus arriving must not change context.
 
 ## Automated coverage (tier 3)
 

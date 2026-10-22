@@ -36,7 +36,7 @@ All techniques are tier 2, from the Understanding page linked above.
 
 - SC 1.4.1 Use of Color (entry in this package). Color as the only means of conveying information in content. The note in this criterion points there.
 - SC 1.3.1 Info and Relationships (entry in this package). A required-field mark that is only visual also raises 1.3.1 if the required state is not in the code.
-- SC 3.3.2 Labels or Instructions (no entry yet). Whether instructions exist at all.
+- SC 3.3.2 Labels or Instructions (`wcag/sc-3.3.2-labels-or-instructions.md`). Whether instructions exist at all.
 
 ## Automated coverage (tier 3)
 

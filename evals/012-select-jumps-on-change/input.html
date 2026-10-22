@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Department directory</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; max-width: 40rem; }
+    label { display: block; margin-bottom: 0.25rem; font-weight: bold; }
+    select { font: inherit; padding: 0.5rem; min-width: 16rem; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Department directory</h1>
+  </header>
+  <main>
+    <p>Choose a department to open its contact page.</p>
+    <form>
+      <label for="dept">Department</label>
+      <select id="dept" name="dept" onchange="if (this.value) { window.location.href = this.value; }">
+        <option value="">Select a department</option>
+        <option value="/departments/biology">Biology</option>
+        <option value="/departments/chemistry">Chemistry</option>
+        <option value="/departments/history">History</option>
+        <option value="/departments/physics">Physics</option>
+      </select>
+    </form>
+  </main>
+</body>
+</html>

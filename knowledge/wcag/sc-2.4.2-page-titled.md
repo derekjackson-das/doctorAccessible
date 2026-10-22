@@ -35,7 +35,7 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 2.4.6 Headings and Labels (entry in this package). The `h1` should describe the page the way the title does.
-- SC 3.2.3 Consistent Navigation (no entry yet). Titles following one pattern across a site help orientation.
+- SC 3.2.3 Consistent Navigation (`wcag/sc-3.2.3-consistent-navigation.md`). Titles following one pattern across a site help orientation.
 
 ## Automated coverage (tier 3)
 

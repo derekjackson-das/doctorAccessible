@@ -25,7 +25,7 @@ Every interactive thing on the page must tell assistive technology three things:
 - A link whose only content is an image with empty or missing alt text. Definite.
 - A clickable `div` or `span` acting as a button or link with no role. Definite.
 - A custom checkbox, toggle, tab, or expandable region that changes state visually without exposing that state (`aria-checked`, `aria-pressed`, `aria-selected`, `aria-expanded`). Definite when the state is user-settable.
-- A placeholder as the only label. A name may be computed from it, but the text disappears on input and the pattern also touches SC 3.3.2. Report as likely and cross-reference 3.3.2 (no entry yet).
+- A placeholder as the only label. A name may be computed from it, but the text disappears on input and the pattern also touches SC 3.3.2. Report as likely and cross-reference 3.3.2 (`wcag/sc-3.3.2-labels-or-instructions.md`).
 - An element with a role whose name is present but meaningless, such as "button" or "click here". Manual review; the name exists, so this criterion is met, but SC 2.4.4 or 2.4.6 may not be (`wcag/sc-2.4.4-link-purpose-in-context.md`, `wcag/sc-2.4.6-headings-and-labels.md`).
 
 ## How to meet it
@@ -42,7 +42,7 @@ All techniques are tier 2, from https://www.w3.org/WAI/WCAG22/Understanding/name
 ## Related criteria
 
 - SC 1.3.1 Info and Relationships (`wcag/sc-1.3.1-info-and-relationships.md`). Often cited alongside for unassociated labels.
-- SC 3.3.2 Labels or Instructions (no entry yet). Whether a label exists at all, as distinct from whether it is programmatically attached.
+- SC 3.3.2 Labels or Instructions (`wcag/sc-3.3.2-labels-or-instructions.md`). Whether a label exists at all, as distinct from whether it is programmatically attached.
 - SC 2.4.4 Link Purpose (In Context) (`wcag/sc-2.4.4-link-purpose-in-context.md`) and 2.4.6 Headings and Labels (`wcag/sc-2.4.6-headings-and-labels.md`). Whether the name is meaningful.
 - Accessible Name and Description Computation 1.2, tier 1, https://www.w3.org/TR/accname-1.2/, for how the name is derived.
 

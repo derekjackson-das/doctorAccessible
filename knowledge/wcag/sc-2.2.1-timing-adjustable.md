@@ -51,7 +51,7 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 2.2.2 Pause, Stop, Hide (entry in this package). Moving and auto-updating content.
-- SC 3.2.1 On Focus and 3.2.5 Change on Request (no entries yet). Unexpected changes of context; 3.2.5 is Level AAA.
+- SC 3.2.1 On Focus (`wcag/sc-3.2.1-on-focus.md`) and 3.2.5 Change on Request (Level AAA, no entry). Unexpected changes of context; 3.2.5 is Level AAA.
 - SC 2.2.3 No Timing, 2.2.4 Interruptions, and 2.2.6 Timeouts are Level AAA and not requirements here.
 
 ## Automated coverage (tier 3)

@@ -35,8 +35,8 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 4.1.2 Name, Role, Value (`wcag/sc-4.1.2-name-role-value.md`). The field also needs a name; this criterion adds a machine-readable purpose.
-- SC 3.3.7 Redundant Entry (no entry yet). The WCAG 2.2 criterion that asks not to make users re-enter information in one process. Autocomplete is one way to help with that.
-- SC 3.3.2 Labels or Instructions (no entry yet). The visible label; this criterion is about the code behind it.
+- SC 3.3.7 Redundant Entry (`wcag/sc-3.3.7-redundant-entry.md`). The WCAG 2.2 criterion that asks not to make users re-enter information in one process. Autocomplete is one way to help with that.
+- SC 3.3.2 Labels or Instructions (`wcag/sc-3.3.2-labels-or-instructions.md`). The visible label; this criterion is about the code behind it.
 
 ## Automated coverage (tier 3)
 
