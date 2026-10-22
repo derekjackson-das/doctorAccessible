@@ -39,7 +39,7 @@ All techniques are tier 2, from the Understanding page linked above.
 - SC 3.3.3 Error Suggestion (entry in this package). Saying how to fix it, Level AA.
 - SC 3.3.2 Labels or Instructions (entry in this package). Preventing the error in the first place.
 - SC 1.4.1 Use of Color (`wcag/sc-1.4.1-use-of-color.md`). Color as the only error cue fails both; F81.
-- SC 4.1.3 Status Messages (no entry yet). Whether the error message is announced without moving focus; Level AA.
+- SC 4.1.3 Status Messages (`wcag/sc-4.1.3-status-messages.md`). Whether the error message is announced without moving focus; Level AA.
 - SC 1.3.1 Info and Relationships (`wcag/sc-1.3.1-info-and-relationships.md`). Associating the message with the field.
 
 ## Automated coverage (tier 3)

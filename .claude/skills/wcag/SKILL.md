@@ -41,7 +41,7 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 | Instructions that rely on shape, position, color, or sound | `sc-1.3.3-sensory-characteristics.md` |
 | Link text | `sc-2.4.4-link-purpose-in-context.md` |
 | Finding pages across a site | `sc-2.4.5-multiple-ways.md` |
-| Status messages and live regions | no entry yet; gap for SC 4.1.3 |
+| Status messages and live regions | `sc-4.1.3-status-messages.md` |
 | Page language and passages in other languages | `sc-3.1.1-language-of-page.md`, `sc-3.1.2-language-of-parts.md` |
 | Predictable behavior: focus, input, consistency across pages | `sc-3.2.1-on-focus.md`, `sc-3.2.2-on-input.md`, `sc-3.2.3-consistent-navigation.md`, `sc-3.2.4-consistent-identification.md`, `sc-3.2.6-consistent-help.md` |
 | Form errors, instructions, consequential submissions | `sc-3.3.1-error-identification.md`, `sc-3.3.3-error-suggestion.md`, `sc-3.3.4-error-prevention-legal-financial-data.md`, `sc-3.3.2-labels-or-instructions.md` |
