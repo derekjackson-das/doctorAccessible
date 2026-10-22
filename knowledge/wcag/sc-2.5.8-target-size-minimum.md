@@ -55,4 +55,4 @@ All techniques are tier 2, from the Understanding page linked above.
 
 ## Automated coverage (tier 3)
 
-axe-core tags `target-size` to this criterion. It measures rendered targets and spacing and reports those under 24 pixels without adequate space; it may return "needs review" where overlap cannot be resolved. Exceptions for equivalent controls and essential presentation are manual. Rule descriptions: https://dequeuniversity.com/rules/axe/ (axe-core 4.14 rule list).
+axe-core tags `target-size` to this criterion with `wcag22aa`. It measures rendered targets and spacing and reports those under 24 pixels without adequate space. But the `@axe-core/cli` default run in axe-core 4.14.0 did not execute any rule tagged `wcag22aa`; it ran the `wcag2a`, `wcag2aa`, `wcag21a`, and `wcag21aa` families only (observed on eval 010). To include WCAG 2.2 rules, pass `--tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa`, or `--rules target-size`. Exceptions for equivalent controls and essential presentation are manual. Rule descriptions: https://dequeuniversity.com/rules/axe/ (axe-core 4.14 rule list).
