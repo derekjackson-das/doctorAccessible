@@ -18,7 +18,7 @@ The most important tasks and information should be the easiest things to find: n
 ## User needs it serves
 
 - **Findable.** People with memory, executive function, or language processing impairments need key information and controls to stand out, to be visible without scrolling or hovering, to be reachable in a small number of easy steps, and to sit where they expect them.
-- **Searchable.** People who have learned to rely on search need it to be available, to work with imprecise terms, and to bring back earlier searches.
+- **Searchable.** People who have learned to rely on search need it to be available, to find features and content easily, and to bring back what they searched for before.
 - **Clear navigation.** People who browse need menu categories and page structure that make sense to them and that they can scan to see what matters most.
 - **Media.** People with attention or executive function impairments need video and audio in short, labeled segments they can jump between, with a transcript they can find.
 
@@ -47,10 +47,10 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 
 ## Where WCAG stops
 
-WCAG requires that structure is coded, that there is more than one way to reach a page, and that headings describe. It does not require that the important task is prominent or above the fold, that menu categories match how the audience thinks, that sub-menus are noticeable, that a path to a key task is short, that search tolerates misspelling or remembers past queries, or that long media is chunked and labeled. Multiple Ways is satisfied by a site map that a person with an executive function impairment may never think to use.
+WCAG requires that structure is coded, that there is more than one way to reach a page, and that headings describe. It does not require that the important task is prominent or above the fold, that menu categories match how the audience thinks, that sub-menus are noticeable, that a path to a key task is short, that search tolerates misspelling or remembers past queries, or that long media is chunked and labeled. Multiple Ways can be met by a menu plus a site map, and neither helps a person who cannot work out which category holds what they need.
 
 ## How it is used
 
 - **Consult** asks what the one or two most important tasks are for the people in the spec and checks that the design puts them first; it challenges deep menus and hover-only sub-menus.
-- **Verify** might report: a key action reachable only through a hover menu (likely, this entry, with 1.4.13 checked separately); a long video with no chapters or transcript link (manual review, this entry; captions are a separate WCAG question under 1.2.2).
+- **Verify** might report: a key action reachable only through a hover menu (check 2.1.1 and 1.4.13 first and report once there if either fails; otherwise likely, this entry); a long video with no chapters or transcript link (manual review, this entry; captions are a separate WCAG question under 1.2.2).
 - **ux** entries, when they exist, carry the research on menu labeling and findability.

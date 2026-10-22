@@ -28,7 +28,7 @@ Write so people can understand on the first read: common words, short sentences,
 - [Avoid double negatives or nested clauses](https://www.w3.org/TR/coga-usable/#x4-4-3-avoid-double-negatives-or-nested-clauses-pattern): simple sentence structure.
 - [Use literal language](https://www.w3.org/TR/coga-usable/#x4-4-4-use-literal-language-pattern): concrete terms; explain any metaphor or simile.
 - [Keep text succinct](https://www.w3.org/TR/coga-usable/#x4-4-5-keep-text-succinct-pattern): short paragraphs with one topic, short sentences with one point, lists, short headings.
-- [Use clear, unambiguous formatting and punctuation](https://www.w3.org/TR/coga-usable/#x4-4-6-use-clear-unambiguous-formatting-and-punctuation-pattern): formats for text, numbers, and symbols that reduce ambiguity.
+- [Use clear, unambiguous formatting and punctuation](https://www.w3.org/TR/coga-usable/#x4-4-6-use-clear-unambiguous-formatting-and-punctuation-pattern): punctuation and number styles chosen so a sentence can only be read one way.
 - [Include symbols and letters necessary to decipher the words](https://www.w3.org/TR/coga-usable/#x4-4-7-include-symbols-and-letters-necessary-to-decipher-the-words-pattern): vowel marks and diacritics where the language needs them.
 - [Provide summary of long documents and media](https://www.w3.org/TR/coga-usable/#x4-4-8-provide-summary-of-long-documents-and-media-pattern): a short, plain summary with the key words emphasized.
 - [Separate each instruction](https://www.w3.org/TR/coga-usable/#x4-4-9-separate-each-instruction-pattern): one step at a time, none left out, numbered, with an if-then table for complex cases.
@@ -47,6 +47,8 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 | 1.4.3 | Contrast (Minimum) | AA | `wcag/sc-1.4.3-contrast-minimum.md` | Text against its background, including over images |
 | 1.4.12 | Text Spacing | AA | `wcag/sc-1.4.12-text-spacing.md` | Content survives a user increasing spacing; does not require spacing by default |
 | 1.1.1 | Non-text Content | A | `wcag/sc-1.1.1-non-text-content.md` | Images that carry meaning have text alternatives |
+| 3.1.1 | Language of Page | A | no entry yet | The page language is declared, so speech synthesis reads words correctly |
+| 3.1.2 | Language of Parts | AA | no entry yet | Passages in another language are marked, with stated exceptions |
 | 3.1.3 | Unusual Words | AAA | no entry yet | A way to find definitions of idioms, jargon, and unusual words |
 | 3.1.4 | Abbreviations | AAA | no entry yet | A way to find what an abbreviation stands for |
 | 3.1.5 | Reading Level | AAA | no entry yet | Supplemental content or a simpler version when text is above lower secondary level |
@@ -55,7 +57,7 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 
 ## Where WCAG stops
 
-Every WCAG criterion about the meaning of words (unusual words, abbreviations, reading level, pronunciation) is Level AAA. At A and AA, WCAG checks that text can be perceived, not that it can be understood. Nothing at our target requires plain words, short sentences, literal language, summaries, chunking, white space by default, or alternatives to numbers. That gap is why `docs/content-standards.md` exists and sets a house reading-level target of grade 8; this entry is the W3C reasoning behind it.
+Every WCAG criterion about the meaning of words (unusual words, abbreviations, reading level, pronunciation) is Level AAA. At A and AA, some criteria ask that particular text describes its purpose (headings and labels, link purpose, labels or instructions) and that its language is declared, but none sets a reading level or rules out jargon, idiom, or long sentences. Nothing at our target requires plain words, short sentences, literal language, summaries, chunking, white space by default, or alternatives to numbers. That gap is why `docs/content-standards.md` exists and sets a house reading-level target of grade 8; this entry is the W3C reasoning behind it.
 
 ## How it is used
 

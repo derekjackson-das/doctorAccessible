@@ -71,4 +71,4 @@ Source of record: W3C, Making Content Usable for People with Cognitive and Learn
 
 ## Other domains
 
-None yet. Planned: HTML patterns, design, content, assistive-technology test protocol, patterns, ux, aria.
+None yet. Planned: HTML patterns, design, content, assistive-technology test protocol.

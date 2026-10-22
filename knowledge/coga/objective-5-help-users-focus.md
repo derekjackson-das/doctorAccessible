@@ -36,16 +36,17 @@ Numbers, titles, and levels checked against the WCAG 2.2 Recommendation of 12 De
 | 1.4.2 | Audio Control | A | `wcag/sc-1.4.2-audio-control.md` | Audio that plays automatically can be paused or turned down |
 | 2.3.1 | Three Flashes or Below Threshold | A | `wcag/sc-2.3.1-three-flashes-or-below-threshold.md` | Flashing limits, for seizure safety rather than attention |
 | 3.2.1 | On Focus | A | no entry yet | Receiving keyboard focus does not change context |
+| 2.4.11 | Focus Not Obscured (Minimum) | AA | `wcag/sc-2.4.11-focus-not-obscured-minimum.md` | Banners and chat widgets must not entirely hide the focused component; new in WCAG 2.2 |
 | 2.2.4 | Interruptions | AAA | no entry yet | Interruptions can be postponed or suppressed, except emergencies |
 | 2.4.8 | Location | AAA | no entry yet | Where the user is within a set of pages |
 | 3.2.5 | Change on Request | AAA | no entry yet | Changes of context only on request, or can be turned off |
 
 ## Where WCAG stops
 
-WCAG at A and AA lets users stop motion and sound once it starts. It does not limit pop-ups, chat prompts, cookie banners, or promotions that break into a task (suppressing interruptions is AAA), the number of choices on a screen, the length of a path to a goal, or the presence of side content. It does not ask that a task tells people what they need before they begin. A page with a newsletter modal, a chat bubble, and twelve calls to action can conform.
+WCAG at A and AA lets users stop motion and sound once it starts. It does not limit pop-ups, chat prompts, cookie banners, or promotions that break into a task (suppressing interruptions is AAA), the number of choices on a screen, the length of a path to a goal, or the presence of side content. It does not ask that a task tells people what they need before they begin. A page with a newsletter modal, a chat bubble, and twelve calls to action can conform, as long as none of them entirely hides the component with keyboard focus.
 
 ## How it is used
 
 - **Consult** challenges every element that is not part of the task the need statement names, and asks whether a modal, banner, or carousel is needed at all. "Build less" is often the answer here.
-- **Verify** might report: a modal that opens unprompted over a form in progress (likely, this entry); a multi-step task with no statement of what to have ready (manual review); auto-advancing content without a pause control (definite under 2.2.2, not under this entry).
+- **Verify** might report: a modal that opens unprompted over a form in progress (likely, this entry); a multi-step task with no statement of what to have ready (manual review); auto-advancing content that starts on its own, runs longer than five seconds alongside other content, and has no pause control (definite under 2.2.2, not under this entry).
 - **patterns** entries for carousel, modal dialog, and infinite scroll, when they exist, link here.
