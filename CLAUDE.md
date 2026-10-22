@@ -64,7 +64,7 @@ Before any mode acts, read the project's `a11y-spec.md` if one exists (repo root
 2. What is the smallest thing that meets that need? "Less than you asked for" and "nothing, it is already met" are valid answers. Say them plainly.
 3. Only then, how. Challenge every interactive pattern named (would a list serve better than a carousel), pull the applicable criteria from `knowledge/INDEX.md`, lay out options with trade-offs, name the manual tests.
 
-End with a need statement in the format in `templates/a11y-spec.md`, written into the project's spec. This is the `consult` skill once it exists (roadmap 3.1); until then, follow this section.
+End with a need statement in the format in `templates/a11y-spec.md`, written into the project's spec with the developer's agreement. This is the `consult` skill at `.claude/skills/consult/SKILL.md`; load it (`/consult`) at the start of any feature and whenever scope changes.
 
 **Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill when a change touches structure, forms, focus, names and roles, color, media, or motion.
 

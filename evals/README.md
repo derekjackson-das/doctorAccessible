@@ -14,6 +14,10 @@ evals/
 
 One intended defect per eval unless its `expected.md` says otherwise. Everything else in the input is kept clean on purpose, so a false positive is visible.
 
+## Transcript evals
+
+Phase 3 skills are tested with a different input. Instead of `input.html`, the folder holds `request.md`: a short feature request as a developer would type it, plus the project context the skill is given (the spec's audience and AT list, any code pasted). `expected.md` says what a good answer contains and what it must not do. To run one, start a fresh Claude Code session in a copy of the repo, load the skill (for example `/consult`), paste the request, and compare the answer to `expected.md`. Until Phase 4 automates this, record the run the same way: a row in `RESULTS.md` and the full answer in a `run-YYYY-MM-DD-<skill>.md` file beside the request.
+
 ## Running one
 
 From a Claude Code session in this repo:
