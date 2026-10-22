@@ -33,6 +33,8 @@ Do not move to the next question until the current one is answered. Ask the deve
 
 ## Output shape
 
+Keep it to what decides the answer. Cite the criteria that settle "build less" or "already met" and the ones the chosen thing must meet; the full criteria pass belongs to build and verify. A consult the developer will not read is a consult that did not happen.
+
 ```
 ## Who and what
 <the person, the situation, the task; or "not yet answered" and the question back>
