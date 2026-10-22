@@ -72,6 +72,11 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 
 **Principle 16 adopted.** Content is part of the build.
 
+## 2026-10-22: contribution rules; roadmap is for the team
+
+**`CONTRIBUTING.md` and two templates.** The procedure for getting a change merged, a pull request template that asks which evals ran, and an issue template carrying the six work-package fields. Roadmap package 1.2.
+
+**The roadmap lists only what the team can see.** Package 1.5, a listing in Derek's private CCode workspace, is removed and its ID left unused. Private housekeeping stays private.
 ## 2026-10-22: axe runs, and eval 001 has one defect
 
 **axe is available.** `@axe-core/cli` through `npx`, no global install. The bundled ChromeDriver lagged the installed Chrome, so `browser-driver-manager` fetches a matching Chrome for Testing and driver pair into the user's home cache. Recorded in the common commands.

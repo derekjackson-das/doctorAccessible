@@ -28,13 +28,14 @@ Every issue has these six fields. Keep them short.
 
 ## Phase 1: Team setup
 
+ID 1.5 is unused. It was a listing in Derek's private workspace, which is not the team's concern.
+
 | ID | Goal | Deliverables | Done when | Depends on | Size |
 |---|---|---|---|---|---|
 | 1.1 | Public repo on GitHub | Repo `doctorAccessible`, `main` pushed, branch protection requiring a PR | Teammates can clone | none | S |
 | 1.2 | Contribution rules | `CONTRIBUTING.md`, PR template with an "evals run" section, issue template with the six fields | A test PR shows the template | 1.1 | S |
 | 1.3 | axe available | `@axe-core/cli` runs via `npx` against `evals/001-missing-label/input.html` | Raw axe output captured in the issue | none | S |
 | 1.4 | Prove the pattern | Verifier run on eval 001, result recorded in `evals/RESULTS.md` | Finding matches `expected.md`; nothing from "must not" appears | 1.3 | S |
-| 1.5 | CCode listing | Project added to the CCode `README.md` and `index.html` | Listed | 1.1 | S |
 | 1.6 | Onboarding | Each teammate clones, runs `claude`, runs eval 001 | Each person has a recorded run | 1.4 | S |
 | 1.7 | Distribution decision | A written choice between packaging this repo as a Claude Code plugin a developer installs into their project, or copying `.claude/` and `templates/a11y-spec.md` by hand; recorded in `docs/decisions.md` | Decision recorded and one developer project set up the chosen way | 1.1 | S |
 
@@ -114,7 +115,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 
 | Person | Phase 1 | Phase 2 | Phase 3 |
 |---|---|---|---|
-| A (Derek) | 1.1, 1.2, 1.5, 1.7 | 2.4, 2.5, 2.6 | 3.1, 3.2, 3.9 |
+| A (Derek) | 1.1, 1.2, 1.7 | 2.4, 2.5, 2.6 | 3.1, 3.2, 3.9 |
 | B | 1.3, 1.4 | 2.1 | 3.5, 3.8 |
 | C | 1.6 | 2.2 | 3.4 |
 | D | | 2.3 | 3.3, 3.6 |

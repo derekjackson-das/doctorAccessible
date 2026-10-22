@@ -49,6 +49,7 @@ The short form. Rationale for each is in [`docs/principles.md`](docs/principles.
 | `docs/content-standards.md` | What good content looks like: plain language, reading level, headings, links, alt text, errors. |
 | `docs/ROADMAP.md` | Phases, work packages, and how the team divides the work. |
 | `docs/decisions.md` | Why things are the way they are, dated. |
+| `CONTRIBUTING.md` | The procedure for getting a change merged. |
 
 ## Roadmap
 
@@ -75,7 +76,9 @@ Work is claimed by work package, not by phase. Each package is one GitHub issue 
 
 ## Working on it as a team
 
-- Claim a work package from `docs/ROADMAP.md` by taking its issue.
+The full procedure is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+- Claim a work package from `docs/ROADMAP.md` by opening an issue from the work-package template.
 - Knowledge entries follow `knowledge/README.md`. Source, tier, version, verified date, or it does not merge.
 - A pull request that changes an agent, a skill, or a knowledge entry says which evals were run and what they produced.
 - Write entries in your own words from the source. This repo is public. Link, do not paste.
