@@ -60,7 +60,7 @@ Robust is small. Whoever takes 2.4 also takes a phase 3 package.
 
 **2.3 Understandable:** 3.1.1 Language of Page (A); 3.1.2 Language of Parts (AA); 3.2.1 On Focus (A); 3.2.2 On Input (A); 3.2.3 Consistent Navigation (AA); 3.2.4 Consistent Identification (AA); 3.2.6 Consistent Help (A); 3.3.1 Error Identification (A); 3.3.2 Labels or Instructions (A); 3.3.3 Error Suggestion (AA); 3.3.4 Error Prevention, Legal, Financial, Data (AA); 3.3.7 Redundant Entry (A); 3.3.8 Accessible Authentication, Minimum (AA).
 
-**2.4 Robust:** 4.1.2 Name, Role, Value (A), done; 4.1.3 Status Messages (AA). Outside the 55: 4.1.1 Parsing, obsolete and removed in 2.2, has an entry so findings about markup get routed to the right criterion; done.
+**2.4 Robust:** 4.1.2 Name, Role, Value (A), done; 4.1.3 Status Messages (AA), done, eval 011. Outside the 55: 4.1.1 Parsing, obsolete and removed in 2.2, has an entry so findings about markup get routed to the right criterion; done.
 
 Done when, for every package: each entry follows `knowledge/wcag/_template.md`, quotes the normative text verbatim with a verified date, lists techniques by ID from the Understanding page, and is in `INDEX.md`; each eval has an `input.html` with one intended defect and an `expected.md` written from the entry.
 

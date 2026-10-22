@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email preferences</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; }
+    fieldset { border: 1px solid #555; padding: 1rem; max-width: 28rem; }
+    label { display: block; padding: 0.5rem 0; }
+    input[type="checkbox"] { width: 1.25rem; height: 1.25rem; margin-right: 0.5rem; vertical-align: middle; }
+    button { font: inherit; padding: 0.6rem 1.2rem; margin-top: 1rem; }
+    .saved { color: #1b5e20; font-weight: 600; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Email preferences</h1>
+  </header>
+  <main>
+    <form id="prefs">
+      <fieldset>
+        <legend>Send me</legend>
+        <label><input type="checkbox" name="news" checked> Monthly newsletter</label>
+        <label><input type="checkbox" name="events"> Event announcements</label>
+        <label><input type="checkbox" name="offers"> Member offers</label>
+      </fieldset>
+      <button type="button" id="save">Save preferences</button>
+      <p id="save-msg" class="saved"></p>
+    </form>
+  </main>
+  <script>
+    document.getElementById('save').addEventListener('click', function () {
+      document.getElementById('save-msg').textContent = 'Your preferences are saved.';
+    });
+  </script>
+</body>
+</html>
