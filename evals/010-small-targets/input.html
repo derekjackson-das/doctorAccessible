@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search results, page 3</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; max-width: 40rem; }
+    a { color: #005a9c; }
+    main > ul li { line-height: 1.6; padding: 0.25rem 0; }
+    .pager { list-style: none; padding: 0; margin: 2rem 0 0; display: flex; gap: 0; }
+    .pager a, .pager [aria-current] {
+      display: block; width: 16px; height: 16px; line-height: 16px;
+      font-size: 0.75rem; text-align: center; text-decoration: none;
+      border: 1px solid #005a9c; border-radius: 2px;
+    }
+    .pager [aria-current] { background: #005a9c; color: #fff; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Search results, page 3</h1>
+  </header>
+  <main>
+    <p>Showing results 21 to 30 of 60 for "accessibility".</p>
+    <ul>
+      <li><a href="/doc/21">Accessible forms checklist</a></li>
+      <li><a href="/doc/22">Captioning guide for lecture video</a></li>
+      <li><a href="/doc/23">Color contrast in the design system</a></li>
+    </ul>
+    <nav aria-label="Search results pages">
+      <ul class="pager">
+        <li><a href="?page=1">1</a></li>
+        <li><a href="?page=2">2</a></li>
+        <li><span aria-current="page">3</span></li>
+        <li><a href="?page=4">4</a></li>
+        <li><a href="?page=5">5</a></li>
+        <li><a href="?page=6">6</a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>
