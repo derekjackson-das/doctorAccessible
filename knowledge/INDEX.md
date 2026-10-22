@@ -62,10 +62,11 @@ Target: Level AA. Source of record: W3C Recommendation 12 December 2024.
 | 3.3.7 | Redundant Entry | A | `wcag/sc-3.3.7-redundant-entry.md` | 2026-10-22 |
 | 3.3.8 | Accessible Authentication (Minimum) | AA | `wcag/sc-3.3.8-accessible-authentication-minimum.md` | 2026-10-22 |
 | 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | 2026-10-22 |
+| 4.1.3 | Status Messages | AA | `wcag/sc-4.1.3-status-messages.md` | 2026-10-22 |
 
 ### Gaps noted so far
 
-4.1.3 Status Messages.
+None. Every Level A and AA success criterion in WCAG 2.2 has an entry as of 2026-10-22.
 
 ## COGA: cognitive and learning disabilities
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a course</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; max-width: 40rem; }
+    label { display: block; margin-bottom: 0.25rem; font-weight: bold; }
+    input { font: inherit; padding: 0.5rem; width: 100%; box-sizing: border-box; }
+    #count { margin: 1rem 0 0.5rem; font-weight: bold; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Find a course</h1>
+  </header>
+  <main>
+    <label for="q">Course title</label>
+    <input type="search" id="q" name="q" autocomplete="off">
+    <p id="count">4 courses</p>
+    <ul id="results">
+      <li>Introduction to Web Accessibility</li>
+      <li>Accessible Document Design</li>
+      <li>Captioning and Audio Description</li>
+      <li>Inclusive Research Methods</li>
+    </ul>
+  </main>
+  <script>
+    var input = document.getElementById('q');
+    var items = Array.prototype.slice.call(document.querySelectorAll('#results li'));
+    var count = document.getElementById('count');
+    input.addEventListener('input', function () {
+      var term = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (li) {
+        var match = li.textContent.toLowerCase().indexOf(term) !== -1;
+        li.hidden = !match;
+        if (match) shown++;
+      });
+      count.textContent = shown + (shown === 1 ? ' course' : ' courses');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Verifier run, 2026-10-22, eval 014
+
+Blind run through the registered `verifier` agent (`verifier.md` at commit f93f693), dispatch omitting the axe command and the scratch directory.
+
+Result against `expected.md`: **pass**. One Definite finding, SC 4.1.3 Status Messages (Level AA), tier 1, at `p#count` and the script line that rewrites it, with the entry's pattern quoted and F103 named; `output` or `role="status"` as the fix, with the region present from load. The must-not list held: the search field was checked against the 1.3.5 entry and left alone, the in-place filter checked against the 3.2.2 entry and left alone, label, landmarks, focus, contrast all declared passing with the entry each rests on. A manual-review note on whether "0 courses" is enough of a next step. Nothing else reported. No file modified.
+
+Rule check: tags flag unprompted; clean scan explicitly not a pass, citing the 4.1.3 entry's note. Every ratio names its entry. Reading-level number computed and then declared not meaningful for a page of course titles. The first-change-after-load caveat was taken from the entry and listed as a manual check rather than asserted.
+
+Report summary: finding as above; passing: contrast 17.40:1 and 7.14:1 against the opened 1.4.3 and 1.4.11 entries; focus style per 2.4.7; label associated; 3.2.2 not triggered by in-place filtering; 1.3.5 not applicable to a search box; landmarks per 2.4.1; `lang` and title. Content: heading describes the page; no empty-result message beyond "0 courses", manual review. Manual checks: screen reader announcement while typing and on the first change; keyboard focus during filtering; 400% reflow; browser-default input border under the 1.4.11 exemption; empty-results behavior; hidden items unreachable in browse mode. axe: 0 violations, 0 incomplete, 13 passes.
