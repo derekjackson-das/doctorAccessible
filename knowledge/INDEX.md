@@ -48,7 +48,6 @@ Target: Level AA. Source of record: W3C Recommendation 12 December 2024.
 | 2.5.4 | Motion Actuation | A | `wcag/sc-2.5.4-motion-actuation.md` | 2026-10-22 |
 | 2.5.7 | Dragging Movements | AA | `wcag/sc-2.5.7-dragging-movements.md` | 2026-10-22 |
 | 2.5.8 | Target Size (Minimum) | AA | `wcag/sc-2.5.8-target-size-minimum.md` | 2026-10-22 |
-| 4.1.1 | Parsing | Obsolete and removed in 2.2 (A in 2.0 and 2.1) | `wcag/sc-4.1.1-parsing.md` | 2026-10-22 |
 | 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | 2026-10-22 |
 | 4.1.3 | Status Messages | AA | `wcag/sc-4.1.3-status-messages.md` | 2026-10-22 |
 

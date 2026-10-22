@@ -35,9 +35,7 @@ A source is removed when it contradicts tier 1 without acknowledging it, or when
 | Source | For | Version or date | Cite as | Verified |
 |---|---|---|---|---|
 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) | Web content requirements. Target: Level AA. | W3C Recommendation 12 December 2024 | WCAG 2.2 SC x.x.x (Level) | 2026-10-22, re-confirmed |
-| [WCAG 2.1](https://www.w3.org/TR/WCAG21/) | Projects or policies that name 2.1 (Harvard policy, ADA Title II, EN 301 549); criterion history | W3C Recommendation 6 May 2025 | WCAG 2.1 SC x.x.x (Level) | 2026-10-22 |
-| [WCAG 2.0](https://www.w3.org/TR/WCAG20/) | Projects or policies that name 2.0 (Section 508); criterion history | W3C Recommendation 11 December 2008 | WCAG 2.0 SC x.x.x (Level) | 2026-10-22 |
-| [WCAG 2.0 errata](https://www.w3.org/WAI/WCAG20/errata/) | Corrections to 2.0 that change how a criterion is read, such as 4.1.1 | Page dated 6 September 2023 | WCAG 2.0 errata, 6 Sep 2023 | 2026-10-22 |
+| [WCAG 2.1](https://www.w3.org/TR/WCAG21/) | Projects or policies that name 2.1 (Harvard policy, ADA Title II, EN 301 549) | W3C Recommendation 6 May 2025 | WCAG 2.1 SC x.x.x (Level) | 2026-10-22 |
 | [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/) | Roles, states, properties | W3C Recommendation 6 June 2023 | WAI-ARIA 1.2 §… | 2026-10-22 |
 | [ARIA in HTML](https://www.w3.org/TR/html-aria/) | Which roles and attributes are allowed on which elements | W3C Recommendation 11 August 2026 | ARIA in HTML, W3C Rec 11 Aug 2026 | 2026-10-22 |
 | [Accessible Name and Description Computation 1.1](https://www.w3.org/TR/accname-1.1/) | How accessible names are computed | W3C Recommendation 18 December 2018. The 1.2 draft at https://www.w3.org/TR/accname-1.2/ was a Working Draft (21 October 2026) when checked; awareness only under rule 4 until it reaches Recommendation. | AccName 1.1 | 2026-10-22 |
@@ -105,4 +103,4 @@ Checked 2026-10-22: every site below is live and publishing under a real name. C
 | 2026-10-22 | List created. Tier 1 and 2 seeded from W3C and WHATWG. Tier 3 proposed for team confirmation. | Derek Jackson with Claude Code |
 | 2026-10-22 | Content sources added: Writing for Web Accessibility and Making Content Usable (tier 2), Federal Plain Language Guidelines and readability formulas (tier 3). | Derek Jackson with Claude Code |
 | 2026-10-22 | Package 2.6 first pass. Every URL opened and its status recorded. ARIA in HTML is now a dated Recommendation (11 Aug 2026). AccName row moved from the 1.2 Working Draft to the 1.1 Recommendation; 1.2 noted as awareness only. HTML-AAM moved from tier 1 to tier 2 as a Working Draft. Using ARIA marked as a Discontinued Draft (24 Feb 2026), kept for the historical rules. Plain Language Guidelines URL now Digital.gov; TPGi blog URL now Vispero. Tier 3 rows marked checked with notes; confirmation left to the team. | Derek Jackson with Claude Code |
-| 2026-10-22 | WCAG 2.1, WCAG 2.0, and the WCAG 2.0 errata added to tier 1, so entries can quote the older versions that policies still name. First used by the SC 4.1.1 entry. | Jennifer Dee with Claude Code |
+| 2026-10-22 | WCAG 2.1 added to tier 1, so entries can cite the version that Harvard policy, ADA Title II, and EN 301 549 still name. First used by the SC 4.1.3 entry. | Jennifer Dee with Claude Code |
