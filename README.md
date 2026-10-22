@@ -41,6 +41,8 @@ Most of the work is writing knowledge entries. For each rule in WCAG, someone re
 
 Later work adds entries beyond WCAG: which interface patterns serve people and which do not, how to write content people can read, how to design focus and contrast above the minimum, how to run tests with real assistive technology.
 
+If GitHub, branches, and pull requests are new to you, read [`docs/how-we-work.md`](docs/how-we-work.md) first. It explains every word and walks through one piece of work from start to finish.
+
 Your first contribution, step by step:
 
 1. Clone this repo and open a terminal in its folder.
@@ -105,6 +107,7 @@ The short form. Rationale for each is in [`docs/principles.md`](docs/principles.
 | `evals/` | Known-defect snippets and the findings a correct verifier must produce. |
 | `templates/a11y-spec.md` | The project spec template. Copy it to the root of your project. |
 | `docs/principles.md` | The principles, with reasons. |
+| `docs/how-we-work.md` | For contributors new to GitHub, Claude Code, or development: the words, the workflow start to finish, and what finished work looks like. |
 | `docs/content-standards.md` | What good content looks like: plain language, reading level, headings, links, alt text, errors. |
 | `docs/ROADMAP.md` | Phases, work packages, and how the team divides the work. |
 | `docs/decisions.md` | Why things are the way they are, dated. |
