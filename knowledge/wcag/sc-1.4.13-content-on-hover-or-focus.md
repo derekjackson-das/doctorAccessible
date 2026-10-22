@@ -41,7 +41,7 @@ Custom tooltips, hover menus, and preview popups must behave in three ways. A pe
 ## How to meet it
 
 - Technique SCR39, "Making content on focus or hover hoverable, dismissible, and persistent": position the popup adjacent to or overlapping the trigger, keep it open while the pointer is over either, close on Escape, and never close on a timer.
-- Consider whether the content needs to be a popup at all. Visible helper text beside a field has none of these problems. The `patterns` entry for tooltips, when it exists, carries that discussion.
+- Consider whether the content needs to be a popup at all. Visible helper text beside a field has none of these problems. `patterns/tooltip.md` carries that discussion.
 
 All techniques are tier 2, from the Understanding page linked above.
 
