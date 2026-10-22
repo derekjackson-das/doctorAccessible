@@ -28,11 +28,31 @@ Target: Level AA. Source of record: W3C Recommendation 12 December 2024.
 | 1.4.11 | Non-text Contrast | AA | `wcag/sc-1.4.11-non-text-contrast.md` | 2026-10-22 |
 | 1.4.12 | Text Spacing | AA | `wcag/sc-1.4.12-text-spacing.md` | 2026-10-22 |
 | 1.4.13 | Content on Hover or Focus | AA | `wcag/sc-1.4.13-content-on-hover-or-focus.md` | 2026-10-22 |
+| 2.1.1 | Keyboard | A | `wcag/sc-2.1.1-keyboard.md` | 2026-10-22 |
+| 2.1.2 | No Keyboard Trap | A | `wcag/sc-2.1.2-no-keyboard-trap.md` | 2026-10-22 |
+| 2.1.4 | Character Key Shortcuts | A | `wcag/sc-2.1.4-character-key-shortcuts.md` | 2026-10-22 |
+| 2.2.1 | Timing Adjustable | A | `wcag/sc-2.2.1-timing-adjustable.md` | 2026-10-22 |
+| 2.2.2 | Pause, Stop, Hide | A | `wcag/sc-2.2.2-pause-stop-hide.md` | 2026-10-22 |
+| 2.3.1 | Three Flashes or Below Threshold | A | `wcag/sc-2.3.1-three-flashes-or-below-threshold.md` | 2026-10-22 |
+| 2.4.1 | Bypass Blocks | A | `wcag/sc-2.4.1-bypass-blocks.md` | 2026-10-22 |
+| 2.4.2 | Page Titled | A | `wcag/sc-2.4.2-page-titled.md` | 2026-10-22 |
+| 2.4.3 | Focus Order | A | `wcag/sc-2.4.3-focus-order.md` | 2026-10-22 |
+| 2.4.4 | Link Purpose (In Context) | A | `wcag/sc-2.4.4-link-purpose-in-context.md` | 2026-10-22 |
+| 2.4.5 | Multiple Ways | AA | `wcag/sc-2.4.5-multiple-ways.md` | 2026-10-22 |
+| 2.4.6 | Headings and Labels | AA | `wcag/sc-2.4.6-headings-and-labels.md` | 2026-10-22 |
+| 2.4.7 | Focus Visible | AA | `wcag/sc-2.4.7-focus-visible.md` | 2026-10-22 |
+| 2.4.11 | Focus Not Obscured (Minimum) | AA | `wcag/sc-2.4.11-focus-not-obscured-minimum.md` | 2026-10-22 |
+| 2.5.1 | Pointer Gestures | A | `wcag/sc-2.5.1-pointer-gestures.md` | 2026-10-22 |
+| 2.5.2 | Pointer Cancellation | A | `wcag/sc-2.5.2-pointer-cancellation.md` | 2026-10-22 |
+| 2.5.3 | Label in Name | A | `wcag/sc-2.5.3-label-in-name.md` | 2026-10-22 |
+| 2.5.4 | Motion Actuation | A | `wcag/sc-2.5.4-motion-actuation.md` | 2026-10-22 |
+| 2.5.7 | Dragging Movements | AA | `wcag/sc-2.5.7-dragging-movements.md` | 2026-10-22 |
+| 2.5.8 | Target Size (Minimum) | AA | `wcag/sc-2.5.8-target-size-minimum.md` | 2026-10-22 |
 | 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | 2026-10-22 |
 
 ### Gaps noted so far
 
-3.3.2 Labels or Instructions, 2.4.6 Headings and Labels, 2.1.1 Keyboard, 2.4.3 Focus Order, 2.4.7 Focus Visible.
+3.3.2 Labels or Instructions.
 
 ## Other domains
 
