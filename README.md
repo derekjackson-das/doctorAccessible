@@ -2,13 +2,72 @@
 
 Doctor Accessible is an accessibility-first development assistant for Claude Code, built by Derek Jackson's team at Harvard and shared through this public repo. It helps a developer build web content that meets WCAG 2.2 Level AA, and it is honest about what it cannot judge.
 
+## New here? Start with this
+
+This section is for two kinds of reader: people who have never used Claude Code, and contributors who are new to development and want to know what they are working on. It is longer than the rest of the README on purpose.
+
+### What Claude Code is
+
+Claude Code is a program that runs in your terminal. You type what you want in plain English. It reads files, writes files, and runs commands for you, and it shows you what it did. It is made by Anthropic and uses the Claude AI model.
+
+When you start Claude Code inside a folder, it looks for a file called `CLAUDE.md` and reads it first. That file holds the rules for the project. Everything Claude does in that folder follows those rules. This repo has one, and it is the most important file here.
+
+### What Doctor Accessible is
+
+Doctor Accessible is not an app you install. It is a set of files that teach Claude Code one job: helping a developer build web pages that work for people with disabilities, to a standard called WCAG 2.2 Level AA.
+
+When you run Claude Code in this repo, or copy these files into another project, Claude follows them. It will ask who a page is for before it writes code. It will check its own work against the standard. It will say when it is not sure and a person needs to test. It will not pretend to be a blind user or guess at a rule it cannot cite.
+
+### The four kinds of file
+
+| Kind | Where | What it is |
+|---|---|---|
+| **Agent** | `.claude/agents/` | A separate Claude with its own instructions and no memory of your conversation. We have one, the verifier. It checks finished work the way a reviewer who was not in the room would. |
+| **Skill** | `.claude/skills/` | A short procedure Claude loads when a task needs it. A skill says when it applies, how to cite, and which reference note answers which question. It holds no facts itself. |
+| **Knowledge entry** | `knowledge/` | One Markdown page about one accessibility rule or topic, written in our own words from the official source, with a link, the source's tier, its version, and the date someone checked it. This is where the facts live. |
+| **Eval** | `evals/` | A small web page with one known defect, plus a note saying what a correct check must find and must not find. Evals test whether a change to an agent, skill, or entry made Claude better or worse. |
+
+Everything else in the repo is documentation: the principles, the roadmap, the content standards, and the record of decisions.
+
+### How the pieces work together
+
+A developer asks Claude for a search box. Claude pauses and asks who will use it and what they need. That is **consult**. Once the need is written down, Claude writes the form, loading the WCAG skill, which points it at the knowledge entries for labels and names. That is **build**. Then the developer asks for a check. The verifier agent reads the form cold, runs the axe scanner, opens the same knowledge entries, and reports that the input has no label, citing the rule. That is **verify**. The developer fixes it. A real person using a screen reader does the final test.
+
+Each project that uses Doctor Accessible keeps one file, `a11y-spec.md`, that records who the project serves, what assistive technology it is tested with, and the decisions made along the way. Every mode reads it first.
+
+### What contributors actually do
+
+Most of the work is writing knowledge entries. For each rule in WCAG, someone reads the W3C page, explains the rule in plain words, says how it fails in code and how to fix it, cites the source, and writes one small broken page as an eval. That is reading, writing, and care. It is not programming. You do not need to know JavaScript to do it well.
+
+Later work adds entries beyond WCAG: which interface patterns serve people and which do not, how to write content people can read, how to design focus and contrast above the minimum, how to run tests with real assistive technology.
+
+Your first contribution, step by step:
+
+1. Clone this repo and open a terminal in its folder.
+2. Run `claude`. Read what it says. Type `/wcag` to see a skill load.
+3. Ask it to run the verifier on `evals/001-missing-label/input.html`. Compare what comes back to `evals/001-missing-label/expected.md`.
+4. Pick an open issue labeled `good first issue`. Put your name in the owner field. Follow its steps.
+5. Open a pull request. The template tells you what to include. Someone reviews it against the same checklist.
+
+### Words you will see
+
+- **WCAG.** Web Content Accessibility Guidelines, the W3C standard. Version 2.2 is current. We build to Level AA.
+- **Success criterion, or SC.** One testable rule in WCAG. There are 55 at Levels A and AA. Each gets its own knowledge entry.
+- **Level A, AA, AAA.** How strict a rule is. A is the floor. AA is the common legal target. AAA is beyond what most policies require.
+- **Tier.** How much authority a source has. Tier 1 is the standard itself. Tier 2 is the W3C explaining the standard. Tier 3 is experienced practitioners. We cite the tier every time.
+- **axe.** The automated scanner we use. It finds some problems reliably and misses most. It is the only scanner here.
+- **Assistive technology, or AT.** Screen readers, magnifiers, switch devices, voice control. The tools people use to work around barriers.
+- **Need statement.** A short paragraph saying who a feature is for and what they are trying to do. Build does not start without one.
+
+## The three modes
+
 It works in three modes:
 
 - **Consult.** The pause before building. Doctor Accessible asks who this is for and what they are trying to do, then what the smallest thing that meets that need is, and only then how. It may answer "build less" or "build nothing." It challenges the pattern (does this page need a carousel, or would a list serve the reader better), pulls the criteria that apply from the knowledge library, lays out options with their trade-offs, names the tests a human still has to run, and writes a need statement into the project spec. A thinking partner, not a lecture.
 - **Build.** The developer writes code and content in the main Claude Code session. Skills load on demand and point at the knowledge entries for the task. Content is built to `docs/content-standards.md`: plain language, a reading-level target, descriptive headings and links, purposeful alt text.
 - **Verify.** An isolated agent checks the result without seeing how it was built. It runs axe when it can, reads everything itself, and reports findings as definite, likely, or needing manual review.
 
-The library is not only WCAG. It draws on the ARIA specs, the HTML Living Standard, W3C's explanatory material, and named practitioners and usability research, each labeled by tier in `knowledge/SOURCES.md`. Under the modes sit four parts: one verifier agent, a set of short skills that act as maps, a Markdown knowledge library where every entry cites its source, tier, version, and verification date, and an eval corpus of known defects that makes every change measurable. Each project keeps one `a11y-spec.md`, its own requirements and decisions, which every mode reads first. Build does not start on a feature without a need statement in it. There is no director agent and no simulated user. The developer directs; real people with assistive technology do the final testing.
+The library is not only WCAG. It draws on the ARIA specs, the HTML Living Standard, W3C's explanatory material, and named practitioners and usability research, each labeled by tier in `knowledge/SOURCES.md`. There is no director agent and no simulated user. The developer directs; real people with assistive technology do the final testing.
 
 Conformance target: WCAG 2.2 Level AA. Automated scanner: axe only. Reference stack: plain HTML, CSS, and JavaScript.
 
@@ -87,4 +146,4 @@ The full procedure is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Status
 
-2026-10-22: Phase 0 complete. One agent, one skill, one verified knowledge entry, one eval. Principles and roadmap adopted. Phase 1 next.
+2026-10-22: Phase 0 complete. Phase 1 nearly complete: public repo, contribution rules, axe running, eval 001 passing through the registered verifier. Work-package issues open for Phases 1 to 3. Remaining in Phase 1: onboarding runs (1.6) and the distribution decision (1.7).
