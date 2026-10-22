@@ -54,6 +54,21 @@ Target: Level AA. Source of record: W3C Recommendation 12 December 2024.
 
 3.3.2 Labels or Instructions.
 
+## COGA: cognitive and learning disabilities
+
+Source of record: W3C, Making Content Usable for People with Cognitive and Learning Disabilities, Working Group Note 29 April 2021. Tier 2. Guidance, not a conformance requirement: a finding that rests only on a COGA entry is likely or manual review, never definite. One entry per objective in the Note.
+
+| Objective | Title | Entry | Verified |
+|---|---|---|---|
+| 1 | Help users understand what things are and how to use them | `coga/objective-1-understand-what-things-are.md` | 2026-10-22 |
+| 2 | Help users find what they need | `coga/objective-2-find-what-they-need.md` | 2026-10-22 |
+| 3 | Use clear and understandable content | `coga/objective-3-clear-content.md` | 2026-10-22 |
+| 4 | Help users avoid mistakes and know how to correct them | `coga/objective-4-avoid-mistakes.md` | 2026-10-22 |
+| 5 | Help users focus | `coga/objective-5-help-users-focus.md` | 2026-10-22 |
+| 6 | Ensure processes do not rely on memory | `coga/objective-6-do-not-rely-on-memory.md` | 2026-10-22 |
+| 7 | Provide help and support | `coga/objective-7-help-and-support.md` | 2026-10-22 |
+| 8 | Support adaptation and personalization | `coga/objective-8-adaptation-and-personalization.md` | 2026-10-22 |
+
 ## Other domains
 
 None yet. Planned: HTML patterns, design, content, assistive-technology test protocol.
