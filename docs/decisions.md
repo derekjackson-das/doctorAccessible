@@ -92,3 +92,15 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **Phase 5 gets a named candidates list (5.5).** Mobile and touch, localization and language, document formats, and CMS layers. Visible so the shape is known; unclaimed so nobody is committed.
 
 **One boundary.** Anything that is not a WCAG failure or a spec deviation is reported as likely or manual review, never definite. That keeps the verifier credible when the advice is "this carousel is a bad idea" rather than "this input has no name."
+
+## 2026-10-22: the verifier's rules tightened from eleven eval runs
+
+**Numbers are covered by the no-memory rule.** The original rule forbade stating a criterion number, title, or level from memory. Across eleven runs the agent stated thresholds from memory three times: computed contrast ratios in pass observations twice, and flash-threshold luminance figures once, attributed to an entry that holds no such figures. The rule now covers thresholds, ratios, sizes, and rates: they come from the entry or are not stated. Computing a value from the code is allowed once the entry holding the threshold has been opened, and the report must say the value was computed and from what. Nothing may be attributed to an entry that the entry does not say.
+
+**axe runs with the WCAG 2.2 tags, and a clean run is not a pass.** The `@axe-core/cli` default run executes no rule tagged `wcag22aa`; eval 010's target-size defect appeared in no result bucket until the rule was requested. The verifier's axe step now carries the tags flag, reads all four result buckets, treats "incomplete" as a lead, and never treats zero violations as a pass. Evals 004, 006, 008, and 009 are deliberately invisible to axe to keep this honest.
+
+**"Expected to announce" is simulation.** The first run on eval 001 wrote what a screen reader would announce before and after the fix. The rule against simulating a user now names that pattern: write the test step and what the tester records.
+
+**Scratch files stay out of the repo.** Agents had kept axe output and measurement scripts out of the repository only because each dispatch prompt named a temp directory. The rule is now in the agent file.
+
+**Why now.** The most recent run before this change, eval 001 after package 2.5, showed the agent declining to cite contrast ratios without opening the entries, on its own. The behavior is reachable; the rule makes it hold. Measured by re-running evals 001, 005, 008, and 010, the four where the old behavior appeared.

@@ -26,12 +26,14 @@ If the project has an `a11y-spec.md` (repo root, then `docs/`), read it before a
 
 Before citing any success criterion, open `knowledge/INDEX.md`, find the entry, and read it. If no entry exists for the criterion you need, write "no entry yet" in the finding, cite the W3C text by URL, and mark it unverified. Never state a criterion number, title, or level from memory.
 
+The same rule covers numbers. A threshold (a contrast ratio, a pixel size, a flash rate, a time limit) comes from the entry that sets it, or it is not stated. You may compute a value from the code, such as a contrast ratio from declared colors or a target size from CSS, and state it, but only after opening the entry that holds the threshold it is compared against, and the report says the value was computed and from what. Never attribute to an entry anything the entry does not say. If you remember a figure and cannot find it in an entry, leave it out or mark it unverified. A figure from any document you did not open in this run is from memory, whatever document you believe it came from; naming that document does not make it a citation.
+
 Tiers: tier 1 is normative (the W3C Recommendation text). Tier 2 is informative from the standards body (Understanding and Techniques documents). Tier 3 is practitioner guidance and tool documentation. A tier 3 source never carries a normative claim on its own.
 
 ## Process
 
 1. Inventory what you were given: files, a URL, or a snippet. Say what you are checking.
-2. If a URL or a local HTML file is given and axe is available, run `npx @axe-core/cli` on it and keep the raw result for the report. axe is the only automated scanner used here. If axe is not available, say so and continue.
+2. If a URL or a local HTML file is given and axe is available, run `npx --yes @axe-core/cli --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa` on it and keep the raw result for the report. The default run skips rules tagged for WCAG 2.2, so the tags flag is not optional. Read all four result buckets: violations, incomplete, passes, inapplicable. "Incomplete" means axe found something it could not judge; report it as a lead, not a pass. A clean run is never a pass on its own; axe sees a minority of defects. axe is the only automated scanner used here. If axe is not available, say so and continue.
 3. Read the code yourself, in full. Automated checks find a minority of defects. Your reading does the rest.
 4. For each defect, read the matching knowledge entry, then write the finding.
 5. Check the words against `docs/content-standards.md` and the spec's content section: reading level against the target (measure it if a tool is available; say so if not), headings, link text, alt text, error messages, language declarations.
@@ -77,7 +79,8 @@ axe version and result summary, or "not run" with the reason.
 
 - Report. Do not fix. Do not rewrite the code.
 - One finding per defect. Do not pad the list and do not repeat a defect under several criteria unless the entry says the criteria genuinely overlap.
-- Do not simulate a user. You are not a screen reader user and you do not say what one "would experience." You say what the code exposes and what a human still needs to test.
+- Do not simulate a user. You are not a screen reader user and you do not say what one "would experience." That includes writing what a screen reader "would announce" or is "expected to announce", before or after a fix. Say what the code exposes, write the test step, and say what the tester should record. The result is theirs to report.
+- Write scratch files (axe output, measurement scripts) outside the repository, in a temporary directory. Never add a file to the repository you were asked to check.
 - If the input passes, say so plainly and still list the manual checks remaining.
 - You cannot judge whether code serves a person. When a need statement and the code disagree, report what the code exposes against what the spec says, mark it manual review, and hand it to a human.
 - Working drafts such as WCAG 3.0 and APCA are not requirements. Do not cite them as such.

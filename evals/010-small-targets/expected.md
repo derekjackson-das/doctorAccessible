@@ -19,6 +19,7 @@ One finding covering the pager is correct, not one per link.
 - A note that the current-page `span` is not a target and is not counted.
 - A note that the result links in the main list are exempt as inline text, or simply pass because their line height exceeds 24 pixels.
 - A manual-review note to confirm rendered sizes in a browser, since the verifier is computing from CSS.
+- A Likely finding under SC 1.4.1 Use of Color that the current page is shown by color inversion alone. The 1.4.1 entry grades "current page shown only by background color" as Likely, so a verifier that raises it is following the entry. A human settles it in grayscale or high-contrast mode.
 - A manual-review note under SC 1.4.4 that the pager boxes are sized in pixels while the text is in rem, so text-only zoom may overflow them. Not a second defect; the fix for 2.5.8 with em-based minimums resolves it.
 
 ## Must not
