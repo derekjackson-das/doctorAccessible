@@ -71,3 +71,9 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **The verifier checks words.** A "Content" heading in its report. A readability tool is roadmap 4.7.
 
 **Principle 16 adopted.** Content is part of the build.
+
+## 2026-10-22: contribution rules; roadmap is for the team
+
+**`CONTRIBUTING.md` and two templates.** The procedure for getting a change merged, a pull request template that asks which evals ran, and an issue template carrying the six work-package fields. Roadmap package 1.2.
+
+**The roadmap lists only what the team can see.** Package 1.5, a listing in Derek's private CCode workspace, is removed and its ID left unused. Private housekeeping stays private.
