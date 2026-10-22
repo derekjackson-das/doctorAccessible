@@ -70,30 +70,30 @@ A source is removed when it contradicts tier 1 without acknowledging it, or when
 
 | Source | For | Verified |
 |---|---|---|
-| [WebAIM](https://webaim.org/) | Foundational articles, contrast checker, Screen Reader User Survey, WebAIM Million | checked 2026-10-22; passes the four tests; team to confirm |
-| [Deque axe rule descriptions](https://dequeuniversity.com/rules/axe/) | What each axe rule checks and which criteria it maps to. The reference for every axe finding. | checked 2026-10-22; passes the four tests; team to confirm |
-| [MDN Web Docs, Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) | Implementation reference for HTML, CSS, JS, ARIA. Reference, not normative. Index page last modified 2 October 2025. | checked 2026-10-22; passes the four tests; team to confirm |
-| [Nielsen Norman Group](https://www.nngroup.com/) | Usability research and UX heuristics. Used in the design moment to ask whether a thing should be built. Not an accessibility authority; summarize and link, never paste. | checked 2026-10-22; dated, named, methods described; rarely cites tier 1 or 2, so admitted for UX claims only; team to confirm |
-| [a11ysupport.io](https://a11ysupport.io/) | Tested support for HTML and ARIA features across screen reader and browser pairs. Each test shows its last-update date; results on one sampled feature ranged from 2024 back to eight years old, and the site itself warns results may be stale. Cite only tests updated within three years, and give the date. | checked 2026-10-22; team to confirm with that usage rule |
-| [GOV.UK accessibility guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service) | Service-manual guidance on testing with assistive technology and on what automated tools miss. Page first published 7 April 2016; maintained as part of the GOV.UK Service Manual. | checked 2026-10-22; team to confirm |
-| [Federal Plain Language Guidelines](https://digital.gov/guides/plain-language) | US government plain language rules: audience, organization, words, sentences, testing. The plainlanguage.gov guidelines URL now redirects to Digital.gov's plain language guide series. | checked 2026-10-22; URL updated; team to confirm |
+| [WebAIM](https://webaim.org/) | Foundational articles, contrast checker, Screen Reader User Survey, WebAIM Million | 2026-10-22, confirmed by Derek Jackson |
+| [Deque axe rule descriptions](https://dequeuniversity.com/rules/axe/) | What each axe rule checks and which criteria it maps to. The reference for every axe finding. | 2026-10-22, confirmed by Derek Jackson |
+| [MDN Web Docs, Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) | Implementation reference for HTML, CSS, JS, ARIA. Reference, not normative. Index page last modified 2 October 2025. | 2026-10-22, confirmed by Derek Jackson |
+| [Nielsen Norman Group](https://www.nngroup.com/) | Usability research and UX heuristics. Used in the design moment to ask whether a thing should be built. Not an accessibility authority; summarize and link, never paste. | 2026-10-22, confirmed by Derek Jackson for UX claims only |
+| [a11ysupport.io](https://a11ysupport.io/) | Tested support for HTML and ARIA features across screen reader and browser pairs. Each test shows its last-update date; results on one sampled feature ranged from 2024 back to eight years old, and the site itself warns results may be stale. Cite only tests updated within three years, and give the date. | 2026-10-22, confirmed by Derek Jackson with that usage rule |
+| [GOV.UK accessibility guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service) | Service-manual guidance on testing with assistive technology and on what automated tools miss. Page first published 7 April 2016; maintained as part of the GOV.UK Service Manual. | 2026-10-22, confirmed by Derek Jackson |
+| [Federal Plain Language Guidelines](https://digital.gov/guides/plain-language) | US government plain language rules: audience, organization, words, sentences, testing. The plainlanguage.gov guidelines URL now redirects to Digital.gov's plain language guide series. | 2026-10-22, URL updated, confirmed by Derek Jackson |
 | Readability formulas (Flesch-Kincaid Grade Level and similar) | A signal for reading level, computed locally. Measures sentence and word length, not clarity. Never a pass on its own. | n/a |
 
 ### Named practitioners
 
-Checked 2026-10-22: every site below is live and publishing under a real name. Confirming or striking each is the team's call under the admission rule.
+Checked 2026-10-22: every site below is live and publishing under a real name. Confirmed by Derek Jackson on 2026-10-22 under the admission rule.
 
 | Source | For | Verified |
 |---|---|---|
-| [Adrian Roselli](https://adrianroselli.com/) | Pattern critiques with screen reader test results; tables, dialogs, carousels, toggles | checked 2026-10-22; team to confirm |
-| [Scott O'Hara](https://www.scottohara.me/) | ARIA and HTML control behavior, tested across assistive technology | checked 2026-10-22; team to confirm |
-| [Sara Soueidan](https://www.sarasoueidan.com/blog/) | Accessible components, SVG, forms | checked 2026-10-22; team to confirm |
-| [Heydon Pickering, Inclusive Components](https://inclusive-components.design/) | Component patterns built accessibly from the start. Last article 4 June 2018; clearly dated, so staleness is visible, but check against current support before relying on a pattern. | checked 2026-10-22; team to confirm |
-| [Léonie Watson](https://tink.uk/) | Screen reader behavior from a screen reader user and W3C participant | checked 2026-10-22; team to confirm |
-| [Steve Faulkner, TPGi](https://vispero.com/resources/category/blog/) | HTML accessibility, ARIA in HTML editor. The TPGi blog URL now redirects to the Vispero blog; TPGi is part of Vispero. | checked 2026-10-22; URL updated; team to confirm |
-| [Eric Bailey](https://ericwbailey.website/) | Design systems, focus, reduced motion | checked 2026-10-22; team to confirm |
-| [Sarah Higley](https://sarahmhigley.com/) | Complex widgets, tooltips, comboboxes, with test data | checked 2026-10-22; team to confirm |
-| [Hidde de Vries](https://hidde.blog/) | Standards process, WCAG interpretation | checked 2026-10-22; team to confirm |
+| [Adrian Roselli](https://adrianroselli.com/) | Pattern critiques with screen reader test results; tables, dialogs, carousels, toggles | 2026-10-22, confirmed by Derek Jackson |
+| [Scott O'Hara](https://www.scottohara.me/) | ARIA and HTML control behavior, tested across assistive technology | 2026-10-22, confirmed by Derek Jackson |
+| [Sara Soueidan](https://www.sarasoueidan.com/blog/) | Accessible components, SVG, forms | 2026-10-22, confirmed by Derek Jackson |
+| [Heydon Pickering, Inclusive Components](https://inclusive-components.design/) | Component patterns built accessibly from the start. Last article 4 June 2018; clearly dated, so staleness is visible, but check against current support before relying on a pattern. | 2026-10-22, confirmed by Derek Jackson |
+| [Léonie Watson](https://tink.uk/) | Screen reader behavior from a screen reader user and W3C participant | 2026-10-22, confirmed by Derek Jackson |
+| [Steve Faulkner, TPGi](https://vispero.com/resources/category/blog/) | HTML accessibility, ARIA in HTML editor. The TPGi blog URL now redirects to the Vispero blog; TPGi is part of Vispero. | 2026-10-22, URL updated, confirmed by Derek Jackson |
+| [Eric Bailey](https://ericwbailey.website/) | Design systems, focus, reduced motion | 2026-10-22, confirmed by Derek Jackson |
+| [Sarah Higley](https://sarahmhigley.com/) | Complex widgets, tooltips, comboboxes, with test data | 2026-10-22, confirmed by Derek Jackson |
+| [Hidde de Vries](https://hidde.blog/) | Standards process, WCAG interpretation | 2026-10-22, confirmed by Derek Jackson |
 
 ## Change log
 
