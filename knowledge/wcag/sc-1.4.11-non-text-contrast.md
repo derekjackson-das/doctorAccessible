@@ -42,7 +42,7 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 1.4.3 Contrast (Minimum) (entry in this package). Text, including text inside controls.
-- SC 2.4.7 Focus Visible (no entry yet) and 2.4.11 Focus Not Obscured (Minimum) (no entry yet). Whether focus is visible at all and whether it is covered; this criterion is how strongly it contrasts.
+- SC 2.4.7 Focus Visible (`wcag/sc-2.4.7-focus-visible.md`) and 2.4.11 Focus Not Obscured (Minimum) (`wcag/sc-2.4.11-focus-not-obscured-minimum.md`). Whether focus is visible at all and whether it is covered; this criterion is how strongly it contrasts.
 - SC 1.4.1 Use of Color (entry in this package). Whether color is the only cue for state.
 - SC 1.1.1 Non-text Content (entry in this package). A graphic also needs a text alternative.
 

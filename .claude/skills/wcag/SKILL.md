@@ -25,14 +25,26 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 
 | Topic | Read |
 |---|---|
-| Accessible names, roles, states on controls | `knowledge/wcag/sc-4.1.2-name-role-value.md` |
-| Form labels and instructions | no entry yet; see 4.1.2 for names, gap for SC 3.3.2 |
-| Structure and relationships | no entry yet; gap for SC 1.3.1 |
-| Keyboard, focus order, focus visible | no entry yet |
-| Color and contrast | no entry yet |
-| Images and media alternatives | no entry yet |
+| Accessible names, roles, states on controls | `knowledge/wcag/sc-4.1.2-name-role-value.md`; visible label must be in the name: `sc-2.5.3-label-in-name.md` |
+| Form labels, grouping, input purpose | `sc-1.3.1-info-and-relationships.md` (association), `sc-1.3.5-identify-input-purpose.md` (autocomplete), `sc-4.1.2-name-role-value.md`; whether a label exists at all: no entry yet, gap for SC 3.3.2 |
+| Headings, lists, tables, landmarks | `sc-1.3.1-info-and-relationships.md`; descriptive headings and labels: `sc-2.4.6-headings-and-labels.md`; page title: `sc-2.4.2-page-titled.md`; skip links: `sc-2.4.1-bypass-blocks.md` |
+| Reading order and focus order | `sc-1.3.2-meaningful-sequence.md`, `sc-2.4.3-focus-order.md` |
+| Keyboard operation, traps, shortcuts | `sc-2.1.1-keyboard.md`, `sc-2.1.2-no-keyboard-trap.md`, `sc-2.1.4-character-key-shortcuts.md` |
+| Focus visibility | `sc-2.4.7-focus-visible.md` (exists), `sc-1.4.11-non-text-contrast.md` (contrasts), `sc-2.4.11-focus-not-obscured-minimum.md` (not covered) |
+| Color and contrast | `sc-1.4.1-use-of-color.md` (color alone), `sc-1.4.3-contrast-minimum.md` (text), `sc-1.4.11-non-text-contrast.md` (controls and graphics) |
+| Zoom, text size, spacing, reflow, orientation | `sc-1.4.4-resize-text.md`, `sc-1.4.10-reflow.md`, `sc-1.4.12-text-spacing.md`, `sc-1.3.4-orientation.md` |
+| Images and images of text | `sc-1.1.1-non-text-content.md`, `sc-1.4.5-images-of-text.md` |
+| Audio and video | `sc-1.2.1-audio-only-and-video-only-prerecorded.md`, `sc-1.2.2-captions-prerecorded.md`, `sc-1.2.3-audio-description-or-media-alternative-prerecorded.md`, `sc-1.2.4-captions-live.md`, `sc-1.2.5-audio-description-prerecorded.md`; autoplaying sound: `sc-1.4.2-audio-control.md` |
+| Motion, flashing, timing, auto-updating | `sc-2.2.1-timing-adjustable.md`, `sc-2.2.2-pause-stop-hide.md`, `sc-2.3.1-three-flashes-or-below-threshold.md` |
+| Pointer, touch, gestures, drag, target size | `sc-2.5.1-pointer-gestures.md`, `sc-2.5.2-pointer-cancellation.md`, `sc-2.5.4-motion-actuation.md`, `sc-2.5.7-dragging-movements.md`, `sc-2.5.8-target-size-minimum.md` |
+| Tooltips and popups on hover or focus | `sc-1.4.13-content-on-hover-or-focus.md` |
+| Instructions that rely on shape, position, color, or sound | `sc-1.3.3-sensory-characteristics.md` |
+| Link text | `sc-2.4.4-link-purpose-in-context.md` |
+| Finding pages across a site | `sc-2.4.5-multiple-ways.md` |
+| Status messages and live regions | no entry yet; gap for SC 4.1.3 |
+| Language, predictable behavior, error handling, authentication | no entries yet; Guidelines 3.1 to 3.3 are roadmap package 2.3 |
 
-Check `knowledge/INDEX.md` for anything not listed here. The index is kept current; this table is a convenience.
+All paths are under `knowledge/wcag/`. Check `knowledge/INDEX.md` for anything not listed here. The index is kept current; this table is a convenience.
 
 ## Output shape for a finding
 

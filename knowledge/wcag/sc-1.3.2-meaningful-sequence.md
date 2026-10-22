@@ -35,7 +35,7 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 1.3.1 Info and Relationships (entry in this package). Structure, as distinct from order.
-- SC 2.4.3 Focus Order (no entry yet). The order in which focus moves, which usually follows source order and has the same cure.
+- SC 2.4.3 Focus Order (`wcag/sc-2.4.3-focus-order.md`). The order in which focus moves, which usually follows source order and has the same cure.
 - SC 1.4.10 Reflow (entry in this package). At 320 CSS pixels, source order becomes the visible order; a wrong source order shows up there.
 
 ## Automated coverage (tier 3)

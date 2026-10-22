@@ -36,7 +36,7 @@ All techniques are tier 2, from the Understanding page linked above.
 
 ## Related criteria
 
-- SC 2.2.2 Pause, Stop, Hide (no entry yet). Moving, blinking, or auto-updating content, including silent video.
+- SC 2.2.2 Pause, Stop, Hide (`wcag/sc-2.2.2-pause-stop-hide.md`). Moving, blinking, or auto-updating content, including silent video.
 - SC 1.2.4 Captions (Live) and 1.2.2 (entries in this package). The content of the sound.
 
 ## Automated coverage (tier 3)
