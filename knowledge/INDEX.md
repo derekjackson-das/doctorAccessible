@@ -103,6 +103,16 @@ Sources: Nielsen Norman Group (tier 3, UX claims only) and the GOV.UK Service Ma
 | Writing a need statement | `ux/writing-a-need-statement.md` | 2026-10-22 |
 | Personas from research | `ux/personas-from-research.md` | 2026-10-22 |
 
+## Patterns: interface patterns and the simpler thing
+
+Sources: the ARIA Authoring Practices Guide and WAI Tutorials (tier 2, patterns not requirements) and named practitioners on the sources list (tier 3). Each entry names the simpler alternative and what it costs, and states any gap in assistive technology testing. Using a pattern is never a finding on its own.
+
+| Pattern | Entry | Verified |
+|---|---|---|
+| Carousel | `patterns/carousel.md` | 2026-10-22 |
+| Modal dialog | `patterns/modal-dialog.md` | 2026-10-22 |
+| Infinite scroll | `patterns/infinite-scroll.md` | 2026-10-22 |
+
 ## Other domains
 
 None yet. Planned: HTML patterns, design, content, assistive-technology test protocol.
