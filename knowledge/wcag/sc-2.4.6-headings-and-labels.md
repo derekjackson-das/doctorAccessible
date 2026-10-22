@@ -34,7 +34,7 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 1.3.1 Info and Relationships (`wcag/sc-1.3.1-info-and-relationships.md`). Whether the heading or label exists in the code.
-- SC 3.3.2 Labels or Instructions (no entry yet). Whether a label exists at all.
+- SC 3.3.2 Labels or Instructions (`wcag/sc-3.3.2-labels-or-instructions.md`). Whether a label exists at all.
 - SC 2.4.2 Page Titled (entry in this package). The same requirement for the page title.
 - SC 2.4.10 Section Headings is Level AAA and not a requirement here.
 - SC 2.5.3 Label in Name (entry in this package). The visible label must be in the accessible name.

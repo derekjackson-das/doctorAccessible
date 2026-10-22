@@ -48,11 +48,24 @@ Target: Level AA. Source of record: W3C Recommendation 12 December 2024.
 | 2.5.4 | Motion Actuation | A | `wcag/sc-2.5.4-motion-actuation.md` | 2026-10-22 |
 | 2.5.7 | Dragging Movements | AA | `wcag/sc-2.5.7-dragging-movements.md` | 2026-10-22 |
 | 2.5.8 | Target Size (Minimum) | AA | `wcag/sc-2.5.8-target-size-minimum.md` | 2026-10-22 |
+| 3.1.1 | Language of Page | A | `wcag/sc-3.1.1-language-of-page.md` | 2026-10-22 |
+| 3.1.2 | Language of Parts | AA | `wcag/sc-3.1.2-language-of-parts.md` | 2026-10-22 |
+| 3.2.1 | On Focus | A | `wcag/sc-3.2.1-on-focus.md` | 2026-10-22 |
+| 3.2.2 | On Input | A | `wcag/sc-3.2.2-on-input.md` | 2026-10-22 |
+| 3.2.3 | Consistent Navigation | AA | `wcag/sc-3.2.3-consistent-navigation.md` | 2026-10-22 |
+| 3.2.4 | Consistent Identification | AA | `wcag/sc-3.2.4-consistent-identification.md` | 2026-10-22 |
+| 3.2.6 | Consistent Help | A | `wcag/sc-3.2.6-consistent-help.md` | 2026-10-22 |
+| 3.3.1 | Error Identification | A | `wcag/sc-3.3.1-error-identification.md` | 2026-10-22 |
+| 3.3.2 | Labels or Instructions | A | `wcag/sc-3.3.2-labels-or-instructions.md` | 2026-10-22 |
+| 3.3.3 | Error Suggestion | AA | `wcag/sc-3.3.3-error-suggestion.md` | 2026-10-22 |
+| 3.3.4 | Error Prevention (Legal, Financial, Data) | AA | `wcag/sc-3.3.4-error-prevention-legal-financial-data.md` | 2026-10-22 |
+| 3.3.7 | Redundant Entry | A | `wcag/sc-3.3.7-redundant-entry.md` | 2026-10-22 |
+| 3.3.8 | Accessible Authentication (Minimum) | AA | `wcag/sc-3.3.8-accessible-authentication-minimum.md` | 2026-10-22 |
 | 4.1.2 | Name, Role, Value | A | `wcag/sc-4.1.2-name-role-value.md` | 2026-10-22 |
 
 ### Gaps noted so far
 
-3.3.2 Labels or Instructions.
+4.1.3 Status Messages.
 
 ## COGA: cognitive and learning disabilities
 

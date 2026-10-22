@@ -47,7 +47,7 @@ All techniques are tier 2, from the Understanding page linked above.
 ## Related criteria
 
 - SC 2.5.1 Pointer Gestures and 2.5.7 Dragging Movements (entries in this package). The other single-pointer requirements.
-- SC 3.3.4 Error Prevention (Legal, Financial, Data) (no entry yet). Reversibility of consequential actions.
+- SC 3.3.4 Error Prevention (Legal, Financial, Data) (`wcag/sc-3.3.4-error-prevention-legal-financial-data.md`). Reversibility of consequential actions.
 
 ## Automated coverage (tier 3)
 

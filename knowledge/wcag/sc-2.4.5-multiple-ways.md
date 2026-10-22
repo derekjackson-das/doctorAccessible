@@ -34,7 +34,7 @@ All techniques are tier 2, from the Understanding page linked above.
 
 - SC 2.4.1 Bypass Blocks (entry in this package). Moving within a page, as distinct from between pages.
 - SC 2.4.8 Location is Level AAA and not a requirement here.
-- SC 3.2.3 Consistent Navigation (no entry yet). The navigation that is one of the ways should be the same on every page.
+- SC 3.2.3 Consistent Navigation (`wcag/sc-3.2.3-consistent-navigation.md`). The navigation that is one of the ways should be the same on every page.
 
 ## Automated coverage (tier 3)
 

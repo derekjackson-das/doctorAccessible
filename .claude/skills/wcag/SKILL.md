@@ -26,7 +26,7 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 | Topic | Read |
 |---|---|
 | Accessible names, roles, states on controls | `knowledge/wcag/sc-4.1.2-name-role-value.md`; visible label must be in the name: `sc-2.5.3-label-in-name.md` |
-| Form labels, grouping, input purpose | `sc-1.3.1-info-and-relationships.md` (association), `sc-1.3.5-identify-input-purpose.md` (autocomplete), `sc-4.1.2-name-role-value.md`; whether a label exists at all: no entry yet, gap for SC 3.3.2 |
+| Form labels, grouping, input purpose | `sc-1.3.1-info-and-relationships.md` (association), `sc-1.3.5-identify-input-purpose.md` (autocomplete), `sc-4.1.2-name-role-value.md`; whether a label or instruction exists at all: `sc-3.3.2-labels-or-instructions.md` |
 | Headings, lists, tables, landmarks | `sc-1.3.1-info-and-relationships.md`; descriptive headings and labels: `sc-2.4.6-headings-and-labels.md`; page title: `sc-2.4.2-page-titled.md`; skip links: `sc-2.4.1-bypass-blocks.md` |
 | Reading order and focus order | `sc-1.3.2-meaningful-sequence.md`, `sc-2.4.3-focus-order.md` |
 | Keyboard operation, traps, shortcuts | `sc-2.1.1-keyboard.md`, `sc-2.1.2-no-keyboard-trap.md`, `sc-2.1.4-character-key-shortcuts.md` |
@@ -42,7 +42,10 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 | Link text | `sc-2.4.4-link-purpose-in-context.md` |
 | Finding pages across a site | `sc-2.4.5-multiple-ways.md` |
 | Status messages and live regions | no entry yet; gap for SC 4.1.3 |
-| Language, predictable behavior, error handling, authentication | no entries yet; Guidelines 3.1 to 3.3 are roadmap package 2.3 |
+| Page language and passages in other languages | `sc-3.1.1-language-of-page.md`, `sc-3.1.2-language-of-parts.md` |
+| Predictable behavior: focus, input, consistency across pages | `sc-3.2.1-on-focus.md`, `sc-3.2.2-on-input.md`, `sc-3.2.3-consistent-navigation.md`, `sc-3.2.4-consistent-identification.md`, `sc-3.2.6-consistent-help.md` |
+| Form errors, instructions, consequential submissions | `sc-3.3.1-error-identification.md`, `sc-3.3.3-error-suggestion.md`, `sc-3.3.4-error-prevention-legal-financial-data.md`, `sc-3.3.2-labels-or-instructions.md` |
+| Re-entering information, logging in | `sc-3.3.7-redundant-entry.md`, `sc-3.3.8-accessible-authentication-minimum.md` |
 
 All paths are under `knowledge/wcag/`. Check `knowledge/INDEX.md` for anything not listed here. The index is kept current; this table is a convenience.
 
