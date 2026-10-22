@@ -13,3 +13,11 @@ Observation: thorough past the point of use. Twenty-one criteria for a list of f
 Same conclusion, tighter. Research claims about carousels taken from `knowledge/ux/carousels.md`, labeled tier 3 and likely, with the entry's own "build less" line quoted. Need-finding entry used to call marketing's wish a stakeholder assumption to test, and to say plainly that if no evidence shows students come to the homepage for events, the feature is not ready. Criteria split into the eight the list must meet and the five that decide against the carousel. Auto-rotation excluded from the options list with the reason. Need statement, pattern decision, and ban proposed, with the "Trying to" line marked as paraphrased from the spec pending research notes. No code. Nothing from the must-not list.
 
 Both runs: the answer to question two is a list, not a carousel.
+
+## Run 3, SKILL.md at commit f05545e (patterns domain mapped), knowledge/patterns/ present: pass
+
+Same method as runs 1 and 2. The purpose of this run was to measure the patterns domain landing: whether consult finds and uses `knowledge/patterns/carousel.md`.
+
+It did. The answer opened the patterns entry and the ux entry together, quoted the patterns entry's framing that a carousel serves the team's problem by hiding content from the person, used its practitioner findings (Roselli and Soueidan, 2025, labeled tier 3) and its floor for a carousel that stays (no auto-rotation, real buttons that do not move focus, the same items as a list elsewhere). Criteria split three ways: the four that decide "build less", the seven the list must meet, and the ones a carousel would add, the last group explicitly left to build and verify per the brevity rule. Three options with Option B (one featured event plus a list) accepted as a variant. Need statement proposed, not written, with the evidence gap about homepage traffic recorded as an assumption. A pattern decision row proposed; a ban deliberately not proposed, with the reason that one decision on one page is not a ban. The listed files opened were all under `knowledge/`. No code. Nothing from the must-not list.
+
+Three runs on this eval now sit on three versions of the skill and two states of the library. All three reached the same conclusion; each later one cited more of what the library had gained.
