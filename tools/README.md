@@ -14,3 +14,16 @@ python -m unittest tools/test_readability.py
 - **Limits:** syllables are counted by rule, an estimate per word. Proper nouns are not removed, so names can raise the grade. Text a script adds at run time is not seen. Under 100 words, the score means little, and the tool says so.
 - **Checked against** hand counts on the three samples in `samples/`, by `test_readability.py`.
 - **Not a verdict:** a score sends a person to read the text (`knowledge/content/reading-level.md`).
+
+## axe.py
+
+Runs axe on a page with the WCAG 2.2 tags and prints every result bucket (roadmap 4.1). Standard library only; needs Node.js for `npx`.
+
+```
+python tools/axe.py evals/001-missing-label/input.html
+```
+
+- **Command:** `npx --yes @axe-core/cli <url> --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa --stdout`. A file path is turned into a `file://` URL.
+- **Output:** the axe version; the path of the raw JSON, saved in a temporary folder and never in the repository; each violation and incomplete result with its rule, impact, WCAG tags, and targets; the pass and inapplicable counts; and a trimmed raw block for the verifier's report.
+- **Setup it handles:** no `npx` (it says "axe: not run" and exits 2; set `DOCTOR_A11Y_NODE_DIR` to a Node.js folder that is not on PATH). It also reads the Chrome and ChromeDriver paths that `npx browser-driver-manager install chrome` saves and passes them with forward slashes, which avoids the Windows path problem in `evals/README.md`.
+- **Not a verdict:** axe finds a minority of defects. A clean run is not a pass.

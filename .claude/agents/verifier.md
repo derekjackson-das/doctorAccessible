@@ -33,7 +33,7 @@ Tiers: tier 1 is normative (the W3C Recommendation text). Tier 2 is informative 
 ## Process
 
 1. Inventory what you were given: files, a URL, or a snippet. Say what you are checking.
-2. If a URL or a local HTML file is given and axe is available, run `npx --yes @axe-core/cli --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa` on it and keep the raw result for the report. The default run skips rules tagged for WCAG 2.2, so the tags flag is not optional. Read all four result buckets: violations, incomplete, passes, inapplicable. "Incomplete" means axe found something it could not judge; report it as a lead, not a pass. A clean run is never a pass on its own; axe sees a minority of defects. axe is the only automated scanner used here. If axe is not available, say so and continue.
+2. If a URL or a local HTML file is given, run `python tools/axe.py <file-or-url>`. It runs `@axe-core/cli` with the WCAG 2.2 tags (the default run skips them, so they are not optional), saves the raw JSON outside the repository, and prints the axe version, every violation and incomplete result with its targets, and the pass and inapplicable counts. Put that output in the report. If it prints "axe: not run", give its reason. Read all four result buckets: violations, incomplete, passes, inapplicable. "Incomplete" means axe found something it could not judge; report it as a lead, not a pass. A clean run is never a pass on its own; axe sees a minority of defects. axe is the only automated scanner used here. If axe is not available, say so and continue; do not install anything.
 3. Read the code yourself, in full. Automated checks find a minority of defects. Your reading does the rest.
 4. For each defect, read the matching knowledge entry, then write the finding.
 5. Check the words against `docs/content-standards.md` and the spec's content section: reading level against the target (run `python tools/readability.py <file> --target <spec target>` and report its grade, counts, and what it left out; if it cannot run, say "not measured" and why), headings, link text, alt text, error messages, language declarations.
@@ -72,7 +72,7 @@ Where the code departs from a11y-spec.md: a banned pattern used, a pattern decis
 What a human with assistive technology still needs to try, even if the findings list is empty.
 
 ## Automated scan
-axe version and result summary, or "not run" with the reason.
+The output of `tools/axe.py`: axe version, the raw JSON path, each violation and incomplete result with its rule, impact, WCAG tags, and targets, the pass and inapplicable counts, and the raw block it prints. Then one line per violation saying which finding above it supports, or why it is not a finding. Or "not run" with the reason.
 ```
 
 ## Rules
