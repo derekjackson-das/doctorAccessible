@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading list</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #ffffff; }
+    button { font: inherit; padding: 0.5rem 1rem; color: #ffffff; background: #005a9c; border: 0; border-radius: 4px; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+    .summary { margin-top: 1rem; padding: 1rem; border: 1px solid #595959; }
+    .summary[hidden] { display: none; }
+    .summary.entering { animation: swoop 800ms ease-out; }
+    @keyframes swoop {
+      from { transform: translateX(-100vw) scale(0.4); }
+      to { transform: translateX(0) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Reading list</h1>
+    <h2>Introduction to Research Methods</h2>
+    <button type="button" aria-expanded="false" aria-controls="s1" id="b1">Show summary</button>
+    <div class="summary" id="s1" hidden>
+      <p>A short guide to planning a study, choosing methods, and reporting results.</p>
+    </div>
+  </main>
+  <script>
+    const button = document.getElementById('b1');
+    const panel = document.getElementById('s1');
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+      if (!open) {
+        panel.classList.remove('entering');
+        void panel.offsetWidth;
+        panel.classList.add('entering');
+      }
+    });
+  </script>
+</body>
+</html>
