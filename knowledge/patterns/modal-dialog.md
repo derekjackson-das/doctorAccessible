@@ -6,7 +6,7 @@
   - Adrian Roselli, "Dialog Focus in Screen Readers", 12 October 2020, updated 6 June 2025. https://adrianroselli.com/2020/10/dialog-focus-in-screen-readers.html Tested where initial focus lands in a custom dialog (built with the inert polyfill, not the native element), with JAWS 2020 and NVDA 2020.2 on Windows, VoiceOver on macOS and iOS 14, and TalkBack on Android 11. His 2023 update checked native `<dialog>` focus in Windows browsers only.
   - Scott O'Hara, "Having an open dialog (archival post)", 5 March 2019, updated 26 January 2023. https://www.scottohara.me/blog/2019/03/05/open-dialog.html Tested the native `<dialog>` element and its polyfill with JAWS, NVDA, VoiceOver on macOS and iOS, and TalkBack, in 2019, with retests in 2021 and early 2022. He marks it archival and points to his 2023 post.
   - Scott O'Hara, "Use the dialog element (reasonably)", 26 January 2023. https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html His current recommendation; not a test report.
-- Related entries: `ux/modals-and-interruptions.md` (when a modal is justified at all), `wcag/sc-2.1.2-no-keyboard-trap.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-4.1.2-name-role-value.md`, `coga/objective-5-help-users-focus.md`; `aria/` once that domain exists.
+- Related entries: `ux/modals-and-interruptions.md` (when a modal is justified at all), `wcag/sc-2.1.2-no-keyboard-trap.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-4.1.2-name-role-value.md`, `coga/objective-5-help-users-focus.md`; `aria/patterns/modal-dialog.md` (the roles, states, naming, keyboard, and the ARIA test results).
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting

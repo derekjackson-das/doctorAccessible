@@ -6,7 +6,7 @@
   - Scott O'Hara, "Trouble Tabbing To Tabs and Cheeky Checking Checkboxes", 2 November 2018, updated 5 February 2019. https://www.scottohara.me/blog/2018/11/02/tabbing-into-tabs.html Tested several tab widgets and a reduced test case with NVDA 2018.3.2, JAWS 18 and 2018, and VoiceOver with Safari and Chrome on macOS High Sierra.
   - Léonie Watson, "Using tabbed interfaces with a screen reader", 29 May 2012. https://tink.uk/using-tabbed-interfaces-with-a-screen-reader/ How NVDA and JAWS users operate tabs; demonstrated with NVDA 2012.2 beta and Firefox 12.
   - Heydon Pickering, "Tabbed Interfaces", Inclusive Components, 5 October 2017. https://inclusive-components.design/tabbed-interfaces/ Build guidance and the case for a table of contents instead; no named assistive technology test.
-- Related entries: `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `patterns/accordion.md`; `aria/` once that domain exists.
+- Related entries: `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `patterns/accordion.md`; `aria/patterns/tabs.md` (the roles, states, naming, keyboard, and the ARIA test results).
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting
