@@ -145,6 +145,21 @@ Each entry keeps the WCAG 2.2 AA Requirement (tier 1, from the `wcag/` entries) 
 | Reflow | `design/reflow.md` | 2026-10-23 |
 | Text spacing | `design/text-spacing.md` | 2026-10-23 |
 
+## Content: the writing mode
+
+The reasoning behind each house standard in `docs/content-standards.md`, with how to apply and check it. Where a WCAG criterion applies, the failure is reported under the `wcag/` entry; a text that meets WCAG but misses the house standard or the spec is likely or manual review, never definite. Reading level is a signal, never a pass. The `content` skill maps questions to these entries.
+
+| Topic | Entry | Verified |
+|---|---|---|
+| Plain language | `content/plain-language.md` | 2026-10-23 |
+| Reading level | `content/reading-level.md` | 2026-10-23 |
+| Organization | `content/organization.md` | 2026-10-23 |
+| Headings | `content/headings.md` | 2026-10-23 |
+| Link text | `content/link-text.md` | 2026-10-23 |
+| Alternative text | `content/alt-text.md` | 2026-10-23 |
+| Error messages and instructions | `content/error-messages.md` | 2026-10-23 |
+| Language | `content/language.md` | 2026-10-23 |
+
 ## Other domains
 
-None yet. Planned: content.
+None yet.

@@ -10,7 +10,7 @@ Write for the reader who knows least and has the least time. Common words over t
 
 - Source: W3C, "Writing for Web Accessibility", tier 2, https://www.w3.org/WAI/tips/writing/
 - Source: W3C, "Making Content Usable for People with Cognitive and Learning Disabilities", W3C Working Group Note, 29 April 2021, tier 2, https://www.w3.org/TR/coga-usable/
-- Source: US Federal Plain Language Guidelines, tier 3, https://www.plainlanguage.gov/guidelines/
+- Source: US Federal Plain Language Guidelines, now Digital.gov's plain language guide series, tier 3, https://digital.gov/guides/plain-language
 
 ## 2. Reading level
 
