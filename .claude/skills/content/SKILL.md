@@ -30,7 +30,7 @@ Any change or review that adds or edits words a reader will see or hear: page co
 ## Measuring reading level
 
 1. Take the main content only: no navigation, headings, code, or, where practical, proper nouns.
-2. Compute Flesch-Kincaid Grade Level with a tool. If `tools/readability.py` exists (roadmap 4.7), use it. Otherwise use a named, versioned tool that runs locally, and name it with its version. A formula written on the spot is an estimate: mark it unverified. Do not install anything without asking.
+2. Compute Flesch-Kincaid Grade Level with `python tools/readability.py <file> --target <spec target>`. It keeps the main content, leaves out navigation, headings, and code, and says what it left out; for a Markdown file with `html` fences it measures only the fences. If it cannot run, use a named, versioned tool that runs locally, and name it with its version. A formula written on the spot is an estimate: mark it unverified. Do not install anything without asking.
 3. **No tool available:** say "reading level not measured: no tool available". Count words per sentence, point out the longest sentences and the long or technical words, and mark the result unverified. Do not invent a score.
 4. Report the score, the tool, and the target from the spec or the house default. Then read the text, because the formula counts lengths, not clarity.
 5. Above the target: likely, with the score. Not measured but plainly long: likely, unverified, with the sentence lengths. The spec may set a different target for its readers; the source conflict on grade 8 is named in `content/reading-level.md`.

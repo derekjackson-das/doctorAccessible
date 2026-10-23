@@ -5,7 +5,7 @@
   - W3C, WCAG 2.2 SC 3.1.5 Reading Level, Level AAA, W3C Recommendation 12 December 2024. https://www.w3.org/TR/WCAG22/#reading-level Tier 1, beyond our target. No entry yet.
   - W3C, "Understanding Success Criterion 3.1.5: Reading Level", updated 28 June 2026. https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html Tier 2.
   - Digital.gov, "Principles of plain language", no date shown on the page; page metadata gives publication in September 2025; accessed 2026-10-23. https://digital.gov/guides/plain-language/principles Tier 3.
-  - Readability formulas (Flesch-Kincaid Grade Level and similar), the row in `knowledge/SOURCES.md`, tier 3: a signal computed locally, never a pass on its own.
+  - Readability formulas (Flesch-Kincaid Grade Level and similar), the row in `knowledge/SOURCES.md`, tier 3: a signal computed locally, never a pass on its own. The grade-level formula is from J. Peter Kincaid, Robert P. Fishburne Jr., Richard L. Rogers, and Brad S. Chissom, "Derivation of New Readability Formulas (Automated Readability Index, Fog Count and Flesch Reading Ease Formula) for Navy Enlisted Personnel", Research Branch Report 8-75, Chief of Naval Technical Training, 1975, Table 3, report page 14. https://stars.library.ucf.edu/istlibrary/56/
 - Related: `content/plain-language.md`, `coga/objective-3-clear-content.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
@@ -34,5 +34,5 @@ Write short sentences and common words (`content/plain-language.md`). Where a te
 ## How to check it
 
 1. Take the main content only: leave out navigation, headings, code, and, where practical, proper nouns (house standard).
-2. Compute Flesch-Kincaid Grade Level with a tool. Roadmap package 4.7 plans `tools/readability.py`. Until it exists, use a named, versioned tool run locally, and name it. A formula the reviewer writes on the spot is an estimate, marked unverified. Do not install anything without asking. If no tool is available, say "not measured", count the words per sentence and point out long sentences and long words, and mark the result unverified.
+2. Compute Flesch-Kincaid Grade Level with `tools/readability.py` (roadmap 4.7). It uses the formula as printed in Kincaid et al. (1975), counts syllables by rule (an estimate per word, checked against hand counts on three samples in `tools/test_readability.py`), sees only the text in the file (content a script adds at run time is missed), and warns below 100 words. If it cannot run, use a named, versioned tool run locally, and name it. A formula the reviewer writes on the spot is an estimate, marked unverified. Do not install anything without asking. If no tool is available, say "not measured", count the words per sentence and point out long sentences and long words, and mark the result unverified.
 3. Report the number, the tool, and the target. Then read the text: a score is a reason to read, not a verdict.
