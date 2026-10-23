@@ -19,8 +19,12 @@ Two checks per eval; both must pass.
    must answer "VERDICT: PASS" or "VERDICT: FAIL" with a quoted report line behind
    each failure. Skip it with --no-judge.
 
+Skill evals (a folder with request.md or text.md, run by `evals/run.sh -s`) have no
+mechanical check: their keys list what a good answer contains, not one finding. The
+judge grades them against the whole key, with the skill's request beside it.
+
 Writes checks.md in the reports folder and prints the table. Exit 0 if every eval
-passes, 1 otherwise. Transcript and text evals are not covered (no report from run.sh).
+passes, 1 otherwise.
 """
 
 import argparse
@@ -49,6 +53,28 @@ then one line per reason, each quoting the report line it rests on.
 {key}
 
 === VERIFIER REPORT ===
+{report}
+"""
+
+JUDGE_SKILL = """You are grading an accessibility assistant's answer against an answer key. The assistant followed one of its skills to answer the developer's request below. Read the request, the key, and the answer. Judge only what is written; do not use outside knowledge.
+
+The answer passes if:
+- the key's "Pass condition" is met, and
+- nothing on the key's "Must not" list appears in the answer. Something the key's "Also acceptable" list allows does not count against it. Saying that a criterion or entry was checked and found met is not "reporting" it.
+
+Answer in this exact shape, and nothing else:
+VERDICT: PASS
+or
+VERDICT: FAIL
+then one line per reason, each quoting the answer line it rests on.
+
+=== REQUEST ===
+{request}
+
+=== ANSWER KEY (expected.md) ===
+{key}
+
+=== ANSWER ===
 {report}
 """
 
@@ -130,8 +156,11 @@ def mechanical(key, report):
     return False, f"no finding names SC {key['sc']}"
 
 
-def judge(key_text, report):
-    prompt = JUDGE.format(key=key_text, report=report)
+def judge(key_text, report, request=None):
+    if request is None:
+        prompt = JUDGE.format(key=key_text, report=report)
+    else:
+        prompt = JUDGE_SKILL.format(request=request, key=key_text, report=report)
     p = subprocess.run(["claude", "-p", "--output-format", "text", "--allowedTools", ""],
                        input=prompt, capture_output=True, text=True, encoding="utf-8", errors="replace")
     out = (p.stdout or "").strip()
@@ -147,9 +176,17 @@ def check(name, reports_dir, use_judge):
     key_path = os.path.join(ROOT, "evals", name, "expected.md")
     report = open(report_path, encoding="utf-8").read()
     key_text = open(key_path, encoding="utf-8").read()
-    mech_ok, mech_why = mechanical(parse_key(key_text), report)
+    request = None
+    for f in ("request.md", "text.md"):
+        p = os.path.join(ROOT, "evals", name, f)
+        if os.path.exists(p) and not os.path.exists(os.path.join(ROOT, "evals", name, "input.html")):
+            request = open(p, encoding="utf-8").read()
+    if request is None:
+        mech_ok, mech_why = mechanical(parse_key(key_text), report)
+    else:
+        mech_ok, mech_why = True, "none (skill eval; the judge grades the whole key)"
     if use_judge:
-        judge_ok, judge_why = judge(key_text, report)
+        judge_ok, judge_why = judge(key_text, report, request)
     else:
         judge_ok, judge_why = True, "not run (--no-judge)"
     return name, mech_ok, mech_why, judge_ok, judge_why

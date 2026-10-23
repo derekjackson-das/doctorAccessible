@@ -31,3 +31,16 @@ python tools/axe.py evals/001-missing-label/input.html
 - **Output:** the axe version; the path of the raw JSON, saved in a temporary folder and never in the repository; each violation and incomplete result with its rule, impact, WCAG tags, and targets; the pass and inapplicable counts; and a trimmed raw block for the verifier's report.
 - **Setup it handles:** no `npx` (it says "axe: not run" and exits 2; set `DOCTOR_A11Y_NODE_DIR` to a Node.js folder that is not on PATH). It also reads the Chrome and ChromeDriver paths that `npx browser-driver-manager install chrome` saves and passes them with forward slashes, which avoids the Windows path problem in `evals/README.md`.
 - **Not a verdict:** axe finds a minority of defects. A clean run is not a pass.
+
+## check_links.py
+
+Checks every link and every repo path named in the library's Markdown: `knowledge/`, `.claude/`, `docs/`, `templates/`, each `evals/*/expected.md`, and the top-level README, CONTRIBUTING, and CLAUDE files. Standard library only.
+
+```
+python tools/check_links.py            # paths and links
+python tools/check_links.py --no-web   # paths only, in a second
+```
+
+- **Paths:** a backticked path such as `knowledge/wcag/sc-1.1.1-non-text-content.md`, or `wcag/...` read from `knowledge/`, must exist. Placeholders (`<name>`, `x.x.x`, `...`, `NNN`) are skipped, and so is the roadmap, whose paths are planned files.
+- **Links:** each page is requested once (anchors dropped), one host at a time with a pause, so W3C does not rate-limit the run. Sites that refuse scripts (401, 403, 405, 429, 999) are listed apart and not counted as broken; open those by hand.
+- Run records, `RESULTS.md`, and baselines are history and are not scanned. Exit 0 if nothing is broken.
