@@ -130,11 +130,22 @@ Work is claimed by work package, not by phase. Each package is one GitHub issue 
 
 ## Using it
 
-1. Clone the repo.
-2. Open a terminal in the repo folder and run `claude`.
-3. Copy `templates/a11y-spec.md` into your project as `a11y-spec.md` and fill in the target and audiences.
-4. Start with consult: say who you are building for and what they need. Build once the need statement is in the spec. Type `/wcag` to load the WCAG skill by hand.
-5. Ask for the verifier when you want an independent check.
+**In this repo.** Clone it, open a terminal in the folder, and run `claude`. The skills, the verifier, and the library load as they are. Type `/wcag` to load the WCAG skill by hand.
+
+**In your own project.** The plan is a Claude Code plugin, `doctor-accessible`, which installs the skills, the verifier, and the library with one command and updates when we change them (roadmap 5.4; the reasons are in `docs/decisions.md`, 2026-10-23). Until it ships, copy these into your project's root, keeping the folder names:
+
+- `.claude/` (the skills and the verifier)
+- `knowledge/` (the library the skills read; without it the verifier has nothing to cite)
+- `tools/` (axe and the reading-level tool the verifier runs; Python 3, and Node.js for axe)
+- `docs/content-standards.md` and `docs/principles.md`
+- `templates/a11y-spec.md`, and a second copy at your project root as `a11y-spec.md`
+
+Then:
+
+1. Fill in `a11y-spec.md`: the conformance target, who the project serves, and the assistive technology you test with.
+2. Run `claude` in your project. Start with consult (`/consult`): say who you are building for and what they need. Build once the need statement is in the spec.
+3. Ask for the verifier when you want an independent check.
+4. When this repo changes, copy `knowledge/`, `.claude/`, and `tools/` again. A copy does not update itself, which is why the plugin is the plan.
 
 ## Working on it as a team
 
