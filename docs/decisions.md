@@ -114,3 +114,30 @@ Why things are the way they are. Add a dated entry when a decision changes shape
 **No patterns or ux entries exist yet.** The skill says so each time and reasons from the WCAG entries a pattern touches, stating that basis. When packages 3.2 and 3.9 land, the skill's map points at them without other change.
 
 **Transcript evals are a new eval shape.** A `request.md` in place of `input.html`, with the answer key describing what a good consult answer contains. The first three cover a build-less case (a carousel that should be a list), an already-met case (a skip link that exists), and a full consult (a registration form). Until Phase 4 automates them, they run in a fresh session or, as a stand-in, in a general-purpose agent carrying the skill's text, and the record says which.
+
+## 2026-10-23: no second agent
+
+**The decision: the verifier stays the only agent.** Every logged verifier failure was reviewed against principle 1's four conditions. None of them would have been prevented by a second agent. Each has a cheaper remedy that is already in place or is a key owner's call. The judge inside `evals/check.py` is a fresh session too, but it is part of the eval tooling, not a mode of the product.
+
+**What was reviewed.** About seventy verifier rows in `evals/RESULTS.md` to 2026-10-23, the run index in `evals/run-2026-10-23-all.md`, and the checker's results in `evals/check-2026-10-23.md`. Every failure or flagged observation falls into one of five kinds.
+
+- **A miss.** Eval 031's options were chosen on `mousedown`, a definite 2.5.2 failure. Three runs did not catch it; the fourth opened the 2.5.2 entry and did. The cause was coverage on a page built to test something else, and the remedy was to fix the page and keep re-running.
+- **Over-reporting.** Manual-review notes on items a key forbade: 031 and 032, then 003, 008, 010, and 034 under the checker. None got the main finding wrong. Each is a disagreement about how strict a key should be. 031 and 032 were amended; the other four are for their owners.
+- **Underclaiming.** Eval 012 graded likely where the key expected definite, and the key itself allows that downgrade. The remedy was in the checker, not the verifier.
+- **Format gaps.** Spec deviations in 038 and 039 had no confidence label, because the verifier's output format never asked for one. Fixed in `verifier.md`.
+- **Environment.** No shell on Windows, so no axe and no readability tool, in every run before WP 4.1. Fixed by adding PowerShell to the verifier's tools.
+
+**Against the four conditions.**
+
+1. **Contamination.** A second agent would help only if the verifier's verdict were contaminated by the builder's reasoning. It never is: the verifier already runs isolated. The misses came from coverage and the over-reporting from key strictness, and another isolated reader would share both.
+2. **Tool output flooding.** axe and the readability tool run inside the verifier. `tools/axe.py` keeps raw output in a file and prints a summary, so nothing floods the main session.
+3. **Parallel work.** `evals/run.sh` already runs verifier sessions in parallel. No mode of the product needs two agents at once.
+4. **A different model or permission set.** The only permission gap was the shell, now closed. No failure pointed to a model that could not do the work.
+
+**What would reopen it.**
+
+- The same kind of miss on the same criterion recurring across runs after its entry and an eval exist.
+- A domain whose checks need tools or permissions the verifier should not hold, such as the document formats in 5.5.
+- Verifier reports long enough that tool output starts to crowd the main session.
+
+Any one of these is a reason to look again, under principle 1.
