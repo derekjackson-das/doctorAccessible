@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading list</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    .item { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .wrap { position: relative; display: inline-block; }
+    .icon-btn { inline-size: 2.75rem; block-size: 2.75rem; display: grid; place-items: center; border: 2px solid #005a9c; background: #fff; color: #005a9c; border-radius: 4px; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+    [role="tooltip"] { position: absolute; inset-block-start: 100%; inset-inline-start: 0; border-block-start: 0.5rem solid transparent; background: #1a1a1a; background-clip: padding-box; color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
+    [role="tooltip"][hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Reading list</h1>
+    <div class="item">
+      <p>Ostrom, <cite>Governing the Commons</cite> (1990)</p>
+      <span class="wrap">
+        <button type="button" class="icon-btn" aria-describedby="tip-download">
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"><path d="M10 3v10M5.5 8.5L10 13l4.5-4.5M4 17h12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <span role="tooltip" id="tip-download" hidden>Download citation (RIS file)</span>
+      </span>
+    </div>
+  </main>
+
+  <script>
+    const wrap = document.querySelector('.wrap');
+    const button = wrap.querySelector('button');
+    const tip = document.getElementById('tip-download');
+    const show = () => { tip.hidden = false; };
+    const hide = () => { tip.hidden = true; };
+
+    button.addEventListener('focus', show);
+    button.addEventListener('blur', () => { if (!wrap.matches(':hover')) hide(); });
+    wrap.addEventListener('mouseenter', show);
+    wrap.addEventListener('mouseleave', () => { if (document.activeElement !== button) hide(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') hide(); });
+    button.addEventListener('click', () => { window.location.href = '/citations/ostrom-1990.ris'; });
+  </script>
+</body>
+</html>

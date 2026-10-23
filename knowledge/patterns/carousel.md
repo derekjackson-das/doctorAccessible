@@ -5,7 +5,7 @@
 - Practitioner sources (tier 3, on `knowledge/SOURCES.md`):
   - Sara Soueidan, "Are 'CSS Carousels' accessible?", 6 May 2025, updated 19 August 2025. https://www.sarasoueidan.com/blog/css-carousels-accessibility/ Tested Chrome's experimental CSS-only carousels with VoiceOver on macOS, the keyboard, and the browser's accessibility tree.
   - Heydon Pickering, "A Content Slider", Inclusive Components, 22 November 2017. https://inclusive-components.design/a-content-slider/ Design and build guidance; it reports no named assistive technology test.
-- Related entries: `ux/carousels.md` (whether people want one at all), `wcag/sc-2.2.2-pause-stop-hide.md`, `wcag/sc-4.1.2-name-role-value.md`, `coga/objective-5-help-users-focus.md`; `aria/` once that domain exists.
+- Related entries: `ux/carousels.md` (whether people want one at all), `wcag/sc-2.2.2-pause-stop-hide.md`, `wcag/sc-4.1.2-name-role-value.md`, `coga/objective-5-help-users-focus.md`; `aria/patterns/carousel.md` (the roles, states, naming, keyboard, and the ARIA test results).
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting

@@ -5,7 +5,7 @@
 - Practitioner testing (tier 3, on `knowledge/SOURCES.md`):
   - Adrian Roselli, "Under-Engineered Comboboxen?", 29 June 2023, updated 19 August 2026. https://adrianroselli.com/2023/06/under-engineered-comboboxen.html Tested the native `datalist` element with JAWS and Chrome, NVDA and Firefox, Narrator and Edge, VoiceOver and Safari on macOS, and TalkBack with Firefox on Android.
   - Sarah Higley, "<select> your poison", 3 January 2020. https://sarahmhigley.com/writing/select-your-poison/ Points to her two-part series on custom selects and comboboxes, with tested code for each variation and three recommended implementations.
-- Related entries: `ux/...` (no entry yet for this pattern), `aria/...` once that domain exists, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-1.3.5-identify-input-purpose.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-6-do-not-rely-on-memory.md`
+- Related entries: `ux/...` (no entry yet for this pattern), `aria/patterns/autocomplete.md` (the roles, states, naming, keyboard, and the ARIA test results), `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-1.3.5-identify-input-purpose.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-6-do-not-rely-on-memory.md`
 - Verified against the live sources: 2026-10-22 by Derek Jackson with Claude Code
 
 ## Status and reporting
@@ -24,7 +24,7 @@ A native `select`, grouped with `optgroup` if the list has a natural shape, or a
 
 Native first: `datalist` is the HTML combobox. Roselli (2023, updated 2026) found it generally works with screen readers, with these caveats from his tests: JAWS with Chrome announced the field as a combo, said a list was expanded, read each option's visible text with a count, but did not announce the chosen value on return to the field; NVDA with Firefox announced the value on return; Narrator with Edge gave position and count in scan mode; VoiceOver on macOS with Safari read only an option's value when it differed from its visible text, so keep value and text identical or omit one; Firefox on Android did not support `datalist` at the time despite the support tables saying it did, so TalkBack could do nothing with it. Styling applies to the text field but not to the list.
 
-If the native control will not do, Higley's series (2020) is the tested reference for three shapes: a select-only combobox that replaces `select`, an editable combobox, and an editable multi-select combobox, each with its trade-offs and test code published.
+If the native control will not do, Higley's 2020 post points to her two-part series on custom selects and comboboxes, covering a select-only combobox, an editable combobox, and an editable multi-select combobox. The series is published on 24a11y.com (2019), which is not on `knowledge/SOURCES.md` and is more than three years old, so its results are not used here. The ARIA for the pattern is in `aria/patterns/autocomplete.md`.
 
 The Authoring Practices' expectations, in our words: the combobox is a text field or a read-only field in the tab sequence; its popup, a listbox, grid, tree, or dialog, is not in the tab sequence; Down Arrow moves into the popup; Escape closes it; the field reports whether the popup is open and which option is active. Whether the person can type is the choice that shapes everything. The guide does not say how any of this performs in real assistive technology; that is what the two sources above supply.
 

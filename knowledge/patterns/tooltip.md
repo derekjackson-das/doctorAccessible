@@ -7,7 +7,7 @@
   - Heydon Pickering, "Tooltips & Toggletips", Inclusive Components, 25 July 2017. https://inclusive-components.design/tooltips-toggletips/ Build guidance for both.
   - Hidde de Vries, "Semantics and the popover attribute: which role to use when?", 16 May 2023, updated 30 April 2024. https://hidde.blog/popover-semantics/ Which role to give popover-based tooltips.
   - Hidde de Vries and Scott O'Hara, "On popover accessibility: what the browser does and doesn't do", 21 March 2024, updated 15 March 2025. https://hidde.blog/popover-accessibility/ Tested what the `popover` attribute exposes, with JAWS 2023 and NVDA 2023.3.4 in Edge 124. Relevant to toggletips built with `popover`.
-- Related entries: `wcag/sc-1.4.13-content-on-hover-or-focus.md`, `wcag/sc-4.1.2-name-role-value.md`, `patterns/modal-dialog.md`, `patterns/accordion.md`; `aria/` once that domain exists.
+- Related entries: `wcag/sc-1.4.13-content-on-hover-or-focus.md`, `wcag/sc-4.1.2-name-role-value.md`, `patterns/modal-dialog.md`, `patterns/accordion.md`; `aria/patterns/tooltip.md` (the roles, states, naming, and keyboard).
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting
