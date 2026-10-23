@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library questions</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    h2 { margin: 0.5rem 0 0; font-size: 1.125rem; }
+    h2 button { font: inherit; width: 100%; text-align: left; padding: 0.75rem 1rem; border: 2px solid #005a9c; background: #fff; color: #005a9c; }
+    h2 button::after { content: ""; display: inline-block; width: 0.5em; height: 0.5em; margin-inline-start: 0.75em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); vertical-align: 0.2em; }
+    h2 button.open::after { transform: rotate(-135deg); vertical-align: -0.1em; }
+    .panel { padding: 0.5rem 1rem; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Library questions</h1>
+    <h2><button type="button" aria-expanded="false" aria-controls="q1">How many books can I borrow?</button></h2>
+    <div class="panel" id="q1" hidden>
+      <p>Up to 20 books at a time, for four weeks each.</p>
+    </div>
+    <h2><button type="button" aria-expanded="false" aria-controls="q2">Can I renew online?</button></h2>
+    <div class="panel" id="q2" hidden>
+      <p>Yes. Sign in to your account and choose "Renew" next to each book.</p>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('h2 button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        panel.hidden = !panel.hidden;
+        button.classList.toggle('open', !panel.hidden);
+      });
+    });
+  </script>
+</body>
+</html>

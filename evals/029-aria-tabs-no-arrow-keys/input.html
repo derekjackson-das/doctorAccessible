@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course formats</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    [role="tablist"] { display: flex; gap: 0.25rem; flex-wrap: wrap; border-bottom: 2px solid #005a9c; }
+    [role="tab"] { font: inherit; padding: 0.5rem 1rem; border: 2px solid #005a9c; border-bottom: none; background: #fff; color: #005a9c; }
+    [role="tab"][aria-selected="true"] { background: #005a9c; color: #fff; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+    [role="tabpanel"] { padding: 1rem 0; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Course formats</h1>
+    <div role="tablist" aria-label="Course formats">
+      <button type="button" role="tab" id="tab-person" aria-selected="true" aria-controls="panel-person" tabindex="0">In person</button>
+      <button type="button" role="tab" id="tab-online" aria-selected="false" aria-controls="panel-online" tabindex="-1">Online</button>
+      <button type="button" role="tab" id="tab-hybrid" aria-selected="false" aria-controls="panel-hybrid" tabindex="-1">Hybrid</button>
+    </div>
+    <div role="tabpanel" id="panel-person" aria-labelledby="tab-person" tabindex="0">
+      <p>Classes meet twice a week in the Science Center.</p>
+    </div>
+    <div role="tabpanel" id="panel-online" aria-labelledby="tab-online" tabindex="0" hidden>
+      <p>Classes are live on video, with recordings posted the same day.</p>
+    </div>
+    <div role="tabpanel" id="panel-hybrid" aria-labelledby="tab-hybrid" tabindex="0" hidden>
+      <p>One class a week meets in person; the other is online.</p>
+    </div>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+
+    function selectTab(tab) {
+      tabs.forEach((t) => {
+        const selected = t === tab;
+        t.setAttribute('aria-selected', String(selected));
+        t.tabIndex = selected ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+      });
+    }
+
+    tabs.forEach((tab) => tab.addEventListener('click', () => selectTab(tab)));
+  </script>
+</body>
+</html>

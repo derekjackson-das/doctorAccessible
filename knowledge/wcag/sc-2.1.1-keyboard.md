@@ -7,6 +7,7 @@
 - Tier 2 source: https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html
 - Also in: WCAG 2.0 and 2.1, same level
 - Verified against the live source: 2026-10-22 by Derek Jackson with Claude Code, direct fetch of the Recommendation page and the W3C WCAG 2.2 JSON
+- Updated 2026-10-23 by Caesar Alam with Claude Code: added the `tabindex="-1"` case under "How it fails in code" (WP 3.8).
 
 ## Normative text (tier 1, quoted)
 
@@ -25,6 +26,7 @@ Everything a person can do with a mouse, they must be able to do with a keyboard
 - A clickable element that only has a mouse event handler (`click`, `mousedown`, `mouseover`) and is not a native interactive element, so Enter and Space do nothing. Definite. F54.
 - A custom control with `role="button"` and `tabindex="0"` but no key handler, so it can be focused but not activated. Definite. F54.
 - A `div` or `span` acting as a link or button with no `tabindex`, so it cannot be reached at all. Definite, and also a 4.1.2 defect; see that entry for how to report once. F42.
+- Controls taken out of the tab order with `tabindex="-1"` and given no other keyboard route, such as inactive tabs in a roving tabindex with no arrow-key handler (`aria/patterns/tabs.md`). Definite.
 - Script that moves focus away from an element as soon as it receives it. Definite. F55.
 - A hover-only menu whose items appear on `mouseover` and have no focus equivalent. Definite.
 - Drag-and-drop as the only way to reorder or move items. Definite under this criterion; also 2.5.7.

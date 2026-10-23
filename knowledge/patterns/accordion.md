@@ -6,7 +6,7 @@
   - Adrian Roselli, "Disclosure Widgets", 20 May 2020, updated 28 January 2024. https://adrianroselli.com/2020/05/disclosure-widgets.html Compared a single native `<details>`/`<summary>` with a single button-based disclosure in JAWS 2019 with Chrome 81, NVDA 2019 with Firefox 76, VoiceOver on macOS 10.15 with Safari, TalkBack on Android 10 with Chrome and Firefox, and VoiceOver on iPadOS 13.4 (2020), retested on iPadOS 16.5 (August 2023) and 17.3 (January 2024).
   - Scott O'Hara, "The details and summary elements, again", 12 September 2022. https://www.scottohara.me/blog/2022/09/12/details-summary.html How `<summary>` is exposed across NVDA, JAWS, Narrator, VoiceOver, and TalkBack with several browsers (versions not given), and what breaks when it is restyled or given a role.
   - Heydon Pickering, "Collapsible Sections", Inclusive Components, 26 October 2017. https://inclusive-components.design/collapsible-sections/ Build guidance; notes `aria-controls` worked only in JAWS at the time.
-- Related entries: `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-1.3.1-info-and-relationships.md`, `patterns/tabs.md`, `coga/objective-2-find-what-they-need.md`; `aria/` once that domain exists.
+- Related entries: `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-1.3.1-info-and-relationships.md`, `patterns/tabs.md`, `coga/objective-2-find-what-they-need.md`; `aria/patterns/accordion.md` (the roles, states, naming, keyboard, and the ARIA test results).
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting
