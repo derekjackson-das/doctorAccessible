@@ -5,7 +5,7 @@
 - Practitioner testing (tier 3, on `knowledge/SOURCES.md`):
   - Adrian Roselli, "Under-Engineered Comboboxen?", 29 June 2023, updated 19 August 2026. https://adrianroselli.com/2023/06/under-engineered-comboboxen.html Tested the native `datalist` element with JAWS and Chrome, NVDA and Firefox, Narrator and Edge, VoiceOver and Safari on macOS, and TalkBack with Firefox on Android.
   - Sarah Higley, "<select> your poison", 3 January 2020. https://sarahmhigley.com/writing/select-your-poison/ Points to her two-part series on custom selects and comboboxes, with tested code for each variation and three recommended implementations.
-- Related entries: `ux/...` (no entry yet for this pattern), `aria/...` once that domain exists, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-1.3.5-identify-input-purpose.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-6-do-not-rely-on-memory.md`
+- Related entries: `ux/...` (no entry yet for this pattern), `aria/patterns/autocomplete.md` (the roles, states, naming, keyboard, and the ARIA test results), `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-1.3.5-identify-input-purpose.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-6-do-not-rely-on-memory.md`
 - Verified against the live sources: 2026-10-22 by Derek Jackson with Claude Code
 
 ## Status and reporting

@@ -172,6 +172,9 @@ When ARIA is needed, what each HTML element allows, and how a name is worked out
 | Modal dialog: roles, naming, keyboard, test results | `aria/patterns/modal-dialog.md` | 2026-10-23 |
 | Tabs: roles, naming, keyboard, test results | `aria/patterns/tabs.md` | 2026-10-23 |
 | Accordion: roles, naming, keyboard, test results | `aria/patterns/accordion.md` | 2026-10-23 |
+| Autocomplete (combobox): roles, naming, keyboard, test results | `aria/patterns/autocomplete.md` | 2026-10-23 |
+| Tooltip: roles, naming, keyboard | `aria/patterns/tooltip.md` | 2026-10-23 |
+| Carousel: roles, naming, keyboard, test results | `aria/patterns/carousel.md` | 2026-10-23 |
 
 ## Other domains
 
