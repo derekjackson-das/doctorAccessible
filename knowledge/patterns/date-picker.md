@@ -4,7 +4,7 @@
 - W3C tutorial: none.
 - Practitioner testing (tier 3, on `knowledge/SOURCES.md`):
   - Adrian Roselli, "Maybe You Don't Need a Date Picker", 5 July 2019, updated 18 March 2026. https://adrianroselli.com/2019/07/maybe-you-dont-need-a-date-picker.html Reports about twenty years of user testing with date fields, an audit of a widely used third-party picker against WCAG, and notes on the native control and on the Authoring Practices example.
-- Related entries: `ux/...` (no entry yet for this pattern), `patterns/modal-dialog.md`, `wcag/sc-3.3.2-labels-or-instructions.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-1.3.1-info-and-relationships.md`, `coga/objective-6-do-not-rely-on-memory.md`, `coga/objective-4-avoid-mistakes.md`
+- Related entries: `ux/...` (no entry yet for this pattern), `aria/patterns/date-picker.md` (the roles, states, naming, and keyboard), `patterns/modal-dialog.md`, `wcag/sc-3.3.2-labels-or-instructions.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-1.3.1-info-and-relationships.md`, `coga/objective-6-do-not-rely-on-memory.md`, `coga/objective-4-avoid-mistakes.md`
 - Verified against the live sources: 2026-10-22 by Derek Jackson with Claude Code
 
 ## Status and reporting

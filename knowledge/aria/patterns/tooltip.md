@@ -1,7 +1,7 @@
 # ARIA pattern: Tooltip
 
 - W3C pattern (tier 2): ARIA Authoring Practices Guide, "Tooltip Pattern", no date shown, accessed 2026-10-23. https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/ A pattern, not a requirement. The page says it is a work in progress without task force consensus, and it has no example.
-- Normative (tier 1): WAI-ARIA 1.2, `tooltip` role and `aria-describedby`, W3C Recommendation 6 June 2023, https://www.w3.org/TR/wai-aria-1.2/#tooltip. ARIA in HTML, W3C Recommendation 11 August 2026, https://www.w3.org/TR/html-aria/: a `span` or `div` may take any role, including `tooltip`.
+- Normative (tier 1): WAI-ARIA 1.2, `tooltip` role and `aria-describedby`, W3C Recommendation 6 June 2023, https://www.w3.org/TR/wai-aria-1.2/#tooltip. ARIA in HTML, W3C Recommendation 11 August 2026, https://www.w3.org/TR/html-aria/ : a `span` or `div` may take any role, including `tooltip`.
 - Practitioner sources (tier 3): Higley (2019), Pickering (2017), de Vries (2023), and de Vries and O'Hara (2024, updated 2025) are cited in `patterns/tooltip.md`, with their findings. None tests a tooltip itself with assistive technology. This entry adds none.
 - Related entries: `patterns/tooltip.md` (whether to use one, toggletips, the criteria, the manual tests), `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-1.4.13-content-on-hover-or-focus.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code

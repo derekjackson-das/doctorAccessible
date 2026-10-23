@@ -4,7 +4,7 @@
 - W3C tutorial: none.
 - Practitioner sources (tier 3, on `knowledge/SOURCES.md`):
   - Adrian Roselli, "So You Think You've Built a Good Infinite Scroll", 31 May 2014, updated 5 April 2024. https://adrianroselli.com/2014/05/so-you-think-you-built-good-infinite.html An eleven-point checklist, with his keyboard check of the Authoring Practices feed example (2018). No screen reader test results.
-- Related entries: `ux/infinite-scroll-and-pagination.md` (whether people want it at all), `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-2-find-what-they-need.md`; `aria/` once that domain exists.
+- Related entries: `ux/infinite-scroll-and-pagination.md` (whether people want it at all), `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-4.1.3-status-messages.md`, `coga/objective-2-find-what-they-need.md`; `aria/patterns/infinite-scroll.md` (the roles, states, naming, and keyboard).
 - Verified against the live sources: 2026-10-22 by Caesar Alam with Claude Code
 
 ## Status and reporting
