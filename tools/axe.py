@@ -30,6 +30,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 
 TAGS = "wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa"
 
@@ -100,7 +101,30 @@ def main(argv=None):
     cmd = [npx, "--yes", "@axe-core/cli", url, "--tags", TAGS, "--stdout"] + driver_flags()
     env = dict(os.environ)
     env["PATH"] = os.path.dirname(npx) + os.pathsep + env.get("PATH", "")  # npx needs node beside it
-    proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
+    # Parallel `npx --yes` runs race on the npm cache (seen as MODULE_NOT_FOUND from npx-cli.js
+    # when evals/run.sh ran six at once), so scans take turns through a lock file, and retry once.
+    os.makedirs(args.out_dir, exist_ok=True)
+    lock = os.path.join(args.out_dir, ".axe.lock")
+    for _ in range(600):
+        try:
+            fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            break
+        except FileExistsError:
+            if time.time() - os.path.getmtime(lock) > 300:
+                os.remove(lock)                      # a stale lock from a crashed run
+            time.sleep(1)
+    else:
+        fd = None
+    try:
+        for attempt in range(2):
+            proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
+            if "MODULE_NOT_FOUND" not in (proc.stderr + proc.stdout) or attempt:
+                break
+            time.sleep(3)
+    finally:
+        if fd is not None:
+            os.close(fd)
+            os.remove(lock)
     out = proc.stdout.strip()
     start = out.find("[")
     try:
