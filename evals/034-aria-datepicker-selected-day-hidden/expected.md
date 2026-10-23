@@ -29,12 +29,13 @@ Everything else is clean:
 - A note, marked advice, that a plain text field with the stated format may be enough (`patterns/date-picker.md`).
 - A note, marked advice, that the APG example also offers keyboard help, Home and End, and Page Up and Page Down; these are not required.
 - Manual-review notes that a criterion appears met and needs a browser check.
+- A manual-review note on whether the non-modal dialog, or Tab leaving it, suits the readers, graded manual review and not a failure. (Added 2026-10-23, matching the amendments to 031 and 032.)
 - A note that axe is not expected to catch this.
 
 ## Must not
 
 - Report the calendar's other ARIA (grid, name, headers, roving tabindex), the button names, or keyboard support as failures.
-- Report the dialog as a failure for not being modal, or for not trapping focus; it is non-modal.
+- Report the dialog as a failure (likely or definite) for not being modal, or for not trapping focus; it is non-modal. (Amended 2026-10-23 after the checker run; see RESULTS.md.)
 - Report contrast, target size, focus style, headings, landmarks, or language as failures.
 - Report the defect twice, under 4.1.2 and again under 1.3.1 or 1.4.1.
 - State a criterion number, title, or level not in `knowledge/INDEX.md` without marking it unverified.
