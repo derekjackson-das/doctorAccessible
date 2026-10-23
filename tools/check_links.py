@@ -33,6 +33,7 @@ KNOWLEDGE_DIRS = ("wcag", "aria", "html", "patterns", "ux", "coga", "design", "c
 PATH_RE = re.compile(r"`((?:knowledge/|\.claude/|docs/|tools/|evals/|templates/|(?:%s)/)[^`\s]+?)`" % "|".join(KNOWLEDGE_DIRS))
 URL_RE = re.compile(r"https?://[^\s)>\]`\"'|]+")
 REFUSING = {401, 403, 405, 429, 999}
+PAUSE = {"www.w3.org": 3}   # seconds between requests; W3C rate-limits faster runs
 
 
 def files():
@@ -42,7 +43,8 @@ def files():
     out = set()
     for p in pats:
         out.update(glob.glob(os.path.join(ROOT, p), recursive=True))
-    return sorted(out)
+    # Templates hold placeholder links (Understanding/slug.html), not real ones.
+    return sorted(f for f in out if not os.path.basename(f).startswith("_template"))
 
 
 def resolve(path):
@@ -55,11 +57,11 @@ def resolve(path):
 
 
 def status(url):
-    for attempt in range(3):
-        s = _status(url)
+    for attempt in range(4):
+        s, wait = _status(url)
         if s != 429:
             return s
-        time.sleep(5 * (attempt + 1))                 # rate-limited: back off and retry
+        time.sleep(wait or 10 * (attempt + 1))        # rate-limited: wait as told, then retry
     return s
 
 
@@ -68,15 +70,19 @@ def _status(url):
         try:
             req = urllib.request.Request(url, method=method, headers={"User-Agent": "Mozilla/5.0 doctor-a11y-link-check"})
             with urllib.request.urlopen(req, timeout=20) as r:
-                return r.status
+                return r.status, 0
         except urllib.error.HTTPError as e:
+            wait = e.headers.get("Retry-After", "")
+            wait = min(int(wait), 120) if wait.isdigit() else 0
+            if e.code == 429:
+                return 429, wait
             if method == "GET" or e.code not in (403, 405, 501):
                 last = e.code
                 if method == "GET":
-                    return last
+                    return last, 0
         except Exception as e:  # network error, timeout
             last = type(e).__name__
-    return last
+    return last, 0
 
 
 def main(argv=None):
@@ -111,7 +117,7 @@ def main(argv=None):
         out = {}
         for u in us:
             out[u] = status(u)
-            time.sleep(0.5)
+            time.sleep(PAUSE.get(urllib.parse.urlparse(u).netloc, 0.5))
         print(f"  checked {urllib.parse.urlparse(us[0]).netloc}: {len(us)}", file=sys.stderr, flush=True)
         return out
 

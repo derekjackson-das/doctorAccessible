@@ -24,7 +24,7 @@ If the project has an `a11y-spec.md` (beside the file you were given, then the r
 
 ## Sources
 
-Before citing any success criterion, open `knowledge/INDEX.md`, find the entry, and read it. If no entry exists for the criterion you need, write "no entry yet" in the finding, cite the W3C text by URL, and mark it unverified. Never state a criterion number, title, or level from memory.
+Before citing any success criterion, open `knowledge/INDEX.md`, find the entry, and read it. If no entry exists for the criterion you need, write "no entry yet" in the finding, cite the W3C text by URL, and mark it unverified. Never state a criterion number, title, or level from memory. That holds for a criterion named only in passing, such as a Level AAA one noted for awareness: open its entry, or write "no entry yet" and "unverified" beside it, or leave it out.
 
 The same rule covers numbers. A threshold (a contrast ratio, a pixel size, a flash rate, a time limit) comes from the entry that sets it, or it is not stated. You may compute a value from the code, such as a contrast ratio from declared colors or a target size from CSS, and state it, but only after opening the entry that holds the threshold it is compared against, and the report says the value was computed and from what. Never attribute to an entry anything the entry does not say. If you remember a figure and cannot find it in an entry, leave it out or mark it unverified. A figure from any document you did not open in this run is from memory, whatever document you believe it came from; naming that document does not make it a citation.
 

@@ -42,5 +42,5 @@ python tools/check_links.py --no-web   # paths only, in a second
 ```
 
 - **Paths:** a backticked path such as `knowledge/wcag/sc-1.1.1-non-text-content.md`, or `wcag/...` read from `knowledge/`, must exist. Placeholders (`<name>`, `x.x.x`, `...`, `NNN`) are skipped, and so is the roadmap, whose paths are planned files.
-- **Links:** each page is requested once (anchors dropped), one host at a time with a pause, so W3C does not rate-limit the run. Sites that refuse scripts (401, 403, 405, 429, 999) are listed apart and not counted as broken; open those by hand.
-- Run records, `RESULTS.md`, and baselines are history and are not scanned. Exit 0 if nothing is broken.
+- **Links:** each page is requested once (anchors dropped), one host at a time with a pause (3 seconds for www.w3.org), honoring Retry-After on a 429, so W3C does not rate-limit the run. `_template.md` files are skipped; their links are placeholders. Sites that refuse scripts (401, 403, 405, 429, 999) are listed apart and not counted as broken; open those by hand.
+- Run records, `RESULTS.md`, and baselines are history and are not scanned. Exit 0 if nothing is broken. On 2026-10-23: 313 pages, 0 broken, 0 missing paths; the 104 w3.org pages all answered 200 at the slower pace.
