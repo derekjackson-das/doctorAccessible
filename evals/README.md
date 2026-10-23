@@ -46,7 +46,7 @@ evals/run.sh -j 6 001-missing-label   # named evals, 6 at a time
 evals/run.sh -o /tmp/reports          # choose where reports go
 ```
 
-Reports go outside the repo by default, in a dated folder in the temp directory: one `<eval>.md` per eval and an `index.md` listing each eval's finding headings and axe line. Read each report against its `expected.md`. The script does not grade; that is roadmap 4.4. Record what you read in `RESULTS.md` as for any run. Each session costs a verifier run's tokens. For axe, Node.js must be on PATH or `DOCTOR_A11Y_NODE_DIR` set. Transcript and text evals (`request.md`, `text.md`) are skill runs and are not covered yet.
+Reports go outside the repo by default, in a dated folder in the temp directory: one `<eval>.md` per eval and an `index.md` listing each eval's finding headings and axe line. Read each report against its `expected.md`, or grade them with `python evals/check.py <reports-folder>` (roadmap 4.4). It checks the criterion, level, tier, and confidence of finding 1 mechanically. A fresh `claude -p` judge with no tools checks the must-not list and the pass condition, quoting the report line behind each failure. It writes `checks.md` beside the reports; `--no-judge` skips the judge. Record what you read in `RESULTS.md` as for any run. Each session costs a verifier run's tokens. For axe, Node.js must be on PATH or `DOCTOR_A11Y_NODE_DIR` set. Transcript and text evals (`request.md`, `text.md`) are skill runs and are not covered yet.
 
 ## Adding one
 
