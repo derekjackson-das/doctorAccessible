@@ -26,6 +26,7 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 | Topic | Read |
 |---|---|
 | Accessible names, roles, states on controls | `knowledge/wcag/sc-4.1.2-name-role-value.md`; visible label must be in the name: `sc-2.5.3-label-in-name.md` |
+| Whether ARIA is needed, what an element allows, where a name comes from | `knowledge/aria/using-aria.md`, `knowledge/aria/aria-in-html.md`, `knowledge/aria/accessible-name.md` |
 | Form labels, grouping, input purpose | `sc-1.3.1-info-and-relationships.md` (association), `sc-1.3.5-identify-input-purpose.md` (autocomplete), `sc-4.1.2-name-role-value.md`; whether a label or instruction exists at all: `sc-3.3.2-labels-or-instructions.md` |
 | Headings, lists, tables, landmarks | `sc-1.3.1-info-and-relationships.md`; descriptive headings and labels: `sc-2.4.6-headings-and-labels.md`; page title: `sc-2.4.2-page-titled.md`; skip links: `sc-2.4.1-bypass-blocks.md` |
 | Reading order and focus order | `sc-1.3.2-meaningful-sequence.md`, `sc-2.4.3-focus-order.md` |
@@ -47,7 +48,7 @@ Any change that touches page structure or landmarks, headings, forms and labels,
 | Form errors, instructions, consequential submissions | `sc-3.3.1-error-identification.md`, `sc-3.3.3-error-suggestion.md`, `sc-3.3.4-error-prevention-legal-financial-data.md`, `sc-3.3.2-labels-or-instructions.md` |
 | Re-entering information, logging in | `sc-3.3.7-redundant-entry.md`, `sc-3.3.8-accessible-authentication-minimum.md` |
 
-All paths are under `knowledge/wcag/`. Check `knowledge/INDEX.md` for anything not listed here. The index is kept current; this table is a convenience.
+Paths given without a folder are under `knowledge/wcag/`. Check `knowledge/INDEX.md` for anything not listed here. The index is kept current; this table is a convenience.
 
 ## Output shape for a finding
 
