@@ -21,6 +21,7 @@
     td { cursor: pointer; }
     td.chosen { background: #005a9c; color: #fff; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; }
     td:focus-visible { outline: 3px solid #1a1a1a; outline-offset: -3px; }
+    td.chosen:focus-visible { box-shadow: inset 0 0 0 6px #fff; }
     .actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
   </style>
 </head>
@@ -64,7 +65,8 @@
     let year = 2026, month = 5, chosen = null, focusDay = 1;
 
     function render() {
-      monthHeading.textContent = months[month] + ' ' + year;
+      const label = months[month] + ' ' + year;
+      if (monthHeading.textContent !== label) monthHeading.textContent = label;
       daysBody.innerHTML = '';
       const first = new Date(year, month, 1).getDay();
       const count = new Date(year, month + 1, 0).getDate();

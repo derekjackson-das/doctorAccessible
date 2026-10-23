@@ -23,10 +23,11 @@ From the APG feed pattern, in our words:
 | Element | Role | States and properties | Set by | Notes |
 |---|---|---|---|---|
 | The list of items | `feed` | `aria-labelledby` pointing at a visible heading, or `aria-label` | Author | Everything inside it is in an article |
-| The list | | `aria-busy="true"` while items are added or removed, then `"false"` | Script | The APG calls resetting it to false extremely important, or the new items may not be exposed |
+| The list | | `aria-busy="true"` while items are added or removed, when the update takes more than one DOM operation, then `"false"` | Script | The APG calls resetting it to false extremely important, or the new items may not be exposed |
 | Each item | `article` (the element gives it) | `aria-labelledby` pointing at its title; `aria-describedby` pointing at its main text, strongly recommended | Author | |
 | Each item | | `aria-posinset` (its position) and `aria-setsize` (the total loaded, the total in the feed, or -1 if unknown) | Script | Updated as items load |
-| A "loading" or "more loaded" message, if shown | `status` | | Author | Required by 4.1.3 for a visible message; the feed role does not announce anything itself |
+
+Ours, not the APG: a visible "loading" or "more loaded" message needs to be a live region (`role="status"`, `aria-live`, or `output`), or to receive focus, under `wcag/sc-4.1.3-status-messages.md`. The `feed` role does not announce anything itself.
 
 ## Naming
 
@@ -34,7 +35,7 @@ The feed is named by its heading; each article by its own title (`aria/accessibl
 
 ## Keyboard
 
-The APG says the feed has no established keyboard convention, so the page must document its keys. It suggests Page Down and Page Up to move between articles, and Control+End and Control+Home to leave the feed forward and back. Roselli's 2018 check, in `patterns/infinite-scroll.md`, found the APG's own example left content after the feed unreachable by Tab, with nothing telling the person about Control+End.
+The APG says the feed has no established keyboard convention, and stresses easily discoverable documentation of whatever keys the page supports. It suggests Page Down and Page Up to move between articles, and Control+End and Control+Home to leave the feed forward and back. In 2018 Roselli found that the APG's own example put a control after the feed that keyboard users could not reach. In his 2019 pull request he noted that nothing told the person about Control+End. Both are in `patterns/infinite-scroll.md`.
 
 ## What testing found
 
@@ -44,6 +45,6 @@ Nothing on the list tests the ARIA of a feed. See `patterns/infinite-scroll.md` 
 
 - A visible "loading" or "N more loaded" message inserted with no live-region role, and focus not moved to it: `wcag/sc-4.1.3-status-messages.md`, definite (F103).
 - Content after the feed, such as the footer, that keyboard users can never reach: `wcag/sc-2.1.1-keyboard.md`, at that entry's confidence.
-- Focus lost when items are removed or replaced: `wcag/sc-2.4.3-focus-order.md`, at that entry's confidence.
+- Focus lost when items are removed or replaced: manual review under `wcag/sc-2.4.3-focus-order.md`, which has no case for it yet.
 - `aria-busy="true"` never reset to false: advice, from the APG; a finding only through the criterion its effect breaks, and confirm with a screen reader.
 - Page Down and the other suggested keys not supported: not a finding; document whatever keys are supported.

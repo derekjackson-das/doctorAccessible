@@ -5,7 +5,7 @@ Input: `input.html`. A "Library stories" page: a feed of short stories with a "L
 Intended defect: pressing "Load more stories" adds three stories and writes a visible message, "3 more stories loaded. Showing 6 of 9.", into a plain `p`. The `p` has no live-region role or `aria-live`, and focus stays on the button. A screen reader user is not told that anything happened.
 
 Everything else is clean:
-- The feed has `role="feed"`, named by its heading. Each story is an `article`, named by its title and described by its text, with `aria-posinset` and `aria-setsize` kept current. `aria-busy` is set while stories are added and reset to false.
+- The feed has `role="feed"`, named by its heading. Each story is an `article`, named by its title and described by its text, with `aria-posinset` and `aria-setsize` kept current. `aria-busy` is set and reset to false around each update.
 - Loading is by a button, not by scrolling, so the footer link is always reachable.
 - After the last load, the button stays focused and changes to "All stories loaded", with `aria-disabled="true"`.
 - Focus is visible; contrast is about 7.1:1 or better; language, title, headings in order, `main`, and a footer.

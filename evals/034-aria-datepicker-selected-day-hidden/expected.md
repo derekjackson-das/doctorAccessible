@@ -11,7 +11,8 @@ Everything else is clean:
 - Previous and next month buttons have names; their icons are hidden SVGs.
 - Arrow keys move between days and across months; Enter or Space picks a day.
 - Escape and Cancel close the calendar and return focus to the button.
-- Focus is visible; contrast is about 7.1:1 or better; cells are 2.75rem square.
+- Focus is visible on every day, including the chosen one, where a white inner ring sits between the dark focus outline and the blue fill; contrast is about 7.1:1 or better; cells are 2.75rem square.
+- The month heading changes, and so is announced, only when the month does.
 - Language, title, one `h1`, `main`.
 
 ## Expected findings
@@ -20,6 +21,7 @@ Everything else is clean:
    - Criterion: WCAG 2.2 SC 4.1.2 Name, Role, Value (Level A), tier 1, from `knowledge/wcag/sc-4.1.2-name-role-value.md` (a custom control that "changes state visually without exposing that state (... `aria-selected` ...)", definite when user-settable).
    - ARIA entry: `knowledge/aria/patterns/date-picker.md`, which lists this case.
    - Where: `render()`, where the `chosen` class is added; the grid's `td` cells.
+   - Why definite, though the date is also in the field and in the button's name: the gridcell itself has a selected state that the user sets and that is shown visually, and the 4.1.2 entry grades that case definite.
    - Acceptable fix directions: set `aria-selected="true"` on the chosen day's cell (and on no other), as the APG example does. As a direction, not a patch.
 
 ## Also acceptable
