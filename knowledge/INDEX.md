@@ -175,6 +175,10 @@ When ARIA is needed, what each HTML element allows, and how a name is worked out
 | Autocomplete (combobox): roles, naming, keyboard, test results | `aria/patterns/autocomplete.md` | 2026-10-23 |
 | Tooltip: roles, naming, keyboard | `aria/patterns/tooltip.md` | 2026-10-23 |
 | Carousel: roles, naming, keyboard, test results | `aria/patterns/carousel.md` | 2026-10-23 |
+| Date picker: roles, naming, keyboard | `aria/patterns/date-picker.md` | 2026-10-23 |
+| Infinite scroll (feed): roles, naming, keyboard | `aria/patterns/infinite-scroll.md` | 2026-10-23 |
+
+Drag and drop has no ARIA entry: ARIA has no vocabulary for it (`aria-grabbed` and `aria-dropeffect` are deprecated; `aria/aria-in-html.md`). See `patterns/drag-and-drop.md`.
 
 ## Other domains
 

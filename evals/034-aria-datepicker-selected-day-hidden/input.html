@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a study room</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    label { display: block; font-weight: 600; }
+    .hint { display: block; color: #4a4a4a; }
+    input, button { font: inherit; padding: 0.5rem; }
+    input { border: 2px solid #4a4a4a; }
+    button { border: 2px solid #005a9c; background: #fff; color: #005a9c; min-inline-size: 2.75rem; min-block-size: 2.75rem; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+    .dialog { border: 2px solid #4a4a4a; padding: 1rem; margin-block-start: 0.5rem; max-inline-size: 22rem; background: #fff; }
+    .dialog[hidden] { display: none; }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+    .nav h2 { font-size: 1.125rem; margin: 0; }
+    table { border-collapse: collapse; margin-block: 0.5rem; }
+    th, td { inline-size: 2.75rem; block-size: 2.75rem; text-align: center; }
+    td { cursor: pointer; }
+    td.chosen { background: #005a9c; color: #fff; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; }
+    td:focus-visible { outline: 3px solid #1a1a1a; outline-offset: -3px; }
+    .actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Book a study room</h1>
+    <form action="/rooms/book" method="post">
+      <label for="date">Date</label>
+      <span class="hint" id="date-format">Format: mm/dd/yyyy</span>
+      <input type="text" id="date" name="date" aria-describedby="date-format">
+      <button type="button" id="open">Choose date</button>
+
+      <div class="dialog" role="dialog" aria-label="Choose date" id="picker" hidden>
+        <div class="nav">
+          <button type="button" id="prev-month" aria-label="Previous month"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
+          <h2 id="month" aria-live="polite">June 2026</h2>
+          <button type="button" id="next-month" aria-label="Next month"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
+        </div>
+        <table role="grid" aria-labelledby="month" id="grid">
+          <thead>
+            <tr><th scope="col" abbr="Sunday">Su</th><th scope="col" abbr="Monday">Mo</th><th scope="col" abbr="Tuesday">Tu</th><th scope="col" abbr="Wednesday">We</th><th scope="col" abbr="Thursday">Th</th><th scope="col" abbr="Friday">Fr</th><th scope="col" abbr="Saturday">Sa</th></tr>
+          </thead>
+          <tbody id="days"></tbody>
+        </table>
+        <div class="actions">
+          <button type="button" id="cancel">Cancel</button>
+        </div>
+      </div>
+
+      <p><button type="submit">Book room</button></p>
+    </form>
+  </main>
+
+  <script>
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const input = document.getElementById('date');
+    const openBtn = document.getElementById('open');
+    const picker = document.getElementById('picker');
+    const daysBody = document.getElementById('days');
+    const monthHeading = document.getElementById('month');
+    let year = 2026, month = 5, chosen = null, focusDay = 1;
+
+    function render() {
+      monthHeading.textContent = months[month] + ' ' + year;
+      daysBody.innerHTML = '';
+      const first = new Date(year, month, 1).getDay();
+      const count = new Date(year, month + 1, 0).getDate();
+      let row = document.createElement('tr');
+      for (let i = 0; i < first; i++) row.appendChild(document.createElement('td'));
+      for (let d = 1; d <= count; d++) {
+        if (row.children.length === 7) { daysBody.appendChild(row); row = document.createElement('tr'); }
+        const cell = document.createElement('td');
+        cell.textContent = d;
+        cell.dataset.day = d;
+        cell.tabIndex = d === focusDay ? 0 : -1;
+        if (chosen && chosen.y === year && chosen.m === month && chosen.d === d) cell.classList.add('chosen');
+        cell.addEventListener('click', () => pick(d));
+        row.appendChild(cell);
+      }
+      daysBody.appendChild(row);
+    }
+
+    function focusCell(d) {
+      const count = new Date(year, month + 1, 0).getDate();
+      if (d < 1) { month--; if (month < 0) { month = 11; year--; } focusDay = new Date(year, month + 1, 0).getDate() + d; }
+      else if (d > count) { focusDay = d - count; month++; if (month > 11) { month = 0; year++; } }
+      else focusDay = d;
+      render();
+      daysBody.querySelector('[data-day="' + focusDay + '"]').focus();
+    }
+
+    function pick(d) {
+      chosen = { y: year, m: month, d: d };
+      input.value = String(month + 1).padStart(2, '0') + '/' + String(d).padStart(2, '0') + '/' + year;
+      openBtn.textContent = 'Change date, ' + months[month] + ' ' + d + ', ' + year;
+      closePicker();
+    }
+
+    function openPicker() {
+      if (chosen) { year = chosen.y; month = chosen.m; focusDay = chosen.d; }
+      picker.hidden = false;
+      render();
+      daysBody.querySelector('[data-day="' + focusDay + '"]').focus();
+    }
+
+    function closePicker() {
+      picker.hidden = true;
+      openBtn.focus();
+    }
+
+    openBtn.addEventListener('click', openPicker);
+    document.getElementById('cancel').addEventListener('click', closePicker);
+    document.getElementById('prev-month').addEventListener('click', () => { month--; if (month < 0) { month = 11; year--; } focusDay = 1; render(); });
+    document.getElementById('next-month').addEventListener('click', () => { month++; if (month > 11) { month = 0; year++; } focusDay = 1; render(); });
+
+    daysBody.addEventListener('keydown', (event) => {
+      const keys = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 };
+      if (event.key in keys) { event.preventDefault(); focusCell(focusDay + keys[event.key]); }
+      else if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); pick(focusDay); }
+    });
+
+    picker.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') { event.preventDefault(); closePicker(); }
+    });
+  </script>
+</body>
+</html>

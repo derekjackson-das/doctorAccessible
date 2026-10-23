@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library stories</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    article { border-block-end: 1px solid #4a4a4a; padding-block: 0.75rem; max-inline-size: 40rem; }
+    article h3 { margin: 0; font-size: 1.125rem; }
+    button { font: inherit; padding: 0.5rem 1rem; border: 2px solid #005a9c; background: #fff; color: #005a9c; margin-block-start: 1rem; }
+    a { color: #005a9c; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+    .loaded { color: #1a1a1a; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Library stories</h1>
+    <h2 id="feed-title">Latest stories</h2>
+    <div role="feed" aria-labelledby="feed-title" aria-busy="false" id="feed"></div>
+    <p class="loaded" id="loaded"></p>
+    <button type="button" id="more">Load more stories</button>
+  </main>
+  <footer>
+    <p><a href="/contact">Contact the library</a></p>
+  </footer>
+
+  <script>
+    const stories = [
+      ['Rare maps go on display', 'Forty maps from the 1700s are now in the Houghton reading room.'],
+      ['Extended hours for exams', 'Widener stays open until 2 a.m. from 1 to 14 December.'],
+      ['New study rooms in Lamont', 'Twelve bookable rooms open on the second floor.'],
+      ['Workshop: citation managers', 'Learn Zotero in one hour, Thursday at noon.'],
+      ['Poetry reading on Friday', 'Student poets read in the Woodberry Room at 6 p.m.'],
+      ['Book sale this weekend', 'Used books for one dollar each, Saturday and Sunday.'],
+      ['Scanning stations upgraded', 'All scanners now send files straight to email.'],
+      ['Ask a librarian by chat', 'Live chat now runs from 9 a.m. to 9 p.m. on weekdays.'],
+      ['Film night returns', 'A classic film every Wednesday in the Lamont forum.']
+    ];
+    const feed = document.getElementById('feed');
+    const loaded = document.getElementById('loaded');
+    const more = document.getElementById('more');
+    let shown = 0;
+
+    function addStories(n) {
+      feed.setAttribute('aria-busy', 'true');
+      const end = Math.min(shown + n, stories.length);
+      for (let i = shown; i < end; i++) {
+        const article = document.createElement('article');
+        article.setAttribute('aria-labelledby', 'story-' + i);
+        article.setAttribute('aria-describedby', 'story-' + i + '-text');
+        const h = document.createElement('h3'); h.id = 'story-' + i; h.textContent = stories[i][0];
+        const p = document.createElement('p'); p.id = 'story-' + i + '-text'; p.textContent = stories[i][1];
+        article.append(h, p);
+        feed.appendChild(article);
+      }
+      const added = end - shown;
+      shown = end;
+      feed.querySelectorAll('article').forEach((a, i) => { a.setAttribute('aria-posinset', i + 1); a.setAttribute('aria-setsize', stories.length); });
+      feed.setAttribute('aria-busy', 'false');
+      if (shown >= stories.length) { more.setAttribute('aria-disabled', 'true'); more.textContent = 'All stories loaded'; }
+      return added;
+    }
+
+    addStories(3);
+    more.addEventListener('click', () => {
+      if (more.getAttribute('aria-disabled') === 'true') return;
+      const added = addStories(3);
+      loaded.textContent = added + ' more stories loaded. Showing ' + shown + ' of ' + stories.length + '.';
+    });
+  </script>
+</body>
+</html>
