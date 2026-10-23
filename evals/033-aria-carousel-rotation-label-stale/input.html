@@ -51,6 +51,7 @@
   <script>
     const news = document.getElementById('news');
     const slides = document.querySelectorAll('.slide');
+    const slidesBox = document.getElementById('slides');
     const rotate = document.getElementById('rotate');
     const icon = document.getElementById('rotate-icon');
     const pauseIcon = icon.innerHTML;
@@ -63,7 +64,7 @@
       current = (index + slides.length) % slides.length;
       slides.forEach((s, i) => { s.hidden = i !== current; });
     }
-    function start() { stop(); timer = setInterval(() => show(current + 1), 6000); }
+    function start() { stop(); timer = setInterval(() => { if (!slidesBox.contains(document.activeElement)) show(current + 1); }, 6000); }
     function stop() { clearInterval(timer); timer = null; }
 
     function setPlaying(value) {

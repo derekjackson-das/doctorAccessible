@@ -4,7 +4,7 @@ Input: `input.html`. A "Find a department" form with a type-ahead field.
 
 Intended defect: the field is an `input` with `role="combobox"`, named by its `label`, with `aria-autocomplete="list"`, `aria-controls`, and `aria-expanded` kept in step with the popup. Up and Down Arrow move a highlight through the suggestions, and Enter accepts one. But the highlight is only a CSS class. The script never sets `aria-activedescendant` on the field, or `aria-selected` on the option. DOM focus stays in the field, so a screen reader is never told which suggestion is active.
 
-Everything else is clean: label, keyboard support (arrows, Enter, Escape), the listbox and options roles, `aria-expanded`, visible focus on the field, the highlight shown by fill, bold, and an inner outline (not color alone), contrast (#1a1a1a on white; white on #005a9c, about 7.1:1), language, title, one `h1`, `main`.
+Everything else is clean: label, a named submit button, keyboard support (arrows, Enter, Escape), the listbox and options roles, `aria-expanded`, visible focus on the field, the highlight shown by fill, bold, and an inner outline (not color alone), contrast (#1a1a1a on white; white on #005a9c, about 7.1:1), language, title, one `h1`, `main`.
 
 ## Expected findings
 

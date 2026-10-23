@@ -10,7 +10,7 @@
     .wrap { position: relative; display: inline-block; }
     .icon-btn { inline-size: 2.75rem; block-size: 2.75rem; display: grid; place-items: center; border: 2px solid #005a9c; background: #fff; color: #005a9c; border-radius: 4px; }
     :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
-    [role="tooltip"] { position: absolute; inset-block-start: calc(100% + 0.5rem); inset-inline-start: 0; background: #1a1a1a; color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
+    [role="tooltip"] { position: absolute; inset-block-start: 100%; inset-inline-start: 0; border-block-start: 0.5rem solid transparent; background: #1a1a1a; background-clip: padding-box; color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
     [role="tooltip"][hidden] { display: none; }
   </style>
 </head>
@@ -36,7 +36,7 @@
     const hide = () => { tip.hidden = true; };
 
     button.addEventListener('focus', show);
-    button.addEventListener('blur', hide);
+    button.addEventListener('blur', () => { if (!wrap.matches(':hover')) hide(); });
     wrap.addEventListener('mouseenter', show);
     wrap.addEventListener('mouseleave', () => { if (document.activeElement !== button) hide(); });
     document.addEventListener('keydown', (event) => { if (event.key === 'Escape') hide(); });

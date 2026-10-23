@@ -7,6 +7,7 @@
   <style>
     body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
     label { display: block; font-weight: 600; }
+    button { font: inherit; padding: 0.5rem 1rem; margin-block-start: 0.75rem; border: 2px solid #005a9c; background: #fff; color: #005a9c; }
     input { font: inherit; padding: 0.5rem; border: 2px solid #4a4a4a; width: min(24rem, 100%); }
     :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
     [role="listbox"] { list-style: none; margin: 0; padding: 0; border: 2px solid #4a4a4a; border-top: none; width: min(24rem, 100%); }
@@ -21,6 +22,7 @@
       <label for="dept">Department</label>
       <input type="text" id="dept" name="dept" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="dept-list" autocomplete="off">
       <ul role="listbox" id="dept-list" aria-label="Departments" hidden></ul>
+      <button type="submit">Find</button>
     </form>
   </main>
 

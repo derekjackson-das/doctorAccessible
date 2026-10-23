@@ -5,7 +5,7 @@ Input: `input.html`. A "Library news" section with three slides that rotate ever
 Intended defect: the rotation control is a native `button` with `aria-label="Pause slides"`. When pressed, rotation stops and the icon changes from pause to play, but the name stays "Pause slides". No state such as `aria-pressed` is exposed. The APG pattern changes the name to match the action. So a screen reader user hears "Pause slides" whether the carousel is moving or stopped, and cannot tell its state or what the button will do.
 
 Everything else is clean:
-- Rotation can be stopped, and it stops on hover and when focus enters the section (2.2.2 met).
+- Rotation can be stopped, and it stops on hover and when focus enters the section (2.2.2 met). It never hides the slide that holds focus.
 - The rotation button is first in the carousel's tab order, and pressing a control leaves focus in place.
 - The previous and next buttons are named.
 - The section is a named region, and the slides are named groups; hidden slides use `hidden`, so their links are not focusable.
@@ -23,7 +23,7 @@ Everything else is clean:
 
 ## Also acceptable
 
-- Noting that the stale name is also a poor label, as context inside the same finding.
+- Noting that the stale name is also a poor label, as context inside the same finding. The 4.1.2 entry sends a present-but-unhelpful name to manual review under 2.4.6, but here the icon shows a state change that the name and attributes never expose. That is the entry's visual-state case, so 4.1.2 definite governs.
 - A note, marked advice, on the `aria-roledescription` conflict or the optional live region, without calling either a defect.
 - A note, marked advice, that a non-rotating list may serve better (`patterns/carousel.md`).
 - A note that axe is not expected to catch this.
