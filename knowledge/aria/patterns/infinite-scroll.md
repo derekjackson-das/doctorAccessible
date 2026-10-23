@@ -1,7 +1,7 @@
 # ARIA pattern: Infinite scroll (feed)
 
 - W3C pattern (tier 2): ARIA Authoring Practices Guide, "Feed Pattern", no date shown, accessed 2026-10-23. https://www.w3.org/WAI/ARIA/apg/patterns/feed/ A pattern, not a requirement: nothing in it is a conformance rule, and following it does not guarantee that assistive technology supports it.
-- Normative (tier 1): WAI-ARIA 1.2, `feed` and `article` roles and `aria-busy`, `aria-posinset`, `aria-setsize`, W3C Recommendation 6 June 2023, https://www.w3.org/TR/wai-aria-1.2/#feed. ARIA in HTML, W3C Recommendation 11 August 2026, https://www.w3.org/TR/html-aria/: the `article` element has the implicit `article` role.
+- Normative (tier 1): WAI-ARIA 1.2, `feed` and `article` roles and `aria-busy`, `aria-posinset`, `aria-setsize`, W3C Recommendation 6 June 2023, https://www.w3.org/TR/wai-aria-1.2/#feed. ARIA in HTML, W3C Recommendation 11 August 2026, https://www.w3.org/TR/html-aria/ : the `article` element has the implicit `article` role.
 - Practitioner testing (tier 3): Roselli's "So You Think You've Built a Good Infinite Scroll" (2014, updated 2024), with his 2018 keyboard check of the APG feed example, is in `patterns/infinite-scroll.md`. This entry adds none.
 - Related entries: `patterns/infinite-scroll.md` (whether to use it, the checklist, the criteria, the manual tests), `ux/infinite-scroll-and-pagination.md`, `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/sc-4.1.3-status-messages.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-2.4.3-focus-order.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
