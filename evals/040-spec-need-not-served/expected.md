@@ -16,6 +16,7 @@ Everything else is clean, on purpose, so the only thing to find is the deviation
 
 ## Also acceptable
 
+- A separate definite note that the specific thing the need statement says to build (today's hours as text, first in the main content) is absent from the code: that is read from the code, like an ignored pattern decision. (Added 2026-10-23.)
 - Naming the manual test the spec owes (VoiceOver on a phone reading today's hours first).
 - Suggesting today's hours as text above the news, as a direction.
 - Manual-review notes that a criterion appears met and needs a browser check.
@@ -24,7 +25,7 @@ Everything else is clean, on purpose, so the only thing to find is the deviation
 ## Must not
 
 - Report the deviation as a WCAG failure, or in the WCAG findings.
-- Grade the deviation definite.
+- Grade as definite that the page fails its readers or does not serve the need; that is a judgment for a person, manual review (`.claude/agents/verifier.md`, Rules). (Amended 2026-10-23 after the first run; see RESULTS.md.)
 - Report the table, headings, or order of sections as a WCAG failure (1.3.1, 1.3.2, 2.4.6); they are correct.
 - Report any WCAG failure (likely or definite); the page is built to pass WCAG 2.2 AA.
 - Speak as, or for, a reader with a disability.
