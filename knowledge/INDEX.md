@@ -132,6 +132,19 @@ Procedures for human testers, one per mode: setup, steps, what passing looks lik
 | Reduced motion | `testing/reduced-motion.md` | 2026-10-22 |
 | Forced colors (Windows Contrast Themes) | `testing/forced-colors.md` | 2026-10-22 |
 
+## Design: requirement and practice
+
+Each entry keeps the WCAG 2.2 AA Requirement (tier 1, from the `wcag/` entries) apart from the Practice above it (Level AAA criteria beyond our target, W3C informative material, and named practitioners, tier 2 or 3). A finding that rests only on Practice is likely or manual review, never definite. The `design` skill maps topics to these entries.
+
+| Topic | Entry | Verified |
+|---|---|---|
+| Contrast | `design/contrast.md` | 2026-10-23 |
+| Focus indicators | `design/focus-indicators.md` | 2026-10-23 |
+| Target size | `design/target-size.md` | 2026-10-23 |
+| Motion | `design/motion.md` | 2026-10-23 |
+| Reflow | `design/reflow.md` | 2026-10-23 |
+| Text spacing | `design/text-spacing.md` | 2026-10-23 |
+
 ## Other domains
 
-None yet. Planned: design, content.
+None yet. Planned: content.
