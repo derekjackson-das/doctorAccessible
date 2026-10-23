@@ -24,7 +24,7 @@ A real link is in the tab order, opens with Enter, and exposes the link role and
 ## Where people go wrong
 
 - A `div` or `span` with a click handler that navigates: not focusable and no role (`wcag/sc-2.1.1-keyboard.md`, `wcag/sc-4.1.2-name-role-value.md`; report once).
-- `a` with no `href`, or `href="#"`, used as a button: without `href` it is not a link at all (HTML Standard), and either way the role is wrong for an action.
+- `a` with no `href` acting as a control: not a link and not focusable (HTML Standard), so `wcag/sc-2.1.1-keyboard.md` (F42) and `wcag/sc-4.1.2-name-role-value.md`, definite, reported once. `href="#"` used for an action is focusable and named, so it is advice, not a finding.
 - Generic text ("click here") with no context (`wcag/sc-2.4.4-link-purpose-in-context.md`, eval 009).
 - `aria-expanded` on a link that navigates; Roselli advises against it (`aria/patterns/accordion.md`).
 

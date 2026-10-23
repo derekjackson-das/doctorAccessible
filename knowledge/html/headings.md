@@ -8,12 +8,12 @@
 
 ## Status and reporting
 
-This entry says how to mark headings up; `content/headings.md` says what they should say. Whether code fails WCAG is decided by the `wcag/` entries named below; report a failure once, under its criterion, at that entry's confidence. A skipped level breaks the HTML Standard; the 2.4.6 entry says it is not that criterion, and 1.3.1 decides whether it is a WCAG failure.
+This entry says how to mark headings up; `content/headings.md` says what they should say. Whether code fails WCAG is decided by the `wcag/` entries named below; report a failure once, under its criterion, at that entry's confidence. A skipped level breaks the HTML Standard, but no `wcag/` entry makes it a WCAG failure (the 2.4.6 entry calls it a best practice), so it is advice, not a finding.
 
 ## The native approach
 
 - **`h1` to `h6` for every heading,** at the level that matches the outline.
-- **At least one `h1`** when a document has headings (HTML Standard).
+- **A level-1 heading.** The HTML Standard recommends ("should") that a document with headings has at least one at level 1.
 - **No skipping going down.** The HTML Standard makes it a conformance rule: each heading after another must be at most one level deeper, the same level, or any level higher. An `h1` followed by an `h3` is non-conforming. Going back up more than one level, when a subsection closes, is allowed (HTML Standard; WAI tutorial).
 - **Headings for structure, not size.** Style with CSS; do not pick a level for how it looks.
 
@@ -25,7 +25,7 @@ The heading role and level are exposed with no ARIA, and screen reader users can
 
 - Bold or large text standing in for a heading: no heading exposed (`wcag/sc-1.3.1-info-and-relationships.md`, when the visual design implies a heading).
 - A heading element used only to make text big, where no section follows.
-- Skipped levels (non-conforming HTML; the `content/headings.md` house rule also forbids them).
+- Skipped levels: non-conforming HTML, and against the `content/headings.md` house rule. Advice, not a WCAG finding.
 - `role="button"` put on a heading for an accordion, which removes the heading (`aria/patterns/accordion.md`): put a `button` inside the heading instead.
 
 ## When ARIA is genuinely needed

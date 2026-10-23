@@ -22,6 +22,7 @@ Everything else is clean:
 ## Also acceptable
 
 - A note that the reading order is fine here (label then field), so SC 1.3.2 is met.
+- A manual-review note to check reflow at 320 CSS pixels (by estimate the two columns fit, since the inputs shrink); not a failure.
 - A note, marked advice, that a `fieldset` and `legend` could group the fields if a group heading is wanted.
 - Manual-review notes that a criterion appears met and needs a browser check.
 - A note that axe may or may not flag the table, depending on its layout-table heuristics; the finding must come from reading.
@@ -29,7 +30,7 @@ Everything else is clean:
 ## Must not
 
 - Report the labels, the inputs, the button, `autocomplete`, or the reading order as failures.
-- Report the HTML conformance problem as a second WCAG finding, separate from 1.3.1.
+- Report the HTML conformance problem, or the `th` and `caption`, as a second WCAG finding (under 2.4.6, 1.3.2, or anything else), separate from 1.3.1.
 - Report contrast, focus style, headings, landmarks, or language as failures.
 - State a criterion number, title, or level not in `knowledge/INDEX.md` without marking it unverified.
 - Rewrite the code.

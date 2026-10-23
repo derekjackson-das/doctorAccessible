@@ -16,7 +16,7 @@ Writing or changing markup: any form, table, page region, heading, image, link, 
 1. **Native first.** Before writing ARIA or a custom control, open `knowledge/html/custom-controls.md` and check whether a native element does the job. If it does, say so and use it (`aria/using-aria.md`, rule 1).
 2. **A link goes somewhere; a button does something.** Never a `div` or `span` with a click handler.
 3. **Not using the native element is never a finding on its own.** Report a failure only through the criterion it breaks, once, at the confidence the `wcag/` entry gives.
-4. **HTML conformance is not WCAG.** Breaking an HTML Standard rule, such as a skipped heading level or a layout table, is reported under a WCAG criterion only when that criterion's entry says so; otherwise it is advice, with the HTML section cited.
+4. **HTML conformance is not WCAG.** Breaking an HTML Standard rule, such as a skipped heading level or a plain layout table (one with `th` or `caption` is a 1.3.1 failure), is reported under a WCAG criterion only when that criterion's entry says so; otherwise it is advice, with the HTML section cited.
 5. **ARIA only from the `aria/` entries.** When ARIA is needed, open the matching `aria/patterns/` entry and `aria/aria-in-html.md` for what the element allows; check names with `aria/accessible-name.md`.
 6. Never state a criterion number, title, or level, or an HTML Standard section, from memory. Open the entry. If there is none, say "no entry yet" and mark the claim unverified.
 7. Advise and describe; do not silently rewrite the developer's markup.
@@ -34,7 +34,7 @@ Writing or changing markup: any form, table, page region, heading, image, link, 
 | How do I build a button, a toggle, an icon button? | `knowledge/html/buttons.md` |
 | How do I build a modal? | `knowledge/html/dialogs.md`, then `knowledge/aria/patterns/modal-dialog.md` |
 | Is there a native element for this control? | `knowledge/html/custom-controls.md` |
-| The ARIA for a widget with no native element | `knowledge/aria/patterns/` (tabs, tooltip, carousel, combobox, feed, date picker, accordion, modal dialog) |
+| The ARIA for a widget with no native element | `knowledge/aria/patterns/` (`tabs.md`, `tooltip.md`, `carousel.md`, `autocomplete.md`, `infinite-scroll.md`, `date-picker.md`, `accordion.md`, `modal-dialog.md`) |
 | Should this widget exist at all? | `knowledge/patterns/`, and the `consult` skill |
 | The criteria themselves | `knowledge/INDEX.md`, then the `wcag/` entry |
 

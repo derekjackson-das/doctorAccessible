@@ -26,10 +26,10 @@ A labeled native control has a role, a name, and its state (checked, selected, v
 ## Where people go wrong
 
 - Text beside a field with no association: no name (`wcag/sc-4.1.2-name-role-value.md`, eval 001).
-- `placeholder` as the only label: it disappears on input (`content/error-messages.md`, `aria/accessible-name.md`).
-- `title` as the label: the WAI tutorial calls it less reliable and not recommended.
+- `placeholder` as the only label: it disappears on input. `wcag/sc-4.1.2-name-role-value.md` grades it likely and cross-refers to `wcag/sc-3.3.2-labels-or-instructions.md` (`content/error-messages.md`, `aria/accessible-name.md`).
+- `title` as the label: the WAI tutorial calls it less reliable and not recommended. Advice, not a finding.
 - Radio buttons with no `fieldset`, so the question they answer is not exposed (`wcag/sc-1.3.1-info-and-relationships.md`).
-- A layout `table` holding the form, which the HTML Standard calls non-conforming (`html/tables.md`).
+- A layout `table` holding the form, which the HTML Standard calls non-conforming; with `th` or `caption` it is a 1.3.1 failure (`html/tables.md`).
 - `aria-labelledby` pointing at a hint instead of the label: the hint replaces the label (`aria/accessible-name.md`, eval 027).
 
 ## When ARIA is genuinely needed

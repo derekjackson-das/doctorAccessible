@@ -7,12 +7,12 @@ Intended defect: "Reserve this book" is a `div` with only an `onclick` handler. 
 Everything else is clean:
 - The result message goes into a `p` with `role="status"`, present from load, so it is announced without moving focus.
 - Language, title, one `h1` and an `h2`, `header` and `main`, a named link.
-- Text and border contrast are about 7.1:1 or better (#005a9c and #1a1a1a on white), and focus is visible on the link.
+- Text and border contrast are 4.5:1 or better in every state (#005a9c on white about 7.1:1, on the hover fill about 6.2:1), and focus is visible on the link.
 
 ## Expected findings
 
 1. **[Definite]** "Reserve this book" cannot be reached or activated by keyboard and is not exposed as a button.
-   - Criterion: WCAG 2.2 SC 2.1.1 Keyboard (Level A), tier 1, from `knowledge/wcag/sc-2.1.1-keyboard.md` ("A `div` or `span` acting as a link or button with no `tabindex`, so it cannot be reached at all. Definite, and also a 4.1.2 defect"; F42). Reporting it under SC 4.1.2 Name, Role, Value (Level A), with 2.1.1 co-cited in the same finding, is equally acceptable. One finding, not two.
+   - Criterion: WCAG 2.2 SC 2.1.1 Keyboard (Level A), tier 1, from `knowledge/wcag/sc-2.1.1-keyboard.md` ("A `div` or `span` acting as a link or button with no `tabindex`, so it cannot be reached at all. Definite, and also a 4.1.2 defect"; F42). The entry says to report it once and name both, so the finding names SC 4.1.2 Name, Role, Value (Level A) as well, in either order. One finding, not two.
    - HTML entry: `knowledge/html/buttons.md`.
    - Where: `div.reserve`.
    - Acceptable fix directions: use a native `<button type="button">`, which brings focus, Enter and Space, and the button role. As a direction, not a patch.
@@ -38,4 +38,4 @@ The 2.1.1 entry says axe "does not detect a clickable `div` with no key handler"
 
 ## Pass condition
 
-Finding 1 is present as definite under SC 2.1.1 or SC 4.1.2 (Level A), tier 1, with the other co-cited at most once, and nothing from the Must not list appears.
+Finding 1 is present as definite, naming both SC 2.1.1 and SC 4.1.2 (Level A), tier 1, in one finding, and nothing from the Must not list appears.

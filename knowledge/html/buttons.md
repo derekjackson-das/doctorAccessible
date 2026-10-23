@@ -14,7 +14,7 @@ This entry says how to build it. Whether code fails WCAG is decided by the `wcag
 ## The native approach
 
 - **`button` for anything that does something on the page:** submits, opens, closes, toggles, deletes.
-- **Set `type`.** Inside a form, a `button` with no `type` submits it (the HTML Standard's Auto state makes it a submit button there). Use `type="button"` for anything that is not a submit.
+- **Set `type`.** Inside a form, a `button` with no `type` submits it, unless it has `command` and `commandfor` (the HTML Standard's Auto state, §4.10.6). Use `type="button"` for anything that is not a submit.
 - **The label is the content** (WAI tutorial), so it can hold markup such as a language change. An icon-only button needs a name: visually hidden text or `aria-label` (`aria/accessible-name.md`).
 - **State with ARIA on the native element,** such as `aria-pressed` for a toggle or `aria-expanded` for a disclosure (ARIA in HTML).
 
@@ -26,8 +26,8 @@ A `button` is in the tab order, activates on Enter and Space, and exposes the bu
 
 - A `div` or `span` with only a click handler: not focusable, no role, no name exposed as a button (`wcag/sc-2.1.1-keyboard.md`, F42 and F54; `wcag/sc-4.1.2-name-role-value.md`; report once). Eval 036.
 - `role="button"` and `tabindex="0"` on a `span`, but no Enter or Space handling: focusable, not operable (`wcag/sc-2.1.1-keyboard.md`, eval 006). Using ARIA rule 3: a role is a promise of keyboard behavior.
-- A link (`a href="#"`) used as a button.
-- A `button` inside a form with no `type`, which submits the form by surprise.
+- A link (`a href="#"`) used as a button. Advice, not a finding (`html/links.md`).
+- A `button` inside a form with no `type`, which submits the form by surprise. Advice, not a finding.
 - An icon-only button with no name (`wcag/sc-4.1.2-name-role-value.md`, eval 032).
 
 ## When ARIA is genuinely needed

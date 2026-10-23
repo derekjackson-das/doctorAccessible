@@ -28,8 +28,8 @@ Screen reader users can list and jump between regions with no ARIA. Landmarks ar
 ## Where people go wrong
 
 - Everything in `div`s, so there is nothing to jump to.
-- Two `nav` elements with no names, so they cannot be told apart (the WAI tutorial says to label each).
-- More than one visible `main`, which the HTML Standard does not allow.
+- Two `nav` elements with no names, so they cannot be told apart (the WAI tutorial says to label each). Advice, not a finding.
+- More than one visible `main`, which the HTML Standard does not allow. Advice, not a finding.
 - Redundant roles such as `<main role="main">`, which ARIA in HTML says not to add (`aria/aria-in-html.md`). Not a finding.
 
 ## When ARIA is genuinely needed

@@ -13,9 +13,8 @@ This entry says how to mark images up; `content/alt-text.md` says what the text 
 ## The native approach
 
 - **Every `img` has an `alt` attribute.** The HTML Standard's default is that it is present and not empty, and is an appropriate replacement for the image; the exceptions are listed in §4.8.4.4.
-- **`alt=""` for a decorative image,** including one beside text that already says the same thing, or one inside a link whose text already names the destination (WAI tutorial; HTML Standard §4.8.4.4.8).
+- **`alt=""` for a decorative image,** including one beside text that already says the same thing, or one inside a link whose text already names the destination (WAI tutorial; HTML Standard §4.8.4.4.4 and §4.8.4.4.6; purely decorative images, §4.8.4.4.8).
 - **An image that is the only content of a link or button** takes alt text that says where the link goes or what the button does, not what the picture shows (HTML Standard §4.8.4.4.2; WAI tutorial: a logo linking home is "W3C home"; a magnifying-glass button is "search").
-- **An inline `svg`** that carries meaning gets `role="img"` and a name; a decorative one gets `aria-hidden="true"`.
 - **Real text, not pictures of text,** wherever the visual effect can be done with CSS (`wcag/sc-1.4.5-images-of-text.md`).
 
 ## What the native approach satisfies by default
@@ -26,12 +25,12 @@ An `img` with an `alt` has its text alternative exposed as its name, and `alt=""
 
 - No `alt` at all, which the HTML Standard does not allow outside its listed exceptions (`wcag/sc-1.1.1-non-text-content.md`, eval 002).
 - A decorative image given text such as "spacer" or "image".
-- An icon-only link or button whose image has `alt=""`, leaving the control with no name (`wcag/sc-4.1.2-name-role-value.md`).
+- An icon-only link or button whose image has `alt=""`, leaving the control with no name: report once, naming `wcag/sc-1.1.1-non-text-content.md` and `wcag/sc-4.1.2-name-role-value.md`.
 - Meaningful images put in CSS `background-image`, with no text equivalent.
-- `role="presentation"` instead of `alt=""`; the WAI tutorial notes it is less widely supported.
+- `role="presentation"` instead of `alt=""`; the WAI tutorial notes it is less widely supported. Advice, not a finding.
 
 ## When ARIA is genuinely needed
 
-- `role="img"` with `aria-label` or `aria-labelledby` for an inline `svg`, or for a group of elements that together form one image.
+- `role="img"` with `aria-label` or `aria-labelledby` for an inline `svg` that carries meaning, or for a group of elements that together form one image (`aria/accessible-name.md`; `wcag/sc-1.1.1-non-text-content.md`).
 - `aria-hidden="true"` on a decorative `svg` or icon font.
 - `aria-describedby` to point a complex chart at its longer description on the page.
