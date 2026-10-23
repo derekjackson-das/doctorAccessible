@@ -156,7 +156,7 @@ Any one of these is a reason to look again, under principle 1.
 
 **What changes for a developer.** The names are namespaced: `/doctor-accessible:wcag`, and the agent is `doctor-accessible:verifier`. `CLAUDE.md` is not part of a plugin (the docs say a plugin's CLAUDE.md is not loaded). So the three-mode instructions a developer needs have to live in a skill, or in a short block the developer pastes into their own `CLAUDE.md`. 5.4 decides which. The spec stays a file in the developer's project, `a11y-spec.md` from the template.
 
-**Updates, from the docs, not yet tested.** With no `version` in `plugin.json`, the version is the git commit, so `claude plugin update` picks up new commits. Auto-update is off by default for marketplaces other than Anthropic's. A project can turn it on, and register the marketplace for everyone, in its committed `.claude/settings.json` (`extraKnownMarketplaces` with `autoUpdate`, and `enabledPlugins`); each teammate still installs once. 5.4 tests this.
+**Updates, from the docs, not yet tested.** With no `version` in `plugin.json`, the version is the git commit, so `claude plugin update` picks up new commits. Auto-update is off by default for marketplaces other than Anthropic's. A project can turn it on, and register the marketplace for everyone, in the `settings.json` it commits under its own `.claude/` folder (`extraKnownMarketplaces` with `autoUpdate`, and `enabledPlugins`); each teammate still installs once. 5.4 tests this.
 
 **Since the trial: `tools/`.** After these trials the verifier gained `tools/axe.py` and `tools/readability.py`, run by repo-relative path, so `tools/` joins the interim copy list and the plugin build.
 

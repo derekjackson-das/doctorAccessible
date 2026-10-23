@@ -196,6 +196,14 @@ How to build each thing with native HTML, what that gives by default, where peop
 | Dialogs | `html/dialogs.md` | 2026-10-23 |
 | Custom controls: the native element to try first | `html/custom-controls.md` | 2026-10-23 |
 
+## Frameworks: layers over the native patterns
+
+How a framework writes what `html/` and `aria/` say to build, and the defects it causes of its own. Tier 3: authoritative on the framework, never on what is required. The `react-jsx` skill maps questions to these entries.
+
+| Topic | Entry | Verified |
+|---|---|---|
+| React and JSX: htmlFor, useId, refs and focus, replaced DOM nodes, onChange | `frameworks/react-jsx.md` | 2026-10-23 |
+
 ## Tools
 
 | Topic | Entry | Verified |

@@ -54,7 +54,7 @@ mkdir -p "$out"
 # The skill an eval tests is the first part of its folder name after the number that
 # names a skill: 015-consult-..., 019-at-test-protocol-..., 023-content-....
 skill_of() {
-  for s in at-test-protocol html-patterns consult planning content design wcag; do
+  for s in at-test-protocol html-patterns react-jsx consult planning content design wcag; do
     case "${1#[0-9][0-9][0-9]-}" in "$s"-*) echo "$s"; return ;; esac
   done
 }
