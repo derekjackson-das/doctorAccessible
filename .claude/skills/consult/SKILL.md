@@ -21,7 +21,7 @@ Do not move to the next question until the current one is answered. Ask the deve
 
 1. **Who is this for, and what are they trying to accomplish?** Answered when it names a specific person in a specific situation, including people using assistive technology named in the spec, and the task in their words. "Users" and "everyone" are not answers. Draw on the need-finding entries in `knowledge/ux/`: how to learn who uses a thing, how to write a need statement, personas from research.
 2. **What is the smallest thing that meets that need?** Answered when you can say what would be built, and what would not. "Less than you asked for" and "nothing, it is already met" are valid answers and are said plainly. Check the spec's existing need statements and pattern decisions first: the need may be met already. Check the code if it is available.
-3. **Only then, how.** For every interactive pattern named in the request or the answer, open its entry in `knowledge/patterns/` (nine patterns: carousel, modal dialog, accordion, tabs, tooltip, infinite scroll, autocomplete, drag and drop, date picker) and the matching heuristics entry in `knowledge/ux/` where one exists. If neither exists, say "no entry yet" and still ask what simpler pattern would serve, and what would be lost. Where the person's difficulty is memory, attention, or understanding, open the matching objective in `knowledge/coga/`; it is tier 2 guidance, so anything resting on it alone is likely or manual review. Pull the criteria the chosen thing touches from `knowledge/INDEX.md`, open each entry, and cite tier and level from the entry. Lay out options with what each costs and what each gives up. Name the manual tests a human with assistive technology still owes, from the spec's AT list.
+3. **Only then, how.** For every interactive pattern named in the request or the answer, open its entry in `knowledge/patterns/` (nine patterns: carousel, modal dialog, accordion, tabs, tooltip, infinite scroll, autocomplete, drag and drop, date picker) and the matching heuristics entry in `knowledge/ux/` where one exists. If neither exists, say "no entry yet" and still ask what simpler pattern would serve, and what would be lost. Where the person's difficulty is memory, attention, or understanding, open the matching objective in `knowledge/coga/`; it is tier 2 guidance, so anything resting on it alone is likely or manual review. Pull the criteria the chosen thing touches from `knowledge/INDEX.md`, open each entry, and cite tier and level from the entry. Lay out options with what each costs and what each gives up: one option pair for every choice the request makes (a pattern, a control, a layout), weighed, not only decided. Name the manual tests a human with assistive technology still owes, from the spec's AT list, naming each part of the thing each test covers (each field group, each picker, each error).
 
 ## Rules
 
@@ -45,7 +45,7 @@ Keep it to what decides the answer. Cite the criteria that settle "build less" o
 ## How
 Patterns: <each named pattern, its entry or "no entry yet", the simpler alternative, what is lost>
 Criteria: <SC x.x.x Title (Level), tier 1, from knowledge/wcag/<entry>.md; one line each>
-Options: <two or three, each with cost and trade-off>
+Options: <for each choice the request makes, the alternatives, each with cost and trade-off>
 Manual tests owed: <from the spec's AT list; what to do and what to record>
 
 ## Need statement (proposed for a11y-spec.md)
