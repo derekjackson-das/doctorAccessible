@@ -2,7 +2,7 @@
 
 Input: `input.html`. A reading list with one entry and an icon-only download button.
 
-Intended defect: the button contains only an SVG icon, hidden with `aria-hidden="true"`. Its only text, "Download citation (RIS file)", is in a `role="tooltip"` element connected by `aria-describedby`. A description is not a name (`knowledge/aria/accessible-name.md`), so the button has no accessible name. A screen reader announces a button with no name, perhaps followed by the description.
+Intended defect: the button contains only an SVG icon, hidden with `aria-hidden="true"`. Its only text, "Download citation file for reference managers", is in a `role="tooltip"` element connected by `aria-describedby`. A description is not a name (`knowledge/aria/accessible-name.md`), so the button has no accessible name. A screen reader announces a button with no name, perhaps followed by the description.
 
 Everything else is clean:
 - The tooltip shows on hover and on focus. It touches the button with no gap (the space above it is a transparent border inside the tip), so the pointer can move onto it; it stays while the pointer is over the button or the tip, or while the button has focus; Escape dismisses it. That meets 1.4.13.
