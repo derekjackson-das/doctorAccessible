@@ -3,7 +3,7 @@
 - W3C pattern (tier 2): ARIA Authoring Practices Guide, "Pattern name", URL. A pattern, not a requirement: nothing in it is a conformance rule, and following it does not guarantee that assistive technology supports it.
 - W3C tutorial (tier 2), if one exists: WAI Tutorials, "Title", URL.
 - Practitioner testing (tier 3), at least two from `knowledge/SOURCES.md`: author, "Title", date (and updated date if shown), URL; one line each on what was tested and with what.
-- Related entries: `ux/...` (whether people want the pattern at all), `aria/...` once that domain exists, `wcag/...`, `coga/...`
+- Related entries: `ux/...` (whether people want the pattern at all), `aria/patterns/<name>.md` for the roles, states, naming, and keyboard, where the pattern uses ARIA, `wcag/...`, `coga/...`
 - Verified against the live sources: YYYY-MM-DD by <name>
 
 ## Status and reporting
@@ -22,7 +22,7 @@ The plainer thing that often meets the same need, usually native HTML or static 
 
 ## What doing it right requires
 
-The parts a correct build cannot skip, summarized from the Authoring Practices and corrected by what practitioners found broken in real assistive technology. Native HTML first. Link to the Authoring Practices page for detail; do not restate it.
+The parts a correct build cannot skip, summarized from the Authoring Practices and corrected by what practitioners found broken in real assistive technology. Native HTML first. Link to the Authoring Practices page for detail; do not restate it. Where an `aria/patterns/` entry exists, the ARIA detail and the ARIA test results live there.
 
 ## Criteria it touches
 

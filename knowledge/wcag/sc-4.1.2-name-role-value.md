@@ -44,7 +44,7 @@ All techniques are tier 2, from https://www.w3.org/WAI/WCAG22/Understanding/name
 - SC 1.3.1 Info and Relationships (`wcag/sc-1.3.1-info-and-relationships.md`). Often cited alongside for unassociated labels.
 - SC 3.3.2 Labels or Instructions (`wcag/sc-3.3.2-labels-or-instructions.md`). Whether a label exists at all, as distinct from whether it is programmatically attached.
 - SC 2.4.4 Link Purpose (In Context) (`wcag/sc-2.4.4-link-purpose-in-context.md`) and 2.4.6 Headings and Labels (`wcag/sc-2.4.6-headings-and-labels.md`). Whether the name is meaningful.
-- Accessible Name and Description Computation 1.2, tier 1, https://www.w3.org/TR/accname-1.2/, for how the name is derived.
+- Accessible Name and Description Computation 1.1, W3C Recommendation 18 December 2018, tier 1, https://www.w3.org/TR/accname-1.1/, for how the name is derived; in our words in `aria/accessible-name.md`. The 1.2 version is a Working Draft, awareness only.
 
 ## Automated coverage (tier 3)
 

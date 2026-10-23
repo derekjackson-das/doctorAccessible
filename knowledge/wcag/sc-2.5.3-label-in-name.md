@@ -21,6 +21,7 @@ The name a control exposes to assistive technology must include the words a sigh
 ## How it fails in code
 
 - A control with visible text and an `aria-label` that does not contain that text: visible "Search", name "Submit". Definite. F96.
+- A control whose `aria-labelledby` points only at other text, such as a format hint, so the visible label is left out of the name: the `aria-labelledby` replaces the `label` (`aria/accessible-name.md`). Definite. F96.
 - A link whose visible text is "Read more" and whose `aria-label` is "Article about printing", omitting "Read more". Definite. F96. The fix for 2.4.4 that breaks 2.5.3 is a common pattern; include both: "Read more about printing".
 - A control with visible label text but no accessible name at all. Definite; shared with 1.3.1 and 4.1.2. F111.
 - Visible text that is an image of text, with an alt that differs. Definite.

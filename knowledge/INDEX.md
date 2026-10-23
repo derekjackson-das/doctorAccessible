@@ -160,6 +160,16 @@ The reasoning behind each house standard in `docs/content-standards.md`, with ho
 | Error messages and instructions | `content/error-messages.md` | 2026-10-23 |
 | Language | `content/language.md` | 2026-10-23 |
 
+## ARIA: when to use it at all, and how
+
+When ARIA is needed, what each HTML element allows, and how a name is worked out. Misused ARIA is reported under the WCAG criterion it breaks, never as a failure of its own; where it breaks nothing, preferring native HTML is advice. Pattern entries, in `aria/patterns/` for each `patterns/` entry that uses ARIA, follow `aria/_template.md`.
+
+| Topic | Entry | Verified |
+|---|---|---|
+| When to use ARIA at all: the rules | `aria/using-aria.md` | 2026-10-23 |
+| What each HTML element allows | `aria/aria-in-html.md` | 2026-10-23 |
+| How an accessible name is computed | `aria/accessible-name.md` | 2026-10-23 |
+
 ## Other domains
 
 None yet.
