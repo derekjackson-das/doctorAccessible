@@ -66,9 +66,9 @@ Before any mode acts, read the project's `a11y-spec.md` if one exists (repo root
 
 End with a need statement in the format in `templates/a11y-spec.md`, written into the project's spec with the developer's agreement. This is the `consult` skill at `.claude/skills/consult/SKILL.md`; load it (`/consult`) at the start of any feature and whenever scope changes.
 
-**Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill when a change touches structure, forms, focus, names and roles, color, media, or motion.
+**Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill as the work demands: `wcag` for any change touching structure, forms, focus, names and roles, color, media, or motion; `content` when writing or reviewing words; `design` for color, contrast, focus indicators, target size, motion, reflow, and spacing above the floor; `planning` when a project has no spec yet.
 
-**Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix.
+**Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix. For the tests only a person can run, load `at-test-protocol`; it writes the test script from the spec's assistive technology list and never stands in for the tester.
 
 ---
 
@@ -81,13 +81,13 @@ The Claude Code session you are in. It consults, writes code and content, loads 
 An isolated subagent that checks code against WCAG 2.2 AA without seeing the builder's reasoning. It reads the code fresh, runs axe when a page is available, and reports findings in three confidence tiers. It does not fix code.
 
 ### Skills (`.claude/skills/*/SKILL.md`)
-Short procedures plus a map into the knowledge library. A skill tells the agent when a domain applies, what the rules are for citing and judging, and which knowledge file answers which question. Skills hold no reference material themselves.
+Short procedures plus a map into the knowledge library. A skill tells the agent when a domain applies, what the rules are for citing and judging, and which knowledge file answers which question. Skills hold no reference material themselves. Six exist; see the Skill Registry at the end of this file.
 
 ### Knowledge library (`knowledge/`)
-Markdown entries, one per success criterion or topic, each with the source, its tier, its version, and the date it was verified. This is the thing that gets maintained. `knowledge/INDEX.md` is the table of contents the skills point at.
+Markdown entries, one per success criterion or topic, each with the source, its tier, its version, and the date it was verified. This is the thing that gets maintained. `knowledge/INDEX.md` is the table of contents the skills point at. Eight domains: `wcag/` (every Level A and AA criterion, tier 1 and 2), `aria/`, `patterns/`, `ux/`, `coga/`, `design/`, `content/`, `testing/`. Everything outside `wcag/` is tier 2 or 3, so a finding resting on it alone is likely or manual review, never definite.
 
 ### Evals (`evals/`)
-Snippets with known defects and the findings a correct verifier must produce. Any pull request that changes an agent, a skill, or a knowledge entry runs the evals first.
+Snippets with known defects and the findings a correct verifier must produce, and, for the skills, transcript evals: a request in `request.md` and the answer a good skill run must give. Any pull request that changes an agent, a skill, or a knowledge entry runs the relevant evals first and records them in `evals/RESULTS.md`.
 
 ---
 
@@ -106,22 +106,39 @@ Snippets with known defects and the findings a correct verifier must produce. An
 doctorAccessible/
 ├── CLAUDE.md
 ├── README.md                   # project description, principles, roadmap summary
+├── CONTRIBUTING.md             # how a change gets merged
 ├── .claude/
 │   ├── agents/verifier.md      # the one isolated agent
-│   └── skills/wcag/SKILL.md    # one folder per knowledge domain
+│   └── skills/                 # one folder per skill, each a SKILL.md under about 120 lines
+│       ├── wcag/               # apply WCAG 2.2 AA; map by topic to knowledge/wcag/
+│       ├── consult/            # the pause before building; writes the need statement
+│       ├── content/            # the writing mode
+│       ├── design/             # requirement and practice for visual design
+│       ├── at-test-protocol/   # the human testing mode; writes the test script
+│       └── planning/           # fills the spec at the start of a project
 ├── knowledge/
 │   ├── README.md               # how to write an entry
 │   ├── INDEX.md                # table of contents the skills point at
 │   ├── SOURCES.md              # trusted sources by tier; nothing off it is authoritative
-│   └── wcag/                   # sc-x.x.x-slug.md, one per success criterion
+│   ├── wcag/                   # sc-x.x.x-slug.md, one per success criterion, all 55 A and AA
+│   ├── aria/                   # when to use ARIA at all, and the tested pattern entries
+│   ├── patterns/               # nine interface patterns: the need, the simpler thing, the cost
+│   ├── ux/                     # usability heuristics and need-finding (tier 3)
+│   ├── coga/                   # Making Content Usable, one entry per objective (tier 2)
+│   ├── design/                 # contrast, focus, target size, motion, reflow, spacing
+│   ├── content/                # plain language, reading level, headings, links, alt, errors
+│   └── testing/                # manual test procedures per assistive technology
 ├── evals/
 │   ├── README.md
-│   └── 001-missing-label/      # input.html + expected.md
+│   ├── RESULTS.md              # one row per run, newest first
+│   ├── 001-missing-label/      # input.html + expected.md, one defect
+│   └── 015-consult-.../        # request.md + expected.md, a transcript eval
 ├── templates/
 │   └── a11y-spec.md            # copy into a project as a11y-spec.md
 └── docs/
     ├── principles.md           # the principles, with reasons
     ├── content-standards.md    # house defaults for words; the spec imports them
+    ├── how-we-work.md          # for contributors new to GitHub and Claude Code
     ├── ROADMAP.md              # phases, work packages, team split
     └── decisions.md            # why things are the way they are
 ```
@@ -134,7 +151,7 @@ doctorAccessible/
 - Every substantive claim carries its tier (1 normative, 2 informative, 3 practitioner), its source, and the version or date. Example: `WCAG 2.2 SC 4.1.2 (Level A), W3C Rec 12 Dec 2024, tier 1`.
 - No agent or skill states a success criterion number or level from memory. It opens the entry.
 - Markdown, not JSON. Nothing here has a machine consumer that needs JSON.
-- Evals are numbered `NNN-slug` and hold exactly one intended defect each unless the README of that eval says otherwise.
+- Evals are numbered `NNN-slug` and hold exactly one intended defect each unless the README of that eval says otherwise. Transcript evals for skills hold a `request.md` instead of an `input.html`.
 - A `SKILL.md` stays under about 120 lines. Depth goes in `knowledge/`.
 - Working drafts (WCAG 3.0, APCA) are awareness only, never a requirement.
 - Work is claimed by work package from `docs/ROADMAP.md`, one GitHub issue each.
@@ -152,8 +169,9 @@ Use the verifier agent on evals/001-missing-label/input.html and compare to expe
 npx --yes browser-driver-manager install chrome
 
 # axe on a local file (needs the file:// form) or a URL
-npx --yes @axe-core/cli "file://$PWD/evals/001-missing-label/input.html"
-npx --yes @axe-core/cli --stdout <url-or-file>     # JSON, with rule tags
+npx --yes @axe-core/cli --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa "file://$PWD/evals/001-missing-label/input.html"
+npx --yes @axe-core/cli --stdout --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa <url-or-file>     # JSON, with rule tags
+# The default run skips rules tagged for WCAG 2.2; always pass the tags.
 ```
 
 ---
@@ -176,4 +194,19 @@ npx --yes @axe-core/cli --stdout <url-or-file>     # JSON, with rule tags
 
 ---
 
-*Last updated: 2026-10-22*
+## Skill Registry
+
+Skills load in the main session and keep the conversation. Each is a map under about 120 lines; depth lives in `knowledge/`.
+
+| Skill | Mode | Use when | Points at |
+|---|---|---|---|
+| `planning` | before consult | A project is new or has no `a11y-spec.md`; fills the spec from the template | `templates/a11y-spec.md` |
+| `consult` | consult | Any new feature or component, and whenever scope changes; may answer build less or build nothing | `patterns/`, `ux/`, `coga/`, `wcag/` |
+| `wcag` | build | Any change touching structure, forms, focus, names and roles, color, media, or motion | `wcag/`, every A and AA criterion |
+| `content` | build | Writing or reviewing words: body text, headings, links, alt text, instructions, errors, language | `content/`, `docs/content-standards.md` |
+| `design` | build | Color and contrast, focus indicators, target size, motion, reflow, text spacing, above the floor | `design/`, `wcag/` |
+| `at-test-protocol` | verify | Writing the test script a person follows with the spec's assistive technology | `testing/` |
+
+---
+
+*Last updated: 2026-10-23*
