@@ -66,7 +66,7 @@ Before any mode acts, read the project's `a11y-spec.md` if one exists (repo root
 
 End with a need statement in the format in `templates/a11y-spec.md`, written into the project's spec with the developer's agreement. This is the `consult` skill at `.claude/skills/consult/SKILL.md`; load it (`/consult`) at the start of any feature and whenever scope changes.
 
-**Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill as the work demands: `wcag` for any change touching structure, forms, focus, names and roles, color, media, or motion; `content` when writing or reviewing words; `design` for color, contrast, focus indicators, target size, motion, reflow, and spacing above the floor; `planning` when a project has no spec yet.
+**Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill as the work demands: `wcag` for any change touching structure, forms, focus, names and roles, color, media, or motion; `content` when writing or reviewing words; `design` for color, contrast, focus indicators, target size, motion, reflow, and spacing above the floor; `html-patterns` before reaching for ARIA or a custom control; `planning` when a project has no spec yet.
 
 **Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix. For the tests only a person can run, load `at-test-protocol`; it writes the test script from the spec's assistive technology list and never stands in for the tester.
 
@@ -81,13 +81,13 @@ The Claude Code session you are in. It consults, writes code and content, loads 
 An isolated subagent that checks code against WCAG 2.2 AA without seeing the builder's reasoning. It reads the code fresh, runs axe when a page is available, and reports findings in three confidence tiers. It does not fix code.
 
 ### Skills (`.claude/skills/*/SKILL.md`)
-Short procedures plus a map into the knowledge library. A skill tells the agent when a domain applies, what the rules are for citing and judging, and which knowledge file answers which question. Skills hold no reference material themselves. Six exist; see the Skill Registry at the end of this file.
+Short procedures plus a map into the knowledge library. A skill tells the agent when a domain applies, what the rules are for citing and judging, and which knowledge file answers which question. Skills hold no reference material themselves. Seven exist; see the Skill Registry at the end of this file.
 
 ### Knowledge library (`knowledge/`)
-Markdown entries, one per success criterion or topic, each with the source, its tier, its version, and the date it was verified. This is the thing that gets maintained. `knowledge/INDEX.md` is the table of contents the skills point at. Eight domains: `wcag/` (every Level A and AA criterion, tier 1 and 2), `aria/`, `patterns/`, `ux/`, `coga/`, `design/`, `content/`, `testing/`. Everything outside `wcag/` is tier 2 or 3, so a finding resting on it alone is likely or manual review, never definite.
+Markdown entries, one per success criterion or topic, each with the source, its tier, its version, and the date it was verified. This is the thing that gets maintained. `knowledge/INDEX.md` is the table of contents the skills point at. Nine domains: `wcag/` (every Level A and AA criterion, tier 1 and 2), `html/`, `aria/`, `patterns/`, `ux/`, `coga/`, `design/`, `content/`, `testing/`, plus `axe-rules.md`, which maps each axe rule to its criterion and entry. Everything outside `wcag/` is tier 2 or 3, so a finding resting on it alone is likely or manual review, never definite.
 
 ### Evals (`evals/`)
-Snippets with known defects and the findings a correct verifier must produce, and, for the skills, transcript evals: a request in `request.md` and the answer a good skill run must give. Any pull request that changes an agent, a skill, or a knowledge entry runs the relevant evals first and records them in `evals/RESULTS.md`.
+Snippets with known defects and the findings a correct verifier must produce, and, for the skills, transcript evals: a request in `request.md` and the answer a good skill run must give. Any pull request that changes an agent, a skill, or a knowledge entry runs the relevant evals first and records them in `evals/RESULTS.md`. `evals/run.sh` runs the verifier on every page eval headless, `evals/check.py` grades the reports, `evals/baseline-2026-10-23.md` is the last full page baseline, and `evals/baseline-skills-2026-10-23.md` the skill one (`evals/run.sh -s`).
 
 ---
 
@@ -95,7 +95,8 @@ Snippets with known defects and the findings a correct verifier must produce, an
 
 - **Language(s):** HTML, CSS, JavaScript as the reference target. Markdown for everything the agents read.
 - **Framework(s):** none.
-- **Key libraries:** axe-core via `@axe-core/cli`, run through `npx`, when a page can be loaded. First run on a machine may need `browser-driver-manager` to fetch a Chrome and ChromeDriver pair that match.
+- **Key libraries:** axe-core via `@axe-core/cli`, run through `npx` by `tools/axe.py` when a page can be loaded. First run on a machine may need `browser-driver-manager` to fetch a Chrome and ChromeDriver pair that match. Python 3 (standard library only) for the tools in `tools/` and `evals/`.
+- **Windows:** agents get PowerShell, not Bash, so the verifier's tools list both; without a shell it cannot run axe.
 - **Runtime / deployment target:** Claude Code, cloned from GitHub. Project-level `.claude/` makes the agent and skills available on clone.
 
 ---
@@ -114,14 +115,17 @@ doctorAccessible/
 │       ├── consult/            # the pause before building; writes the need statement
 │       ├── content/            # the writing mode
 │       ├── design/             # requirement and practice for visual design
+│       ├── html-patterns/      # native HTML first; maps to knowledge/html/
 │       ├── at-test-protocol/   # the human testing mode; writes the test script
 │       └── planning/           # fills the spec at the start of a project
 ├── knowledge/
 │   ├── README.md               # how to write an entry
 │   ├── INDEX.md                # table of contents the skills point at
 │   ├── SOURCES.md              # trusted sources by tier; nothing off it is authoritative
+│   ├── axe-rules.md            # axe rule ID to criterion and entry, generated (tier 3)
 │   ├── wcag/                   # sc-x.x.x-slug.md, one per success criterion, all 55 A and AA
-│   ├── aria/                   # when to use ARIA at all, and the tested pattern entries
+│   ├── html/                   # the native HTML way to build nine common things
+│   ├── aria/                   # when to use ARIA at all; aria/patterns/ per widget
 │   ├── patterns/               # nine interface patterns: the need, the simpler thing, the cost
 │   ├── ux/                     # usability heuristics and need-finding (tier 3)
 │   ├── coga/                   # Making Content Usable, one entry per objective (tier 2)
@@ -131,8 +135,16 @@ doctorAccessible/
 ├── evals/
 │   ├── README.md
 │   ├── RESULTS.md              # one row per run, newest first
+│   ├── run.sh                  # run the verifier on every page eval, headless
+│   ├── check.py                # grade the reports against expected.md
 │   ├── 001-missing-label/      # input.html + expected.md, one defect
-│   └── 015-consult-.../        # request.md + expected.md, a transcript eval
+│   ├── 015-consult-.../        # request.md + expected.md, a transcript eval
+│   └── 038-spec-.../           # input.html + a11y-spec.md + expected.md, a spec deviation
+├── tools/
+│   ├── axe.py                  # axe with the WCAG 2.2 tags, every result bucket
+│   ├── readability.py          # Flesch-Kincaid grade over main content
+│   ├── build_axe_rules.py      # rebuilds knowledge/axe-rules.md
+│   └── check_links.py          # every link and path in the library
 ├── templates/
 │   └── a11y-spec.md            # copy into a project as a11y-spec.md
 └── docs/
@@ -168,10 +180,18 @@ Use the verifier agent on evals/001-missing-label/input.html and compare to expe
 # axe: one-time setup if the bundled ChromeDriver does not match the installed Chrome
 npx --yes browser-driver-manager install chrome
 
-# axe on a local file (needs the file:// form) or a URL
-npx --yes @axe-core/cli --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa "file://$PWD/evals/001-missing-label/input.html"
-npx --yes @axe-core/cli --stdout --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa <url-or-file>     # JSON, with rule tags
-# The default run skips rules tagged for WCAG 2.2; always pass the tags.
+# axe on a file or URL, with the WCAG 2.2 tags, raw JSON saved outside the repo
+python tools/axe.py evals/001-missing-label/input.html
+# (the bare CLI: npx --yes @axe-core/cli --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa <url-or-file>;
+#  the default run skips rules tagged for WCAG 2.2, so always pass the tags)
+
+# every page eval (-s: every skill eval; -a: both), headless, then grade the reports
+evals/run.sh -j 4 -o <folder>
+python evals/check.py <folder>
+
+# reading level, and a check of every link and path in the library
+python tools/readability.py <file> --target 8
+python tools/check_links.py
 ```
 
 ---
@@ -205,6 +225,7 @@ Skills load in the main session and keep the conversation. Each is a map under a
 | `wcag` | build | Any change touching structure, forms, focus, names and roles, color, media, or motion | `wcag/`, every A and AA criterion |
 | `content` | build | Writing or reviewing words: body text, headings, links, alt text, instructions, errors, language | `content/`, `docs/content-standards.md` |
 | `design` | build | Color and contrast, focus indicators, target size, motion, reflow, text spacing, above the floor | `design/`, `wcag/` |
+| `html-patterns` | build | Writing or reviewing markup for forms, tables, landmarks, headings, images, links, buttons, dialogs, or any custom control; before adding ARIA | `html/`, `aria/` |
 | `at-test-protocol` | verify | Writing the test script a person follows with the spec's assistive technology | `testing/` |
 
 ---
