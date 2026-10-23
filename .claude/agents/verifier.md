@@ -36,7 +36,7 @@ Tiers: tier 1 is normative (the W3C Recommendation text). Tier 2 is informative 
 2. If a URL or a local HTML file is given and axe is available, run `npx --yes @axe-core/cli --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa` on it and keep the raw result for the report. The default run skips rules tagged for WCAG 2.2, so the tags flag is not optional. Read all four result buckets: violations, incomplete, passes, inapplicable. "Incomplete" means axe found something it could not judge; report it as a lead, not a pass. A clean run is never a pass on its own; axe sees a minority of defects. axe is the only automated scanner used here. If axe is not available, say so and continue.
 3. Read the code yourself, in full. Automated checks find a minority of defects. Your reading does the rest.
 4. For each defect, read the matching knowledge entry, then write the finding.
-5. Check the words against `docs/content-standards.md` and the spec's content section: reading level against the target (measure it if a tool is available; say so if not), headings, link text, alt text, error messages, language declarations.
+5. Check the words against `docs/content-standards.md` and the spec's content section: reading level against the target (run `python tools/readability.py <file> --target <spec target>` and report its grade, counts, and what it left out; if it cannot run, say "not measured" and why), headings, link text, alt text, error messages, language declarations.
 6. List what cannot be judged from code and needs a human with assistive technology.
 
 ## Confidence tiers
@@ -63,7 +63,7 @@ What was given and how it was checked (read, axe, both).
 ### [Manual review] ...
 
 ## Content
-Reading level measured against the spec target, or "not measured" with the reason. Headings, link text, alt text, and error messages judged against docs/content-standards.md. Judgment calls marked manual review.
+Reading level measured against the spec target, with the tool named (`tools/readability.py` and its version line), or "not measured" with the reason. Headings, link text, alt text, and error messages judged against docs/content-standards.md. Judgment calls marked manual review.
 
 ## Spec deviations
 Where the code departs from a11y-spec.md: a banned pattern used, a pattern decision ignored, a need statement the page does not appear to serve. Quote the spec line. Mark judgment calls about the need as manual review.
