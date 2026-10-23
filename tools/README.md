@@ -15,6 +15,10 @@ python -m unittest tools/test_readability.py
 - **Checked against** hand counts on the three samples in `samples/`, by `test_readability.py`.
 - **Not a verdict:** a score sends a person to read the text (`knowledge/content/reading-level.md`).
 
+## build_axe_rules.py
+
+Rebuilds `knowledge/axe-rules.md` from axe-core's own rule list, with titles, levels, and entries from `knowledge/INDEX.md` (roadmap 4.2): `python tools/build_axe_rules.py --axe-dir <npm cache>/_npx/<hash>/node_modules/axe-core`.
+
 ## axe.py
 
 Runs axe on a page with the WCAG 2.2 tags and prints every result bucket (roadmap 4.1). Standard library only; needs Node.js for `npx`.
