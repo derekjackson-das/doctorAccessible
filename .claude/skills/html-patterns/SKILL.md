@@ -36,6 +36,7 @@ Writing or changing markup: any form, table, page region, heading, image, link, 
 | Is there a native element for this control? | `knowledge/html/custom-controls.md` |
 | The ARIA for a widget with no native element | `knowledge/aria/patterns/` (`tabs.md`, `tooltip.md`, `carousel.md`, `autocomplete.md`, `infinite-scroll.md`, `date-picker.md`, `accordion.md`, `modal-dialog.md`) |
 | Should this widget exist at all? | `knowledge/patterns/`, and the `consult` skill |
+| The code is React or JSX | the `react-jsx` skill too, a layer over this one: `knowledge/frameworks/react-jsx.md` |
 | The criteria themselves | `knowledge/INDEX.md`, then the `wcag/` entry |
 
 ## Output shape for a finding

@@ -29,7 +29,7 @@ import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KNOWLEDGE_DIRS = ("wcag", "aria", "html", "patterns", "ux", "coga", "design", "content", "testing")
+KNOWLEDGE_DIRS = ("wcag", "aria", "html", "frameworks", "patterns", "ux", "coga", "design", "content", "testing")
 PATH_RE = re.compile(r"`((?:knowledge/|\.claude/|docs/|tools/|evals/|templates/|(?:%s)/)[^`\s]+?)`" % "|".join(KNOWLEDGE_DIRS))
 URL_RE = re.compile(r"https?://[^\s)>\]`\"'|]+")
 REFUSING = {401, 403, 405, 429, 999}
