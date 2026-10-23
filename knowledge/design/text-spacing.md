@@ -23,7 +23,7 @@ When a reader overrides line height, paragraph spacing, letter spacing, and word
 ## Practice (tier 2 and 3, not required)
 
 - **Let text containers grow.** Size containers in `em` (technique C28) and avoid fixed heights, so spaced-out text pushes the box larger instead of being clipped (W3C Understanding 1.4.12).
-- **Leave room beyond the test values.** The Understanding page notes that users may choose spacing beyond the criterion's values, and that what happens then is not a failure of the content (W3C). Our own inference: a layout that only just survives the test values leaves those readers nothing to spare.
+- **Leave room beyond the test values.** The Understanding page notes that users may choose spacing beyond the criterion's values, and puts readability at those larger settings in the user's hands rather than the author's (W3C). Our own inference: a layout that only just survives the test values leaves those readers nothing to spare.
 - **Readable blocks of text.** SC 1.4.8, Level AAA, asks for a way to get lines of no more than 80 characters, unjustified text, and more generous line and paragraph spacing. WebAIM (2020) puts a comfortable line length at roughly 50 to 120 characters and says fully justified text impairs readability.
 
 ## How to check
