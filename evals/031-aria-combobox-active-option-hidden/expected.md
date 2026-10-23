@@ -24,7 +24,7 @@ Everything else is clean: label, a named submit button, keyboard support (arrows
 
 - Report the field's name, role, or `aria-expanded`; they are correct.
 - Report keyboard operation; arrows, Enter, and Escape work.
-- Report a missing count of results under 4.1.3; the page shows no status message.
+- Report a missing count of results as a 4.1.3 failure (likely or definite); the page shows no status message. A manual-review note that 4.1.3 is not triggered, offered as context, is acceptable. (Amended 2026-10-23 after the first run; see RESULTS.md.)
 - Report the highlight as color alone; it is also bold and outlined.
 - Report `autocomplete="off"` under 1.3.5; a department is not information about the user.
 - Report the defect twice, under 4.1.2 and again under 1.3.1 or 2.1.1.

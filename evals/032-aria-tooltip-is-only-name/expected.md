@@ -27,7 +27,7 @@ Everything else is clean:
 
 ## Must not
 
-- Report the tooltip's behavior under 1.4.13; it is hoverable, persistent, and dismissible.
+- Report the tooltip's behavior as a 1.4.13 failure (likely or definite); it is hoverable, persistent, and dismissible. A manual-review note that 1.4.13 appears met and needs a browser check is acceptable. (Amended 2026-10-23 after the first run; see RESULTS.md.)
 - Report `role="tooltip"` or `aria-describedby` as invalid ARIA; both are allowed.
 - Report the target size, contrast, focus style, heading, landmarks, or language.
 - Report the defect twice, under 4.1.2 and again under 1.1.1, 2.4.6, or 2.5.3.
