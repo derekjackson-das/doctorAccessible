@@ -41,7 +41,8 @@
         li.setAttribute('role', 'option');
         li.id = 'dept-opt-' + i;
         li.textContent = name;
-        li.addEventListener('mousedown', (event) => { event.preventDefault(); choose(name); });
+        li.addEventListener('mousedown', (event) => event.preventDefault());
+        li.addEventListener('click', () => choose(name));
         list.appendChild(li);
       });
       active = -1;

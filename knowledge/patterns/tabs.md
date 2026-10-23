@@ -28,7 +28,7 @@ Switching between a few related sections in the same space, such as product deta
 ## What doing it right requires
 
 From the Authoring Practices, unless noted:
-- **Roles and names:** a `tablist` containing `tab` elements, each controlling a `tabpanel` named by its tab. The selected tab is marked selected.
+- **Roles, names, and states** are in `aria/patterns/tabs.md`.
 - **One tab stop for the list.** Only the active tab is in the tab order; Left and Right Arrow move between tabs; Tab moves on into the panel. Home and End are optional. Pickering explains the reason: otherwise keyboard users step through every tab to reach the panel's content.
 - **Activate on focus only when it is instant.** Automatic activation is recommended only when panels show with no noticeable delay; otherwise tabs activate on Enter or Space.
 - **Down Arrow: the sources differ.** The Authoring Practices say a horizontal tab list should not respond to Down or Up Arrow, so those keys keep scrolling the page. Pickering's tabs use Down Arrow to move focus into the panel, so screen reader users do not land on the next tab. Following the Authoring Practices is the safer default; if Down Arrow is used, test that page scrolling still works.

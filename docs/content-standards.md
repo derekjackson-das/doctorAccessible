@@ -27,6 +27,7 @@ Front-load. The first sentence of a page or section carries its point. One idea 
 
 - Source: W3C, "Writing for Web Accessibility", tier 2.
 - Source: Nielsen Norman Group research on how people read online, which finds scanning rather than reading, tier 3, https://www.nngroup.com/ (summarize and link; never paste).
+- How to apply and check it: `knowledge/content/organization.md`, which rests on Digital.gov's plain language guide (tier 3), the W3C writing tips, and COGA objectives 2 and 3 (tier 2). It does not yet draw on the NN/g research.
 
 ## 4. Headings
 

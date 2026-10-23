@@ -136,6 +136,7 @@ Work is claimed by work package, not by phase. Each package is one GitHub issue 
 
 - `.claude/` (the skills and the verifier)
 - `knowledge/` (the library the skills read; without it the verifier has nothing to cite)
+- `tools/` (axe and the reading-level tool the verifier runs; Python 3, and Node.js for axe)
 - `docs/content-standards.md` and `docs/principles.md`
 - `templates/a11y-spec.md`, and a second copy at your project root as `a11y-spec.md`
 
@@ -144,7 +145,7 @@ Then:
 1. Fill in `a11y-spec.md`: the conformance target, who the project serves, and the assistive technology you test with.
 2. Run `claude` in your project. Start with consult (`/consult`): say who you are building for and what they need. Build once the need statement is in the spec.
 3. Ask for the verifier when you want an independent check.
-4. When this repo changes, copy `knowledge/` and `.claude/` again. A copy does not update itself, which is why the plugin is the plan.
+4. When this repo changes, copy `knowledge/`, `.claude/`, and `tools/` again. A copy does not update itself, which is why the plugin is the plan.
 
 ## Working on it as a team
 
