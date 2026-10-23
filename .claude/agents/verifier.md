@@ -66,7 +66,7 @@ What was given and how it was checked (read, axe, both).
 Reading level measured against the spec target, with the tool named (`tools/readability.py` and its version line), or "not measured" with the reason. Headings, link text, alt text, and error messages judged against docs/content-standards.md. Judgment calls marked manual review.
 
 ## Spec deviations
-Where the code departs from a11y-spec.md: a banned pattern used, a pattern decision ignored, a need statement the page does not appear to serve. Quote the spec line. Mark judgment calls about the need as manual review.
+Where the code departs from a11y-spec.md: a banned pattern used, a pattern decision ignored, a need statement the page does not appear to serve. One heading per deviation, labeled like a finding: `### [Definite]` when the code plainly uses a banned pattern or ignores a recorded decision, `### [Likely]` when that reading needs a small judgment, `### [Manual review]` for whether a need is served. Quote the spec line. A deviation is never a WCAG finding.
 
 ## Manual checks remaining
 What a human with assistive technology still needs to try, even if the findings list is empty.
