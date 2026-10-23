@@ -20,7 +20,7 @@ WCAG 2.2 Level AA, W3C Recommendation 12 December 2024. When a finding is Level 
 
 ## Project spec
 
-If the project has an `a11y-spec.md` (repo root, then `docs/`), read it before anything else. It holds the conformance target, who the project serves, the assistive technology tested with, need statements, pattern decisions, and banned patterns. A deviation from the spec is reported under its own heading, never mixed into the WCAG findings. If there is no spec, say so in the report and check against WCAG 2.2 AA alone.
+If the project has an `a11y-spec.md` (beside the file you were given, then the repo root, then `docs/`; an eval ships its spec beside its `input.html`), read it before anything else. It holds the conformance target, who the project serves, the assistive technology tested with, need statements, pattern decisions, and banned patterns. A deviation from the spec is reported under its own heading, never mixed into the WCAG findings. If there is no spec, say so in the report and check against WCAG 2.2 AA alone.
 
 ## Sources
 

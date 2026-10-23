@@ -11,6 +11,9 @@ Two checks per eval; both must pass.
    paragraph names). The report passes if some finding heading
    ("### [Definite] ...") is at an allowed confidence and its block names that
    criterion, "Level <level>", and "tier 1".
+   A key with a "Spec check" line is a spec-deviation eval: the report's
+   "Spec deviations" section must name one of the listed terms, at an allowed
+   confidence if it names one.
 2. Judge, for the rest of the key: the must-not list and the pass condition. A fresh
    `claude -p` session with no tools gets only the key and the report, inline, and
    must answer "VERDICT: PASS" or "VERDICT: FAIL" with a quoted report line behind
@@ -67,8 +70,10 @@ def parse_key(text):
     also = re.search(r"## Also acceptable\s*\n(.*?)(\n## |\Z)", text, re.S)
     for m in re.finditer(r"downgrades? (?:it )?to (likely|manual review)", also.group(1).lower() if also else ""):
         allowed.add(m.group(1))
+    spec = re.search(r"Spec check:.*?must mention:\s*(.+)$", text, re.M)
+    terms = [t.strip().lower() for t in spec.group(1).split("/")] if spec else []
     return {"sc": crit.group(1) if crit else None, "level": crit.group(2) if crit else None,
-            "allowed": {a for a in allowed if a in CONF}}
+            "allowed": {a for a in allowed if a in CONF}, "spec_terms": terms}
 
 
 def findings(report):
@@ -84,7 +89,27 @@ def findings(report):
     return out
 
 
+def spec_section(report):
+    m = re.search(r"^#{1,3} Spec deviations\s*\n(.*?)(?=^#{1,2} |\Z)", report, re.S | re.M)
+    return m.group(1) if m else ""
+
+
 def mechanical(key, report):
+    if key.get("spec_terms"):
+        # A spec-deviation key: the finding belongs in the report's Spec deviations section.
+        sec = spec_section(report)
+        low = sec.lower()
+        if not sec.strip() or re.match(r"\s*(none|no a11y-spec|there is no)", low):
+            return False, "the Spec deviations section is missing or reports none"
+        hit = [t for t in key["spec_terms"] if t in low]
+        if not hit:
+            return False, f"Spec deviations section names none of: {', '.join(key['spec_terms'])}"
+        named = {c for c in CONF if c in low}
+        if named and not (named & key["allowed"]):
+            return False, (f"spec deviation at {', '.join(sorted(named))}; allowed: "
+                           f"{', '.join(sorted(key['allowed']))}")
+        return True, f"Spec deviations section names {hit[0]}" + (
+            f", at {', '.join(sorted(named & key['allowed']))}" if named else "")
     if not key["sc"]:
         # A practice-only key (no Criterion line): check the confidence; the judge checks the rest.
         got = [c for c, _ in findings(report) if c in key["allowed"]]
