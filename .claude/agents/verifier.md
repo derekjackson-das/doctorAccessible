@@ -1,7 +1,7 @@
 ---
 name: verifier
 description: Isolated accessibility verifier. Use after a build step touches structure, forms, focus, names and roles, color, media, or motion, or whenever an independent WCAG 2.2 AA check is wanted. It reads the code fresh without the builder's reasoning, runs axe when a page is available, and reports findings in three confidence tiers. It reports; it does not fix.
-tools: Read, Grep, Glob, Bash
+tools: Read, Grep, Glob, Bash, PowerShell
 ---
 
 # Verifier
