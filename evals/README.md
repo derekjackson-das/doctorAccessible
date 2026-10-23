@@ -36,6 +36,18 @@ From a Claude Code session in this repo:
 
 A pull request that changes `.claude/` or `knowledge/` states which evals were run and the result.
 
+## Running them all
+
+`evals/run.sh` runs the verifier on every eval with an `input.html`, or on the evals named, each in its own fresh `claude -p` session using the registered verifier (roadmap 4.3):
+
+```
+evals/run.sh                          # every page eval, 3 at a time
+evals/run.sh -j 6 001-missing-label   # named evals, 6 at a time
+evals/run.sh -o /tmp/reports          # choose where reports go
+```
+
+Reports go outside the repo by default, in a dated folder in the temp directory: one `<eval>.md` per eval and an `index.md` listing each eval's finding headings and axe line. Read each report against its `expected.md`. The script does not grade; that is roadmap 4.4. Record what you read in `RESULTS.md` as for any run. Each session costs a verifier run's tokens. For axe, Node.js must be on PATH or `DOCTOR_A11Y_NODE_DIR` set. Transcript and text evals (`request.md`, `text.md`) are skill runs and are not covered yet.
+
 ## Adding one
 
 Pick the next number. Write the input first, then the expected findings from the knowledge entry, not from memory. If the knowledge entry does not exist yet, write it first.
