@@ -180,6 +180,22 @@ When ARIA is needed, what each HTML element allows, and how a name is worked out
 
 Drag and drop has no ARIA entry: ARIA has no vocabulary for it (`aria-grabbed` and `aria-dropeffect` are deprecated; `aria/aria-in-html.md`). See `patterns/drag-and-drop.md`.
 
+## HTML: the native way to build common things
+
+How to build each thing with native HTML, what that gives by default, where people go wrong, and when ARIA is genuinely needed (pointing to `aria/`). Not using the native element is never a finding on its own; failures are reported under the `wcag/` criterion. The `html-patterns` skill maps questions to these entries.
+
+| Topic | Entry | Verified |
+|---|---|---|
+| Forms: labels, groups, input types | `html/forms.md` | 2026-10-23 |
+| Tables: data tables, never layout | `html/tables.md` | 2026-10-23 |
+| Landmarks: header, nav, main, aside, footer | `html/landmarks.md` | 2026-10-23 |
+| Headings: levels and the outline | `html/headings.md` | 2026-10-23 |
+| Images: alt, decorative, functional, svg | `html/images.md` | 2026-10-23 |
+| Links | `html/links.md` | 2026-10-23 |
+| Buttons | `html/buttons.md` | 2026-10-23 |
+| Dialogs | `html/dialogs.md` | 2026-10-23 |
+| Custom controls: the native element to try first | `html/custom-controls.md` | 2026-10-23 |
+
 ## Other domains
 
 None yet.

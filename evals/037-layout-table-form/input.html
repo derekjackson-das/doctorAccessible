@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ask a librarian</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    table.layout { border-collapse: collapse; }
+    table.layout caption { text-align: start; font-weight: 700; padding-block-end: 0.5rem; }
+    table.layout th { text-align: start; padding: 0.5rem 1rem 0.5rem 0; color: #4a4a4a; font-weight: 400; }
+    table.layout td { padding: 0.5rem 1rem 0.5rem 0; vertical-align: top; }
+    input, textarea, button { font: inherit; padding: 0.5rem; }
+    input, textarea { border: 2px solid #4a4a4a; inline-size: min(22rem, 100%); }
+    button { border: 2px solid #005a9c; background: #fff; color: #005a9c; }
+    :focus-visible { outline: 3px solid #005a9c; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Ask a librarian</h1>
+    <p>Send us a question and a librarian will reply by email within one working day.</p>
+    <form action="/ask" method="post">
+      <table class="layout">
+        <caption>Your question</caption>
+        <tr><th>Field</th><th>Your answer</th></tr>
+        <tr>
+          <td><label for="name">Name</label></td>
+          <td><input type="text" id="name" name="name" autocomplete="name"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="email" id="email" name="email" autocomplete="email"></td>
+        </tr>
+        <tr>
+          <td><label for="question">Question</label></td>
+          <td><textarea id="question" name="question" rows="4"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button type="submit">Send question</button></td>
+        </tr>
+      </table>
+    </form>
+  </main>
+</body>
+</html>
