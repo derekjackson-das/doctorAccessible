@@ -4,7 +4,7 @@ Input: `input.html`. A "Course formats" page with three tabs: In person, Online,
 
 Intended defect: the tabs use the APG's roving tabindex. The active tab has `tabindex="0"` and the others have `tabindex="-1"`, but the script handles only `click`. There is no arrow-key handler, so a keyboard user can reach only the active tab. The Online and Hybrid tabs, and their panels, cannot be reached or chosen without a mouse.
 
-Everything else is clean: `tablist` with a name, `tab` roles inside it, `aria-selected` and `tabindex` updated on every change, `aria-controls`, each `tabpanel` named by its tab, panels hidden with `hidden`, visible focus, language, title, one `h1`, `main`. Contrast: #005a9c on white and white on #005a9c are both about 7.1:1.
+Everything else is clean: `tablist` with a name, `tab` roles inside it, `aria-selected` and `tabindex` updated on every change, `aria-controls`, each `tabpanel` named by its tab, panels hidden with `hidden`, visible focus, language, title, one `h1`, `main`. Contrast: #005a9c on white and white on #005a9c are both about 7.1:1. The selected tab is shown by fill, bold text, and an underline, not by color alone.
 
 ## Expected findings
 
@@ -25,7 +25,7 @@ Everything else is clean: `tablist` with a name, `tab` roles inside it, `aria-se
 - Report missing ARIA roles, names, or states; they are present and updated.
 - Report missing Home and End keys as a failure; they are optional in the APG.
 - Report the defect twice, under 2.1.1 and again under 4.1.2 or 2.4.3.
-- Report contrast, focus style, headings, landmarks, or language.
+- Report contrast, use of color for the selected tab (it is also bold and underlined), focus style, headings, landmarks, or language.
 - State a criterion number, title, or level not in `knowledge/INDEX.md` without marking it unverified.
 - Rewrite the code.
 

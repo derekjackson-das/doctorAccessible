@@ -7,6 +7,7 @@
 - Tier 2 source: https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html
 - Also in: WCAG 2.1, same level. Not in WCAG 2.0.
 - Verified against the live source: 2026-10-22 by Derek Jackson with Claude Code, direct fetch of the Recommendation page and the W3C WCAG 2.2 JSON
+- Updated 2026-10-23 by Caesar Alam with Claude Code: added the `aria-labelledby` case under "How it fails in code" (WP 3.8).
 
 ## Normative text (tier 1, quoted)
 

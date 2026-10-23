@@ -2,7 +2,7 @@
 
 Input: `input.html`. A "Library questions" page with two accordion sections.
 
-Intended defect: each header is a native `button` inside an `h2`, with `aria-expanded="false"` and `aria-controls` pointing at its panel. The script toggles the panel's `hidden` attribute and a CSS class that turns the chevron, but never updates `aria-expanded`. A sighted user sees the section open. A screen reader still reports "collapsed".
+Intended defect: each header is a native `button` inside an `h2`, with `aria-expanded="false"` and `aria-controls` pointing at its panel. The script toggles the panel's `hidden` attribute and a CSS class that turns the chevron, but never updates `aria-expanded`. The section opens and the chevron turns, but the button still exposes `aria-expanded="false"`.
 
 Everything else is clean: native buttons in headings, so Enter and Space work; the chevron is drawn with borders, not text, so it adds nothing to the button's name; visible focus; language, title, one `h1`, `main`. Contrast: #005a9c on white is about 7.1:1.
 

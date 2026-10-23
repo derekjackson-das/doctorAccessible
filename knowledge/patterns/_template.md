@@ -22,7 +22,7 @@ The plainer thing that often meets the same need, usually native HTML or static 
 
 ## What doing it right requires
 
-The parts a correct build cannot skip, summarized from the Authoring Practices and corrected by what practitioners found broken in real assistive technology. Native HTML first. Link to the Authoring Practices page for detail; do not restate it. Where an `aria/patterns/` entry exists, the ARIA detail and the ARIA test results live there.
+The parts a correct build cannot skip, summarized from the Authoring Practices and corrected by what practitioners found broken in real assistive technology. Native HTML first. Link to the Authoring Practices page for detail; do not restate it. Where an `aria/patterns/` entry exists, the ARIA detail (roles, states, naming, keyboard) lives there; test results stay here and are not repeated there.
 
 ## Criteria it touches
 

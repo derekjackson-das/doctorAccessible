@@ -6,7 +6,7 @@ The ARIA side of one widget. Whether to build the widget at all, the simpler alt
 
 - W3C pattern (tier 2): ARIA Authoring Practices Guide, "Pattern name", URL. A pattern, not a requirement: nothing in it is a conformance rule, and following it does not guarantee that assistive technology supports it.
 - Normative (tier 1): WAI-ARIA 1.2 role definitions used, and the ARIA in HTML rows for the elements used.
-- Practitioner testing (tier 3), at least two from `knowledge/SOURCES.md`: author, "Title", date (and updated date if shown), URL; one line each on what was tested, with which screen reader and browser.
+- Practitioner testing (tier 3): point to the sources in `patterns/<name>.md` rather than repeating them, and list only sources this entry adds: author, "Title", date (and updated date if shown), URL; one line each on what was tested, with which screen reader and browser.
 - Support data (tier 3), if used: a11ysupport.io tests updated within three years only, with the date.
 - Related entries: `patterns/<name>.md`, `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/...`
 - Verified against the live sources: YYYY-MM-DD by <name>
@@ -38,7 +38,7 @@ The keys the APG pattern expects, in our words, marked as a pattern. Then what p
 
 ## What testing found
 
-Each practitioner's result: what broke, with which screen reader and browser, and when. Newest first.
+Only results about the ARIA itself that `patterns/<name>.md` does not already give: what broke, with which screen reader and browser, and when, in the past tense. Point to the patterns entry for the rest.
 
 ## How it fails in code
 
