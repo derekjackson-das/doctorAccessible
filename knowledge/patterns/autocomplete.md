@@ -26,7 +26,7 @@ Native first: `datalist` is the HTML combobox. Roselli (2023, updated 2026) foun
 
 If the native control will not do, Higley's 2020 post points to her two-part series on custom selects and comboboxes, covering a select-only combobox, an editable combobox, and an editable multi-select combobox. The series is published on 24a11y.com (2019), which is not on `knowledge/SOURCES.md` and is more than three years old, so its results are not used here. The ARIA for the pattern is in `aria/patterns/autocomplete.md`.
 
-The Authoring Practices' expectations, in our words: the combobox is a text field or a read-only field in the tab sequence; its popup, a listbox, grid, tree, or dialog, is not in the tab sequence; Down Arrow moves into the popup; Escape closes it; the field reports whether the popup is open and which option is active. Whether the person can type is the choice that shapes everything. The guide does not say how any of this performs in real assistive technology; that is what the two sources above supply.
+The Authoring Practices' roles, states, and keys are in `aria/patterns/autocomplete.md`. Whether the person can type is the choice that shapes everything. The guide does not say how any of this performs in real assistive technology; that is what the sources above supply.
 
 ## Criteria it touches
 
