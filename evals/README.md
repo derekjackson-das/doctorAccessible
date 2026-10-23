@@ -28,6 +28,7 @@ From a Claude Code session in this repo:
    `npx --yes @axe-core/cli "file://$PWD/evals/NNN-slug/input.html"`.
    The default run skips rules tagged for WCAG 2.2 (observed with axe-core 4.14.0 on eval 010). To include them, add `--tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa`. Record which form you ran in `RESULTS.md`.
    If it complains about ChromeDriver, run `npx --yes browser-driver-manager install chrome` once.
+   On Windows, if axe then fails with `spawn ... ENOENT` and the driver path broken across two lines, the user folder name is being read as an escape (`C:\Users\rua126` loses its `\r`). Pass the paths the driver manager printed, with forward slashes: `--chromedriver-path C:/Users/<you>/.browser-driver-manager/chromedriver/<version>/chromedriver-win64/chromedriver.exe --chrome-path C:/Users/<you>/.browser-driver-manager/chrome/<version>/chrome-win64/chrome.exe`. Observed with axe-core 4.14.0 on 2026-10-23.
 2. Ask for the verifier agent on `evals/NNN-slug/input.html`. Tell it not to open `expected.md` or `RESULTS.md`. Claude Code registers project agents at launch, so an agent added during a session is available only after a restart.
 3. Compare both to `expected.md`.
 4. Add a row to `RESULTS.md` and cite it in the pull request.
