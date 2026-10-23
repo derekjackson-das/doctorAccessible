@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve a book</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    .book { max-inline-size: 36rem; }
+    .reserve { display: inline-block; padding: 0.5rem 1rem; border: 2px solid #005a9c; color: #005a9c; background: #fff; border-radius: 4px; cursor: pointer; }
+    .reserve:hover { background: #e8f1f8; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+    .status { margin-block-start: 0.75rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <p><a href="/">Harvard Library</a></p>
+  </header>
+  <main>
+    <h1>Reserve a book</h1>
+    <div class="book">
+      <h2>Governing the Commons</h2>
+      <p>Elinor Ostrom, 1990. Widener Library, one copy available.</p>
+      <div class="reserve" onclick="reserve()">Reserve this book</div>
+      <p class="status" id="status" role="status"></p>
+    </div>
+  </main>
+
+  <script>
+    function reserve() {
+      document.getElementById('status').textContent = 'Reserved. Pick it up at the Widener circulation desk within 7 days.';
+    }
+  </script>
+</body>
+</html>
