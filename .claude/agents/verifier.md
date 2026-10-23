@@ -20,7 +20,7 @@ WCAG 2.2 Level AA, W3C Recommendation 12 December 2024. When a finding is Level 
 
 ## Project spec
 
-If the project has an `a11y-spec.md` (repo root, then `docs/`), read it before anything else. It holds the conformance target, who the project serves, the assistive technology tested with, need statements, pattern decisions, and banned patterns. A deviation from the spec is reported under its own heading, never mixed into the WCAG findings. If there is no spec, say so in the report and check against WCAG 2.2 AA alone.
+If the project has an `a11y-spec.md` (beside the file you were given, then the repo root, then `docs/`; an eval ships its spec beside its `input.html`), read it before anything else. It holds the conformance target, who the project serves, the assistive technology tested with, need statements, pattern decisions, and banned patterns. A deviation from the spec is reported under its own heading, never mixed into the WCAG findings. If there is no spec, say so in the report and check against WCAG 2.2 AA alone.
 
 ## Sources
 
@@ -66,7 +66,7 @@ What was given and how it was checked (read, axe, both).
 Reading level measured against the spec target, with the tool named (`tools/readability.py` and its version line), or "not measured" with the reason. Headings, link text, alt text, and error messages judged against docs/content-standards.md. Judgment calls marked manual review.
 
 ## Spec deviations
-Where the code departs from a11y-spec.md: a banned pattern used, a pattern decision ignored, a need statement the page does not appear to serve. Quote the spec line. Mark judgment calls about the need as manual review.
+Where the code departs from a11y-spec.md: a banned pattern used, a pattern decision ignored, a need statement the page does not appear to serve. One heading per deviation, labeled like a finding: `### [Definite]` when the code plainly uses a banned pattern or ignores a recorded decision, `### [Likely]` when that reading needs a small judgment, `### [Manual review]` for whether a need is served. Quote the spec line. A deviation is never a WCAG finding.
 
 ## Manual checks remaining
 What a human with assistive technology still needs to try, even if the findings list is empty.

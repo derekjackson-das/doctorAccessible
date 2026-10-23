@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library news</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; line-height: 1.5; }
+    button { font: inherit; padding: 0.5rem 1rem; border: 2px solid #005a9c; background: #fff; color: #005a9c; }
+    a { color: #005a9c; }
+    :focus-visible { outline: 3px solid #1a1a1a; outline-offset: 2px; }
+    .slide { border: 2px solid #4a4a4a; padding: 1rem; max-inline-size: 36rem; }
+    .slide[hidden] { display: none; }
+    .controls { display: flex; gap: 0.5rem; margin-block: 0.5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Harvard Library</h1>
+    <section aria-labelledby="news-heading">
+      <h2 id="news-heading">This week</h2>
+      <div class="controls">
+        <button type="button" id="prev">Previous story</button>
+        <button type="button" id="next">Next story</button>
+      </div>
+      <div class="slide" role="group" aria-labelledby="s1"><h3 id="s1">Extended hours for exams</h3><p>Widener stays open late from 1 to 14 December. <a href="/hours">See all opening hours</a></p></div>
+      <div class="slide" role="group" aria-labelledby="s2" hidden><h3 id="s2">New study rooms</h3><p>Twelve bookable rooms open in Lamont. <a href="/rooms">Book a study room</a></p></div>
+      <div class="slide" role="group" aria-labelledby="s3" hidden><h3 id="s3">Workshop: citation managers</h3><p>Learn Zotero in one hour on Thursday. <a href="/workshops">Sign up for the workshop</a></p></div>
+    </section>
+  </main>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+    function show(i) { current = (i + slides.length) % slides.length; slides.forEach((s, n) => { s.hidden = n !== current; }); }
+    document.getElementById('prev').addEventListener('click', () => show(current - 1));
+    document.getElementById('next').addEventListener('click', () => show(current + 1));
+  </script>
+</body>
+</html>
