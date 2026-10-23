@@ -162,7 +162,7 @@ The reasoning behind each house standard in `docs/content-standards.md`, with ho
 
 ## ARIA: when to use it at all, and how
 
-When ARIA is needed, what each HTML element allows, and how a name is worked out. Misused ARIA is reported under the WCAG criterion it breaks, never as a failure of its own; where it breaks nothing, preferring native HTML is advice. Pattern entries, one per `patterns/` entry, follow `aria/_template.md`.
+When ARIA is needed, what each HTML element allows, and how a name is worked out. Misused ARIA is reported under the WCAG criterion it breaks, never as a failure of its own; where it breaks nothing, preferring native HTML is advice. Pattern entries, in `aria/patterns/` for each `patterns/` entry that uses ARIA, follow `aria/_template.md`.
 
 | Topic | Entry | Verified |
 |---|---|---|
