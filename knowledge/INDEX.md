@@ -196,6 +196,12 @@ How to build each thing with native HTML, what that gives by default, where peop
 | Dialogs | `html/dialogs.md` | 2026-10-23 |
 | Custom controls: the native element to try first | `html/custom-controls.md` | 2026-10-23 |
 
+## Tools
+
+| Topic | Entry | Verified |
+|---|---|---|
+| axe-core rule ID to criterion and entry (tier 3) | `axe-rules.md` | 2026-10-23 |
+
 ## Other domains
 
 None yet.
