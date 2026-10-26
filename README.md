@@ -4,7 +4,7 @@ Doctor Accessible is an accessibility-first development assistant for Claude Cod
 
 ## New here? Start with this
 
-This section is for two kinds of reader: people who have never used Claude Code, and contributors who are new to development and want to know what they are working on. It is longer than the rest of the README on purpose.
+This section is for two kinds of reader: people who have never used Claude Code, and contributors who are new to development and want to know what they are working on. It is longer than the rest of the README on purpose. If you only want to run the tool, `docs/TLDR.md` is the one page to read.
 
 ### What Claude Code is
 
@@ -99,6 +99,9 @@ The short form. Rationale for each is in [`docs/principles.md`](docs/principles.
 | Path | What |
 |---|---|
 | `CLAUDE.md` | Rules for Claude Code in this repo. Read it first. |
+| `docs/TLDR.md` | The short version: what it is, what you need, first run, commands, what it will not do. |
+| `docs/FAQ.md` | The questions people ask first, starting with: it is an assistant, a person verifies everything. |
+| `docs/how-it-works.md` | The full description for people and AI tools: parts, flow, rules, measurement, extension. |
 | `.claude/agents/verifier.md` | The verifier agent. |
 | `.claude/skills/wcag/SKILL.md` | The WCAG skill: when it applies, how to cite, where to look. |
 | `knowledge/INDEX.md` | Table of contents for the library. |
@@ -160,4 +163,4 @@ The full procedure is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Status
 
-2026-10-22: Phase 0 complete. Phase 1 nearly complete: public repo, contribution rules, axe running, eval 001 passing through the registered verifier. Work-package issues open for Phases 1 to 3. Remaining in Phase 1: onboarding runs (1.6) and the distribution decision (1.7).
+2026-10-26: Phases 1 to 4 done in substance. 55 WCAG entries, ten knowledge domains, eight skills, one agent, 42 evals with a headless runner and checker, a sources list verified, a distribution decision made (plugin; copy by hand until it ships). Phase 5 under way: react-jsx and the no-second-agent review are in. Not yet done: the plugin, a v1.0 tag, and a real project through consult, build, and verify.
