@@ -15,6 +15,21 @@ python -m unittest tools/test_readability.py
 - **Checked against** hand counts on the three samples in `samples/`, by `test_readability.py`.
 - **Not a verdict:** a score sends a person to read the text (`knowledge/content/reading-level.md`).
 
+## install.py
+
+Copies Doctor Accessible into a project folder, the interim route until the plugin (roadmap 5.4). Standard library only.
+
+```
+python3 tools/install.py <project-folder>            # dry run: the plan, nothing written
+python3 tools/install.py <project-folder> --apply    # write the files
+python3 -m unittest tools/test_install.py
+```
+
+- **Copies:** `.claude/`, `knowledge/`, `tools/`, `templates/`, `docs/content-standards.md`, `docs/principles.md`. Creates `a11y-spec.md` from the template if the project has none. Never touches `CLAUDE.md` or an existing `a11y-spec.md`. Never copies `.claude/settings.local.json`.
+- **Update:** running it again. Untouched library files are updated, unchanged ones are left alone, and files the project has edited (or that it did not install) are skipped and listed.
+- **Record:** `.doctor-accessible.json` in the project holds a SHA-256 per installed file and the repo commit (marked `-dirty` if the repo had uncommitted changes). Commit it with the project.
+- **Retired files:** a file removed from the repo is listed and left in place.
+
 ## build_axe_rules.py
 
 Rebuilds `knowledge/axe-rules.md` from axe-core's own rule list, with titles, levels, and entries from `knowledge/INDEX.md` (roadmap 4.2): `python tools/build_axe_rules.py --axe-dir <npm cache>/_npx/<hash>/node_modules/axe-core`.
