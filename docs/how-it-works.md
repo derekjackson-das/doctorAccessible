@@ -6,7 +6,7 @@ If you are an AI tool reading this repo, start with `CLAUDE.md` (the operating r
 
 ## 1. Purpose and position
 
-Doctor Accessible is an accessibility-first development assistant for Claude Code. It helps a developer build web content that meets WCAG 2.2 Level AA and is honest about what it cannot judge. It is built by Derek Jackson's team at Harvard, in public, from scratch, with nothing imported from other projects.
+Doctor Accessible is an accessibility-first development assistant for Claude Code. It helps a developer build web content that meets WCAG 2.2 Level AA and is honest about what it cannot judge. It is built by Derek Jackson, Caesar Alam, Evan Tansil, and Jen Dee at Harvard, in public, from scratch, with nothing imported from other projects.
 
 It is an assistant, not an authority. It never certifies conformance. Every finding is reviewed by a person; every page is tested by a person with assistive technology before it ships. The tooling produces findings, options, need statements, and test scripts. People make the decisions and run the tests.
 

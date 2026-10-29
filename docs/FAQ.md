@@ -58,7 +58,7 @@ Read `CONTRIBUTING.md` and `docs/how-we-work.md`. In short: claim the issue, bra
 
 ## Who maintains it, and how current is the library?
 
-Derek Jackson's team at Harvard, in public on GitHub. Every entry carries the date it was verified against the live source. Entries re-verify when W3C revises WCAG 2.2 and quarterly otherwise. The sources list is re-checked each quarter.
+Derek Jackson, Caesar Alam, Evan Tansil, and Jen Dee at Harvard, in public on GitHub. Every entry carries the date it was verified against the live source. Entries re-verify when W3C revises WCAG 2.2 and quarterly otherwise. The sources list is re-checked each quarter.
 
 ## What should I do first?
 

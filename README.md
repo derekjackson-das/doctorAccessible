@@ -1,6 +1,6 @@
 # Doctor Accessible
 
-Doctor Accessible is an accessibility-first development assistant for Claude Code, built by Derek Jackson's team at Harvard and shared through this public repo. It helps a developer build web content that meets WCAG 2.2 Level AA, and it is honest about what it cannot judge.
+Doctor Accessible is an accessibility-first development assistant for Claude Code, built by Derek Jackson, Caesar Alam, Evan Tansil, and Jen Dee at Harvard and shared through this public repo. It helps a developer build web content that meets WCAG 2.2 Level AA, and it is honest about what it cannot judge.
 
 ## New here? Start with this
 
@@ -160,6 +160,15 @@ The full procedure is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 - Write entries in your own words from the source. This repo is public. Link, do not paste.
 - New skill? Start from `.claude/skills/wcag/SKILL.md`. Keep it short. Depth goes in `knowledge/`.
 - New decision? Add a dated entry to `docs/decisions.md`. Do not rewrite old ones.
+
+## Credits
+
+Contributors to Doctor Accessible:
+
+- Derek Jackson
+- Caesar Alam
+- Evan Tansil
+- Jen Dee
 
 ## Status
 
