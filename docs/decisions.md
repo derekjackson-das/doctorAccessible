@@ -163,3 +163,17 @@ Any one of these is a reason to look again, under principle 1.
 **The interim route, end to end, 2026-10-23.** A new project outside this repo (a one-page department site in its own git repository) was set up from the copy list in `README.md`, and each mode ran in a fresh headless session there, with axe allowed. Planning filled `a11y-spec.md` from the brief, marking the audience as assumed and flagging a missing mobile screen reader. Consult refused to write a need statement until the developer answered who the list is for; given the answer, it wrote one into the spec. Build refused to start before the need statement existed, then added a heading and a plain list of four workshops with distinct link text. The verifier read the spec, ran axe-core 4.14.0 and `tools/readability.py` from the copied `tools/`, found no definite or likely defect and no spec deviation, and filed a manual-review note that `signup.html` does not exist. This was a project made for the test, not a team's live site; the first live project will repeat it.
 
 **Rejected: copy by hand as the long-term route.** It works, but it turns every project into a fork of the library that never hears about corrections. The interim instructions in `README.md` say so.
+
+## 2026-10-29: an interim installer for copy-by-hand
+
+**The choice: until the plugin ships (5.4), a project gets the library from `tools/install.py`, not from manual copying.** The plugin decision of 2026-10-23 stands. This only removes the hand-copy step from the interim route, and it does not change what a project receives.
+
+**Why.** Copying by hand was error-prone, and nothing told a project when the library changed. The installer runs from a clone of this repo. It is a dry run by default, and `--apply` writes the files. Running it again is the update.
+
+**Update rules.** A library file the installer last wrote, and that the project has not edited, is updated when the repo changes. A file the project has edited, or one it did not install, is skipped and listed, never overwritten. A file removed from the repo is listed and left in place. `a11y-spec.md` and `CLAUDE.md` are never touched after the spec is created. `.claude/settings.local.json` is never copied, because it is a personal, git-ignored file.
+
+**Record.** The installer writes `.doctor-accessible.json` into the project: a SHA-256 for each installed file, and the repo commit (marked `-dirty` when the repo had uncommitted changes). The project commits that file, so later updates know which files it installed.
+
+**Not decided here.** Whether the installer should create a project `CLAUDE.md` from a template. The plugin decision (5.4) still settles how the three-mode instructions reach a developer. Also not decided: whether `tools/__pycache__/` should be git-ignored.
+
+**Status.** Built in PR #81 (issue #82). Tested against a fake repo in 14 unit tests, and run once against a scratch project. Not yet run against a live project; the DrA_test trial is the next check.
