@@ -146,7 +146,8 @@ doctorAccessible/
 │   ├── axe.py                  # axe with the WCAG 2.2 tags, every result bucket
 │   ├── readability.py          # Flesch-Kincaid grade over main content
 │   ├── build_axe_rules.py      # rebuilds knowledge/axe-rules.md
-│   └── check_links.py          # every link and path in the library
+│   ├── check_links.py          # every link and path in the library
+│   └── install.py              # copy the library into a project (interim; roadmap 5.4)
 ├── templates/
 │   └── a11y-spec.md            # copy into a project as a11y-spec.md
 └── docs/
@@ -194,6 +195,10 @@ python evals/check.py <folder>
 # reading level, and a check of every link and path in the library
 python tools/readability.py <file> --target 8
 python tools/check_links.py
+
+# install Doctor Accessible into a project (interim until the plugin, roadmap 5.4)
+python tools/install.py <project-folder>            # dry run, writes nothing
+python tools/install.py <project-folder> --apply    # write the files
 ```
 
 ---
