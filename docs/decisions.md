@@ -177,3 +177,11 @@ Any one of these is a reason to look again, under principle 1.
 **Not decided here.** Whether the installer should create a project `CLAUDE.md` from a template. The plugin decision (5.4) still settles how the three-mode instructions reach a developer. Also not decided: whether `tools/__pycache__/` should be git-ignored.
 
 **Status.** Built in PR #81 (issue #82). Tested against a fake repo in 14 unit tests, and run once against a scratch project. Not yet run against a live project; the DrA_test trial is the next check.
+
+## 2026-11-02: a prototype, with no v1.0
+
+**The choice: Doctor Accessible is a demo and prototype, shared for information. It is not for use on live code or in real development work, and no v1.0 release is planned.** Package 5.3 stays in the roadmap, marked dropped, so the record of what was planned survives.
+
+**Why.** A version tag tells people a release is ready to use. That is the opposite of what the repo now says. A note at the top of `README.md` and `docs/TLDR.md` says it (PR #85), and the README status line no longer lists a v1.0 (PR #87).
+
+**What stays.** The rest of the roadmap is unchanged. The work packages still describe how the tool would grow, and anyone learning from the repo can read them that way.

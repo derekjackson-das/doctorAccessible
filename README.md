@@ -130,7 +130,7 @@ Full detail, including every work package with its deliverables and done-when, i
 | 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
 | 3 | Domain skills | The procedures that use the library | consult, patterns, content, html-patterns, design, at-test-protocol, aria, ux, each with evals |
 | 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
-| 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
+| 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries |
 
 Work is claimed by work package, not by phase. Each package is one GitHub issue with six fields: goal, deliverables, done when, depends on, size, owner.
 
