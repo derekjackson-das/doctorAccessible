@@ -8,7 +8,7 @@
 
 ## Checked
 
-- **Input:** `C:\Users\rua126\AppData\Local\Temp\claude\C--Users-rua126\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\032-aria-tooltip-is-only-name\input.html` (46 lines). It's a "Reading list" page with one citation and an icon-only download button. The button has a custom tooltip that a script shows on hover and focus.
+- **Input:** `C:\Users\<you>\AppData\Local\Temp\claude\C--Users-<you>\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\032-aria-tooltip-is-only-name\input.html` (46 lines). It's a "Reading list" page with one citation and an icon-only download button. The button has a custom tooltip that a script shows on hover and focus.
 - **How it was checked:** I read the whole file, ran axe through `tools/axe.py`, and ran `tools/readability.py`.
 - **No spec:** there is no `a11y-spec.md` at the repo root or in `docs/`, so the check is against WCAG 2.2 AA and `docs/content-standards.md` only.
 - **Files not opened:** `expected.md` and the `run-*.md` files, as you asked.
@@ -86,8 +86,8 @@ No `a11y-spec.md` was found at the repo root or in `docs/`, so there is nothing 
 ## Automated scan
 
 - **Version and tags:** axe-core 4.14.0 via @axe-core/cli; tags `wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa`.
-- **Page:** `file:///C:/Users/rua126/AppData/Local/Temp/claude/C--Users-rua126/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/032-aria-tooltip-is-only-name/input.html`
-- **Raw JSON:** `C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\032-aria-tooltip-is-only-name-20261023-134502.json`
+- **Page:** `file:///C:/Users/<you>/AppData/Local/Temp/claude/C--Users-<you>/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/032-aria-tooltip-is-only-name/input.html`
+- **Raw JSON:** `C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\032-aria-tooltip-is-only-name-20261023-134502.json`
 - **Violations: 1**
   - `button-name` (critical; tags `wcag2a`, `wcag412`), "Buttons must have discernible text", target `button`.
   - Failure summary: no visible inner text, no `aria-label`, no `aria-labelledby`, no `title`, no implicit or explicit `<label>`, and no `role="none"` or `role="presentation"`.

@@ -8,7 +8,7 @@
 
 ## Checked
 
-- **Files:** `C:\Users\rua126\AppData\Local\Temp\claude\C--Users-rua126\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\040-spec-need-not-served\input.html` (40 lines, static HTML with inline CSS and no script) and the spec beside it, `...\evals\040-spec-need-not-served\a11y-spec.md`. I read the spec first.
+- **Files:** `C:\Users\<you>\AppData\Local\Temp\claude\C--Users-<you>\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\040-spec-need-not-served\input.html` (40 lines, static HTML with inline CSS and no script) and the spec beside it, `...\evals\040-spec-need-not-served\a11y-spec.md`. I read the spec first.
 - **Method:** I read the code in full, ran `tools/axe.py` (axe-core 4.14.0) and ran `tools/readability.py` with target 8, which the spec sets.
 - **Knowledge entries opened:** `knowledge/INDEX.md`, `wcag/sc-1.3.1-info-and-relationships.md`, `wcag/sc-1.3.2-meaningful-sequence.md`, `wcag/sc-2.4.6-headings-and-labels.md`, `content/organization.md`, `content/reading-level.md`, and `docs/content-standards.md`.
 
@@ -68,8 +68,8 @@ The spec names VoiceOver on iOS, NVDA with Chrome, keyboard only, and 400% zoom.
 
 ```
 axe-core 4.14.0 via @axe-core/cli (axe), tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa
-page: file:///C:/Users/rua126/AppData/Local/Temp/claude/C--Users-rua126/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/040-spec-need-not-served/input.html
-raw JSON: C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\040-spec-need-not-served-20261023-144518.json
+page: file:///C:/Users/<you>/AppData/Local/Temp/claude/C--Users-<you>/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/040-spec-need-not-served/input.html
+raw JSON: C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\040-spec-need-not-served-20261023-144518.json
 
 violations: 0
 

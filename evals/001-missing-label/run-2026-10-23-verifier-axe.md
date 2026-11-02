@@ -8,7 +8,7 @@
 
 ## Checked
 
-- **File:** `C:\Users\rua126\AppData\Local\Temp\claude\C--Users-rua126\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\001-missing-label\input.html`. It is 28 lines: a search form with one text input and one submit button.
+- **File:** `C:\Users\<you>\AppData\Local\Temp\claude\C--Users-<you>\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\001-missing-label\input.html`. It is 28 lines: a search form with one text input and one submit button.
 - **Method:** I ran `tools/axe.py`, read every line of the code, and ran `tools/readability.py`.
 - **Project spec:** none. There is no `a11y-spec.md` at the repo root or in `docs/`; the only copy is `templates/a11y-spec.md`, which is the blank template. This check is against WCAG 2.2 AA and `docs/content-standards.md` only.
 - **Entries opened:** `knowledge/INDEX.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-1.3.1-info-and-relationships.md`, `wcag/sc-3.3.2-labels-or-instructions.md`, `wcag/sc-2.4.6-headings-and-labels.md`, `wcag/sc-1.4.3-contrast-minimum.md`, and `docs/content-standards.md`.
@@ -60,7 +60,7 @@ None to report, because no `a11y-spec.md` exists. Per CLAUDE.md principle 15, th
 ## Automated scan
 
 - **Tool:** axe-core 4.14.0 via @axe-core/cli, run with tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa.
-- **Raw JSON:** `C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\001-missing-label-20261023-134339.json`
+- **Raw JSON:** `C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\001-missing-label-20261023-134339.json`
 - **Violations (1):** `label`, impact critical, tags wcag2a and wcag412, "Form elements must have labels", target `#q`.
 - **Incomplete:** 0.
 - **Passes:** 10 rules. **Inapplicable:** 53 rules.

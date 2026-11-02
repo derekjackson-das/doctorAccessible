@@ -84,7 +84,7 @@ These are the checks I computed or read against the entries:
 
 ```
 axe-core 4.14.0 via @axe-core/cli (axe), tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa
-raw JSON: C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\038-spec-banned-carousel-20261023-144522.json
+raw JSON: C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\038-spec-banned-carousel-20261023-144522.json
 violations: 0
 incomplete: 0
 passes: 21 rules   inapplicable: 43 rules

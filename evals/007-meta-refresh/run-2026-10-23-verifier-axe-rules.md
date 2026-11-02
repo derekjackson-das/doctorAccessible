@@ -7,9 +7,9 @@
 
 Warning: no stdin data received in 3s, proceeding without it. If piping from a slow command, redirect stdin explicitly: < /dev/null to skip, or wait longer.
 ## Checked
-- I checked `C:\Users\rua126\AppData\Local\Temp\claude\C--Users-rua126\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\007-meta-refresh\input.html` (23 lines). I read the code in full and ran axe through `tools/axe.py`.
+- I checked `C:\Users\<you>\AppData\Local\Temp\claude\C--Users-<you>\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\007-meta-refresh\input.html` (23 lines). I read the code in full and ran axe through `tools/axe.py`.
 - **No spec.** There is no `a11y-spec.md` at the repo root or in `docs/`, so I checked against WCAG 2.2 AA alone and used the house content defaults in `docs/content-standards.md`.
-- **One file was written.** `tools/axe.py` saves its raw JSON by design, so this run created one file outside the repository: `C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\007-meta-refresh-20261023-135615.json`. Your constraint said to create no files; I read it as covering the repository. No file in the repository was created, edited or deleted.
+- **One file was written.** `tools/axe.py` saves its raw JSON by design, so this run created one file outside the repository: `C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\007-meta-refresh-20261023-135615.json`. Your constraint said to create no files; I read it as covering the repository. No file in the repository was created, edited or deleted.
 - I did not open `expected.md`, `RESULTS.md`, or any `run-*.md`.
 
 ## Findings
@@ -55,8 +55,8 @@ None reported: there is no `a11y-spec.md` to check against.
 
 ## Automated scan
 - **Version and tags:** axe-core 4.14.0 via @axe-core/cli, tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa.
-- **Page:** `file:///C:/Users/rua126/AppData/Local/Temp/claude/C--Users-rua126/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/007-meta-refresh/input.html`
-- **Raw JSON:** `C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\007-meta-refresh-20261023-135615.json`
+- **Page:** `file:///C:/Users/<you>/AppData/Local/Temp/claude/C--Users-<you>/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/007-meta-refresh/input.html`
+- **Raw JSON:** `C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\007-meta-refresh-20261023-135615.json`
 - **Violations: 1**
   - `meta-refresh` (impact critical; tags wcag2a, wcag221): "Delayed refresh under 20 hours must not be used", at `meta[http-equiv="refresh"]`
 - **Incomplete:** 0
