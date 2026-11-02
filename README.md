@@ -1,5 +1,8 @@
 # Doctor Accessible
 
+> [!NOTE]
+> **This is a demo and prototype.** We share this repo so others can see how the tool was built and learn from it. Do not use it on live code or in real development work. Its output has not been checked well enough for that.
+
 Doctor Accessible is an accessibility-first development assistant for Claude Code, built by Derek Jackson, Caesar Alam, Evan Tansil, and Jen Dee at Harvard and shared through this public repo. It helps a developer build web content that meets WCAG 2.2 Level AA, and it is honest about what it cannot judge.
 
 ## New here? Start with this
