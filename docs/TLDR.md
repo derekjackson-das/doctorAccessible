@@ -1,5 +1,8 @@
 # Doctor Accessible: the short version
 
+> [!NOTE]
+> **This is a demo and prototype.** We share this repo so others can see how the tool was built and learn from it. Do not use it on live code or in real development work. Its output has not been checked well enough for that.
+
 Doctor Accessible is a set of files that teach Claude Code to help you build web pages that work for people with disabilities, to the WCAG 2.2 Level AA standard. It is an assistant. It does not make a page accessible by itself, and it does not replace a person testing with real assistive technology. You do both of those. It makes them easier to do well.
 
 ## What it does
