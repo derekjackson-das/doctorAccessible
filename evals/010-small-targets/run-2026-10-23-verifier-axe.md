@@ -8,7 +8,7 @@
 
 ## Checked
 
-- Input: `C:\Users\rua126\AppData\Local\Temp\claude\C--Users-rua126\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\010-small-targets\input.html`. It is a "Search results, page 3" page with three result links and a six-item pager inside `<nav aria-label="Search results pages">`.
+- Input: `C:\Users\<you>\AppData\Local\Temp\claude\C--Users-<you>\cf68331b-fb24-46e9-a990-751e07481e93\scratchpad\repo\doctorAccessible\evals\010-small-targets\input.html`. It is a "Search results, page 3" page with three result links and a six-item pager inside `<nav aria-label="Search results pages">`.
 - Method: I read the code in full, ran axe through `tools/axe.py` and ran `tools/readability.py`.
 - Spec: there is no `a11y-spec.md` at the repo root or in `docs/`. The only copy is `templates/a11y-spec.md`, which is a blank template. I checked against WCAG 2.2 AA alone, and against the house defaults in `docs/content-standards.md` for content.
 - Entries read: `wcag/sc-2.5.8-target-size-minimum.md`, `design/target-size.md`, `wcag/sc-1.4.1-use-of-color.md`, `wcag/sc-1.4.3-contrast-minimum.md`, `wcag/sc-1.4.4-resize-text.md`, `wcag/sc-2.4.4-link-purpose-in-context.md`, `content/link-text.md`.
@@ -82,8 +82,8 @@ None to report: the project has no `a11y-spec.md`, so the code cannot depart fro
 ## Automated scan
 
 - **Tool:** axe-core 4.14.0 via @axe-core/cli, with tags `wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa`.
-- **Page:** `file:///C:/Users/rua126/AppData/Local/Temp/claude/C--Users-rua126/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/010-small-targets/input.html`
-- **Raw JSON:** `C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\010-small-targets-20261023-134507.json`
+- **Page:** `file:///C:/Users/<you>/AppData/Local/Temp/claude/C--Users-<you>/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/010-small-targets/input.html`
+- **Raw JSON:** `C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\010-small-targets-20261023-134507.json`
 - **Results:** 1 violation, 0 incomplete, 16 rules passed, 48 inapplicable.
 - **Violation:** `target-size`, impact serious, tags `wcag22aa` and `wcag258`, "All touch targets must be 24px large, or leave sufficient space".
   - Targets: `a[href="?page=1"]`, `a[href="?page=2"]`, `a[href="?page=4"]`, `a[href="?page=5"]`, `a[href="?page=6"]`.

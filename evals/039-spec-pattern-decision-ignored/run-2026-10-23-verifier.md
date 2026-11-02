@@ -86,8 +86,8 @@ I found no WCAG 2.2 AA defects in the code. What I checked:
 
 ```
 axe-core 4.14.0 via @axe-core/cli (axe), tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa
-page: file:///C:/Users/rua126/AppData/Local/Temp/claude/C--Users-rua126/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/039-spec-pattern-decision-ignored/input.html
-raw JSON: C:\Users\rua126\AppData\Local\Temp\doctor-a11y-axe\039-spec-pattern-decision-ignored-20261023-144526.json
+page: file:///C:/Users/<you>/AppData/Local/Temp/claude/C--Users-<you>/cf68331b-fb24-46e9-a990-751e07481e93/scratchpad/repo/doctorAccessible/evals/039-spec-pattern-decision-ignored/input.html
+raw JSON: C:\Users\<you>\AppData\Local\Temp\doctor-a11y-axe\039-spec-pattern-decision-ignored-20261023-144526.json
 
 violations: 0
 
