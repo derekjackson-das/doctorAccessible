@@ -153,7 +153,7 @@ Work is claimed by work package from the roadmap, one issue each. Check the issu
 
 ## 9. What is next
 
-Roadmap Phase 5: the plugin (5.4), a v1.0 tag (5.3), and four new domains named so they are visible: mobile and touch, localization and language, document formats, and CMS layers (5.6 to 5.9). The thing not yet done that would teach the most is a real project through consult, build, and verify end to end.
+Roadmap Phase 5: the plugin (5.4) and four new domains named so they are visible: mobile and touch, localization and language, document formats, and CMS layers (5.6 to 5.9). The thing not yet done that would teach the most is a real project through consult, build, and verify end to end.
 
 ## 10. Glossary
 

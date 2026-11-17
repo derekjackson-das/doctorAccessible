@@ -1,6 +1,6 @@
 # Roadmap
 
-Phases, work packages, and how the team divides the work. Updated 2026-10-23 (5.5 split into packages 5.6 to 5.9); before that 2026-10-22 (design moment, project spec, sources list, content standards, and the beyond-WCAG additions: package 3.10 and the Phase 5 candidates).
+Phases, work packages, and how the team divides the work. Updated 2026-11-02 (5.3 v1.0 dropped); before that 2026-10-23 (5.5 split into packages 5.6 to 5.9); before that 2026-10-22 (design moment, project spec, sources list, content standards, and the beyond-WCAG additions: package 3.10 and the Phase 5 candidates).
 
 Work is claimed by work package, not by phase. Each package becomes one GitHub issue carrying the six fields below, and a person claims the issue. Packages inside a phase are designed not to touch each other's files, so they can run in parallel.
 
@@ -13,7 +13,7 @@ Work is claimed by work package, not by phase. Each package becomes one GitHub i
 | 2 | WCAG library | Every Level A and AA criterion has a verified entry | 55 entries in the index with source, tier, version, verified date |
 | 3 | Domain skills | The procedures that use the library | consult, patterns, content, html-patterns, design, at-test-protocol, aria, ux, coga, each with evals |
 | 4 | Eval automation | Changes are measurable | Evals run headless and their results appear in every PR |
-| 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries, v1.0 |
+| 5 | Expansion | Layers on top of the base | Framework skills, ARIA pattern entries |
 
 ## Work package format
 
@@ -99,7 +99,7 @@ Each skill is a `SKILL.md` under about 120 lines, the knowledge entries it point
 |---|---|---|---|---|---|
 | 5.1 | Framework layer | `.claude/skills/react-jsx/SKILL.md` as a layer referencing `html-patterns`, never replacing it | Two evals | 3.2 | M |
 | 5.2 | Second agent review | A written assessment of logged verifier failures against the four conditions in principle 1 | Decision recorded in `decisions.md` | 4.4 | S |
-| 5.3 | v1.0 | Onboarding doc, CCode listing updated, tag `v1.0` | Tagged | all | S |
+| 5.3 | v1.0 (dropped 2026-11-02) | Onboarding doc, CCode listing updated, tag `v1.0` | Dropped: the repo is a prototype shared for information, and no release is planned (`decisions.md`, 2026-11-02) | all | dropped |
 | 5.4 | Plugin packaging, if 1.7 chose it | Plugin manifest; install into a fresh project yields the agent, the skills, and the spec template | One developer project installed from the plugin | 1.7, 3.x | M |
 | 5.5 | Beyond-WCAG candidates | Named so they are visible, not yet claimed: mobile and touch, localization and language, document formats, CMS layers. Split into packages 5.6 to 5.9 below (drafted in #74, 2026-10-23); none is claimed, and none has its sources agreed | Each candidate is its own package with the six fields | 3.x | done |
 | 5.6 | Mobile and touch | `knowledge/mobile/`: touch targets and reach (linking `design/target-size.md`), screen reader gestures on iOS and Android and what a page must not override, OS text scaling (linking `design/reflow.md`, `wcag/sc-1.4.4-resize-text.md`); `testing/screen-reader-android.md` (TalkBack). Sources to agree first: Apple's VoiceOver guide for iPhone and Google's TalkBack help (tier 3); W3C's mobile accessibility mapping note (tier 2) | Two evals: a page that captures a swipe the screen reader needs; a page whose text cannot grow with the OS setting | 3.5, 3.6 | M |
