@@ -28,6 +28,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -95,15 +96,33 @@ def load_manifest(target):
 
 
 def repo_version(repo):
-    """The repo's short commit, marked -dirty if the working tree has changes."""
+    """The repo's short commit, marked -dirty if the working tree has changes.
+
+    A downloaded zip has no git history, so fall back to the release in CHANGELOG.md.
+    """
     try:
         commit = subprocess.run(["git", "-C", repo, "rev-parse", "--short", "HEAD"],
                                 capture_output=True, text=True, check=True).stdout.strip()
         dirty = subprocess.run(["git", "-C", repo, "status", "--porcelain"],
                                capture_output=True, text=True, check=True).stdout.strip()
     except (OSError, subprocess.CalledProcessError):
-        return "unknown"
+        return changelog_version(repo)
     return commit + ("-dirty" if dirty else "")
+
+
+def changelog_version(repo):
+    """The newest release in CHANGELOG.md, noting unreleased changes, or "unknown"."""
+    try:
+        with open(os.path.join(repo, "CHANGELOG.md"), encoding="utf-8") as f:
+            text = f.read()
+    except OSError:
+        return "unknown"
+    release = re.search(r"^## (\d+\.\d+\.\d+) \(", text, re.M)
+    if not release:
+        return "unknown"
+    unreleased = re.search(r"^## Unreleased\s*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
+    pending = unreleased and unreleased.group(1).strip() not in ("", "Nothing yet.")
+    return f"{release.group(1)}{' plus unreleased changes' if pending else ''} (download, no git)"
 
 
 def make_plan(repo, target, manifest):
@@ -184,9 +203,11 @@ def main(argv=None, repo=REPO):
         check_target(repo, target)
         manifest = load_manifest(target)
         actions, retired, spec_action = make_plan(repo, target, manifest)
+        version = repo_version(repo)
         if args.apply:
-            apply_plan(repo, target, manifest, actions, retired, spec_action, repo_version(repo))
+            apply_plan(repo, target, manifest, actions, retired, spec_action, version)
         report(target, actions, retired, spec_action, args.apply, args.verbose)
+        print(f"Source: {version}" + ("" if args.apply else " (recorded on --apply)"))
     except InstallError as err:
         print(f"error: {err}", file=sys.stderr)
         return 1

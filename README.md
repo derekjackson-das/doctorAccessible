@@ -145,6 +145,8 @@ python3 tools/install.py ~/Documents/CCode/my-page
 python3 tools/install.py ~/Documents/CCode/my-page --apply
 ```
 
+**From a release, without git.** On the [releases page](https://github.com/derekjackson-das/doctorAccessible/releases), download a version's **Source code (zip)** and unzip it. In a terminal, go into the unzipped folder and run the same two commands. A download has no git history, so the installer records the release number from `CHANGELOG.md` instead of a commit.
+
 Running it again is the update. It refreshes library files you have not edited, skips and lists files you have, and never touches your `a11y-spec.md` or `CLAUDE.md`. It records what it wrote in `.doctor-accessible.json`; commit that file with your project. It copies:
 
 - `.claude/` (the skills and the verifier)
@@ -158,7 +160,7 @@ Then:
 1. Fill in `a11y-spec.md`: the conformance target, who the project serves, and the assistive technology you test with.
 2. Run `claude` in your project. Start with consult (`/consult`): say who you are building for and what they need. Build once the need statement is in the spec.
 3. Ask for the verifier when you want an independent check.
-4. When this repo changes, pull it and run the installer again. Files you edited locally are listed and left alone. The plugin is still the plan, because it updates without a manual step.
+4. When this repo changes, pull it (or download the newer release) and run the installer again. Files you edited locally are listed and left alone. The plugin is still the plan, because it updates without a manual step.
 
 ## Working on it as a team
 

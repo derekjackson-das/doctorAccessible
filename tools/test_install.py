@@ -151,6 +151,24 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(data["files"]["knowledge/INDEX.md"], inst.sha256(
             os.path.join(self.repo, "knowledge/INDEX.md")))
 
+    def installed_from(self):
+        run(self.repo, self.project, "--apply")
+        with open(os.path.join(self.project, inst.MANIFEST_NAME), encoding="utf-8") as f:
+            return json.load(f)["installed_from"]
+
+    def test_download_without_git_records_the_release(self):
+        write(self.repo, "CHANGELOG.md", "# Changelog\n\n## Unreleased\n\nNothing yet.\n\n"
+                                         "## 0.1.1 (2026-11-19)\n\n- fix\n\n## 0.1.0 (2026-11-18)\n")
+        self.assertEqual(self.installed_from(), "0.1.1 (download, no git)")
+
+    def test_download_with_unreleased_changes_says_so(self):
+        write(self.repo, "CHANGELOG.md", "# Changelog\n\n## Unreleased\n\n- something new\n\n"
+                                         "## 0.1.0 (2026-11-18)\n")
+        self.assertEqual(self.installed_from(), "0.1.0 plus unreleased changes (download, no git)")
+
+    def test_download_without_changelog_is_unknown(self):
+        self.assertEqual(self.installed_from(), "unknown")
+
     def test_refuses_to_install_into_the_repo_itself(self):
         code, _ = run(self.repo, self.repo, "--apply")
         self.assertEqual(code, 1)
