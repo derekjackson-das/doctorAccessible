@@ -182,4 +182,6 @@ Contributors to Doctor Accessible:
 
 ## Status
 
+**Release:** 0.1.0, a pre-release of the prototype. What each release holds is in [`CHANGELOG.md`](CHANGELOG.md).
+
 2026-11-02: A prototype, shared so others can learn from it (see the note at the top). Phases 1 to 4 are done in substance: 55 WCAG entries, ten knowledge domains, eight skills, one agent, and 42 evals with a headless runner and checker, and the sources list is verified. Phase 5 is under way. The React layer and the review that found no second agent is needed are in. An interim installer copies the files into a project until the plugin exists. A first trial project has gone through planning, consult, build, and verify on two pages; its manual tests are still owed, and what it taught comes back here as issues and evals. Not yet done: the plugin and the beyond-WCAG packages 5.6 to 5.9 (mobile, localization, documents, CMS), none of them claimed.
