@@ -108,6 +108,7 @@ doctorAccessible/
 ├── CLAUDE.md
 ├── README.md                   # project description, principles, roadmap summary
 ├── CONTRIBUTING.md             # how a change gets merged
+├── CHANGELOG.md                # one section per release; pre-releases below 1.0
 ├── .claude/
 │   ├── agents/verifier.md      # the one isolated agent
 │   └── skills/                 # one folder per skill, each a SKILL.md under about 120 lines
@@ -172,6 +173,7 @@ doctorAccessible/
 - Working drafts (WCAG 3.0, APCA) are awareness only, never a requirement.
 - Work is claimed by work package from `docs/ROADMAP.md`, one GitHub issue each.
 - A project using Doctor Accessible keeps one `a11y-spec.md` at its root, from `templates/a11y-spec.md`.
+- Notable changes get one line under "Unreleased" in `CHANGELOG.md` in the same pull request. Releases are GitHub pre-releases numbered below 1.0 (`docs/decisions.md`, 2026-11-18).
 
 ---
 
