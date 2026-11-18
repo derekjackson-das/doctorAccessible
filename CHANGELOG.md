@@ -6,6 +6,12 @@ Notable changes to Doctor Accessible, one section per release, newest first. Ver
 
 ## Unreleased
 
+Nothing yet.
+
+## 0.1.1 (2026-11-18)
+
+A fix release.
+
 ### Fixed
 
 - The installer records the release number when it runs from a downloaded zip, which has no git history. Before, it recorded "unknown", so a project could not tell which release it had. It now also prints the source it records.
