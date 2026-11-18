@@ -68,7 +68,7 @@ End with a need statement in the format in `templates/a11y-spec.md`, written int
 
 **Build.** Write code and content in this session. Content follows `docs/content-standards.md` and the spec's content section: plain language, the reading-level target, headings that describe, links that say where they go, alt text that says the purpose and stops. Build does not start on a feature without a need statement in the spec. When scope changes, a new component appears, or a requirement arrives that the need statement does not cover, stop and return to consult. Load the matching skill as the work demands: `wcag` for any change touching structure, forms, focus, names and roles, color, media, or motion; `content` when writing or reviewing words; `design` for color, contrast, focus indicators, target size, motion, reflow, and spacing above the floor; `html-patterns` before reaching for ARIA or a custom control, with `react-jsx` on top of it for React code; `planning` when a project has no spec yet.
 
-**Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix. For the tests only a person can run, load `at-test-protocol`; it writes the test script from the spec's assistive technology list and never stands in for the tester.
+**Verify.** Dispatch the verifier agent for an independent check. It does not see this conversation. It reads the spec, reports WCAG findings and spec deviations separately, and does not fix. For the tests only a person can run, load `at-test-protocol`; it writes the test script, or a checklist for one component or a whole page, from the spec's assistive technology list and never stands in for the tester.
 
 ---
 
@@ -117,7 +117,7 @@ doctorAccessible/
 │       ├── design/             # requirement and practice for visual design
 │       ├── html-patterns/      # native HTML first; maps to knowledge/html/
 │       ├── react-jsx/          # the React layer over html-patterns
-│       ├── at-test-protocol/   # the human testing mode; writes the test script
+│       ├── at-test-protocol/   # the human testing mode; writes the test script or a checklist
 │       └── planning/           # fills the spec at the start of a project
 ├── knowledge/
 │   ├── README.md               # how to write an entry
@@ -149,7 +149,8 @@ doctorAccessible/
 │   ├── check_links.py          # every link and path in the library
 │   └── install.py              # copy the library into a project (interim; roadmap 5.4)
 ├── templates/
-│   └── a11y-spec.md            # copy into a project as a11y-spec.md
+│   ├── a11y-spec.md            # copy into a project as a11y-spec.md
+│   └── at-test-checklist.md    # the checklist at-test-protocol fills
 └── docs/
     ├── principles.md           # the principles, with reasons
     ├── content-standards.md    # house defaults for words; the spec imports them
@@ -234,8 +235,8 @@ Skills load in the main session and keep the conversation. Each is a map under a
 | `design` | build | Color and contrast, focus indicators, target size, motion, reflow, text spacing, above the floor | `design/`, `wcag/` |
 | `html-patterns` | build | Writing or reviewing markup for forms, tables, landmarks, headings, images, links, buttons, dialogs, or any custom control; before adding ARIA | `html/`, `aria/` |
 | `react-jsx` | build | React components or JSX: htmlFor, useId, aria-* in JSX, refs and focus, focus lost on re-render, onChange | `frameworks/`, `html/` |
-| `at-test-protocol` | verify | Writing the test script a person follows with the spec's assistive technology | `testing/` |
+| `at-test-protocol` | verify | Writing the test script a person follows with the spec's assistive technology, or a checklist with expected outcomes for one component or a whole page | `testing/`, `html/`, `templates/at-test-checklist.md` |
 
 ---
 
-*Last updated: 2026-10-23*
+*Last updated: 2026-11-18*

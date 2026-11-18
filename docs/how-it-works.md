@@ -41,7 +41,7 @@ A skill is a short procedure plus a map. It loads in the main Claude Code sessio
 | `react-jsx` | build | How React writes the native patterns; defects React causes on its own |
 | `content` | build | The writing mode: plain language, reading level, headings, links, alt text, instructions, errors, language |
 | `design` | build | Visual judgment above the floor: contrast, focus indicators, target size, motion, reflow, text spacing, with Requirement kept apart from Practice |
-| `at-test-protocol` | verify | Writes the numbered test script a person follows with the spec's assistive technology |
+| `at-test-protocol` | verify | Writes the numbered test script a person follows with the spec's assistive technology, or a tick-box checklist for one component or a whole page |
 
 A skill is the right shape when the task needs the conversation. An agent is the right shape when it must not have it (principle 1).
 
