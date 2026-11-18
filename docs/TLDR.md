@@ -43,7 +43,7 @@ Then copy `templates/a11y-spec.md` a second time, to your project root as `a11y-
 3. For your first feature, type `/consult` and describe it. Answer the three questions. Agree to the need statement it proposes; it writes it into the spec.
 4. Build. Load `/wcag` for structure, forms, focus, color, or media. Load `/html-patterns` before you reach for ARIA. Load `/content` for words. Load `/design` for contrast, focus rings, target sizes, motion. Load `/react-jsx` if you are in React.
 5. Ask: "Use the verifier agent on `path/to/page.html`." Read the report. Fix what it found. Run it again.
-6. Type `/at-test-protocol` and name the component. It writes the test script. A person follows it with a keyboard, a screen reader, zoom, reduced motion, and forced colors, and records what happened.
+6. Type `/at-test-protocol` and name the component. It writes the test script. Ask for a checklist to get one for the component or the whole page, with an expected outcome on every item. A person follows it with a keyboard, a screen reader, zoom, reduced motion, and forced colors, and records what happened.
 
 ## Commands you will use
 
