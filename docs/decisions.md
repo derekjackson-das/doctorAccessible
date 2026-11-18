@@ -185,3 +185,11 @@ Any one of these is a reason to look again, under principle 1.
 **Why.** A version tag tells people a release is ready to use. That is the opposite of what the repo now says. A note at the top of `README.md` and `docs/TLDR.md` says it (PR #85), and the README status line no longer lists a v1.0 (PR #87).
 
 **What stays.** The rest of the roadmap is unchanged. The work packages still describe how the tool would grow, and anyone learning from the repo can read them that way.
+
+## 2026-11-18: numbered pre-releases, below 1.0
+
+**The choice: Doctor Accessible gets numbered releases, starting at 0.1.0 for the repo as it stands on this date. Versions stay below 1.0, and every release is a GitHub pre-release.** Each release has a section in `CHANGELOG.md`, and its tag (`v0.1.0`) is set on `main` after the pull request that writes the section merges.
+
+**Why.** Numbered releases give the team and anyone learning from the repo a fixed point to refer to: "this was true in 0.1.0". The 2026-11-02 entry still holds. A version below 1.0 and a pre-release label both say "early, may change, not ready for use", which is what the repo says. A 1.0 would say the opposite, so it is not planned.
+
+**How it works.** Notable changes get a line under "Unreleased" in `CHANGELOG.md` in the pull request that makes them. A release renames that section to the new version and date. The minor number goes up for each release (0.2.0, 0.3.0); the last number is for a fix to a release already out.

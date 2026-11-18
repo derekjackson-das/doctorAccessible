@@ -12,6 +12,7 @@ Find a package in `docs/ROADMAP.md`. Open an issue from the **Work package** tem
 - One package per branch, one branch per pull request.
 - Never commit to `main`. Branch protection requires a pull request.
 - Commit messages say what changed and why, in a sentence or two.
+- A notable change gets one line under "Unreleased" in `CHANGELOG.md`, in the same pull request.
 
 ## 3. What a knowledge entry needs to merge
 
