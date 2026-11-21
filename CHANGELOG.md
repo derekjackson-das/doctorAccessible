@@ -6,6 +6,7 @@ Notable changes to Doctor Accessible, one section per release, newest first. Ver
 
 ## Unreleased
 
+- ARIA roles, batch 2: 27 widget role entries with the keyboard each promises, and a "Keyboard it promises" section in the role template; eval 047 (#115).
 - New `knowledge/aria/roles/`: a template and the first 11 role entries (the eight landmarks, presentation, none, generic); eval 046 (#114).
 - New knowledge entry `aria/live-regions.md`: when a live region is the right tool, the alternatives, roles and attributes, and what testing found; eval 045 (#112).
 

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notification settings – Campus Libraries</title>
+<style>
+  body { font: 1rem/1.5 system-ui, sans-serif; margin: 0; color: #1a1a1a; background: #fff; }
+  header, main, footer { padding: 1rem; }
+  header { border-bottom: 1px solid #767676; }
+  footer { border-top: 1px solid #767676; }
+  a { color: #0b4f9c; }
+  .setting { display: flex; align-items: center; gap: .75rem; margin: 1rem 0; }
+  .switch { width: 3rem; height: 1.75rem; border: 2px solid #1a1a1a; border-radius: 1rem; position: relative; cursor: pointer; background: #fff; }
+  .switch::after { content: ""; position: absolute; top: .15rem; left: .15rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #1a1a1a; }
+  .switch.on { background: #0b4f9c; border-color: #0b4f9c; }
+  .switch.on::after { left: 1.45rem; background: #fff; }
+  .switch:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #0b4f9c; outline-offset: 2px; }
+  button { font: inherit; padding: .4rem 1rem; border: 2px solid #0b4f9c; background: #0b4f9c; color: #fff; border-radius: .25rem; }
+</style>
+</head>
+<body>
+<header>
+  <p><a href="/">Campus Libraries</a></p>
+</header>
+<main>
+  <h1>Notification settings</h1>
+  <p>Choose which emails you get from the library.</p>
+  <form action="/settings" method="post">
+    <div class="setting">
+      <span id="due-label">Due date reminders</span>
+      <div class="switch on" role="switch" tabindex="0" aria-labelledby="due-label" data-name="due"></div>
+    </div>
+    <div class="setting">
+      <span id="hold-label">Hold ready alerts</span>
+      <div class="switch" role="switch" tabindex="0" aria-labelledby="hold-label" data-name="hold"></div>
+    </div>
+    <button type="submit">Save settings</button>
+  </form>
+</main>
+<footer>
+  <p><a href="/accessibility">Accessibility statement</a></p>
+</footer>
+<script>
+  document.querySelectorAll('.switch').forEach(sw => {
+    const toggle = () => sw.classList.toggle('on');
+    sw.addEventListener('click', toggle);
+    sw.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
+    });
+  });
+</script>
+</body>
+</html>
