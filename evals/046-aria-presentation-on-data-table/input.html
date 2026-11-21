@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library opening hours – Campus Libraries</title>
+<style>
+  body { font: 1rem/1.5 system-ui, sans-serif; margin: 0; color: #1a1a1a; background: #fff; }
+  header, main, footer { padding: 1rem; }
+  header { border-bottom: 1px solid #767676; }
+  footer { border-top: 1px solid #767676; }
+  nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+  a { color: #0b4f9c; }
+  a:focus-visible { outline: 3px solid #0b4f9c; outline-offset: 2px; }
+  table { border-collapse: collapse; margin-top: 1rem; }
+  th, td { border: 1px solid #767676; padding: .5rem .75rem; text-align: left; }
+  th { background: #f2f2f2; }
+</style>
+</head>
+<body>
+<header>
+  <p><a href="/">Campus Libraries</a></p>
+  <nav aria-label="Site">
+    <ul>
+      <li><a href="/hours" aria-current="page">Hours</a></li>
+      <li><a href="/locations">Locations</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <h1>Opening hours this week</h1>
+  <p>Hours for each library, Monday to Sunday. Times are local.</p>
+  <table role="presentation">
+    <caption>Opening hours by library and day</caption>
+    <thead>
+      <tr>
+        <th scope="col">Library</th>
+        <th scope="col">Monday to Friday</th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Main Library</th>
+        <td>8:00 to 22:00</td>
+        <td>10:00 to 18:00</td>
+        <td>12:00 to 18:00</td>
+      </tr>
+      <tr>
+        <th scope="row">Science Library</th>
+        <td>8:00 to 20:00</td>
+        <td>10:00 to 16:00</td>
+        <td>Closed</td>
+      </tr>
+      <tr>
+        <th scope="row">Music Library</th>
+        <td>9:00 to 17:00</td>
+        <td>Closed</td>
+        <td>Closed</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a href="/hours/holidays">Holiday opening hours</a></p>
+</main>
+<footer>
+  <p><a href="/accessibility">Accessibility statement</a></p>
+</footer>
+</body>
+</html>
