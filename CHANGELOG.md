@@ -6,7 +6,7 @@ Notable changes to Doctor Accessible, one section per release, newest first. Ver
 
 ## Unreleased
 
-Nothing yet.
+- New knowledge entry `aria/live-regions.md`: when a live region is the right tool, the alternatives, roles and attributes, and what testing found; eval 045 (#112).
 
 ## 0.1.1 (2026-11-18)
 

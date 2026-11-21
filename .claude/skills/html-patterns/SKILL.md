@@ -34,6 +34,7 @@ Writing or changing markup: any form, table, page region, heading, image, link, 
 | How do I build a button, a toggle, an icon button? | `knowledge/html/buttons.md` |
 | How do I build a modal? | `knowledge/html/dialogs.md`, then `knowledge/aria/patterns/modal-dialog.md` |
 | Is there a native element for this control? | `knowledge/html/custom-controls.md` |
+| How do I announce a change: a toast, a status message, a result count, a loading state? | `knowledge/aria/live-regions.md`; the criterion: `knowledge/wcag/sc-4.1.3-status-messages.md` |
 | The ARIA for a widget with no native element | `knowledge/aria/patterns/` (`tabs.md`, `tooltip.md`, `carousel.md`, `autocomplete.md`, `infinite-scroll.md`, `date-picker.md`, `accordion.md`, `modal-dialog.md`) |
 | Should this widget exist at all? | `knowledge/patterns/`, and the `consult` skill |
 | The code is React or JSX | the `react-jsx` skill too, a layer over this one: `knowledge/frameworks/react-jsx.md` |
