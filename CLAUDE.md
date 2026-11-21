@@ -128,7 +128,7 @@ doctorAccessible/
 │   ├── wcag/                   # sc-x.x.x-slug.md, one per success criterion, all 55 A and AA
 │   ├── html/                   # the native HTML way to build nine common things
 │   ├── frameworks/             # framework layers: react-jsx.md (tier 3, react.dev)
-│   ├── aria/                   # when to use ARIA at all; aria/patterns/ per widget
+│   ├── aria/                   # when to use ARIA at all; aria/patterns/ per widget; aria/roles/ per role
 │   ├── patterns/               # nine interface patterns: the need, the simpler thing, the cost
 │   ├── ux/                     # usability heuristics and need-finding (tier 3)
 │   ├── coga/                   # Making Content Usable, one entry per objective (tier 2)

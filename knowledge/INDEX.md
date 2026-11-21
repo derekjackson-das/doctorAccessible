@@ -179,6 +179,24 @@ When ARIA is needed, what each HTML element allows, and how a name is worked out
 | Date picker: roles, naming, keyboard | `aria/patterns/date-picker.md` | 2026-10-23 |
 | Infinite scroll (feed): roles, naming, keyboard | `aria/patterns/infinite-scroll.md` | 2026-10-23 |
 
+### Roles, one entry per role
+
+One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_template.md`: what it is, the native element that provides it, what the spec asks of authors, the attributes and context it needs, where it can and cannot be used, and what an explicit role takes away. Abstract roles get no entry; authors must not use them. The remaining roles are planned in #115 to #118.
+
+| Role | Entry | Verified |
+|---|---|---|
+| banner | `aria/roles/banner.md` | 2026-11-20 |
+| complementary | `aria/roles/complementary.md` | 2026-11-20 |
+| contentinfo | `aria/roles/contentinfo.md` | 2026-11-20 |
+| form | `aria/roles/form.md` | 2026-11-20 |
+| generic | `aria/roles/generic.md` | 2026-11-20 |
+| main | `aria/roles/main.md` | 2026-11-20 |
+| navigation | `aria/roles/navigation.md` | 2026-11-20 |
+| none | `aria/roles/none.md` | 2026-11-20 |
+| presentation | `aria/roles/presentation.md` | 2026-11-20 |
+| region | `aria/roles/region.md` | 2026-11-20 |
+| search | `aria/roles/search.md` | 2026-11-20 |
+
 Drag and drop has no ARIA entry: ARIA has no vocabulary for it (`aria-grabbed` and `aria-dropeffect` are deprecated; `aria/aria-in-html.md`). See `patterns/drag-and-drop.md`.
 
 ## HTML: the native way to build common things
