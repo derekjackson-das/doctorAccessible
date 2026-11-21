@@ -181,21 +181,48 @@ When ARIA is needed, what each HTML element allows, and how a name is worked out
 
 ### Roles, one entry per role
 
-One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_template.md`: what it is, the native element that provides it, what the spec asks of authors, the attributes and context it needs, where it can and cannot be used, and what an explicit role takes away. Abstract roles get no entry; authors must not use them. The remaining roles are planned in #115 to #118.
+One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_template.md`: what it is, the native element that provides it, what the spec asks of authors, the attributes and context it needs, where it can and cannot be used, and what an explicit role takes away. Abstract roles get no entry; authors must not use them. The remaining roles are planned in #116 to #118.
 
 | Role | Entry | Verified |
 |---|---|---|
 | banner | `aria/roles/banner.md` | 2026-11-20 |
+| button | `aria/roles/button.md` | 2026-11-21 |
+| checkbox | `aria/roles/checkbox.md` | 2026-11-21 |
 | complementary | `aria/roles/complementary.md` | 2026-11-20 |
 | contentinfo | `aria/roles/contentinfo.md` | 2026-11-20 |
 | form | `aria/roles/form.md` | 2026-11-20 |
 | generic | `aria/roles/generic.md` | 2026-11-20 |
+| grid | `aria/roles/grid.md` | 2026-11-21 |
+| gridcell | `aria/roles/gridcell.md` | 2026-11-21 |
+| link | `aria/roles/link.md` | 2026-11-21 |
+| listbox | `aria/roles/listbox.md` | 2026-11-21 |
 | main | `aria/roles/main.md` | 2026-11-20 |
+| menu | `aria/roles/menu.md` | 2026-11-21 |
+| menubar | `aria/roles/menubar.md` | 2026-11-21 |
+| menuitem | `aria/roles/menuitem.md` | 2026-11-21 |
+| menuitemcheckbox | `aria/roles/menuitemcheckbox.md` | 2026-11-21 |
+| menuitemradio | `aria/roles/menuitemradio.md` | 2026-11-21 |
+| meter | `aria/roles/meter.md` | 2026-11-21 |
 | navigation | `aria/roles/navigation.md` | 2026-11-20 |
 | none | `aria/roles/none.md` | 2026-11-20 |
+| option | `aria/roles/option.md` | 2026-11-21 |
 | presentation | `aria/roles/presentation.md` | 2026-11-20 |
+| progressbar | `aria/roles/progressbar.md` | 2026-11-21 |
+| radio | `aria/roles/radio.md` | 2026-11-21 |
+| radiogroup | `aria/roles/radiogroup.md` | 2026-11-21 |
 | region | `aria/roles/region.md` | 2026-11-20 |
+| scrollbar | `aria/roles/scrollbar.md` | 2026-11-21 |
 | search | `aria/roles/search.md` | 2026-11-20 |
+| searchbox | `aria/roles/searchbox.md` | 2026-11-21 |
+| separator | `aria/roles/separator.md` | 2026-11-21 |
+| slider | `aria/roles/slider.md` | 2026-11-21 |
+| spinbutton | `aria/roles/spinbutton.md` | 2026-11-21 |
+| switch | `aria/roles/switch.md` | 2026-11-21 |
+| textbox | `aria/roles/textbox.md` | 2026-11-21 |
+| toolbar | `aria/roles/toolbar.md` | 2026-11-21 |
+| tree | `aria/roles/tree.md` | 2026-11-21 |
+| treegrid | `aria/roles/treegrid.md` | 2026-11-21 |
+| treeitem | `aria/roles/treeitem.md` | 2026-11-21 |
 
 Drag and drop has no ARIA entry: ARIA has no vocabulary for it (`aria-grabbed` and `aria-dropeffect` are deprecated; `aria/aria-in-html.md`). See `patterns/drag-and-drop.md`.
 
