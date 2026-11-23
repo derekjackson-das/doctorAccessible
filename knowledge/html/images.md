@@ -3,7 +3,7 @@
 - Tier 1: HTML Living Standard, §4.8.4.4 Requirements for providing text to act as an alternative for images, accessed 2026-10-23. https://html.spec.whatwg.org/multipage/images.html
 - Tier 1: ARIA in HTML, W3C Recommendation 11 August 2026, rows for `img` with and without `alt`, and `svg`. https://www.w3.org/TR/html-aria/
 - Tier 2: WAI Tutorials, Images Tutorial (updated 8 April 2026), "Functional Images" (updated 12 April 2017), "Decorative Images" (updated 27 July 2019). https://www.w3.org/WAI/tutorials/images/
-- Related: `content/alt-text.md` (what the text should say), `aria/accessible-name.md`, `wcag/sc-1.1.1-non-text-content.md`, `wcag/sc-1.4.5-images-of-text.md`
+- Related: `content/alt-text.md` (what the text should say), `aria/accessible-name.md`, `aria/roles/img.md`, `aria/roles/figure.md`, `wcag/sc-1.1.1-non-text-content.md`, `wcag/sc-1.4.5-images-of-text.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
 ## Status and reporting
@@ -31,6 +31,6 @@ An `img` with an `alt` has its text alternative exposed as its name, and `alt=""
 
 ## When ARIA is genuinely needed
 
-- `role="img"` with `aria-label` or `aria-labelledby` for an inline `svg` that carries meaning, or for a group of elements that together form one image (`aria/accessible-name.md`; `wcag/sc-1.1.1-non-text-content.md`).
+- `role="img"` with `aria-label` or `aria-labelledby` for an inline `svg` that carries meaning, or for a group of elements that together form one image (`aria/roles/img.md`; `aria/accessible-name.md`; `wcag/sc-1.1.1-non-text-content.md`).
 - `aria-hidden="true"` on a decorative `svg` or icon font.
 - `aria-describedby` to point a complex chart at its longer description on the page.

@@ -181,22 +181,34 @@ When ARIA is needed, what each HTML element allows, and how a name is worked out
 
 ### Roles, one entry per role
 
-One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_template.md`: what it is, the native element that provides it, what the spec asks of authors, the attributes and context it needs, where it can and cannot be used, and what an explicit role takes away. Abstract roles get no entry; authors must not use them. The remaining roles are planned in #116 to #118.
+One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_template.md`: what it is, the native element that provides it, what the spec asks of authors, the attributes and context it needs, where it can and cannot be used, and what an explicit role takes away. Abstract roles get no entry; authors must not use them. The remaining roles are planned in #117 and #118.
 
 | Role | Entry | Verified |
 |---|---|---|
+| application | `aria/roles/application.md` | 2026-11-23 |
+| article | `aria/roles/article.md` | 2026-11-23 |
 | banner | `aria/roles/banner.md` | 2026-11-20 |
 | button | `aria/roles/button.md` | 2026-11-21 |
+| cell | `aria/roles/cell.md` | 2026-11-23 |
 | checkbox | `aria/roles/checkbox.md` | 2026-11-21 |
+| columnheader | `aria/roles/columnheader.md` | 2026-11-23 |
 | complementary | `aria/roles/complementary.md` | 2026-11-20 |
 | contentinfo | `aria/roles/contentinfo.md` | 2026-11-20 |
+| document | `aria/roles/document.md` | 2026-11-23 |
+| figure | `aria/roles/figure.md` | 2026-11-23 |
 | form | `aria/roles/form.md` | 2026-11-20 |
 | generic | `aria/roles/generic.md` | 2026-11-20 |
 | grid | `aria/roles/grid.md` | 2026-11-21 |
 | gridcell | `aria/roles/gridcell.md` | 2026-11-21 |
+| group | `aria/roles/group.md` | 2026-11-23 |
+| heading | `aria/roles/heading.md` | 2026-11-23 |
+| img | `aria/roles/img.md` | 2026-11-23 |
 | link | `aria/roles/link.md` | 2026-11-21 |
+| list | `aria/roles/list.md` | 2026-11-23 |
 | listbox | `aria/roles/listbox.md` | 2026-11-21 |
+| listitem | `aria/roles/listitem.md` | 2026-11-23 |
 | main | `aria/roles/main.md` | 2026-11-20 |
+| math | `aria/roles/math.md` | 2026-11-23 |
 | menu | `aria/roles/menu.md` | 2026-11-21 |
 | menubar | `aria/roles/menubar.md` | 2026-11-21 |
 | menuitem | `aria/roles/menuitem.md` | 2026-11-21 |
@@ -205,12 +217,16 @@ One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_templat
 | meter | `aria/roles/meter.md` | 2026-11-21 |
 | navigation | `aria/roles/navigation.md` | 2026-11-20 |
 | none | `aria/roles/none.md` | 2026-11-20 |
+| note | `aria/roles/note.md` | 2026-11-23 |
 | option | `aria/roles/option.md` | 2026-11-21 |
 | presentation | `aria/roles/presentation.md` | 2026-11-20 |
 | progressbar | `aria/roles/progressbar.md` | 2026-11-21 |
 | radio | `aria/roles/radio.md` | 2026-11-21 |
 | radiogroup | `aria/roles/radiogroup.md` | 2026-11-21 |
 | region | `aria/roles/region.md` | 2026-11-20 |
+| row | `aria/roles/row.md` | 2026-11-23 |
+| rowgroup | `aria/roles/rowgroup.md` | 2026-11-23 |
+| rowheader | `aria/roles/rowheader.md` | 2026-11-23 |
 | scrollbar | `aria/roles/scrollbar.md` | 2026-11-21 |
 | search | `aria/roles/search.md` | 2026-11-20 |
 | searchbox | `aria/roles/searchbox.md` | 2026-11-21 |
@@ -218,6 +234,7 @@ One entry per WAI-ARIA 1.2 role an author might write, from `aria/roles/_templat
 | slider | `aria/roles/slider.md` | 2026-11-21 |
 | spinbutton | `aria/roles/spinbutton.md` | 2026-11-21 |
 | switch | `aria/roles/switch.md` | 2026-11-21 |
+| table | `aria/roles/table.md` | 2026-11-23 |
 | textbox | `aria/roles/textbox.md` | 2026-11-21 |
 | toolbar | `aria/roles/toolbar.md` | 2026-11-21 |
 | tree | `aria/roles/tree.md` | 2026-11-21 |
