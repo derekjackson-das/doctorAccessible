@@ -3,7 +3,7 @@
 - Tier 1: HTML Living Standard, §4.9 Tabular data (§4.9.1 The table element, §4.9.2 The caption element, §4.9.10 The th element), accessed 2026-10-23. https://html.spec.whatwg.org/multipage/tables.html
 - Tier 1: ARIA in HTML, W3C Recommendation 11 August 2026, rows for `table`, `caption`, `th`, `td`. https://www.w3.org/TR/html-aria/
 - Tier 2: WAI Tutorials, "Tables Tutorial" (updated 16 February 2023), "Tables with one header" and "Caption & Summary" (both updated 27 July 2019). https://www.w3.org/WAI/tutorials/tables/
-- Related: `patterns/` none; `aria/patterns/date-picker.md` (a table as a grid), `wcag/sc-1.3.1-info-and-relationships.md`, `wcag/sc-1.3.2-meaningful-sequence.md`, `wcag/sc-1.4.10-reflow.md`
+- Related: `patterns/` none; `aria/patterns/date-picker.md` (a table as a grid), `aria/roles/table.md` (the ARIA table roles), `wcag/sc-1.3.1-info-and-relationships.md`, `wcag/sc-1.3.2-meaningful-sequence.md`, `wcag/sc-1.4.10-reflow.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
 ## Status and reporting
@@ -36,5 +36,6 @@ Header and data cells, and the relationship between them, are exposed with no AR
 ## When ARIA is genuinely needed
 
 - `role="presentation"` on a layout table that cannot yet be replaced.
+- The table roles (`table`, `row`, `cell`, `columnheader`, `rowheader`, `rowgroup`) for a table built from `div` elements that cannot be rebuilt, or a `table` whose CSS `display` was changed: `aria/roles/table.md`.
 - `aria-describedby` for a summary.
 - An interactive grid, where cells take focus and arrow keys move between them: `role="grid"`, as in `aria/patterns/date-picker.md`. A table that only shows data needs none of this.
