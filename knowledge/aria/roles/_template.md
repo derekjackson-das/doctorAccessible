@@ -57,6 +57,10 @@ From ARIA in HTML, section 4. Three lists, plus any rule from WAI-ARIA 1.2 that 
 
 Using a role where ARIA in HTML does not allow it is a conformance error against that specification: advice, unless it breaks a criterion (`aria/aria-in-html.md`).
 
+## Keyboard it promises
+
+For widget roles only; leave the section out for landmark and structure roles. A widget role tells assistive technology the element behaves like that control, so the keys that control is expected to answer must work. List them from the APG pattern, in our words, marked as a pattern, not a requirement, and say where focus goes (one tab stop, roving `tabindex`, or `aria-activedescendant`). The native element provides these keys itself; an ARIA build has to script every one. A role whose keys do not work misreports the control (`wcag/sc-4.1.2-name-role-value.md`) and may fail `wcag/sc-2.1.1-keyboard.md`.
+
 ## What an explicit role takes away
 
 What happens when this role is put on an element that already has a role: the native role is replaced, and with it its children's roles where they depend on it (a list's items, a table's rows and cells). And what happens when another role is put on this role's native element. Name the role lost. This is the check the verifier makes under #97.
