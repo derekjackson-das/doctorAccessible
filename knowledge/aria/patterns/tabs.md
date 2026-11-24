@@ -6,7 +6,7 @@
   - ARIA in HTML, W3C Recommendation 11 August 2026, https://www.w3.org/TR/html-aria/. A `button` may take `role=tab`; so may `h1` to `h6`, though the Using ARIA example puts the heading inside the tab instead (`aria/using-aria.md`, rule 2).
 - Practitioner testing (tier 3): the sources and their full results are in `patterns/tabs.md`: Scott O'Hara (2 November 2018, updated 5 February 2019), Léonie Watson (29 May 2012), Heydon Pickering (5 October 2017). This entry adds:
   - Adrian Roselli, "CSS-only Widgets Are Inaccessible", 25 March 2023, tabs section added 19 June 2024. https://adrianroselli.com/2023/03/css-only-widgets-are-inaccessible.html A review, not a screen reader test: radio-button "tabs" without the tab roles.
-- Related entries: `patterns/tabs.md` (whether to use tabs, the criteria, the manual tests, the screen reader results), `patterns/accordion.md`, `aria/using-aria.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-4.1.2-name-role-value.md`
+- Related entries: `patterns/tabs.md` (whether to use tabs, the criteria, the manual tests, the screen reader results), `patterns/accordion.md`, `aria/using-aria.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-4.1.2-name-role-value.md`, `aria/roles/tab.md`, `aria/roles/tablist.md`, `aria/roles/tabpanel.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
 ## Status and reporting

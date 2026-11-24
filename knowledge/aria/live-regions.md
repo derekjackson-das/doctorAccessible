@@ -12,7 +12,7 @@
   - Scott O'Hara, "output: HTML's native live region element", 10 July 2019, updated 16 July 2020. https://www.scottohara.me/blog/2019/07/10/the-output-element.html Tier 3: `output` support, tested with VoiceOver and TalkBack in 2019 and 2020; no versions.
   - Adrian Roselli, "Defining 'Toast' Messages", 14 January 2020, updated 21 August 2026. https://adrianroselli.com/2020/01/defining-toast-messages.html Tier 3: the criteria toasts put at risk, and three alternatives. No test results.
   - Adrian Roselli, "More Accessible Skeletons", 29 November 2020, updated 14 April 2026. https://adrianroselli.com/2020/11/more-accessible-skeletons.html Tier 3: `aria-busy` support, tested with named versions in 2020.
-- Related: `aria/using-aria.md`, `aria/accessible-name.md`, `aria/patterns/infinite-scroll.md`, `html/forms.md`, `html/dialogs.md`, `content/error-messages.md`
+- Related: `aria/using-aria.md`, `aria/accessible-name.md`, `aria/patterns/infinite-scroll.md`, `html/forms.md`, `html/dialogs.md`, `content/error-messages.md`, `aria/roles/alert.md`, `aria/roles/status.md`, `aria/roles/log.md`, `aria/roles/marquee.md`, `aria/roles/timer.md`, `aria/roles/alertdialog.md`
 - WCAG: `wcag/sc-4.1.3-status-messages.md` (the criterion live regions usually meet), `wcag/sc-2.2.1-timing-adjustable.md`, `wcag/sc-2.1.1-keyboard.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-3.3.1-error-identification.md`, `wcag/sc-1.3.2-meaningful-sequence.md`
 - Verified against the live sources: 2026-11-20 by Derek Jackson with Claude Code. WAI-ARIA 1.2 and HTML-AAM quotes checked against a downloaded copy of each page; the practitioner articles and the Understanding page read in full by fetch.
 

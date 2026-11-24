@@ -6,6 +6,7 @@ Notable changes to Doctor Accessible, one section per release, newest first. Ver
 
 ## Unreleased
 
+- ARIA roles, batch 4: 13 short role entries that point to the pattern and live-region entries (tab, tablist, tabpanel, dialog, alertdialog, combobox, tooltip, feed, alert, log, marquee, status, timer) (#117).
 - ARIA roles, batch 3: 17 document structure role entries (heading, img, list, the six table roles, group, article, figure, application, document, math, note); eval 048 (#116).
 - ARIA roles, batch 2: 27 widget role entries with the keyboard each promises, and a "Keyboard it promises" section in the role template; eval 047 (#115).
 - New `knowledge/aria/roles/`: a template and the first 11 role entries (the eight landmarks, presentation, none, generic); eval 046 (#114).

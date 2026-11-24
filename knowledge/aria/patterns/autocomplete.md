@@ -5,7 +5,7 @@
   - ARIA in HTML, W3C Recommendation 11 August 2026, https://www.w3.org/TR/html-aria/. An `input type="text"` may take `role="combobox"`; a `ul` may take `listbox`; an `li` whose parent is no longer a list may take any role, such as `option`.
 - Practitioner testing (tier 3): the native `datalist` results (Roselli, 2023, updated 2026) are in `patterns/autocomplete.md`. This entry adds:
   - Sarah Higley, "Aria-activedescendant is not focus", 16 October 2024. https://sarahmhigley.com/writing/activedescendant/ How NVDA, Narrator, JAWS, VoiceOver with Safari on macOS, and the mobile screen readers handle `aria-activedescendant`. She gives no method, versions, or test dates.
-- Related entries: `patterns/autocomplete.md` (whether to build one, the native options, the criteria, the manual tests), `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`
+- Related entries: `patterns/autocomplete.md` (whether to build one, the native options, the criteria, the manual tests), `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/sc-4.1.2-name-role-value.md`, `wcag/sc-2.1.1-keyboard.md`, `aria/roles/combobox.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
 ## Status and reporting

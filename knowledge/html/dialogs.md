@@ -3,7 +3,7 @@
 - Tier 1: HTML Living Standard, §4.11.4 The dialog element, accessed 2026-10-23. https://html.spec.whatwg.org/multipage/interactive-elements.html
 - Tier 1: ARIA in HTML, W3C Recommendation 11 August 2026, row for `dialog` (implicit `dialog`; `alertdialog` may be set). https://www.w3.org/TR/html-aria/
 - Tier 2: no WAI tutorial covers dialogs. The ARIA Authoring Practices "Dialog (Modal) Pattern" is summarized in `aria/patterns/modal-dialog.md`.
-- Related: `patterns/modal-dialog.md` (whether to use one at all), `aria/patterns/modal-dialog.md`, `ux/modals-and-interruptions.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-2.1.2-no-keyboard-trap.md`, `wcag/sc-4.1.2-name-role-value.md`
+- Related: `patterns/modal-dialog.md` (whether to use one at all), `aria/patterns/modal-dialog.md`, `ux/modals-and-interruptions.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-2.1.2-no-keyboard-trap.md`, `wcag/sc-4.1.2-name-role-value.md`, `aria/roles/dialog.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
 ## Status and reporting
