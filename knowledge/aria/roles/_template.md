@@ -1,6 +1,6 @@
 # Role: name
 
-Saved as `aria/roles/<role>.md`, one per WAI-ARIA 1.2 role an author might write. Abstract roles get no entry; authors must not use them. A role whose widget has an `aria/patterns/` entry gets a short entry that points there. Roles that only mirror an HTML element (`paragraph`, `strong`, `code`, and the like) share `aria/roles/structural.md`.
+Saved as `aria/roles/<role>.md`, one per WAI-ARIA 1.2 role an author might write. Abstract roles get no entry; authors must not use them. A role whose widget has an `aria/patterns/` entry gets a short entry that points there. A short entry keeps the sections through "What an explicit role takes away", drops "When writing the role is justified", "Keyboard it promises", "How it fails in code", and "How to check", and ends with "Where the detail lives", which names the entry that holds them. Roles that only mirror an HTML element (`paragraph`, `strong`, `code`, and the like) share `aria/roles/structural.md`.
 
 What the role is, which native element already provides it, when writing the role is justified, what the spec asks of authors, and what an explicit role takes away from the element it sits on. How to build the thing the role describes lives in `html/` or `aria/patterns/`; this entry links there and does not repeat it.
 

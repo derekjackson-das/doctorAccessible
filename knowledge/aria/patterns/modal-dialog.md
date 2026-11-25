@@ -7,7 +7,7 @@
 - Practitioner testing (tier 3): the sources and their full results are in `patterns/modal-dialog.md`. This entry adds only what bears on the ARIA:
   - Adrian Roselli, "Dialog Focus in Screen Readers", 12 October 2020, updates to 6 June 2025. https://adrianroselli.com/2020/10/dialog-focus-in-screen-readers.html Announcements for focus on a custom `role="dialog"` container, its heading, or its close button: JAWS 2020 and NVDA 2020.2 with Chrome 85 and Firefox 81, VoiceOver on macOS 10.15.6 and iOS 14, TalkBack on Android 11. His 18 December 2024 update covers `aria-modal` with the native element.
   - Scott O'Hara, "Having an open dialog (archival post)", 5 March 2019, updated 26 January 2023. https://www.scottohara.me/blog/2019/03/05/open-dialog.html Includes `aria-modal` with VoiceOver on iOS 15.0.2, from his early 2022 retest.
-- Related entries: `patterns/modal-dialog.md` (whether to use a modal, the native element, the criteria, the manual tests), `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-2.1.2-no-keyboard-trap.md`, `wcag/sc-4.1.2-name-role-value.md`
+- Related entries: `patterns/modal-dialog.md` (whether to use a modal, the native element, the criteria, the manual tests), `aria/using-aria.md`, `aria/accessible-name.md`, `wcag/sc-2.4.3-focus-order.md`, `wcag/sc-2.1.2-no-keyboard-trap.md`, `wcag/sc-4.1.2-name-role-value.md`, `aria/roles/dialog.md`, `aria/roles/alertdialog.md`
 - Verified against the live sources: 2026-10-23 by Caesar Alam with Claude Code
 
 ## Status and reporting
